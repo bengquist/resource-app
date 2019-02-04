@@ -5,9 +5,9 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
 const USERS_QUERY = gql`
-  query UsersQuery {
+  query {
     users {
-      name
+      _id
     }
   }
 `;
@@ -22,7 +22,7 @@ const AboutPage: React.FunctionComponent = () => (
       </Link>
     </p>
     <Query query={USERS_QUERY}>
-      {({ loading, error, data }) => <>{console.log(data)}</>}
+      {({ loading, error, data }) => <>{console.log(loading, error, data)}</>}
     </Query>
   </Layout>
 );

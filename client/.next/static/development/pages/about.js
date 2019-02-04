@@ -25514,7 +25514,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\pages\\about.tsx";
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  query UsersQuery {\n    users {\n      name\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  query {\n    users {\n      _id\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -25582,7 +25582,7 @@ var AboutPage = function AboutPage() {
     var loading = _ref.loading,
         error = _ref.error,
         data = _ref.data;
-    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, console.log(data));
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, console.log(loading, error, data));
   }));
 };
 
