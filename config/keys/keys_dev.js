@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://leo:leoleo1@ds121753.mlab.com:21753/graphql-server",
-  secretOrKey: "secret"
+  mongoURI: process.env.MONGO_URI,
+  secretOrKey: process.env.SECRET
 };

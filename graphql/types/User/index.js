@@ -3,31 +3,14 @@ export default `
     _id: String!
     name: String!
     email: String!
-    age: Int!
-    posts: [Post!]!
-    comments: [Comment!]!
   }
-
   type Query {
-    user(_id: ID!): User!
-    users: [User!]!
+    user(id: String!): User
+    users: [User]
   }
-
   type Mutation {
-    createUser(user: CreateUserInput): User!
-    updateUser(_id: String!, user: UpdateUserInput!): User!
-    deleteUser(_id: String!): User!
+    addUser(_id: String!, name: String!, email: String!): User
+    editUser(_id: String, name: String, email: String): User
+    deleteUser(_id: String, name: String, email: String): User
   }
-
-  input CreateUserInput {
-    name: String!
-    email: String!
-    age: Int!
-  }
-  
-  input UpdateUserInput {
-    name: String
-    email: String
-    age: Int
-  } 
 `;
