@@ -84,10 +84,11 @@ export default (App: any) => {
 
     apolloClient: ApolloClient<NormalizedCacheObject>;
 
-    constructor(prop: any) {
+    constructor(props: any) {
       super(props);
       // `getDataFromTree` renders the component first, the client is passed off as a property.
       // After that rendering is done using Next's normal rendering pipeline
+
       this.apolloClient = initApollo(props.apolloState, {
         getToken: () => {
           return parseCookies().token;
