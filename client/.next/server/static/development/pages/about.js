@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -239,9 +239,9 @@ var Layout = function Layout(_ref) {
 
 /***/ }),
 
-/***/ "./pages/index.tsx":
+/***/ "./pages/about.tsx":
 /*!*************************!*\
-  !*** ./pages/index.tsx ***!
+  !*** ./pages/about.tsx ***!
   \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -253,60 +253,109 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
-var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\pages\\index.tsx";
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\pages\\about.tsx";
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  query UsersQuery {\n    users {\n      name\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
 
-var IndexPage = function IndexPage() {
+
+
+var USERS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default()(_templateObject());
+
+var AboutPage = function AboutPage() {
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "Home | Next.js + TypeScript Example",
+    title: "About | Next.js + TypeScript Example",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 17
     },
     __self: this
-  }, "Hello Next.js \uD83D\uDC4B"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", {
+  }, "About"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 18
+    },
+    __self: this
+  }, "This is the about page"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/about",
+    href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 21
     },
     __self: this
-  }, "About"))));
+  }, "Go home"))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_apollo__WEBPACK_IMPORTED_MODULE_4__["Query"], {
+    query: USERS_QUERY,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, function (_ref) {
+    var loading = _ref.loading,
+        error = _ref.error,
+        data = _ref.data;
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, console.log(data));
+  }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (IndexPage);
+/* harmony default export */ __webpack_exports__["default"] = (AboutPage);
 
 /***/ }),
 
-/***/ 3:
+/***/ 6:
 /*!*******************************!*\
-  !*** multi ./pages/index.tsx ***!
+  !*** multi ./pages/about.tsx ***!
   \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./pages/index.tsx */"./pages/index.tsx");
+module.exports = __webpack_require__(/*! ./pages/about.tsx */"./pages/about.tsx");
 
+
+/***/ }),
+
+/***/ "graphql-tag":
+/*!******************************!*\
+  !*** external "graphql-tag" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("graphql-tag");
 
 /***/ }),
 
@@ -341,7 +390,18 @@ module.exports = require("next/link");
 
 module.exports = require("react");
 
+/***/ }),
+
+/***/ "react-apollo":
+/*!*******************************!*\
+  !*** external "react-apollo" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-apollo");
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=about.js.map

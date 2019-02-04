@@ -22,7 +22,7 @@ interface Options {
 function create(initialState: any, { getToken }: Options) {
   const httpLink = createHttpLink({
     uri: "http://localhost:4000",
-    credentials: "include"
+    credentials: "*"
   });
 
   const authLink = setContext((_, { headers }) => {

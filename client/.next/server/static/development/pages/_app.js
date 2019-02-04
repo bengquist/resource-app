@@ -131,7 +131,7 @@ function create(initialState, _ref) {
   var getToken = _ref.getToken;
   var httpLink = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_1__["createHttpLink"])({
     uri: "http://localhost:4000",
-    credentials: "include"
+    credentials: "*"
   });
   var authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_2__["setContext"])(function (_, _ref2) {
     var headers = _ref2.headers;
