@@ -11,7 +11,6 @@ const IndexPage: React.FunctionComponent = () => {
           <a>About</a>
         </Link>
       </p>
-      <button>call login mutation</button>
     </Layout>
   );
 };

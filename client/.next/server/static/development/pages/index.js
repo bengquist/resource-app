@@ -291,13 +291,7 @@ var IndexPage = function IndexPage() {
       lineNumber: 11
     },
     __self: this
-  }, "About"))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, "call login mutation"));
+  }, "About"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (IndexPage);
