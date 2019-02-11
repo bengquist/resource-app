@@ -1,4 +1,5 @@
 import * as React from "react";
+import styled from "styled-components";
 import Layout from "../components/Layout";
 import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
@@ -19,16 +20,16 @@ const Signup: React.FunctionComponent = () => {
     <Layout title="Resource | Sign Up">
       <Mutation mutation={USER_SIGNUP}>
         {(signupUser, { loading, error, data }) => (
-          <>
-            {" "}
-            <p>Email</p>
-            <input type="text" />
-            <p>Password</p>
-            <input type="password" />
-            <br />
-            <br />
-            <button>SIGN UP</button>
-          </>
+          <Container>
+            <Label>Email</Label>
+            <Input onChange={e => setEmailInput(e.target.value)} type="text" />
+            <Label>Password</Label>
+            <Input
+              onChange={e => setPasswordInput(e.target.value)}
+              type="password"
+            />
+            <Button>SIGN UP</Button>
+          </Container>
         )}
       </Mutation>
     </Layout>
@@ -36,3 +37,16 @@ const Signup: React.FunctionComponent = () => {
 };
 
 export default Signup;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Label = styled.p``;
+
+const Input = styled.input``;
+
+const Button = styled.button`
+  margin-top: 20px;
+`;

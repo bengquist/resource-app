@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -104,11 +104,47 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "next/link");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\components\\Layout.tsx";
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
 
 
 
@@ -117,29 +153,29 @@ var Layout = function Layout(_ref) {
   var children = _ref.children,
       _ref$title = _ref.title,
       title = _ref$title === void 0 ? "This is the default title" : _ref$title;
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Container, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("title", {
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
     },
     __self: this
   }, title), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("meta", {
     charSet: "utf-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("meta", {
@@ -147,82 +183,85 @@ var Layout = function Layout(_ref) {
     content: "initial-scale=1.0, width=device-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("header", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("nav", {
+  })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Header, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("nav", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }, "Home")), " ", "|", " ", react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/login",
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 23
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
+  }, "Home")), " ", "|", " ", react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/login",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: this
-  }, "Login")), " ", "|", " ", react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/signup",
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 27
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
+  }, "Login")), " ", "|", " ", react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/signup",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: this
-  }, "Sign Up")))), children, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("footer", {
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 31
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("hr", {
+  }, "Sign Up")))), children, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Footer, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("hr", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: this
   }, "I'm here to stay (Footer)")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject());
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject2());
+var Footer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject3());
 
 /***/ }),
 
@@ -237,12 +276,54 @@ var Layout = function Layout(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-apollo */ "react-apollo");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\pages\\signup.tsx";
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  margin-top: 20px;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -268,7 +349,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var USER_SIGNUP = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_templateObject());
+
+var USER_SIGNUP = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default()(_templateObject());
 
 var Signup = function Signup() {
   var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__["useState"](""),
@@ -281,66 +363,66 @@ var Signup = function Signup() {
       passwordInput = _React$useState4[0],
       setPasswordInput = _React$useState4[1];
 
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Resource | Sign Up",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_apollo__WEBPACK_IMPORTED_MODULE_3__["Mutation"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_apollo__WEBPACK_IMPORTED_MODULE_4__["Mutation"], {
     mutation: USER_SIGNUP,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, function (signupUser, _ref) {
     var loading = _ref.loading,
         error = _ref.error,
         data = _ref.data;
-    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, " ", react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", {
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Container, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Label, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 24
       },
       __self: this
-    }, "Email"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", {
+    }, "Email"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Input, {
+      onChange: function onChange(e) {
+        return setEmailInput(e.target.value);
+      },
       type: "text",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 25
       },
       __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", {
+    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Label, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 26
       },
       __self: this
-    }, "Password"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", {
+    }, "Password"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Input, {
+      onChange: function onChange(e) {
+        return setPasswordInput(e.target.value);
+      },
       type: "password",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 27
       },
       __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("br", {
+    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Button, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("br", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 31
       },
       __self: this
     }, "SIGN UP"));
@@ -348,10 +430,14 @@ var Signup = function Signup() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Signup);
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject2());
+var Label = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.p(_templateObject3());
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.input(_templateObject4());
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.button(_templateObject5());
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!********************************!*\
   !*** multi ./pages/signup.tsx ***!
   \********************************/
@@ -415,6 +501,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-apollo");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 
