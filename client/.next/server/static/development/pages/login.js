@@ -112,39 +112,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\components\\Layout.tsx";
 
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
 
 
 
@@ -259,9 +226,18 @@ var Layout = function Layout(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject());
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject2());
-var Footer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject3());
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Layout__Container",
+  componentId: "jbj1sg-0"
+})(["display:flex;flex-direction:column;align-items:center;width:100%;"]);
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Layout__Header",
+  componentId: "jbj1sg-1"
+})(["width:100%;"]);
+var Footer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Layout__Footer",
+  componentId: "jbj1sg-2"
+})(["width:100%;"]);
 
 /***/ }),
 
@@ -285,48 +261,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\pages\\login.tsx";
 
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 20px;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral([""]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral([""]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    mutation signupUser($email: String!, $password: String!) {\n      loginUser(email: $email, password: $password) {\n        email\n      }\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    mutation loginUser($email: String!, $password: String!) {\n      loginUser(email: $email, password: $password) {\n        token\n      }\n    }\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -377,14 +313,14 @@ var Login = function Login() {
       lineNumber: 21
     },
     __self: this
-  }, function (signupUser, _ref) {
+  }, function (loginUser, _ref) {
     var loading = _ref.loading,
         error = _ref.error,
         data = _ref.data;
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
       onSubmit: function onSubmit(e) {
         e.preventDefault();
-        signupUser({
+        loginUser({
           variables: {
             email: email,
             password: password
@@ -398,10 +334,10 @@ var Login = function Login() {
         lineNumber: 23
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
+    }, console.log(data), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 34
       },
       __self: this
     }, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
@@ -412,13 +348,13 @@ var Login = function Login() {
       type: "text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 35
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 40
       },
       __self: this
     }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
@@ -429,14 +365,14 @@ var Login = function Login() {
       type: "password",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 41
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
       type: "submit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 46
       },
       __self: this
     }, "LOGIN"));
@@ -444,10 +380,22 @@ var Login = function Login() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Login);
-var Form = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.form(_templateObject2());
-var Label = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.p(_templateObject3());
-var Input = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.input(_templateObject4());
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.button(_templateObject5());
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.form.withConfig({
+  displayName: "login__Form",
+  componentId: "sc-1o2x3zo-0"
+})(["display:flex;flex-direction:column;"]);
+var Label = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.p.withConfig({
+  displayName: "login__Label",
+  componentId: "sc-1o2x3zo-1"
+})([""]);
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.input.withConfig({
+  displayName: "login__Input",
+  componentId: "sc-1o2x3zo-2"
+})([""]);
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.button.withConfig({
+  displayName: "login__Button",
+  componentId: "sc-1o2x3zo-3"
+})(["margin-top:20px;"]);
 
 /***/ }),
 

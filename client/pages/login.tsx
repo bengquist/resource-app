@@ -9,9 +9,9 @@ const Login: React.FunctionComponent = () => {
   const [password, setPassword] = useState("");
 
   const USER_LOGIN = gql`
-    mutation signupUser($email: String!, $password: String!) {
+    mutation loginUser($email: String!, $password: String!) {
       loginUser(email: $email, password: $password) {
-        email
+        token
       }
     }
   `;
@@ -19,17 +19,18 @@ const Login: React.FunctionComponent = () => {
   return (
     <Layout title="Resource | Login">
       <Mutation mutation={USER_LOGIN}>
-        {(signupUser, { loading, error, data }) => (
+        {(loginUser, { loading, error, data }) => (
           <Form
             onSubmit={e => {
               e.preventDefault();
-              signupUser({
+              loginUser({
                 variables: { email: email, password: password }
               });
               setEmail("");
               setPassword("");
             }}
           >
+            {console.log(data)}
             <Label>Email</Label>
             <Input
               value={email}
