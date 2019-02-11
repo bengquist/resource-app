@@ -11,11 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/list-fc": [
+    "/about": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/about": [
+    "/list-class": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

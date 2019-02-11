@@ -5,25 +5,29 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
 const USERS_QUERY = gql`
-  query {
-    users {
-      _id
+  mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
+    createReview(episode: $ep, review: $review) {
+      stars
+      commentary
     }
   }
 `;
 
 const AboutPage: React.FunctionComponent = () => (
   <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>This is the about page</p>
-    <p>
-      <Link href="/">
-        <a>Go home</a>
-      </Link>
-    </p>
-    <Query query={USERS_QUERY}>
-      {({ loading, error, data }) => <>{console.log(loading, error, data)}</>}
-    </Query>
+    <p>Email</p>
+    <input type="text" />
+    <p>Password</p>
+    <input type="password" />
+    <br />
+    <br />
+    <button>LOGIN</button>
+    {/* <Query query={USERS_QUERY}>
+      {({ loading, error, data }) =>
+        !loading &&
+        data.users.map((user: { name: string }) => <p>{user.name}</p>)
+      }
+    </Query> */}
   </Layout>
 );
 

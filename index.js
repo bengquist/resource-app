@@ -8,6 +8,7 @@ import schema from "./graphql/";
 
 const app = express();
 app.use(cors());
+
 const PORT = process.env.PORT || "4000";
 const db =
   "mongodb://bengquist:yourmom1023@resourceappcluster-shard-00-00-97s9x.mongodb.net:27017,resourceappcluster-shard-00-01-97s9x.mongodb.net:27017,resourceappcluster-shard-00-02-97s9x.mongodb.net:27017/test?ssl=true&replicaSet=ResourceAppCluster-shard-0&authSource=admin&retryWrites=true";

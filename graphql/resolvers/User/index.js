@@ -21,6 +21,16 @@ export default {
     }
   },
   Mutation: {
+    loginUser: (root, { email, password }) => {
+      return new Promise((resolve, reject) => {
+        User.findOne({ email, password })
+          .populate()
+          .exec((err, res) => {
+            console.log(err, res);
+            err ? reject(err) : resolve(res);
+          });
+      });
+    },
     addUser: (root, { id, name, email }) => {
       const newUser = new User({ id, name, email });
 
