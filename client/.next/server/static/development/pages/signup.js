@@ -325,16 +325,8 @@ function _templateObject2() {
   return data;
 }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  mutation {\n    loginUser(email: \"huh\", password: \"ayy\") {\n      name\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n    mutation signupUser($email: String!, $password: String!) {\n      signupUser(email: $email, password: $password) {\n        email\n      }\n    }\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -345,32 +337,40 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
 
-var USER_SIGNUP = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default()(_templateObject());
+
 
 var Signup = function Signup() {
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__["useState"](""),
-      _React$useState2 = _slicedToArray(_React$useState, 2),
-      emailInput = _React$useState2[0],
-      setEmailInput = _React$useState2[1];
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      email = _useState2[0],
+      setEmail = _useState2[1];
 
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0__["useState"](""),
-      _React$useState4 = _slicedToArray(_React$useState3, 2),
-      passwordInput = _React$useState4[0],
-      setPasswordInput = _React$useState4[1];
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      password = _useState4[0],
+      setPassword = _useState4[1];
 
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  var USER_SIGNUP = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default()(_templateObject());
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Resource | Sign Up",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_apollo__WEBPACK_IMPORTED_MODULE_4__["Mutation"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_4__["Mutation"], {
     mutation: USER_SIGNUP,
     __source: {
       fileName: _jsxFileName,
@@ -381,48 +381,62 @@ var Signup = function Signup() {
     var loading = _ref.loading,
         error = _ref.error,
         data = _ref.data;
-    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Container, {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+      onSubmit: function onSubmit(e) {
+        e.preventDefault();
+        signupUser({
+          variables: {
+            email: email,
+            password: password
+          }
+        });
+        setEmail("");
+        setPassword("");
+      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 23
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Label, {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 33
       },
       __self: this
-    }, "Email"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Input, {
+    }, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+      value: email,
       onChange: function onChange(e) {
-        return setEmailInput(e.target.value);
+        return setEmail(e.target.value);
       },
       type: "text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 34
       },
       __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Label, {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 39
       },
       __self: this
-    }, "Password"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Input, {
+    }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+      value: password,
       onChange: function onChange(e) {
-        return setPasswordInput(e.target.value);
+        return setPassword(e.target.value);
       },
       type: "password",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 40
       },
       __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Button, {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+      type: "submit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 45
       },
       __self: this
     }, "SIGN UP"));
@@ -430,7 +444,7 @@ var Signup = function Signup() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Signup);
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject2());
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.form(_templateObject2());
 var Label = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.p(_templateObject3());
 var Input = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.input(_templateObject4());
 var Button = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.button(_templateObject5());

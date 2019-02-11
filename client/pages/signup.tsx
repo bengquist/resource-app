@@ -1,35 +1,49 @@
-import * as React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
 
-const USER_SIGNUP = gql`
-  mutation {
-    loginUser(email: "huh", password: "ayy") {
-      name
-    }
-  }
-`;
-
 const Signup: React.FunctionComponent = () => {
-  const [emailInput, setEmailInput] = React.useState("");
-  const [passwordInput, setPasswordInput] = React.useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const USER_SIGNUP = gql`
+    mutation signupUser($email: String!, $password: String!) {
+      signupUser(email: $email, password: $password) {
+        email
+      }
+    }
+  `;
 
   return (
     <Layout title="Resource | Sign Up">
       <Mutation mutation={USER_SIGNUP}>
         {(signupUser, { loading, error, data }) => (
-          <Container>
+          <Form
+            onSubmit={e => {
+              e.preventDefault();
+              signupUser({
+                variables: { email: email, password: password }
+              });
+              setEmail("");
+              setPassword("");
+            }}
+          >
             <Label>Email</Label>
-            <Input onChange={e => setEmailInput(e.target.value)} type="text" />
+            <Input
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              type="text"
+            />
             <Label>Password</Label>
             <Input
-              onChange={e => setPasswordInput(e.target.value)}
+              value={password}
+              onChange={e => setPassword(e.target.value)}
               type="password"
             />
-            <Button>SIGN UP</Button>
-          </Container>
+            <Button type="submit">SIGN UP</Button>
+          </Form>
         )}
       </Mutation>
     </Layout>
@@ -38,7 +52,7 @@ const Signup: React.FunctionComponent = () => {
 
 export default Signup;
 
-const Container = styled.div`
+const Form = styled.form`
   display: flex;
   flex-direction: column;
 `;
