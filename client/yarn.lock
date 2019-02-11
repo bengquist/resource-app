@@ -3550,6 +3550,14 @@ node-releases@^1.1.3:
   dependencies:
     semver "^5.3.0"
 
+nookies@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/nookies/-/nookies-2.0.1.tgz#44e3441eafae81cc30633d3c2da377070d998bd8"
+  integrity sha512-OuJy8S3b1MGcKz1mvl8Rcr9GfC9fKvtM1cswXyix6p7PvlnRVjvHn46VsxvDeSHBMrLe1Sr0TOzqa3kiObz1oQ==
+  dependencies:
+    cookie "^0.3.1"
+    set-cookie-parser "^2.2.1"
+
 nopt@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-4.0.1.tgz#d0d4685afd5415193c8c7505602d0d17cd64474d"
@@ -4365,6 +4373,11 @@ set-blocking@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
   integrity sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
+
+set-cookie-parser@^2.2.1:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.3.5.tgz#e2c16c93f063dee2486c5d48e26621ad75fd3bab"
+  integrity sha512-cN4GIBOE11PDqW1tXs4y9hQX68eOczUAQSrmB1ByNG3zH4hSOeBVtBe3lmEyjt8iy2F7JR17JLRwYLb1XncfuA==
 
 set-value@^0.4.3:
   version "0.4.3"
