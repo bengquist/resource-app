@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -241,213 +241,52 @@ var Footer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withCo
 
 /***/ }),
 
-/***/ "./pages/login.tsx":
+/***/ "./pages/index.tsx":
 /*!*************************!*\
-  !*** ./pages/login.tsx ***!
+  !*** ./pages/index.tsx ***!
   \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! cookie */ "cookie");
-/* harmony import */ var cookie__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(cookie__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-apollo */ "react-apollo");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\pages\\login.tsx";
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    mutation loginUser($email: String!, $password: String!) {\n      loginUser(email: $email, password: $password) {\n        token\n      }\n    }\n  "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
+var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\pages\\index.tsx";
 
 
 
-
-
-
-
-
-var Login = function Login() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(""),
-      _useState2 = _slicedToArray(_useState, 2),
-      email = _useState2[0],
-      setEmail = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(""),
-      _useState4 = _slicedToArray(_useState3, 2),
-      password = _useState4[0],
-      setPassword = _useState4[1];
-
-  var USER_LOGIN = graphql_tag__WEBPACK_IMPORTED_MODULE_4___default()(_templateObject());
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    title: "Resource | Login",
+var AboutPage = function AboutPage() {
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Resource | Home",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 5
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Mutation"], {
-    mutation: USER_LOGIN,
-    onCompleted: function onCompleted(data) {
-      // Store the token in cookie
-      document.cookie = cookie__WEBPACK_IMPORTED_MODULE_0___default.a.serialize("token", data.loginUser.token, {
-        maxAge: 30 * 24 * 60 * 60 // 30 days
-
-      }); // Force a reload of all the current queries now that the user is
-      // logged in
-      // client.cache.reset().then(() => {
-      //   redirect({}, "/");
-      // });
-    },
-    onError: function onError(error) {
-      // If you want to send error to external service?
-      console.log(error);
-    },
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 6
     },
     __self: this
-  }, function (loginUser, _ref) {
-    var loading = _ref.loading,
-        error = _ref.error,
-        data = _ref.data;
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
-      onSubmit: function onSubmit(e) {
-        e.preventDefault();
-        loginUser({
-          variables: {
-            email: email,
-            password: password
-          }
-        });
-        setEmail("");
-        setPassword("");
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 52
-      },
-      __self: this
-    }, "Email"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
-      value: email,
-      onChange: function onChange(e) {
-        return setEmail(e.target.value);
-      },
-      type: "text",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58
-      },
-      __self: this
-    }, "Password"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
-      value: password,
-      onChange: function onChange(e) {
-        return setPassword(e.target.value);
-      },
-      type: "password",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
-      type: "submit",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: this
-    }, "LOGIN"));
-  }));
+  }, "This is the home page!"));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Login);
-var Form = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.form.withConfig({
-  displayName: "login__Form",
-  componentId: "sc-1o2x3zo-0"
-})(["display:flex;flex-direction:column;"]);
-var Label = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.p.withConfig({
-  displayName: "login__Label",
-  componentId: "sc-1o2x3zo-1"
-})([""]);
-var Input = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.input.withConfig({
-  displayName: "login__Input",
-  componentId: "sc-1o2x3zo-2"
-})([""]);
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
-  displayName: "login__Button",
-  componentId: "sc-1o2x3zo-3"
-})(["margin-top:20px;"]);
+/* harmony default export */ __webpack_exports__["default"] = (AboutPage);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*******************************!*\
-  !*** multi ./pages/login.tsx ***!
+  !*** multi ./pages/index.tsx ***!
   \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./pages/login.tsx */"./pages/login.tsx");
+module.exports = __webpack_require__(/*! ./pages/index.tsx */"./pages/index.tsx");
 
-
-/***/ }),
-
-/***/ "cookie":
-/*!*************************!*\
-  !*** external "cookie" ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("cookie");
-
-/***/ }),
-
-/***/ "graphql-tag":
-/*!******************************!*\
-  !*** external "graphql-tag" ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("graphql-tag");
 
 /***/ }),
 
@@ -484,17 +323,6 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-apollo":
-/*!*******************************!*\
-  !*** external "react-apollo" ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-apollo");
-
-/***/ }),
-
 /***/ "styled-components":
 /*!************************************!*\
   !*** external "styled-components" ***!
@@ -507,4 +335,4 @@ module.exports = require("styled-components");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=login.js.map
+//# sourceMappingURL=index.js.map

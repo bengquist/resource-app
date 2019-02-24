@@ -1,4 +1,5 @@
-// The User schema.
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 import User from "../../../models/User";
 
 export default {
@@ -23,21 +24,50 @@ export default {
   Mutation: {
     loginUser: (root, { email, password }) => {
       return new Promise((resolve, reject) => {
-        User.findOne({ email, password })
+        User.findOne({ email })
           .populate()
-          .exec((err, res) => {
-            console.log(err, res);
-            err ? reject(err) : resolve(res);
+          .exec((err, user) => {
+            if (!user)
+              return reject("There is no account associated with this email");
+
+            const isValidPassword = bcrypt.compareSync(password, user.password);
+
+            if (!isValidPassword)
+              return reject("The password entered was incorrect");
+
+            const token = jwt.sign(
+              {
+                id: user._id,
+                email
+              },
+              "secret",
+              { expiresIn: "1y" }
+            );
+
+            resolve({ token });
           });
       });
     },
-    addUser: (root, { id, name, email }) => {
-      const newUser = new User({ id, name, email });
-
+    signupUser: (root, { email, password }) => {
       return new Promise((resolve, reject) => {
-        newUser.save((err, res) => {
-          err ? reject(err) : resolve(res);
-        });
+        User.findOne({ email })
+          .populate()
+          .exec((err, res) => {
+            if (res)
+              return reject("An account is already signed up with this email");
+
+            bcrypt.hash(password, 12, (err, hash) => {
+              if (err) console.log("There was an error hashing the password");
+
+              const newUser = new User({ email, password: hash });
+
+              return new Promise((resolve, reject) => {
+                newUser.save((err, res) => {
+                  err ? reject(err) : resolve(res);
+                });
+              });
+            });
+          });
       });
     },
     editUser: (root, { id, name, email }) => {

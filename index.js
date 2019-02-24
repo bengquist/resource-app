@@ -1,13 +1,12 @@
-import express from "express";
-import expressGraphQL from "express-graphql";
+const cors = require("cors");
+const express = require("express");
+import session from "express-session";
+const { ApolloServer, gql } = require("apollo-server-express");
+import { redis } from "./redis";
+import typeDefs from "./graphql/types/";
+import resolvers from "./graphql/resolvers/";
+import connectRedis from "connect-redis";
 import mongoose from "mongoose";
-import bodyParser from "body-parser";
-import cors from "cors";
-
-import schema from "./graphql/";
-
-const app = express();
-app.use(cors());
 
 const PORT = process.env.PORT || "4000";
 const db =
@@ -22,13 +21,54 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
 
+const app = express();
+
+const RedisStore = connectRedis(session);
+
 app.use(
-  "/graphql",
-  bodyParser.json(),
-  expressGraphQL({
-    schema,
-    graphiql: true
+  cors({
+    credentials: true,
+    origin: "http://localhost:3000"
   })
 );
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.use(
+  session({
+    store: new RedisStore({
+      client: redis
+    }),
+    name: "token",
+    secret: "aslkdfjoiq12312",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 1000 * 60 * 60 * 24 * 7 * 365 // 7 years
+    }
+  })
+);
+
+const verifyUser = async (req, res) => {
+  // const token = req.heaaders["authentication"];
+  console.log(req.headers);
+
+  try {
+    // const { user } = await jwt.verify(token, "secret");
+    req.user = user;
+  } catch (err) {
+    console.log("Invalid token");
+  }
+
+  req.next();
+};
+
+app.use(verifyUser);
+
+const server = new ApolloServer({ typeDefs, resolvers });
+
+server.applyMiddleware({ app });
+
+app.listen({ port: 4000 }, () =>
+  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
+);
