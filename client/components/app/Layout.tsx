@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Link from "next/link";
+import Header from "./Header";
 import Head from "next/head";
 
 type Props = {
@@ -17,21 +17,7 @@ const Layout: React.FunctionComponent<Props> = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <Header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/login">
-          <a>Login</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/signup">
-          <a>Sign Up</a>
-        </Link>
-      </nav>
-    </Header>
+    <Header />
     {children}
     <Footer>
       <hr />
@@ -46,10 +32,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-`;
-
-const Header = styled.div`
   width: 100%;
 `;
 

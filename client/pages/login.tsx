@@ -1,9 +1,10 @@
 import cookie from "cookie";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Layout from "../components/Layout";
+import Layout from "../components/app/Layout";
 import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
+import { useObserver } from "mobx-react-lite";
 
 const Login: React.FunctionComponent = () => {
   const [email, setEmail] = useState("");
@@ -17,8 +18,9 @@ const Login: React.FunctionComponent = () => {
     }
   `;
 
-  return (
+  return useObserver(() => (
     <Layout title="Resource | Login">
+      {console.log("yo")}
       <Mutation
         mutation={USER_LOGIN}
         onCompleted={data => {
@@ -67,7 +69,7 @@ const Login: React.FunctionComponent = () => {
         }}
       </Mutation>
     </Layout>
-  );
+  ));
 };
 
 export default Login;

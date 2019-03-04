@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Layout from "../components/Layout";
+import Layout from "../components/app/Layout";
 import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
 

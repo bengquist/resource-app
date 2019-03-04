@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/app/Layout";
 
 const AboutPage: React.FunctionComponent = () => (
   <Layout title="Resource | Home">
