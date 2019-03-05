@@ -1,10 +1,10 @@
 import cookie from "cookie";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Layout from "../components/app/Layout";
 import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
-import { useObserver } from "mobx-react-lite";
+import redirect from "../lib/redirect";
 
 const Login: React.FunctionComponent = () => {
   const [email, setEmail] = useState("");
@@ -18,9 +18,8 @@ const Login: React.FunctionComponent = () => {
     }
   `;
 
-  return useObserver(() => (
+  return (
     <Layout title="Resource | Login">
-      {console.log("yo")}
       <Mutation
         mutation={USER_LOGIN}
         onCompleted={data => {
@@ -28,11 +27,12 @@ const Login: React.FunctionComponent = () => {
           document.cookie = cookie.serialize("token", data.loginUser.token, {
             maxAge: 30 * 24 * 60 * 60 // 30 days
           });
+
           // Force a reload of all the current queries now that the user is
           // logged in
-          // client.cache.reset().then(() => {
-          //   redirect({}, "/");
-          // });
+          if (data.loginUser.token) {
+            redirect({}, "/");
+          }
         }}
         onError={error => {
           // If you want to send error to external service?
@@ -45,7 +45,7 @@ const Login: React.FunctionComponent = () => {
               onSubmit={e => {
                 e.preventDefault();
                 loginUser({
-                  variables: { email: email, password: password }
+                  variables: { email, password }
                 });
                 setEmail("");
                 setPassword("");
@@ -69,7 +69,7 @@ const Login: React.FunctionComponent = () => {
         }}
       </Mutation>
     </Layout>
-  ));
+  );
 };
 
 export default Login;

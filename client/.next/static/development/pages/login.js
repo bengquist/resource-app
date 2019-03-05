@@ -9,79 +9,84 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\components\\app\\Header.tsx";
+
+
 
 
 function Header() {
   var cookie = false;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    style: {
-      width: "100%"
-    },
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }, "Home")), " ", "|", " ", cookie ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/login",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: this
   }, "Log Out")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/login",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, "Log In")), " ", "|", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, "Sign Up"))));
 }
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
+  displayName: "Header__Container",
+  componentId: "sc-7lelrg-0"
+})(["background-color:#bcbcbc;width:100%;"]);
 
 /***/ }),
 
@@ -179,6 +184,34 @@ var Footer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withC
   displayName: "Layout__Footer",
   componentId: "hwewb-1"
 })(["width:100%;"]);
+
+/***/ }),
+
+/***/ "./lib/redirect.ts":
+/*!*************************!*\
+  !*** ./lib/redirect.ts ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function (context, target) {
+  if (context.res) {
+    // server
+    // 303: "See other"
+    context.res.writeHead(303, {
+      Location: target
+    });
+    context.res.end();
+  } else {
+    // In the browser, we just pretend like this never even happened ;)
+    next_router__WEBPACK_IMPORTED_MODULE_0___default.a.replace(target);
+  }
+});
 
 /***/ }),
 
@@ -1088,278 +1121,109 @@ var unitlessKeys = {
 
 /***/ }),
 
-/***/ "./node_modules/apollo-client/ApolloClient.js":
-/*!****************************************************!*\
-  !*** ./node_modules/apollo-client/ApolloClient.js ***!
-  \****************************************************/
-/*! exports provided: default */
+/***/ "./node_modules/apollo-client/bundle.esm.js":
+/*!**************************************************!*\
+  !*** ./node_modules/apollo-client/bundle.esm.js ***!
+  \**************************************************/
+/*! exports provided: default, ApolloClient, ObservableQuery, NetworkStatus, isApolloError, ApolloError, FetchType */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var apollo_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-link */ "./node_modules/apollo-link/lib/bundle.esm.js");
-/* harmony import */ var apollo_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-utilities */ "./node_modules/apollo-utilities/lib/index.js");
-/* harmony import */ var _core_QueryManager__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./core/QueryManager */ "./node_modules/apollo-client/core/QueryManager.js");
-/* harmony import */ var _data_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/store */ "./node_modules/apollo-client/data/store.js");
-/* harmony import */ var _version__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./version */ "./node_modules/apollo-client/version.js");
-/* harmony import */ var _version__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_version__WEBPACK_IMPORTED_MODULE_5__);
-
-
-
-
-
-
-var hasSuggestedDevtools = false;
-var ApolloClient = (function () {
-    function ApolloClient(options) {
-        var _this = this;
-        this.defaultOptions = {};
-        this.resetStoreCallbacks = [];
-        this.clearStoreCallbacks = [];
-        this.clientAwareness = {};
-        var link = options.link, cache = options.cache, _a = options.ssrMode, ssrMode = _a === void 0 ? false : _a, _b = options.ssrForceFetchDelay, ssrForceFetchDelay = _b === void 0 ? 0 : _b, connectToDevTools = options.connectToDevTools, _c = options.queryDeduplication, queryDeduplication = _c === void 0 ? true : _c, defaultOptions = options.defaultOptions, clientAwarenessName = options.name, clientAwarenessVersion = options.version;
-        if (!link || !cache) {
-            throw new Error("\n        In order to initialize Apollo Client, you must specify link & cache properties on the config object.\n        This is part of the required upgrade when migrating from Apollo Client 1.0 to Apollo Client 2.0.\n        For more information, please visit:\n          https://www.apollographql.com/docs/react/basics/setup.html\n        to help you get started.\n      ");
-        }
-        var supportedCache = new Map();
-        var supportedDirectives = new apollo_link__WEBPACK_IMPORTED_MODULE_1__["ApolloLink"](function (operation, forward) {
-            var result = supportedCache.get(operation.query);
-            if (!result) {
-                result = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_2__["removeConnectionDirectiveFromDocument"])(operation.query);
-                supportedCache.set(operation.query, result);
-                supportedCache.set(result, result);
-            }
-            operation.query = result;
-            return forward(operation);
-        });
-        this.link = supportedDirectives.concat(link);
-        this.cache = cache;
-        this.store = new _data_store__WEBPACK_IMPORTED_MODULE_4__["DataStore"](cache);
-        this.disableNetworkFetches = ssrMode || ssrForceFetchDelay > 0;
-        this.queryDeduplication = queryDeduplication;
-        this.ssrMode = ssrMode;
-        this.defaultOptions = defaultOptions || {};
-        if (ssrForceFetchDelay) {
-            setTimeout(function () { return (_this.disableNetworkFetches = false); }, ssrForceFetchDelay);
-        }
-        this.watchQuery = this.watchQuery.bind(this);
-        this.query = this.query.bind(this);
-        this.mutate = this.mutate.bind(this);
-        this.resetStore = this.resetStore.bind(this);
-        this.reFetchObservableQueries = this.reFetchObservableQueries.bind(this);
-        var defaultConnectToDevTools = !Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_2__["isProduction"])() &&
-            typeof window !== 'undefined' &&
-            !window.__APOLLO_CLIENT__;
-        if (typeof connectToDevTools === 'undefined'
-            ? defaultConnectToDevTools
-            : connectToDevTools && typeof window !== 'undefined') {
-            window.__APOLLO_CLIENT__ = this;
-        }
-        if (!hasSuggestedDevtools && !Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_2__["isProduction"])()) {
-            hasSuggestedDevtools = true;
-            if (typeof window !== 'undefined' &&
-                window.document &&
-                window.top === window.self) {
-                if (typeof window.__APOLLO_DEVTOOLS_GLOBAL_HOOK__ === 'undefined') {
-                    if (window.navigator &&
-                        window.navigator.userAgent &&
-                        window.navigator.userAgent.indexOf('Chrome') > -1) {
-                        console.debug('Download the Apollo DevTools ' +
-                            'for a better development experience: ' +
-                            'https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm');
-                    }
-                }
-            }
-        }
-        this.version = _version__WEBPACK_IMPORTED_MODULE_5__["version"];
-        if (clientAwarenessName) {
-            this.clientAwareness.name = clientAwarenessName;
-        }
-        if (clientAwarenessVersion) {
-            this.clientAwareness.version = clientAwarenessVersion;
-        }
-    }
-    ApolloClient.prototype.stop = function () {
-        if (this.queryManager) {
-            this.queryManager.stop();
-        }
-    };
-    ApolloClient.prototype.watchQuery = function (options) {
-        if (this.defaultOptions.watchQuery) {
-            options = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, this.defaultOptions.watchQuery, options);
-        }
-        if (this.disableNetworkFetches &&
-            (options.fetchPolicy === 'network-only' ||
-                options.fetchPolicy === 'cache-and-network')) {
-            options = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, options, { fetchPolicy: 'cache-first' });
-        }
-        return this.initQueryManager().watchQuery(options);
-    };
-    ApolloClient.prototype.query = function (options) {
-        if (this.defaultOptions.query) {
-            options = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, this.defaultOptions.query, options);
-        }
-        if (options.fetchPolicy === 'cache-and-network') {
-            throw new Error('cache-and-network fetchPolicy can only be used with watchQuery');
-        }
-        if (this.disableNetworkFetches && options.fetchPolicy === 'network-only') {
-            options = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, options, { fetchPolicy: 'cache-first' });
-        }
-        return this.initQueryManager().query(options);
-    };
-    ApolloClient.prototype.mutate = function (options) {
-        if (this.defaultOptions.mutate) {
-            options = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, this.defaultOptions.mutate, options);
-        }
-        return this.initQueryManager().mutate(options);
-    };
-    ApolloClient.prototype.subscribe = function (options) {
-        return this.initQueryManager().startGraphQLSubscription(options);
-    };
-    ApolloClient.prototype.readQuery = function (options, optimistic) {
-        if (optimistic === void 0) { optimistic = false; }
-        return this.initProxy().readQuery(options, optimistic);
-    };
-    ApolloClient.prototype.readFragment = function (options, optimistic) {
-        if (optimistic === void 0) { optimistic = false; }
-        return this.initProxy().readFragment(options, optimistic);
-    };
-    ApolloClient.prototype.writeQuery = function (options) {
-        var result = this.initProxy().writeQuery(options);
-        this.initQueryManager().broadcastQueries();
-        return result;
-    };
-    ApolloClient.prototype.writeFragment = function (options) {
-        var result = this.initProxy().writeFragment(options);
-        this.initQueryManager().broadcastQueries();
-        return result;
-    };
-    ApolloClient.prototype.writeData = function (options) {
-        var result = this.initProxy().writeData(options);
-        this.initQueryManager().broadcastQueries();
-        return result;
-    };
-    ApolloClient.prototype.__actionHookForDevTools = function (cb) {
-        this.devToolsHookCb = cb;
-    };
-    ApolloClient.prototype.__requestRaw = function (payload) {
-        return Object(apollo_link__WEBPACK_IMPORTED_MODULE_1__["execute"])(this.link, payload);
-    };
-    ApolloClient.prototype.initQueryManager = function () {
-        var _this = this;
-        if (!this.queryManager) {
-            this.queryManager = new _core_QueryManager__WEBPACK_IMPORTED_MODULE_3__["QueryManager"]({
-                link: this.link,
-                store: this.store,
-                queryDeduplication: this.queryDeduplication,
-                ssrMode: this.ssrMode,
-                clientAwareness: this.clientAwareness,
-                onBroadcast: function () {
-                    if (_this.devToolsHookCb) {
-                        _this.devToolsHookCb({
-                            action: {},
-                            state: {
-                                queries: _this.queryManager
-                                    ? _this.queryManager.queryStore.getStore()
-                                    : {},
-                                mutations: _this.queryManager
-                                    ? _this.queryManager.mutationStore.getStore()
-                                    : {},
-                            },
-                            dataWithOptimisticResults: _this.cache.extract(true),
-                        });
-                    }
-                },
-            });
-        }
-        return this.queryManager;
-    };
-    ApolloClient.prototype.resetStore = function () {
-        var _this = this;
-        return Promise.resolve()
-            .then(function () {
-            return _this.queryManager
-                ? _this.queryManager.clearStore()
-                : Promise.resolve(null);
-        })
-            .then(function () { return Promise.all(_this.resetStoreCallbacks.map(function (fn) { return fn(); })); })
-            .then(function () {
-            return _this.queryManager && _this.queryManager.reFetchObservableQueries
-                ? _this.queryManager.reFetchObservableQueries()
-                : Promise.resolve(null);
-        });
-    };
-    ApolloClient.prototype.clearStore = function () {
-        var _this = this;
-        var queryManager = this.queryManager;
-        return Promise.resolve()
-            .then(function () { return Promise.all(_this.clearStoreCallbacks.map(function (fn) { return fn(); })); })
-            .then(function () {
-            return queryManager ? queryManager.clearStore() : Promise.resolve(null);
-        });
-    };
-    ApolloClient.prototype.onResetStore = function (cb) {
-        var _this = this;
-        this.resetStoreCallbacks.push(cb);
-        return function () {
-            _this.resetStoreCallbacks = _this.resetStoreCallbacks.filter(function (c) { return c !== cb; });
-        };
-    };
-    ApolloClient.prototype.onClearStore = function (cb) {
-        var _this = this;
-        this.clearStoreCallbacks.push(cb);
-        return function () {
-            _this.clearStoreCallbacks = _this.clearStoreCallbacks.filter(function (c) { return c !== cb; });
-        };
-    };
-    ApolloClient.prototype.reFetchObservableQueries = function (includeStandby) {
-        return this.queryManager
-            ? this.queryManager.reFetchObservableQueries(includeStandby)
-            : Promise.resolve(null);
-    };
-    ApolloClient.prototype.extract = function (optimistic) {
-        return this.initProxy().extract(optimistic);
-    };
-    ApolloClient.prototype.restore = function (serializedState) {
-        return this.initProxy().restore(serializedState);
-    };
-    ApolloClient.prototype.initProxy = function () {
-        if (!this.proxy) {
-            this.initQueryManager();
-            this.proxy = this.cache;
-        }
-        return this.proxy;
-    };
-    return ApolloClient;
-}());
-/* harmony default export */ __webpack_exports__["default"] = (ApolloClient);
-//# sourceMappingURL=ApolloClient.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-client/core/ObservableQuery.js":
-/*!************************************************************!*\
-  !*** ./node_modules/apollo-client/core/ObservableQuery.js ***!
-  \************************************************************/
-/*! exports provided: hasError, ObservableQuery */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasError", function() { return hasError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApolloClient", function() { return ApolloClient; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ObservableQuery", function() { return ObservableQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NetworkStatus", function() { return NetworkStatus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isApolloError", function() { return isApolloError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApolloError", function() { return ApolloError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FetchType", function() { return FetchType; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var apollo_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-utilities */ "./node_modules/apollo-utilities/lib/index.js");
-/* harmony import */ var _networkStatus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./networkStatus */ "./node_modules/apollo-client/core/networkStatus.js");
-/* harmony import */ var _util_Observable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/Observable */ "./node_modules/apollo-client/util/Observable.js");
-/* harmony import */ var _errors_ApolloError__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../errors/ApolloError */ "./node_modules/apollo-client/errors/ApolloError.js");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./types */ "./node_modules/apollo-client/core/types.js");
+/* harmony import */ var apollo_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-utilities */ "./node_modules/apollo-utilities/lib/bundle.esm.js");
+/* harmony import */ var apollo_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-link */ "./node_modules/apollo-link/lib/bundle.esm.js");
+/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! symbol-observable */ "./node_modules/symbol-observable/es/index.js");
+/* harmony import */ var ts_invariant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ts-invariant */ "./node_modules/ts-invariant/lib/invariant.esm.js");
+/* harmony import */ var apollo_link_dedup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! apollo-link-dedup */ "./node_modules/apollo-link-dedup/lib/bundle.esm.js");
+/* harmony import */ var graphql_language_visitor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! graphql/language/visitor */ "./node_modules/graphql/language/visitor.mjs");
 
 
 
 
 
+
+
+
+var NetworkStatus;
+(function (NetworkStatus) {
+    NetworkStatus[NetworkStatus["loading"] = 1] = "loading";
+    NetworkStatus[NetworkStatus["setVariables"] = 2] = "setVariables";
+    NetworkStatus[NetworkStatus["fetchMore"] = 3] = "fetchMore";
+    NetworkStatus[NetworkStatus["refetch"] = 4] = "refetch";
+    NetworkStatus[NetworkStatus["poll"] = 6] = "poll";
+    NetworkStatus[NetworkStatus["ready"] = 7] = "ready";
+    NetworkStatus[NetworkStatus["error"] = 8] = "error";
+})(NetworkStatus || (NetworkStatus = {}));
+function isNetworkRequestInFlight(networkStatus) {
+    return networkStatus < 7;
+}
+
+var Observable = (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(Observable, _super);
+    function Observable() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Observable.prototype[symbol_observable__WEBPACK_IMPORTED_MODULE_3__["default"]] = function () {
+        return this;
+    };
+    Observable.prototype['@@observable'] = function () {
+        return this;
+    };
+    return Observable;
+}(apollo_link__WEBPACK_IMPORTED_MODULE_2__["Observable"]));
+
+function isApolloError(err) {
+    return err.hasOwnProperty('graphQLErrors');
+}
+var generateErrorMessage = function (err) {
+    var message = '';
+    if (Array.isArray(err.graphQLErrors) && err.graphQLErrors.length !== 0) {
+        err.graphQLErrors.forEach(function (graphQLError) {
+            var errorMessage = graphQLError
+                ? graphQLError.message
+                : 'Error message not found.';
+            message += "GraphQL error: " + errorMessage + "\n";
+        });
+    }
+    if (err.networkError) {
+        message += 'Network error: ' + err.networkError.message + '\n';
+    }
+    message = message.replace(/\n$/, '');
+    return message;
+};
+var ApolloError = (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(ApolloError, _super);
+    function ApolloError(_a) {
+        var graphQLErrors = _a.graphQLErrors, networkError = _a.networkError, errorMessage = _a.errorMessage, extraInfo = _a.extraInfo;
+        var _this = _super.call(this, errorMessage) || this;
+        _this.graphQLErrors = graphQLErrors || [];
+        _this.networkError = networkError || null;
+        if (!errorMessage) {
+            _this.message = generateErrorMessage(_this);
+        }
+        else {
+            _this.message = errorMessage;
+        }
+        _this.extraInfo = extraInfo;
+        _this.__proto__ = ApolloError.prototype;
+        return _this;
+    }
+    return ApolloError;
+}(Error));
+
+var FetchType;
+(function (FetchType) {
+    FetchType[FetchType["normal"] = 1] = "normal";
+    FetchType[FetchType["refetch"] = 2] = "refetch";
+    FetchType[FetchType["poll"] = 3] = "poll";
+})(FetchType || (FetchType = {}));
 
 var hasError = function (storeValue, policy) {
     if (policy === void 0) { policy = 'none'; }
@@ -1370,20 +1234,18 @@ var hasError = function (storeValue, policy) {
             storeValue.networkError);
 };
 var ObservableQuery = (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ObservableQuery, _super);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(ObservableQuery, _super);
     function ObservableQuery(_a) {
-        var scheduler = _a.scheduler, options = _a.options, _b = _a.shouldSubscribe, shouldSubscribe = _b === void 0 ? true : _b;
+        var queryManager = _a.queryManager, options = _a.options, _b = _a.shouldSubscribe, shouldSubscribe = _b === void 0 ? true : _b;
         var _this = _super.call(this, function (observer) {
             return _this.onSubscribe(observer);
         }) || this;
-        _this.isCurrentlyPolling = false;
         _this.isTornDown = false;
         _this.options = options;
         _this.variables = options.variables || {};
-        _this.queryId = scheduler.queryManager.generateQueryId();
+        _this.queryId = queryManager.generateQueryId();
         _this.shouldSubscribe = shouldSubscribe;
-        _this.scheduler = scheduler;
-        _this.queryManager = scheduler.queryManager;
+        _this.queryManager = queryManager;
         _this.observers = [];
         _this.subscriptionHandles = [];
         return _this;
@@ -1410,29 +1272,43 @@ var ObservableQuery = (function (_super) {
         });
     };
     ObservableQuery.prototype.currentResult = function () {
+        var result = this.getCurrentResult();
+        if (result.data === undefined) {
+            result.data = {};
+        }
+        return result;
+    };
+    ObservableQuery.prototype.getCurrentResult = function () {
         if (this.isTornDown) {
             return {
-                data: this.lastError ? {} : this.lastResult ? this.lastResult.data : {},
+                data: this.lastError
+                    ? undefined
+                    : this.lastResult
+                        ? this.lastResult.data
+                        : undefined,
                 error: this.lastError,
                 loading: false,
-                networkStatus: _networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].error,
+                networkStatus: NetworkStatus.error,
             };
         }
         var queryStoreValue = this.queryManager.queryStore.get(this.queryId);
         if (hasError(queryStoreValue, this.options.errorPolicy)) {
             return {
-                data: {},
+                data: undefined,
                 loading: false,
                 networkStatus: queryStoreValue.networkStatus,
-                error: new _errors_ApolloError__WEBPACK_IMPORTED_MODULE_4__["ApolloError"]({
+                error: new ApolloError({
                     graphQLErrors: queryStoreValue.graphQLErrors,
                     networkError: queryStoreValue.networkError,
                 }),
             };
         }
+        if (queryStoreValue && queryStoreValue.variables) {
+            this.options.variables = Object.assign({}, this.options.variables, queryStoreValue.variables);
+        }
         var _a = this.queryManager.getCurrentQueryResult(this), data = _a.data, partial = _a.partial;
         var queryLoading = !queryStoreValue ||
-            queryStoreValue.networkStatus === _networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].loading;
+            queryStoreValue.networkStatus === NetworkStatus.loading;
         var loading = (this.options.fetchPolicy === 'network-only' && queryLoading) ||
             (partial && this.options.fetchPolicy !== 'cache-only');
         var networkStatus;
@@ -1440,11 +1316,11 @@ var ObservableQuery = (function (_super) {
             networkStatus = queryStoreValue.networkStatus;
         }
         else {
-            networkStatus = loading ? _networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].loading : _networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].ready;
+            networkStatus = loading ? NetworkStatus.loading : NetworkStatus.ready;
         }
         var result = {
             data: data,
-            loading: Object(_networkStatus__WEBPACK_IMPORTED_MODULE_2__["isNetworkRequestInFlight"])(networkStatus),
+            loading: isNetworkRequestInFlight(networkStatus),
             networkStatus: networkStatus,
         };
         if (queryStoreValue &&
@@ -1453,10 +1329,10 @@ var ObservableQuery = (function (_super) {
             result.errors = queryStoreValue.graphQLErrors;
         }
         if (!partial) {
-            this.lastResult = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, result, { stale: false });
+            this.lastResult = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, result, { stale: false });
             this.lastResultSnapshot = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["cloneDeep"])(this.lastResult);
         }
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, result, { partial: partial });
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, result, { partial: partial });
     };
     ObservableQuery.prototype.isDifferentFromLastResult = function (newResult) {
         var snapshot = this.lastResultSnapshot;
@@ -1490,16 +1366,14 @@ var ObservableQuery = (function (_super) {
             this.options.variables = Object.assign({}, this.options.variables, this.variables);
         }
         var isNetworkFetchPolicy = fetchPolicy === 'network-only' || fetchPolicy === 'no-cache';
-        var combinedOptions = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, this.options, { fetchPolicy: isNetworkFetchPolicy ? fetchPolicy : 'network-only' });
+        var combinedOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options, { fetchPolicy: isNetworkFetchPolicy ? fetchPolicy : 'network-only' });
         return this.queryManager
-            .fetchQuery(this.queryId, combinedOptions, _types__WEBPACK_IMPORTED_MODULE_5__["FetchType"].refetch)
+            .fetchQuery(this.queryId, combinedOptions, FetchType.refetch)
             .then(function (result) { return result; });
     };
     ObservableQuery.prototype.fetchMore = function (fetchMoreOptions) {
         var _this = this;
-        if (!fetchMoreOptions.updateQuery) {
-            throw new Error('updateQuery option is required. This function defines how to update the query data with the new results.');
-        }
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(fetchMoreOptions.updateQuery, 'updateQuery option is required. This function defines how to update the query data with the new results.');
         var combinedOptions;
         return Promise.resolve()
             .then(function () {
@@ -1508,10 +1382,10 @@ var ObservableQuery = (function (_super) {
                 combinedOptions = fetchMoreOptions;
             }
             else {
-                combinedOptions = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, _this.options, fetchMoreOptions, { variables: Object.assign({}, _this.variables, fetchMoreOptions.variables) });
+                combinedOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, _this.options, fetchMoreOptions, { variables: Object.assign({}, _this.variables, fetchMoreOptions.variables) });
             }
             combinedOptions.fetchPolicy = 'network-only';
-            return _this.queryManager.fetchQuery(qid, combinedOptions, _types__WEBPACK_IMPORTED_MODULE_5__["FetchType"].normal, _this.queryId);
+            return _this.queryManager.fetchQuery(qid, combinedOptions, FetchType.normal, _this.queryId);
         })
             .then(function (fetchMoreResult) {
             _this.updateQuery(function (previousResult) {
@@ -1595,7 +1469,7 @@ var ObservableQuery = (function (_super) {
                 return new Promise(function (resolve) { return resolve(); });
             }
             return this.queryManager
-                .fetchQuery(this.queryId, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, this.options, { variables: this.variables }))
+                .fetchQuery(this.queryId, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options, { variables: this.variables }))
                 .then(function (result) { return result; });
         }
     };
@@ -1610,24 +1484,13 @@ var ObservableQuery = (function (_super) {
         }
     };
     ObservableQuery.prototype.stopPolling = function () {
-        if (this.isCurrentlyPolling) {
-            this.scheduler.stopPollingQuery(this.queryId);
-            this.options.pollInterval = undefined;
-            this.isCurrentlyPolling = false;
-        }
+        this.queryManager.stopPollingQuery(this.queryId);
+        this.options.pollInterval = undefined;
     };
     ObservableQuery.prototype.startPolling = function (pollInterval) {
-        if (this.options.fetchPolicy === 'cache-first' ||
-            this.options.fetchPolicy === 'cache-only') {
-            throw new Error('Queries that specify the cache-first and cache-only fetchPolicies cannot also be polling queries.');
-        }
-        if (this.isCurrentlyPolling) {
-            this.scheduler.stopPollingQuery(this.queryId);
-            this.isCurrentlyPolling = false;
-        }
+        assertNotCacheFirstOrOnly(this);
         this.options.pollInterval = pollInterval;
-        this.isCurrentlyPolling = true;
-        this.scheduler.startPollingQuery(this.options, this.queryId);
+        this.queryManager.startPollingQuery(this.options, this.queryId);
     };
     ObservableQuery.prototype.onSubscribe = function (observer) {
         var _this = this;
@@ -1658,12 +1521,8 @@ var ObservableQuery = (function (_super) {
             this.queryManager.addObservableQuery(this.queryId, this);
         }
         if (!!this.options.pollInterval) {
-            if (this.options.fetchPolicy === 'cache-first' ||
-                this.options.fetchPolicy === 'cache-only') {
-                throw new Error('Queries that specify the cache-first and cache-only fetchPolicies cannot also be polling queries.');
-            }
-            this.isCurrentlyPolling = true;
-            this.scheduler.startPollingQuery(this.options, this.queryId);
+            assertNotCacheFirstOrOnly(this);
+            this.queryManager.startPollingQuery(this.options, this.queryId);
         }
         var observer = {
             next: function (result) {
@@ -1680,10 +1539,7 @@ var ObservableQuery = (function (_super) {
     };
     ObservableQuery.prototype.tearDownQuery = function () {
         this.isTornDown = true;
-        if (this.isCurrentlyPolling) {
-            this.scheduler.stopPollingQuery(this.queryId);
-            this.isCurrentlyPolling = false;
-        }
+        this.queryManager.stopPollingQuery(this.queryId);
         this.subscriptionHandles.forEach(function (sub) { return sub.unsubscribe(); });
         this.subscriptionHandles = [];
         this.queryManager.removeObservableQuery(this.queryId);
@@ -1691,452 +1547,941 @@ var ObservableQuery = (function (_super) {
         this.observers = [];
     };
     return ObservableQuery;
-}(_util_Observable__WEBPACK_IMPORTED_MODULE_3__["Observable"]));
+}(Observable));
+function assertNotCacheFirstOrOnly(obsQuery) {
+    var fetchPolicy = obsQuery.options.fetchPolicy;
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(fetchPolicy !== 'cache-first' && fetchPolicy !== 'cache-only', 'Queries that specify the cache-first and cache-only fetchPolicies cannot also be polling queries.');
+}
 
-//# sourceMappingURL=ObservableQuery.js.map
+var MutationStore = (function () {
+    function MutationStore() {
+        this.store = {};
+    }
+    MutationStore.prototype.getStore = function () {
+        return this.store;
+    };
+    MutationStore.prototype.get = function (mutationId) {
+        return this.store[mutationId];
+    };
+    MutationStore.prototype.initMutation = function (mutationId, mutation, variables) {
+        this.store[mutationId] = {
+            mutation: mutation,
+            variables: variables || {},
+            loading: true,
+            error: null,
+        };
+    };
+    MutationStore.prototype.markMutationError = function (mutationId, error) {
+        var mutation = this.store[mutationId];
+        if (!mutation) {
+            return;
+        }
+        mutation.loading = false;
+        mutation.error = error;
+    };
+    MutationStore.prototype.markMutationResult = function (mutationId) {
+        var mutation = this.store[mutationId];
+        if (!mutation) {
+            return;
+        }
+        mutation.loading = false;
+        mutation.error = null;
+    };
+    MutationStore.prototype.reset = function () {
+        this.store = {};
+    };
+    return MutationStore;
+}());
 
-/***/ }),
+var QueryStore = (function () {
+    function QueryStore() {
+        this.store = {};
+    }
+    QueryStore.prototype.getStore = function () {
+        return this.store;
+    };
+    QueryStore.prototype.get = function (queryId) {
+        return this.store[queryId];
+    };
+    QueryStore.prototype.initQuery = function (query) {
+        var previousQuery = this.store[query.queryId];
+        if (previousQuery &&
+            previousQuery.document !== query.document &&
+            !Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["isEqual"])(previousQuery.document, query.document)) {
+            throw  false ? undefined : new ts_invariant__WEBPACK_IMPORTED_MODULE_4__["InvariantError"]('Internal Error: may not update existing query string in store');
+        }
+        var isSetVariables = false;
+        var previousVariables = null;
+        if (query.storePreviousVariables &&
+            previousQuery &&
+            previousQuery.networkStatus !== NetworkStatus.loading) {
+            if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["isEqual"])(previousQuery.variables, query.variables)) {
+                isSetVariables = true;
+                previousVariables = previousQuery.variables;
+            }
+        }
+        var networkStatus;
+        if (isSetVariables) {
+            networkStatus = NetworkStatus.setVariables;
+        }
+        else if (query.isPoll) {
+            networkStatus = NetworkStatus.poll;
+        }
+        else if (query.isRefetch) {
+            networkStatus = NetworkStatus.refetch;
+        }
+        else {
+            networkStatus = NetworkStatus.loading;
+        }
+        var graphQLErrors = [];
+        if (previousQuery && previousQuery.graphQLErrors) {
+            graphQLErrors = previousQuery.graphQLErrors;
+        }
+        this.store[query.queryId] = {
+            document: query.document,
+            variables: query.variables,
+            previousVariables: previousVariables,
+            networkError: null,
+            graphQLErrors: graphQLErrors,
+            networkStatus: networkStatus,
+            metadata: query.metadata,
+        };
+        if (typeof query.fetchMoreForQueryId === 'string' &&
+            this.store[query.fetchMoreForQueryId]) {
+            this.store[query.fetchMoreForQueryId].networkStatus =
+                NetworkStatus.fetchMore;
+        }
+    };
+    QueryStore.prototype.markQueryResult = function (queryId, result, fetchMoreForQueryId) {
+        if (!this.store || !this.store[queryId])
+            return;
+        this.store[queryId].networkError = null;
+        this.store[queryId].graphQLErrors =
+            result.errors && result.errors.length ? result.errors : [];
+        this.store[queryId].previousVariables = null;
+        this.store[queryId].networkStatus = NetworkStatus.ready;
+        if (typeof fetchMoreForQueryId === 'string' &&
+            this.store[fetchMoreForQueryId]) {
+            this.store[fetchMoreForQueryId].networkStatus = NetworkStatus.ready;
+        }
+    };
+    QueryStore.prototype.markQueryError = function (queryId, error, fetchMoreForQueryId) {
+        if (!this.store || !this.store[queryId])
+            return;
+        this.store[queryId].networkError = error;
+        this.store[queryId].networkStatus = NetworkStatus.error;
+        if (typeof fetchMoreForQueryId === 'string') {
+            this.markQueryResultClient(fetchMoreForQueryId, true);
+        }
+    };
+    QueryStore.prototype.markQueryResultClient = function (queryId, complete) {
+        if (!this.store || !this.store[queryId])
+            return;
+        this.store[queryId].networkError = null;
+        this.store[queryId].previousVariables = null;
+        this.store[queryId].networkStatus = complete
+            ? NetworkStatus.ready
+            : NetworkStatus.loading;
+    };
+    QueryStore.prototype.stopQuery = function (queryId) {
+        delete this.store[queryId];
+    };
+    QueryStore.prototype.reset = function (observableQueryIds) {
+        var _this = this;
+        this.store = Object.keys(this.store)
+            .filter(function (queryId) {
+            return observableQueryIds.indexOf(queryId) > -1;
+        })
+            .reduce(function (res, key) {
+            res[key] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, _this.store[key], { networkStatus: NetworkStatus.loading });
+            return res;
+        }, {});
+    };
+    return QueryStore;
+}());
 
-/***/ "./node_modules/apollo-client/core/QueryManager.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/apollo-client/core/QueryManager.js ***!
-  \*********************************************************/
-/*! exports provided: QueryManager */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QueryManager", function() { return QueryManager; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var apollo_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-link */ "./node_modules/apollo-link/lib/bundle.esm.js");
-/* harmony import */ var apollo_link_dedup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-link-dedup */ "./node_modules/apollo-link-dedup/lib/bundle.esm.js");
-/* harmony import */ var apollo_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-utilities */ "./node_modules/apollo-utilities/lib/index.js");
-/* harmony import */ var _scheduler_scheduler__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scheduler/scheduler */ "./node_modules/apollo-client/scheduler/scheduler.js");
-/* harmony import */ var _errors_ApolloError__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../errors/ApolloError */ "./node_modules/apollo-client/errors/ApolloError.js");
-/* harmony import */ var _util_Observable__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/Observable */ "./node_modules/apollo-client/util/Observable.js");
-/* harmony import */ var _data_mutations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../data/mutations */ "./node_modules/apollo-client/data/mutations.js");
-/* harmony import */ var _data_queries__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../data/queries */ "./node_modules/apollo-client/data/queries.js");
-/* harmony import */ var _ObservableQuery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ObservableQuery */ "./node_modules/apollo-client/core/ObservableQuery.js");
-/* harmony import */ var _networkStatus__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./networkStatus */ "./node_modules/apollo-client/core/networkStatus.js");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./types */ "./node_modules/apollo-client/core/types.js");
-
-
-
-
-
-
-
-
-
-
-
-
+var LocalState = (function () {
+    function LocalState(_a) {
+        var cache = _a.cache, client = _a.client, resolvers = _a.resolvers, fragmentMatcher = _a.fragmentMatcher;
+        this.cache = cache;
+        if (client) {
+            this.client = client;
+        }
+        if (resolvers) {
+            this.addResolvers(resolvers);
+        }
+        if (fragmentMatcher) {
+            this.setFragmentMatcher(fragmentMatcher);
+        }
+    }
+    LocalState.prototype.addResolvers = function (resolvers) {
+        var _this = this;
+        this.resolvers = this.resolvers || {};
+        if (Array.isArray(resolvers)) {
+            resolvers.forEach(function (resolverGroup) {
+                _this.resolvers = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["mergeDeep"])(_this.resolvers, resolverGroup);
+            });
+        }
+        else {
+            this.resolvers = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["mergeDeep"])(this.resolvers, resolvers);
+        }
+    };
+    LocalState.prototype.setResolvers = function (resolvers) {
+        this.resolvers = {};
+        this.addResolvers(resolvers);
+    };
+    LocalState.prototype.getResolvers = function () {
+        return this.resolvers || {};
+    };
+    LocalState.prototype.runResolvers = function (_a) {
+        var document = _a.document, remoteResult = _a.remoteResult, context = _a.context, variables = _a.variables, _b = _a.onlyRunForcedResolvers, onlyRunForcedResolvers = _b === void 0 ? false : _b;
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_c) {
+                if (document) {
+                    return [2, this.resolveDocument(document, remoteResult.data, context, variables, this.fragmentMatcher, onlyRunForcedResolvers).then(function (localResult) { return (Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, remoteResult, { data: localResult.result })); })];
+                }
+                return [2, remoteResult];
+            });
+        });
+    };
+    LocalState.prototype.setFragmentMatcher = function (fragmentMatcher) {
+        this.fragmentMatcher = fragmentMatcher;
+    };
+    LocalState.prototype.getFragmentMatcher = function () {
+        return this.fragmentMatcher;
+    };
+    LocalState.prototype.clientQuery = function (document) {
+        if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["hasDirectives"])(['client'], document)) {
+            if (this.resolvers) {
+                return document;
+            }
+            "development" === "production" || ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"].warn('Found @client directives in query but no client resolvers were specified. ' +
+                'You can now pass apollo-link-state resolvers to the ApolloClient constructor.');
+        }
+        return null;
+    };
+    LocalState.prototype.serverQuery = function (document) {
+        return this.resolvers ? Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["removeClientSetsFromDocument"])(document) : document;
+    };
+    LocalState.prototype.prepareContext = function (context) {
+        if (context === void 0) { context = {}; }
+        var cache = this.cache;
+        var newContext = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context, { cache: cache, getCacheKey: function (obj) {
+                if (cache.config) {
+                    return cache.config.dataIdFromObject(obj);
+                }
+                else {
+                     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(false, 'To use context.getCacheKey, you need to use a cache that has ' +
+                        'a configurable dataIdFromObject, like apollo-cache-inmemory.');
+                }
+            } });
+        return newContext;
+    };
+    LocalState.prototype.addExportedVariables = function (document, variables, context) {
+        if (variables === void 0) { variables = {}; }
+        if (context === void 0) { context = {}; }
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                if (document) {
+                    return [2, this.resolveDocument(document, this.buildRootValueFromCache(document, variables) || {}, this.prepareContext(context), variables).then(function (data) { return (Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, variables, data.exportedVariables)); })];
+                }
+                return [2, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, variables)];
+            });
+        });
+    };
+    LocalState.prototype.shouldForceResolvers = function (document) {
+        var forceResolvers = false;
+        Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_6__["visit"])(document, {
+            Directive: {
+                enter: function (node) {
+                    if (node.name.value === 'client' && node.arguments) {
+                        forceResolvers = node.arguments.some(function (arg) {
+                            return arg.name.value === 'always' &&
+                                arg.value.kind === 'BooleanValue' &&
+                                arg.value.value === true;
+                        });
+                        if (forceResolvers) {
+                            return graphql_language_visitor__WEBPACK_IMPORTED_MODULE_6__["BREAK"];
+                        }
+                    }
+                },
+            },
+        });
+        return forceResolvers;
+    };
+    LocalState.prototype.shouldForceResolver = function (field) {
+        return this.shouldForceResolvers(field);
+    };
+    LocalState.prototype.buildRootValueFromCache = function (document, variables) {
+        return this.cache.diff({
+            query: Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["buildQueryFromSelectionSet"])(document),
+            variables: variables,
+            optimistic: false,
+        }).result;
+    };
+    LocalState.prototype.resolveDocument = function (document, rootValue, context, variables, fragmentMatcher, onlyRunForcedResolvers) {
+        if (context === void 0) { context = {}; }
+        if (variables === void 0) { variables = {}; }
+        if (fragmentMatcher === void 0) { fragmentMatcher = function () { return true; }; }
+        if (onlyRunForcedResolvers === void 0) { onlyRunForcedResolvers = false; }
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            var mainDefinition, fragments, fragmentMap, definitionOperation, defaultOperationType, _a, cache, client, execContext;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_b) {
+                mainDefinition = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getMainDefinition"])(document);
+                fragments = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getFragmentDefinitions"])(document);
+                fragmentMap = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["createFragmentMap"])(fragments);
+                definitionOperation = mainDefinition
+                    .operation;
+                defaultOperationType = definitionOperation
+                    ? capitalizeFirstLetter(definitionOperation)
+                    : 'Query';
+                _a = this, cache = _a.cache, client = _a.client;
+                execContext = {
+                    fragmentMap: fragmentMap,
+                    context: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context, { cache: cache,
+                        client: client }),
+                    variables: variables,
+                    fragmentMatcher: fragmentMatcher,
+                    defaultOperationType: defaultOperationType,
+                    exportedVariables: {},
+                    onlyRunForcedResolvers: onlyRunForcedResolvers,
+                };
+                return [2, this.resolveSelectionSet(mainDefinition.selectionSet, rootValue, execContext).then(function (result) { return ({
+                        result: result,
+                        exportedVariables: execContext.exportedVariables,
+                    }); })];
+            });
+        });
+    };
+    LocalState.prototype.resolveSelectionSet = function (selectionSet, rootValue, execContext) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            var fragmentMap, context, variables, resultsToMerge, execute;
+            var _this = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                fragmentMap = execContext.fragmentMap, context = execContext.context, variables = execContext.variables;
+                resultsToMerge = [rootValue];
+                execute = function (selection) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+                    var fragment, typeCondition;
+                    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                        if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["shouldInclude"])(selection, variables)) {
+                            return [2];
+                        }
+                        if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["isField"])(selection)) {
+                            return [2, this.resolveField(selection, rootValue, execContext).then(function (fieldResult) {
+                                    var _a;
+                                    if (typeof fieldResult !== 'undefined') {
+                                        resultsToMerge.push((_a = {},
+                                            _a[Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["resultKeyNameFromField"])(selection)] = fieldResult,
+                                            _a));
+                                    }
+                                })];
+                        }
+                        if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["isInlineFragment"])(selection)) {
+                            fragment = selection;
+                        }
+                        else {
+                            fragment = fragmentMap[selection.name.value];
+                             false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(fragment, "No fragment named " + selection.name.value);
+                        }
+                        if (fragment && fragment.typeCondition) {
+                            typeCondition = fragment.typeCondition.name.value;
+                            if (execContext.fragmentMatcher(rootValue, typeCondition, context)) {
+                                return [2, this.resolveSelectionSet(fragment.selectionSet, rootValue, execContext).then(function (fragmentResult) {
+                                        resultsToMerge.push(fragmentResult);
+                                    })];
+                            }
+                        }
+                        return [2];
+                    });
+                }); };
+                return [2, Promise.all(selectionSet.selections.map(execute)).then(function () {
+                        return Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["mergeDeepArray"])(resultsToMerge);
+                    })];
+            });
+        });
+    };
+    LocalState.prototype.resolveField = function (field, rootValue, execContext) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            var variables, fieldName, aliasedFieldName, aliasUsed, defaultResult, resultPromise, resolverType, resolverMap, resolve;
+            var _this = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                variables = execContext.variables;
+                fieldName = field.name.value;
+                aliasedFieldName = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["resultKeyNameFromField"])(field);
+                aliasUsed = fieldName !== aliasedFieldName;
+                defaultResult = rootValue[aliasedFieldName] || rootValue[fieldName];
+                resultPromise = Promise.resolve(defaultResult);
+                if (!execContext.onlyRunForcedResolvers ||
+                    this.shouldForceResolver(field)) {
+                    resolverType = rootValue.__typename || execContext.defaultOperationType;
+                    resolverMap = this.resolvers && this.resolvers[resolverType];
+                    if (resolverMap) {
+                        resolve = resolverMap[aliasUsed ? fieldName : aliasedFieldName];
+                        if (resolve) {
+                            resultPromise = Promise.resolve(resolve(rootValue, Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["argumentsObjectFromField"])(field, variables), execContext.context, { field: field }));
+                        }
+                    }
+                }
+                return [2, resultPromise.then(function (result) {
+                        if (result === void 0) { result = defaultResult; }
+                        if (field.directives) {
+                            field.directives.forEach(function (directive) {
+                                if (directive.name.value === 'export' && directive.arguments) {
+                                    directive.arguments.forEach(function (arg) {
+                                        if (arg.name.value === 'as' && arg.value.kind === 'StringValue') {
+                                            execContext.exportedVariables[arg.value.value] = result;
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                        if (!field.selectionSet) {
+                            return result;
+                        }
+                        if (result == null) {
+                            return result;
+                        }
+                        if (Array.isArray(result)) {
+                            return _this.resolveSubSelectedArray(field, result, execContext);
+                        }
+                        if (field.selectionSet) {
+                            return _this.resolveSelectionSet(field.selectionSet, result, execContext);
+                        }
+                    })];
+            });
+        });
+    };
+    LocalState.prototype.resolveSubSelectedArray = function (field, result, execContext) {
+        var _this = this;
+        return Promise.all(result.map(function (item) {
+            if (item === null) {
+                return null;
+            }
+            if (Array.isArray(item)) {
+                return _this.resolveSubSelectedArray(field, item, execContext);
+            }
+            if (field.selectionSet) {
+                return _this.resolveSelectionSet(field.selectionSet, item, execContext);
+            }
+        }));
+    };
+    return LocalState;
+}());
 
 var QueryManager = (function () {
     function QueryManager(_a) {
-        var link = _a.link, _b = _a.queryDeduplication, queryDeduplication = _b === void 0 ? false : _b, store = _a.store, _c = _a.onBroadcast, onBroadcast = _c === void 0 ? function () { return undefined; } : _c, _d = _a.ssrMode, ssrMode = _d === void 0 ? false : _d, _e = _a.clientAwareness, clientAwareness = _e === void 0 ? {} : _e;
-        this.mutationStore = new _data_mutations__WEBPACK_IMPORTED_MODULE_7__["MutationStore"]();
-        this.queryStore = new _data_queries__WEBPACK_IMPORTED_MODULE_8__["QueryStore"]();
+        var link = _a.link, _b = _a.queryDeduplication, queryDeduplication = _b === void 0 ? false : _b, store = _a.store, _c = _a.onBroadcast, onBroadcast = _c === void 0 ? function () { return undefined; } : _c, _d = _a.ssrMode, ssrMode = _d === void 0 ? false : _d, _e = _a.clientAwareness, clientAwareness = _e === void 0 ? {} : _e, localState = _a.localState;
+        this.mutationStore = new MutationStore();
+        this.queryStore = new QueryStore();
         this.clientAwareness = {};
         this.idCounter = 1;
         this.queries = new Map();
-        this.fetchQueryRejectFns = new Set();
+        this.fetchQueryRejectFns = new Map();
         this.queryIdsByName = {};
+        this.pollingInfoByQueryId = new Map();
+        this.nextPoll = null;
         this.link = link;
-        this.deduplicator = apollo_link__WEBPACK_IMPORTED_MODULE_1__["ApolloLink"].from([new apollo_link_dedup__WEBPACK_IMPORTED_MODULE_2__["DedupLink"](), link]);
+        this.deduplicator = apollo_link__WEBPACK_IMPORTED_MODULE_2__["ApolloLink"].from([new apollo_link_dedup__WEBPACK_IMPORTED_MODULE_5__["DedupLink"](), link]);
         this.queryDeduplication = queryDeduplication;
         this.dataStore = store;
         this.onBroadcast = onBroadcast;
         this.clientAwareness = clientAwareness;
-        this.scheduler = new _scheduler_scheduler__WEBPACK_IMPORTED_MODULE_4__["QueryScheduler"]({ queryManager: this, ssrMode: ssrMode });
+        this.localState = localState || new LocalState({ cache: store.getCache() });
+        this.ssrMode = ssrMode;
     }
     QueryManager.prototype.stop = function () {
-        this.scheduler.stop();
+        var _this = this;
+        this.queries.forEach(function (_info, queryId) {
+            _this.stopQueryNoBroadcast(queryId);
+        });
         this.fetchQueryRejectFns.forEach(function (reject) {
             reject(new Error('QueryManager stopped while query was in flight'));
         });
     };
     QueryManager.prototype.mutate = function (_a) {
-        var _this = this;
         var mutation = _a.mutation, variables = _a.variables, optimisticResponse = _a.optimisticResponse, updateQueriesByName = _a.updateQueries, _b = _a.refetchQueries, refetchQueries = _b === void 0 ? [] : _b, _c = _a.awaitRefetchQueries, awaitRefetchQueries = _c === void 0 ? false : _c, updateWithProxyFn = _a.update, _d = _a.errorPolicy, errorPolicy = _d === void 0 ? 'none' : _d, fetchPolicy = _a.fetchPolicy, _e = _a.context, context = _e === void 0 ? {} : _e;
-        if (!mutation) {
-            throw new Error('mutation option is required. You must specify your GraphQL document in the mutation option.');
-        }
-        if (fetchPolicy && fetchPolicy !== 'no-cache') {
-            throw new Error("fetchPolicy for mutations currently only supports the 'no-cache' policy");
-        }
-        var mutationId = this.generateQueryId();
-        var cache = this.dataStore.getCache();
-        (mutation = cache.transformDocument(mutation)),
-            (variables = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["assign"])({}, Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["getDefaultValues"])(Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["getMutationDefinition"])(mutation)), variables));
-        this.setQuery(mutationId, function () { return ({ document: mutation }); });
-        var generateUpdateQueriesInfo = function () {
-            var ret = {};
-            if (updateQueriesByName) {
-                Object.keys(updateQueriesByName).forEach(function (queryName) {
-                    return (_this.queryIdsByName[queryName] || []).forEach(function (queryId) {
-                        ret[queryId] = {
-                            updater: updateQueriesByName[queryName],
-                            query: _this.queryStore.get(queryId),
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            var mutationId, cache, generateUpdateQueriesInfo, updatedVariables, _f;
+            var _this = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_g) {
+                switch (_g.label) {
+                    case 0:
+                         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(mutation, 'mutation option is required. You must specify your GraphQL document in the mutation option.');
+                         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(!fetchPolicy || fetchPolicy === 'no-cache', "fetchPolicy for mutations currently only supports the 'no-cache' policy");
+                        mutationId = this.generateQueryId();
+                        cache = this.dataStore.getCache();
+                        (mutation = cache.transformDocument(mutation)),
+                            (variables = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["assign"])({}, Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getDefaultValues"])(Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getMutationDefinition"])(mutation)), variables));
+                        this.setQuery(mutationId, function () { return ({ document: mutation }); });
+                        generateUpdateQueriesInfo = function () {
+                            var ret = {};
+                            if (updateQueriesByName) {
+                                Object.keys(updateQueriesByName).forEach(function (queryName) {
+                                    return (_this.queryIdsByName[queryName] || []).forEach(function (queryId) {
+                                        ret[queryId] = {
+                                            updater: updateQueriesByName[queryName],
+                                            query: _this.queryStore.get(queryId),
+                                        };
+                                    });
+                                });
+                            }
+                            return ret;
                         };
-                    });
-                });
-            }
-            return ret;
-        };
-        this.mutationStore.initMutation(mutationId, mutation, variables);
-        this.dataStore.markMutationInit({
-            mutationId: mutationId,
-            document: mutation,
-            variables: variables || {},
-            updateQueries: generateUpdateQueriesInfo(),
-            update: updateWithProxyFn,
-            optimisticResponse: optimisticResponse,
-        });
-        this.broadcastQueries();
-        return new Promise(function (resolve, reject) {
-            var storeResult;
-            var error;
-            var operation = _this.buildOperationForLink(mutation, variables, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, context, { optimisticResponse: optimisticResponse }));
-            var completeMutation = function () {
-                if (error) {
-                    _this.mutationStore.markMutationError(mutationId, error);
-                }
-                _this.dataStore.markMutationComplete({
-                    mutationId: mutationId,
-                    optimisticResponse: optimisticResponse,
-                });
-                _this.broadcastQueries();
-                if (error) {
-                    return Promise.reject(error);
-                }
-                if (typeof refetchQueries === 'function') {
-                    refetchQueries = refetchQueries(storeResult);
-                }
-                var refetchQueryPromises = [];
-                for (var _i = 0, refetchQueries_1 = refetchQueries; _i < refetchQueries_1.length; _i++) {
-                    var refetchQuery = refetchQueries_1[_i];
-                    if (typeof refetchQuery === 'string') {
-                        var promise = _this.refetchQueryByName(refetchQuery);
-                        if (promise) {
-                            refetchQueryPromises.push(promise);
-                        }
-                        continue;
-                    }
-                    var queryOptions = {
-                        query: refetchQuery.query,
-                        variables: refetchQuery.variables,
-                        fetchPolicy: 'network-only',
-                    };
-                    if (refetchQuery.context) {
-                        queryOptions.context = refetchQuery.context;
-                    }
-                    refetchQueryPromises.push(_this.query(queryOptions));
-                }
-                return Promise.all(awaitRefetchQueries ? refetchQueryPromises : []).then(function () {
-                    _this.setQuery(mutationId, function () { return ({ document: undefined }); });
-                    if (errorPolicy === 'ignore' &&
-                        storeResult &&
-                        Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["graphQLResultHasError"])(storeResult)) {
-                        delete storeResult.errors;
-                    }
-                    return storeResult;
-                });
-            };
-            Object(apollo_link__WEBPACK_IMPORTED_MODULE_1__["execute"])(_this.link, operation).subscribe({
-                next: function (result) {
-                    if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["graphQLResultHasError"])(result) && errorPolicy === 'none') {
-                        error = new _errors_ApolloError__WEBPACK_IMPORTED_MODULE_5__["ApolloError"]({
-                            graphQLErrors: result.errors,
-                        });
-                        return;
-                    }
-                    _this.mutationStore.markMutationResult(mutationId);
-                    if (fetchPolicy !== 'no-cache') {
-                        _this.dataStore.markMutationResult({
+                        if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["hasClientExports"])(mutation)) return [3, 2];
+                        return [4, this.localState.addExportedVariables(mutation, variables, context)];
+                    case 1:
+                        _f = _g.sent();
+                        return [3, 3];
+                    case 2:
+                        _f = variables;
+                        _g.label = 3;
+                    case 3:
+                        updatedVariables = _f;
+                        this.mutationStore.initMutation(mutationId, mutation, updatedVariables);
+                        this.dataStore.markMutationInit({
                             mutationId: mutationId,
-                            result: result,
                             document: mutation,
-                            variables: variables || {},
+                            variables: updatedVariables || {},
                             updateQueries: generateUpdateQueriesInfo(),
                             update: updateWithProxyFn,
+                            optimisticResponse: optimisticResponse,
                         });
-                    }
-                    storeResult = result;
-                },
-                error: function (err) {
-                    _this.mutationStore.markMutationError(mutationId, err);
-                    _this.dataStore.markMutationComplete({
-                        mutationId: mutationId,
-                        optimisticResponse: optimisticResponse,
-                    });
-                    _this.broadcastQueries();
-                    _this.setQuery(mutationId, function () { return ({ document: undefined }); });
-                    reject(new _errors_ApolloError__WEBPACK_IMPORTED_MODULE_5__["ApolloError"]({
-                        networkError: err,
-                    }));
-                },
-                complete: function () { return completeMutation().then(resolve, reject); },
+                        this.broadcastQueries();
+                        return [2, new Promise(function (resolve, reject) {
+                                var storeResult;
+                                var error;
+                                var operation = _this.buildOperationForLink(mutation, updatedVariables, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context, { optimisticResponse: optimisticResponse }));
+                                var completeMutation = function () {
+                                    if (error) {
+                                        _this.mutationStore.markMutationError(mutationId, error);
+                                    }
+                                    _this.dataStore.markMutationComplete({
+                                        mutationId: mutationId,
+                                        optimisticResponse: optimisticResponse,
+                                    });
+                                    _this.broadcastQueries();
+                                    if (error) {
+                                        return Promise.reject(error);
+                                    }
+                                    if (typeof refetchQueries === 'function') {
+                                        refetchQueries = refetchQueries(storeResult);
+                                    }
+                                    var refetchQueryPromises = [];
+                                    for (var _i = 0, refetchQueries_1 = refetchQueries; _i < refetchQueries_1.length; _i++) {
+                                        var refetchQuery = refetchQueries_1[_i];
+                                        if (typeof refetchQuery === 'string') {
+                                            var promise = _this.refetchQueryByName(refetchQuery);
+                                            if (promise) {
+                                                refetchQueryPromises.push(promise);
+                                            }
+                                            continue;
+                                        }
+                                        var queryOptions = {
+                                            query: refetchQuery.query,
+                                            variables: refetchQuery.variables,
+                                            fetchPolicy: 'network-only',
+                                        };
+                                        if (refetchQuery.context) {
+                                            queryOptions.context = refetchQuery.context;
+                                        }
+                                        refetchQueryPromises.push(_this.query(queryOptions));
+                                    }
+                                    return Promise.all(awaitRefetchQueries ? refetchQueryPromises : []).then(function () {
+                                        _this.setQuery(mutationId, function () { return ({ document: null }); });
+                                        if (errorPolicy === 'ignore' &&
+                                            storeResult &&
+                                            Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["graphQLResultHasError"])(storeResult)) {
+                                            delete storeResult.errors;
+                                        }
+                                        return storeResult;
+                                    });
+                                };
+                                var clientQuery = _this.localState.clientQuery(operation.query);
+                                var serverQuery = _this.localState.serverQuery(operation.query);
+                                if (serverQuery) {
+                                    operation.query = serverQuery;
+                                }
+                                var obs = serverQuery
+                                    ? Object(apollo_link__WEBPACK_IMPORTED_MODULE_2__["execute"])(_this.link, operation)
+                                    : Observable.of({
+                                        data: {},
+                                    });
+                                var self = _this;
+                                var complete = false;
+                                var handlingNext = false;
+                                obs.subscribe({
+                                    next: function (result) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+                                        var updatedResult, context, variables;
+                                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                                            switch (_a.label) {
+                                                case 0:
+                                                    handlingNext = true;
+                                                    if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["graphQLResultHasError"])(result) && errorPolicy === 'none') {
+                                                        handlingNext = false;
+                                                        error = new ApolloError({
+                                                            graphQLErrors: result.errors,
+                                                        });
+                                                        return [2];
+                                                    }
+                                                    self.mutationStore.markMutationResult(mutationId);
+                                                    updatedResult = result;
+                                                    context = operation.context, variables = operation.variables;
+                                                    if (!(clientQuery && Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["hasDirectives"])(['client'], clientQuery))) return [3, 2];
+                                                    return [4, self.localState
+                                                            .runResolvers({
+                                                            document: clientQuery,
+                                                            remoteResult: result,
+                                                            context: context,
+                                                            variables: variables,
+                                                        })
+                                                            .catch(function (error) {
+                                                            handlingNext = false;
+                                                            reject(error);
+                                                            return result;
+                                                        })];
+                                                case 1:
+                                                    updatedResult = _a.sent();
+                                                    _a.label = 2;
+                                                case 2:
+                                                    if (fetchPolicy !== 'no-cache') {
+                                                        self.dataStore.markMutationResult({
+                                                            mutationId: mutationId,
+                                                            result: updatedResult,
+                                                            document: mutation,
+                                                            variables: updatedVariables || {},
+                                                            updateQueries: generateUpdateQueriesInfo(),
+                                                            update: updateWithProxyFn,
+                                                        });
+                                                    }
+                                                    storeResult = updatedResult;
+                                                    handlingNext = false;
+                                                    if (complete) {
+                                                        completeMutation().then(resolve, reject);
+                                                    }
+                                                    return [2];
+                                            }
+                                        });
+                                    }); },
+                                    error: function (err) {
+                                        self.mutationStore.markMutationError(mutationId, err);
+                                        self.dataStore.markMutationComplete({
+                                            mutationId: mutationId,
+                                            optimisticResponse: optimisticResponse,
+                                        });
+                                        self.broadcastQueries();
+                                        self.setQuery(mutationId, function () { return ({ document: null }); });
+                                        reject(new ApolloError({
+                                            networkError: err,
+                                        }));
+                                    },
+                                    complete: function () {
+                                        if (!handlingNext) {
+                                            completeMutation().then(resolve, reject);
+                                        }
+                                        complete = true;
+                                    },
+                                });
+                            })];
+                }
             });
         });
     };
     QueryManager.prototype.fetchQuery = function (queryId, options, fetchType, fetchMoreForQueryId) {
-        var _this = this;
-        var _a = options.variables, variables = _a === void 0 ? {} : _a, _b = options.metadata, metadata = _b === void 0 ? null : _b, _c = options.fetchPolicy, fetchPolicy = _c === void 0 ? 'cache-first' : _c;
-        var cache = this.dataStore.getCache();
-        var query = cache.transformDocument(options.query);
-        var storeResult;
-        var needToFetch = fetchPolicy === 'network-only' || fetchPolicy === 'no-cache';
-        if (fetchType !== _types__WEBPACK_IMPORTED_MODULE_11__["FetchType"].refetch &&
-            fetchPolicy !== 'network-only' &&
-            fetchPolicy !== 'no-cache') {
-            var _d = this.dataStore.getCache().diff({
-                query: query,
-                variables: variables,
-                returnPartialData: true,
-                optimistic: false,
-            }), complete = _d.complete, result = _d.result;
-            needToFetch = !complete || fetchPolicy === 'cache-and-network';
-            storeResult = result;
-        }
-        var shouldFetch = needToFetch && fetchPolicy !== 'cache-only' && fetchPolicy !== 'standby';
-        if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["hasDirectives"])(['live'], query))
-            shouldFetch = true;
-        var requestId = this.generateRequestId();
-        var cancel = this.updateQueryWatch(queryId, query, options);
-        this.setQuery(queryId, function () { return ({
-            document: query,
-            lastRequestId: requestId,
-            invalidated: true,
-            cancel: cancel,
-        }); });
-        this.invalidate(true, fetchMoreForQueryId);
-        this.queryStore.initQuery({
-            queryId: queryId,
-            document: query,
-            storePreviousVariables: shouldFetch,
-            variables: variables,
-            isPoll: fetchType === _types__WEBPACK_IMPORTED_MODULE_11__["FetchType"].poll,
-            isRefetch: fetchType === _types__WEBPACK_IMPORTED_MODULE_11__["FetchType"].refetch,
-            metadata: metadata,
-            fetchMoreForQueryId: fetchMoreForQueryId,
-        });
-        this.broadcastQueries();
-        var shouldDispatchClientResult = !shouldFetch || fetchPolicy === 'cache-and-network';
-        if (shouldDispatchClientResult) {
-            this.queryStore.markQueryResultClient(queryId, !shouldFetch);
-            this.invalidate(true, queryId, fetchMoreForQueryId);
-            this.broadcastQueries();
-        }
-        if (shouldFetch) {
-            var networkResult = this.fetchRequest({
-                requestId: requestId,
-                queryId: queryId,
-                document: query,
-                options: options,
-                fetchMoreForQueryId: fetchMoreForQueryId,
-            }).catch(function (error) {
-                if (Object(_errors_ApolloError__WEBPACK_IMPORTED_MODULE_5__["isApolloError"])(error)) {
-                    throw error;
-                }
-                else {
-                    var lastRequestId = _this.getQuery(queryId).lastRequestId;
-                    if (requestId >= (lastRequestId || 1)) {
-                        _this.queryStore.markQueryError(queryId, error, fetchMoreForQueryId);
-                        _this.invalidate(true, queryId, fetchMoreForQueryId);
-                        _this.broadcastQueries();
-                    }
-                    throw new _errors_ApolloError__WEBPACK_IMPORTED_MODULE_5__["ApolloError"]({ networkError: error });
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            var _a, variables, _b, metadata, _c, fetchPolicy, _d, context, cache, query, updatedVariables, _e, updatedOptions, storeResult, needToFetch, _f, complete, result, shouldFetch, requestId, cancel, shouldDispatchClientResult, networkResult;
+            var _this = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_g) {
+                switch (_g.label) {
+                    case 0:
+                        _a = options.variables, variables = _a === void 0 ? {} : _a, _b = options.metadata, metadata = _b === void 0 ? null : _b, _c = options.fetchPolicy, fetchPolicy = _c === void 0 ? 'cache-first' : _c, _d = options.context, context = _d === void 0 ? {} : _d;
+                        cache = this.dataStore.getCache();
+                        query = cache.transformDocument(options.query);
+                        if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["hasClientExports"])(query)) return [3, 2];
+                        return [4, this.localState.addExportedVariables(query, variables, context)];
+                    case 1:
+                        _e = _g.sent();
+                        return [3, 3];
+                    case 2:
+                        _e = variables;
+                        _g.label = 3;
+                    case 3:
+                        updatedVariables = _e;
+                        updatedOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options, { variables: updatedVariables });
+                        needToFetch = fetchPolicy === 'network-only' || fetchPolicy === 'no-cache';
+                        if (fetchType !== FetchType.refetch &&
+                            fetchPolicy !== 'network-only' &&
+                            fetchPolicy !== 'no-cache') {
+                            _f = this.dataStore.getCache().diff({
+                                query: query,
+                                variables: updatedVariables,
+                                returnPartialData: true,
+                                optimistic: false,
+                            }), complete = _f.complete, result = _f.result;
+                            needToFetch = !complete || fetchPolicy === 'cache-and-network';
+                            storeResult = result;
+                        }
+                        shouldFetch = needToFetch && fetchPolicy !== 'cache-only' && fetchPolicy !== 'standby';
+                        if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["hasDirectives"])(['live'], query))
+                            shouldFetch = true;
+                        requestId = this.generateRequestId();
+                        cancel = this.updateQueryWatch(queryId, query, updatedOptions);
+                        this.setQuery(queryId, function () { return ({
+                            document: query,
+                            lastRequestId: requestId,
+                            invalidated: true,
+                            cancel: cancel,
+                        }); });
+                        this.invalidate(true, fetchMoreForQueryId);
+                        this.queryStore.initQuery({
+                            queryId: queryId,
+                            document: query,
+                            storePreviousVariables: shouldFetch,
+                            variables: updatedVariables,
+                            isPoll: fetchType === FetchType.poll,
+                            isRefetch: fetchType === FetchType.refetch,
+                            metadata: metadata,
+                            fetchMoreForQueryId: fetchMoreForQueryId,
+                        });
+                        this.broadcastQueries();
+                        shouldDispatchClientResult = !shouldFetch || fetchPolicy === 'cache-and-network';
+                        if (shouldDispatchClientResult) {
+                            this.queryStore.markQueryResultClient(queryId, !shouldFetch);
+                            this.invalidate(true, queryId, fetchMoreForQueryId);
+                            this.broadcastQueries(this.localState.shouldForceResolvers(query));
+                        }
+                        if (shouldFetch) {
+                            networkResult = this.fetchRequest({
+                                requestId: requestId,
+                                queryId: queryId,
+                                document: query,
+                                options: updatedOptions,
+                                fetchMoreForQueryId: fetchMoreForQueryId,
+                            }).catch(function (error) {
+                                if (isApolloError(error)) {
+                                    throw error;
+                                }
+                                else {
+                                    var lastRequestId = _this.getQuery(queryId).lastRequestId;
+                                    if (requestId >= (lastRequestId || 1)) {
+                                        _this.queryStore.markQueryError(queryId, error, fetchMoreForQueryId);
+                                        _this.invalidate(true, queryId, fetchMoreForQueryId);
+                                        _this.broadcastQueries();
+                                    }
+                                    throw new ApolloError({ networkError: error });
+                                }
+                            });
+                            if (fetchPolicy !== 'cache-and-network') {
+                                return [2, networkResult];
+                            }
+                            else {
+                                networkResult.catch(function () { });
+                            }
+                        }
+                        return [2, Promise.resolve({ data: storeResult })];
                 }
             });
-            if (fetchPolicy !== 'cache-and-network') {
-                return networkResult;
-            }
-            else {
-                networkResult.catch(function () { });
-            }
-        }
-        return Promise.resolve({ data: storeResult });
+        });
     };
     QueryManager.prototype.queryListenerForObserver = function (queryId, options, observer) {
         var _this = this;
         var previouslyHadError = false;
-        return function (queryStoreValue, newData) {
-            _this.invalidate(false, queryId);
-            if (!queryStoreValue)
-                return;
-            var observableQuery = _this.getQuery(queryId).observableQuery;
-            var fetchPolicy = observableQuery
-                ? observableQuery.options.fetchPolicy
-                : options.fetchPolicy;
-            if (fetchPolicy === 'standby')
-                return;
-            var errorPolicy = observableQuery
-                ? observableQuery.options.errorPolicy
-                : options.errorPolicy;
-            var lastResult = observableQuery
-                ? observableQuery.getLastResult()
-                : null;
-            var lastError = observableQuery ? observableQuery.getLastError() : null;
-            var shouldNotifyIfLoading = (!newData && queryStoreValue.previousVariables != null) ||
-                fetchPolicy === 'cache-only' ||
-                fetchPolicy === 'cache-and-network';
-            var networkStatusChanged = Boolean(lastResult &&
-                queryStoreValue.networkStatus !== lastResult.networkStatus);
-            var errorStatusChanged = errorPolicy &&
-                (lastError && lastError.graphQLErrors) !==
-                    queryStoreValue.graphQLErrors &&
-                errorPolicy !== 'none';
-            if (!Object(_networkStatus__WEBPACK_IMPORTED_MODULE_10__["isNetworkRequestInFlight"])(queryStoreValue.networkStatus) ||
-                (networkStatusChanged && options.notifyOnNetworkStatusChange) ||
-                shouldNotifyIfLoading) {
-                if (((!errorPolicy || errorPolicy === 'none') &&
-                    queryStoreValue.graphQLErrors &&
-                    queryStoreValue.graphQLErrors.length > 0) ||
-                    queryStoreValue.networkError) {
-                    var apolloError_1 = new _errors_ApolloError__WEBPACK_IMPORTED_MODULE_5__["ApolloError"]({
-                        graphQLErrors: queryStoreValue.graphQLErrors,
-                        networkError: queryStoreValue.networkError,
-                    });
-                    previouslyHadError = true;
-                    if (observer.error) {
-                        try {
-                            observer.error(apolloError_1);
+        return function (queryStoreValue, newData, forceResolvers) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+            var observableQuery, fetchPolicy, errorPolicy, lastResult, lastError, shouldNotifyIfLoading, networkStatusChanged, errorStatusChanged, apolloError_1, data, isMissing, document_1, readResult, resultFromStore, query, variables, context, updatedResult, e_1, error_1;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.invalidate(false, queryId);
+                        if (!queryStoreValue)
+                            return [2];
+                        observableQuery = this.getQuery(queryId).observableQuery;
+                        fetchPolicy = observableQuery
+                            ? observableQuery.options.fetchPolicy
+                            : options.fetchPolicy;
+                        if (fetchPolicy === 'standby')
+                            return [2];
+                        errorPolicy = observableQuery
+                            ? observableQuery.options.errorPolicy
+                            : options.errorPolicy;
+                        lastResult = observableQuery
+                            ? observableQuery.getLastResult()
+                            : null;
+                        lastError = observableQuery ? observableQuery.getLastError() : null;
+                        shouldNotifyIfLoading = (!newData && queryStoreValue.previousVariables != null) ||
+                            fetchPolicy === 'cache-only' ||
+                            fetchPolicy === 'cache-and-network';
+                        networkStatusChanged = Boolean(lastResult &&
+                            queryStoreValue.networkStatus !== lastResult.networkStatus);
+                        errorStatusChanged = errorPolicy &&
+                            (lastError && lastError.graphQLErrors) !==
+                                queryStoreValue.graphQLErrors &&
+                            errorPolicy !== 'none';
+                        if (!(!isNetworkRequestInFlight(queryStoreValue.networkStatus) ||
+                            (networkStatusChanged && options.notifyOnNetworkStatusChange) ||
+                            shouldNotifyIfLoading)) return [3, 8];
+                        if (((!errorPolicy || errorPolicy === 'none') &&
+                            queryStoreValue.graphQLErrors &&
+                            queryStoreValue.graphQLErrors.length > 0) ||
+                            queryStoreValue.networkError) {
+                            apolloError_1 = new ApolloError({
+                                graphQLErrors: queryStoreValue.graphQLErrors,
+                                networkError: queryStoreValue.networkError,
+                            });
+                            previouslyHadError = true;
+                            if (observer.error) {
+                                try {
+                                    observer.error(apolloError_1);
+                                }
+                                catch (e) {
+                                    setTimeout(function () {
+                                        throw e;
+                                    }, 0);
+                                }
+                            }
+                            else {
+                                setTimeout(function () {
+                                    throw apolloError_1;
+                                }, 0);
+                                if (true) {
+                                    console.info('An unhandled error was thrown because no error handler is registered ' +
+                                        'for the query ' +
+                                        JSON.stringify(queryStoreValue.document));
+                                }
+                            }
+                            return [2];
                         }
-                        catch (e) {
-                            setTimeout(function () {
-                                throw e;
-                            }, 0);
-                        }
-                    }
-                    else {
-                        setTimeout(function () {
-                            throw apolloError_1;
-                        }, 0);
-                        if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["isProduction"])()) {
-                            console.info('An unhandled error was thrown because no error handler is registered ' +
-                                'for the query ' +
-                                JSON.stringify(queryStoreValue.document));
-                        }
-                    }
-                    return;
-                }
-                try {
-                    var data = void 0;
-                    var isMissing = void 0;
-                    if (newData) {
-                        if (fetchPolicy !== 'no-cache') {
-                            _this.setQuery(queryId, function () { return ({ newData: null }); });
-                        }
-                        data = newData.result;
-                        isMissing = !newData.complete || false;
-                    }
-                    else {
-                        if (lastResult && lastResult.data && !errorStatusChanged) {
-                            data = lastResult.data;
-                            isMissing = false;
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 7, , 8]);
+                        data = void 0;
+                        isMissing = void 0;
+                        if (newData) {
+                            if (fetchPolicy !== 'no-cache' && fetchPolicy !== 'network-only') {
+                                this.setQuery(queryId, function () { return ({ newData: null }); });
+                            }
+                            data = newData.result;
+                            isMissing = !newData.complete || false;
                         }
                         else {
-                            var document_1 = _this.getQuery(queryId).document;
-                            var readResult = _this.dataStore.getCache().diff({
-                                query: document_1,
-                                variables: queryStoreValue.previousVariables ||
-                                    queryStoreValue.variables,
-                                optimistic: true,
-                            });
-                            data = readResult.result;
-                            isMissing = !readResult.complete;
+                            if (lastResult && lastResult.data && !errorStatusChanged) {
+                                data = lastResult.data;
+                                isMissing = false;
+                            }
+                            else {
+                                document_1 = this.getQuery(queryId).document;
+                                readResult = this.dataStore.getCache().diff({
+                                    query: document_1,
+                                    variables: queryStoreValue.previousVariables ||
+                                        queryStoreValue.variables,
+                                    optimistic: true,
+                                });
+                                data = readResult.result;
+                                isMissing = !readResult.complete;
+                            }
                         }
-                    }
-                    var resultFromStore = void 0;
-                    if (isMissing && fetchPolicy !== 'cache-only') {
-                        resultFromStore = {
-                            data: lastResult && lastResult.data,
-                            loading: Object(_networkStatus__WEBPACK_IMPORTED_MODULE_10__["isNetworkRequestInFlight"])(queryStoreValue.networkStatus),
-                            networkStatus: queryStoreValue.networkStatus,
-                            stale: true,
-                        };
-                    }
-                    else {
-                        resultFromStore = {
-                            data: data,
-                            loading: Object(_networkStatus__WEBPACK_IMPORTED_MODULE_10__["isNetworkRequestInFlight"])(queryStoreValue.networkStatus),
-                            networkStatus: queryStoreValue.networkStatus,
-                            stale: false,
-                        };
-                    }
-                    if (errorPolicy === 'all' &&
-                        queryStoreValue.graphQLErrors &&
-                        queryStoreValue.graphQLErrors.length > 0) {
-                        resultFromStore.errors = queryStoreValue.graphQLErrors;
-                    }
-                    if (observer.next) {
-                        if (previouslyHadError ||
+                        resultFromStore = void 0;
+                        if (isMissing && fetchPolicy !== 'cache-only') {
+                            resultFromStore = {
+                                data: lastResult && lastResult.data,
+                                loading: isNetworkRequestInFlight(queryStoreValue.networkStatus),
+                                networkStatus: queryStoreValue.networkStatus,
+                                stale: true,
+                            };
+                        }
+                        else {
+                            resultFromStore = {
+                                data: data,
+                                loading: isNetworkRequestInFlight(queryStoreValue.networkStatus),
+                                networkStatus: queryStoreValue.networkStatus,
+                                stale: false,
+                            };
+                        }
+                        if (errorPolicy === 'all' &&
+                            queryStoreValue.graphQLErrors &&
+                            queryStoreValue.graphQLErrors.length > 0) {
+                            resultFromStore.errors = queryStoreValue.graphQLErrors;
+                        }
+                        if (!observer.next) return [3, 6];
+                        if (!(previouslyHadError ||
                             !observableQuery ||
-                            observableQuery.isDifferentFromLastResult(resultFromStore)) {
-                            try {
-                                observer.next(resultFromStore);
-                            }
-                            catch (e) {
-                                setTimeout(function () {
-                                    throw e;
-                                }, 0);
-                            }
-                        }
-                    }
-                    previouslyHadError = false;
+                            observableQuery.isDifferentFromLastResult(resultFromStore))) return [3, 6];
+                        _a.label = 2;
+                    case 2:
+                        _a.trys.push([2, 5, , 6]);
+                        if (!forceResolvers) return [3, 4];
+                        query = options.query, variables = options.variables, context = options.context;
+                        return [4, this.localState.runResolvers({
+                                document: query,
+                                remoteResult: resultFromStore,
+                                context: context,
+                                variables: variables,
+                                onlyRunForcedResolvers: forceResolvers,
+                            })];
+                    case 3:
+                        updatedResult = _a.sent();
+                        resultFromStore = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, resultFromStore, updatedResult);
+                        _a.label = 4;
+                    case 4:
+                        observer.next(resultFromStore);
+                        return [3, 6];
+                    case 5:
+                        e_1 = _a.sent();
+                        setTimeout(function () {
+                            throw e_1;
+                        }, 0);
+                        return [3, 6];
+                    case 6:
+                        previouslyHadError = false;
+                        return [3, 8];
+                    case 7:
+                        error_1 = _a.sent();
+                        previouslyHadError = true;
+                        if (observer.error)
+                            observer.error(new ApolloError({ networkError: error_1 }));
+                        return [2];
+                    case 8: return [2];
                 }
-                catch (error) {
-                    previouslyHadError = true;
-                    if (observer.error)
-                        observer.error(new _errors_ApolloError__WEBPACK_IMPORTED_MODULE_5__["ApolloError"]({ networkError: error }));
-                    return;
-                }
-            }
-        };
+            });
+        }); };
     };
     QueryManager.prototype.watchQuery = function (options, shouldSubscribe) {
         if (shouldSubscribe === void 0) { shouldSubscribe = true; }
-        if (options.fetchPolicy === 'standby') {
-            throw new Error('client.watchQuery cannot be called with fetchPolicy set to "standby"');
-        }
-        var queryDefinition = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["getQueryDefinition"])(options.query);
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(options.fetchPolicy !== 'standby', 'client.watchQuery cannot be called with fetchPolicy set to "standby"');
+        var queryDefinition = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getQueryDefinition"])(options.query);
         if (queryDefinition.variableDefinitions &&
             queryDefinition.variableDefinitions.length) {
-            var defaultValues = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["getDefaultValues"])(queryDefinition);
-            options.variables = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["assign"])({}, defaultValues, options.variables);
+            var defaultValues = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getDefaultValues"])(queryDefinition);
+            options.variables = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["assign"])({}, defaultValues, options.variables);
         }
         if (typeof options.notifyOnNetworkStatusChange === 'undefined') {
             options.notifyOnNetworkStatusChange = false;
         }
-        var transformedOptions = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, options);
-        return new _ObservableQuery__WEBPACK_IMPORTED_MODULE_9__["ObservableQuery"]({
-            scheduler: this.scheduler,
+        var transformedOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options);
+        return new ObservableQuery({
+            queryManager: this,
             options: transformedOptions,
             shouldSubscribe: shouldSubscribe,
         });
     };
     QueryManager.prototype.query = function (options) {
         var _this = this;
-        if (!options.query) {
-            throw new Error('query option is required. You must specify your GraphQL document ' +
-                'in the query option.');
-        }
-        if (options.query.kind !== 'Document') {
-            throw new Error('You must wrap the query string in a "gql" tag.');
-        }
-        if (options.returnPartialData) {
-            throw new Error('returnPartialData option only supported on watchQuery.');
-        }
-        if (options.pollInterval) {
-            throw new Error('pollInterval option only supported on watchQuery.');
-        }
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(options.query, 'query option is required. You must specify your GraphQL document ' +
+            'in the query option.');
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(options.query.kind === 'Document', 'You must wrap the query string in a "gql" tag.');
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(!options.returnPartialData, 'returnPartialData option only supported on watchQuery.');
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(!options.pollInterval, 'pollInterval option only supported on watchQuery.');
         return new Promise(function (resolve, reject) {
-            _this.fetchQueryRejectFns.add(reject);
-            _this.watchQuery(options, false)
+            var watchedQuery = _this.watchQuery(options, false);
+            _this.fetchQueryRejectFns.set("query:" + watchedQuery.queryId, reject);
+            watchedQuery
                 .result()
                 .then(resolve, reject)
-                .then(function () { return _this.fetchQueryRejectFns.delete(reject); });
+                .then(function () {
+                return _this.fetchQueryRejectFns.delete("query:" + watchedQuery.queryId);
+            });
         });
     };
     QueryManager.prototype.generateQueryId = function () {
@@ -2145,16 +2490,20 @@ var QueryManager = (function () {
         return queryId;
     };
     QueryManager.prototype.stopQueryInStore = function (queryId) {
+        this.stopQueryInStoreNoBroadcast(queryId);
+        this.broadcastQueries();
+    };
+    QueryManager.prototype.stopQueryInStoreNoBroadcast = function (queryId) {
+        this.stopPollingQuery(queryId);
         this.queryStore.stopQuery(queryId);
         this.invalidate(true, queryId);
-        this.broadcastQueries();
     };
     QueryManager.prototype.addQueryListener = function (queryId, listener) {
         this.setQuery(queryId, function (_a) {
             var _b = _a.listeners, listeners = _b === void 0 ? [] : _b;
             return ({
                 listeners: listeners.concat([listener]),
-                invalidate: false,
+                invalidated: false,
             });
         });
     };
@@ -2186,7 +2535,7 @@ var QueryManager = (function () {
     };
     QueryManager.prototype.addObservableQuery = function (queryId, observableQuery) {
         this.setQuery(queryId, function () { return ({ observableQuery: observableQuery }); });
-        var queryDef = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["getQueryDefinition"])(observableQuery.options.query);
+        var queryDef = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getQueryDefinition"])(observableQuery.options.query);
         if (queryDef.name && queryDef.name.value) {
             var queryName = queryDef.name.value;
             this.queryIdsByName[queryName] = this.queryIdsByName[queryName] || [];
@@ -2199,7 +2548,7 @@ var QueryManager = (function () {
             cancel();
         if (!observableQuery)
             return;
-        var definition = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["getQueryDefinition"])(observableQuery.options.query);
+        var definition = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getQueryDefinition"])(observableQuery.options.query);
         var queryName = definition.name ? definition.name.value : null;
         this.setQuery(queryId, function () { return ({ observableQuery: null }); });
         if (queryName) {
@@ -2246,29 +2595,57 @@ var QueryManager = (function () {
         var isCacheEnabled = !(options.fetchPolicy && options.fetchPolicy === 'no-cache');
         var cache = this.dataStore.getCache();
         var transformedDoc = cache.transformDocument(query);
-        var variables = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["assign"])({}, Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["getDefaultValues"])(Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["getOperationDefinition"])(query)), options.variables);
+        var variables = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["assign"])({}, Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getDefaultValues"])(Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getOperationDefinition"])(query)), options.variables);
+        var updatedVariables = variables;
         var sub;
         var observers = [];
-        return new _util_Observable__WEBPACK_IMPORTED_MODULE_6__["Observable"](function (observer) {
+        var clientQuery = this.localState.clientQuery(transformedDoc);
+        return new Observable(function (observer) {
             observers.push(observer);
             if (observers.length === 1) {
-                var handler = {
-                    next: function (result) {
-                        if (isCacheEnabled) {
-                            _this.dataStore.markSubscriptionResult(result, transformedDoc, variables);
-                            _this.broadcastQueries();
-                        }
-                        observers.forEach(function (obs) {
-                            if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["graphQLResultHasError"])(result) && obs.error) {
-                                obs.error(new _errors_ApolloError__WEBPACK_IMPORTED_MODULE_5__["ApolloError"]({
-                                    graphQLErrors: result.errors,
-                                }));
-                            }
-                            else if (obs.next) {
-                                obs.next(result);
+                var activeNextCalls_1 = 0;
+                var complete_1 = false;
+                var handler_1 = {
+                    next: function (result) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+                        var updatedResult;
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                            switch (_a.label) {
+                                case 0:
+                                    activeNextCalls_1 += 1;
+                                    updatedResult = result;
+                                    if (!(clientQuery && Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["hasDirectives"])(['client'], clientQuery))) return [3, 2];
+                                    return [4, this.localState.runResolvers({
+                                            document: clientQuery,
+                                            remoteResult: result,
+                                            context: {},
+                                            variables: updatedVariables,
+                                        })];
+                                case 1:
+                                    updatedResult = _a.sent();
+                                    _a.label = 2;
+                                case 2:
+                                    if (isCacheEnabled) {
+                                        this.dataStore.markSubscriptionResult(updatedResult, transformedDoc, updatedVariables);
+                                        this.broadcastQueries();
+                                    }
+                                    observers.forEach(function (obs) {
+                                        if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["graphQLResultHasError"])(updatedResult) && obs.error) {
+                                            obs.error(new ApolloError({
+                                                graphQLErrors: updatedResult.errors,
+                                            }));
+                                        }
+                                        else if (obs.next) {
+                                            obs.next(updatedResult);
+                                        }
+                                        activeNextCalls_1 -= 1;
+                                    });
+                                    if (activeNextCalls_1 === 0 && complete_1) {
+                                        handler_1.complete();
+                                    }
+                                    return [2];
                             }
                         });
-                    },
+                    }); },
                     error: function (error) {
                         observers.forEach(function (obs) {
                             if (obs.error) {
@@ -2277,15 +2654,43 @@ var QueryManager = (function () {
                         });
                     },
                     complete: function () {
-                        observers.forEach(function (obs) {
-                            if (obs.complete) {
-                                obs.complete();
-                            }
-                        });
+                        if (activeNextCalls_1 === 0) {
+                            observers.forEach(function (obs) {
+                                if (obs.complete) {
+                                    obs.complete();
+                                }
+                            });
+                        }
+                        complete_1 = true;
                     }
                 };
-                var operation = _this.buildOperationForLink(transformedDoc, variables);
-                sub = Object(apollo_link__WEBPACK_IMPORTED_MODULE_1__["execute"])(_this.link, operation).subscribe(handler);
+                (function () { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+                    var updatedVariables, _a, serverQuery, operation;
+                    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_b) {
+                        switch (_b.label) {
+                            case 0:
+                                if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["hasClientExports"])(transformedDoc)) return [3, 2];
+                                return [4, this.localState.addExportedVariables(transformedDoc, variables)];
+                            case 1:
+                                _a = _b.sent();
+                                return [3, 3];
+                            case 2:
+                                _a = variables;
+                                _b.label = 3;
+                            case 3:
+                                updatedVariables = _a;
+                                serverQuery = this.localState.serverQuery(transformedDoc);
+                                if (serverQuery) {
+                                    operation = this.buildOperationForLink(serverQuery, updatedVariables);
+                                    sub = Object(apollo_link__WEBPACK_IMPORTED_MODULE_2__["execute"])(this.link, operation).subscribe(handler_1);
+                                }
+                                else {
+                                    sub = Observable.of({ data: {} }).subscribe(handler_1);
+                                }
+                                return [2];
+                        }
+                    });
+                }); })();
             }
             return function () {
                 observers = observers.filter(function (obs) { return obs !== observer; });
@@ -2296,21 +2701,30 @@ var QueryManager = (function () {
         });
     };
     QueryManager.prototype.stopQuery = function (queryId) {
-        this.stopQueryInStore(queryId);
+        this.stopQueryNoBroadcast(queryId);
+        this.broadcastQueries();
+    };
+    QueryManager.prototype.stopQueryNoBroadcast = function (queryId) {
+        this.stopQueryInStoreNoBroadcast(queryId);
         this.removeQuery(queryId);
     };
     QueryManager.prototype.removeQuery = function (queryId) {
         var subscriptions = this.getQuery(queryId).subscriptions;
+        this.fetchQueryRejectFns.delete("query:" + queryId);
+        this.fetchQueryRejectFns.delete("fetchRequest:" + queryId);
         subscriptions.forEach(function (x) { return x.unsubscribe(); });
         this.queries.delete(queryId);
     };
     QueryManager.prototype.getCurrentQueryResult = function (observableQuery, optimistic) {
         if (optimistic === void 0) { optimistic = true; }
-        var _a = observableQuery.options, variables = _a.variables, query = _a.query;
+        var _a = observableQuery.options, variables = _a.variables, query = _a.query, fetchPolicy = _a.fetchPolicy;
         var lastResult = observableQuery.getLastResult();
         var newData = this.getQuery(observableQuery.queryId).newData;
         if (newData && newData.complete) {
             return { data: newData.result, partial: false };
+        }
+        else if (fetchPolicy === 'no-cache' || fetchPolicy === 'network-only') {
+            return { data: undefined, partial: false };
         }
         else {
             try {
@@ -2319,11 +2733,11 @@ var QueryManager = (function () {
                     variables: variables,
                     previousResult: lastResult ? lastResult.data : undefined,
                     optimistic: optimistic,
-                });
+                }) || undefined;
                 return { data: data, partial: false };
             }
             catch (e) {
-                return { data: {}, partial: true };
+                return { data: undefined, partial: true };
             }
         }
     };
@@ -2331,9 +2745,7 @@ var QueryManager = (function () {
         var observableQuery;
         if (typeof queryIdOrObservable === 'string') {
             var foundObserveableQuery = this.getQuery(queryIdOrObservable).observableQuery;
-            if (!foundObserveableQuery) {
-                throw new Error("ObservableQuery with this id doesn't exist: " + queryIdOrObservable);
-            }
+             false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(foundObserveableQuery, "ObservableQuery with this id doesn't exist: " + queryIdOrObservable);
             observableQuery = foundObserveableQuery;
         }
         else {
@@ -2347,8 +2759,9 @@ var QueryManager = (function () {
             document: query,
         };
     };
-    QueryManager.prototype.broadcastQueries = function () {
+    QueryManager.prototype.broadcastQueries = function (forceResolvers) {
         var _this = this;
+        if (forceResolvers === void 0) { forceResolvers = false; }
         this.onBroadcast();
         this.queries.forEach(function (info, id) {
             if (!info.invalidated || !info.listeners)
@@ -2356,9 +2769,12 @@ var QueryManager = (function () {
             info.listeners
                 .filter(function (x) { return !!x; })
                 .forEach(function (listener) {
-                listener(_this.queryStore.get(id), info.newData);
+                listener(_this.queryStore.get(id), info.newData, forceResolvers);
             });
         });
+    };
+    QueryManager.prototype.getLocalState = function () {
+        return this.localState;
     };
     QueryManager.prototype.getObservableQueryPromises = function (includeStandby) {
         var _this = this;
@@ -2382,59 +2798,105 @@ var QueryManager = (function () {
         var _this = this;
         var requestId = _a.requestId, queryId = _a.queryId, document = _a.document, options = _a.options, fetchMoreForQueryId = _a.fetchMoreForQueryId;
         var variables = options.variables, context = options.context, _b = options.errorPolicy, errorPolicy = _b === void 0 ? 'none' : _b, fetchPolicy = options.fetchPolicy;
-        var operation = this.buildOperationForLink(document, variables, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, context, { forceFetch: !this.queryDeduplication }));
         var resultFromStore;
         var errorsFromStore;
-        var rejectFetchPromise;
         return new Promise(function (resolve, reject) {
-            _this.fetchQueryRejectFns.add(rejectFetchPromise = reject);
-            var subscription = Object(apollo_link__WEBPACK_IMPORTED_MODULE_1__["execute"])(_this.deduplicator, operation).subscribe({
-                next: function (result) {
-                    var lastRequestId = _this.getQuery(queryId).lastRequestId;
-                    if (requestId >= (lastRequestId || 1)) {
-                        if (fetchPolicy !== 'no-cache') {
-                            try {
-                                _this.dataStore.markQueryResult(result, document, variables, fetchMoreForQueryId, errorPolicy === 'ignore' || errorPolicy === 'all');
-                            }
-                            catch (e) {
-                                reject(e);
-                                return;
-                            }
+            var obs;
+            var updatedContext = {};
+            var clientQuery = _this.localState.clientQuery(document);
+            var serverQuery = _this.localState.serverQuery(document);
+            if (serverQuery) {
+                var operation = _this.buildOperationForLink(serverQuery, variables, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context, { forceFetch: !_this.queryDeduplication }));
+                updatedContext = operation.context;
+                obs = Object(apollo_link__WEBPACK_IMPORTED_MODULE_2__["execute"])(_this.deduplicator, operation);
+            }
+            else {
+                updatedContext = _this.prepareContext(context);
+                obs = Observable.of({ data: {} });
+            }
+            _this.fetchQueryRejectFns.set("fetchRequest:" + queryId, reject);
+            var complete = false;
+            var handlingNext = true;
+            var subscriber = {
+                next: function (result) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+                    var updatedResult, lastRequestId;
+                    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                        switch (_a.label) {
+                            case 0:
+                                handlingNext = true;
+                                updatedResult = result;
+                                lastRequestId = this.getQuery(queryId).lastRequestId;
+                                if (!(requestId >= (lastRequestId || 1))) return [3, 3];
+                                if (!(clientQuery && Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["hasDirectives"])(['client'], clientQuery))) return [3, 2];
+                                return [4, this.localState
+                                        .runResolvers({
+                                        document: clientQuery,
+                                        remoteResult: result,
+                                        context: updatedContext,
+                                        variables: variables,
+                                    })
+                                        .catch(function (error) {
+                                        handlingNext = false;
+                                        reject(error);
+                                        return result;
+                                    })];
+                            case 1:
+                                updatedResult = _a.sent();
+                                _a.label = 2;
+                            case 2:
+                                if (fetchPolicy !== 'no-cache') {
+                                    try {
+                                        this.dataStore.markQueryResult(updatedResult, document, variables, fetchMoreForQueryId, errorPolicy === 'ignore' || errorPolicy === 'all');
+                                    }
+                                    catch (e) {
+                                        handlingNext = false;
+                                        reject(e);
+                                        return [2];
+                                    }
+                                }
+                                else {
+                                    this.setQuery(queryId, function () { return ({
+                                        newData: { result: updatedResult.data, complete: true },
+                                    }); });
+                                }
+                                this.queryStore.markQueryResult(queryId, updatedResult, fetchMoreForQueryId);
+                                this.invalidate(true, queryId, fetchMoreForQueryId);
+                                this.broadcastQueries();
+                                _a.label = 3;
+                            case 3:
+                                if (updatedResult.errors && errorPolicy === 'none') {
+                                    handlingNext = false;
+                                    reject(new ApolloError({
+                                        graphQLErrors: updatedResult.errors,
+                                    }));
+                                    return [2];
+                                }
+                                else if (errorPolicy === 'all') {
+                                    errorsFromStore = updatedResult.errors;
+                                }
+                                if (fetchMoreForQueryId || fetchPolicy === 'no-cache') {
+                                    resultFromStore = updatedResult.data;
+                                }
+                                else {
+                                    try {
+                                        resultFromStore = this.dataStore.getCache().read({
+                                            variables: variables,
+                                            query: document,
+                                            optimistic: false,
+                                        });
+                                    }
+                                    catch (e) { }
+                                }
+                                handlingNext = false;
+                                if (complete) {
+                                    subscriber.complete();
+                                }
+                                return [2];
                         }
-                        else {
-                            _this.setQuery(queryId, function () { return ({
-                                newData: { result: result.data, complete: true },
-                            }); });
-                        }
-                        _this.queryStore.markQueryResult(queryId, result, fetchMoreForQueryId);
-                        _this.invalidate(true, queryId, fetchMoreForQueryId);
-                        _this.broadcastQueries();
-                    }
-                    if (result.errors && errorPolicy === 'none') {
-                        reject(new _errors_ApolloError__WEBPACK_IMPORTED_MODULE_5__["ApolloError"]({
-                            graphQLErrors: result.errors,
-                        }));
-                        return;
-                    }
-                    else if (errorPolicy === 'all') {
-                        errorsFromStore = result.errors;
-                    }
-                    if (fetchMoreForQueryId || fetchPolicy === 'no-cache') {
-                        resultFromStore = result.data;
-                    }
-                    else {
-                        try {
-                            resultFromStore = _this.dataStore.getCache().read({
-                                variables: variables,
-                                query: document,
-                                optimistic: false,
-                            });
-                        }
-                        catch (e) { }
-                    }
-                },
+                    });
+                }); },
                 error: function (error) {
-                    _this.fetchQueryRejectFns.delete(reject);
+                    _this.fetchQueryRejectFns.delete("fetchRequest:" + queryId);
                     _this.setQuery(queryId, function (_a) {
                         var subscriptions = _a.subscriptions;
                         return ({
@@ -2444,22 +2906,26 @@ var QueryManager = (function () {
                     reject(error);
                 },
                 complete: function () {
-                    _this.fetchQueryRejectFns.delete(reject);
-                    _this.setQuery(queryId, function (_a) {
-                        var subscriptions = _a.subscriptions;
-                        return ({
-                            subscriptions: subscriptions.filter(function (x) { return x !== subscription; }),
+                    if (!handlingNext) {
+                        _this.fetchQueryRejectFns.delete("fetchRequest:" + queryId);
+                        _this.setQuery(queryId, function (_a) {
+                            var subscriptions = _a.subscriptions;
+                            return ({
+                                subscriptions: subscriptions.filter(function (x) { return x !== subscription; }),
+                            });
                         });
-                    });
-                    resolve({
-                        data: resultFromStore,
-                        errors: errorsFromStore,
-                        loading: false,
-                        networkStatus: _networkStatus__WEBPACK_IMPORTED_MODULE_10__["NetworkStatus"].ready,
-                        stale: false,
-                    });
+                        resolve({
+                            data: resultFromStore,
+                            errors: errorsFromStore,
+                            loading: false,
+                            networkStatus: NetworkStatus.ready,
+                            stale: false,
+                        });
+                    }
+                    complete = true;
                 },
-            });
+            };
+            var subscription = obs.subscribe(subscriber);
             _this.setQuery(queryId, function (_a) {
                 var subscriptions = _a.subscriptions;
                 return ({
@@ -2467,7 +2933,7 @@ var QueryManager = (function () {
                 });
             });
         }).catch(function (error) {
-            _this.fetchQueryRejectFns.delete(rejectFetchPromise);
+            _this.fetchQueryRejectFns.delete("fetchRequest:" + queryId);
             throw error;
         });
     };
@@ -2499,7 +2965,7 @@ var QueryManager = (function () {
     };
     QueryManager.prototype.setQuery = function (queryId, updater) {
         var prev = this.getQuery(queryId);
-        var newInfo = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, prev, updater(prev));
+        var newInfo = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prev, updater(prev));
         this.queries.set(queryId, newInfo);
     };
     QueryManager.prototype.invalidate = function (invalidated, queryId, fetchMoreForQueryId) {
@@ -2516,264 +2982,77 @@ var QueryManager = (function () {
                 ? cache.transformForLink(document)
                 : document,
             variables: variables,
-            operationName: Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_3__["getOperationName"])(document) || undefined,
-            context: tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, extraContext, { cache: cache, getCacheKey: function (obj) {
-                    if (cache.config) {
-                        return cache.config.dataIdFromObject(obj);
+            operationName: Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getOperationName"])(document) || undefined,
+            context: this.prepareContext(extraContext),
+        };
+    };
+    QueryManager.prototype.prepareContext = function (context) {
+        if (context === void 0) { context = {}; }
+        var newContext = this.localState.prepareContext(context);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, newContext, { clientAwareness: this.clientAwareness });
+    };
+    QueryManager.prototype.checkInFlight = function (queryId) {
+        var query = this.queryStore.get(queryId);
+        return (query &&
+            query.networkStatus !== NetworkStatus.ready &&
+            query.networkStatus !== NetworkStatus.error);
+    };
+    QueryManager.prototype.startPollingQuery = function (options, queryId, listener) {
+        var pollInterval = options.pollInterval;
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(pollInterval, 'Attempted to start a polling query without a polling interval.');
+        if (!this.ssrMode) {
+            this.pollingInfoByQueryId.set(queryId, {
+                interval: pollInterval,
+                lastPollTimeMs: Date.now() - 10,
+                options: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options, { fetchPolicy: 'network-only' }),
+            });
+            if (listener) {
+                this.addQueryListener(queryId, listener);
+            }
+            this.schedulePoll(pollInterval);
+        }
+        return queryId;
+    };
+    QueryManager.prototype.stopPollingQuery = function (queryId) {
+        this.pollingInfoByQueryId.delete(queryId);
+    };
+    QueryManager.prototype.schedulePoll = function (timeLimitMs) {
+        var _this = this;
+        var now = Date.now();
+        if (this.nextPoll) {
+            if (timeLimitMs < this.nextPoll.time - now) {
+                clearTimeout(this.nextPoll.timeout);
+            }
+            else {
+                return;
+            }
+        }
+        this.nextPoll = {
+            time: now + timeLimitMs,
+            timeout: setTimeout(function () {
+                _this.nextPoll = null;
+                var nextTimeLimitMs = Infinity;
+                _this.pollingInfoByQueryId.forEach(function (info, queryId) {
+                    if (info.interval < nextTimeLimitMs) {
+                        nextTimeLimitMs = info.interval;
                     }
-                    else {
-                        throw new Error('To use context.getCacheKey, you need to use a cache that has a configurable dataIdFromObject, like apollo-cache-inmemory.');
+                    if (!_this.checkInFlight(queryId)) {
+                        if (Date.now() - info.lastPollTimeMs >= info.interval) {
+                            var updateLastPollTime = function () {
+                                info.lastPollTimeMs = Date.now();
+                            };
+                            _this.fetchQuery(queryId, info.options, FetchType.poll).then(updateLastPollTime, updateLastPollTime);
+                        }
                     }
-                }, clientAwareness: this.clientAwareness }),
+                });
+                if (isFinite(nextTimeLimitMs)) {
+                    _this.schedulePoll(nextTimeLimitMs);
+                }
+            }, timeLimitMs),
         };
     };
     return QueryManager;
 }());
-
-//# sourceMappingURL=QueryManager.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-client/core/networkStatus.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/apollo-client/core/networkStatus.js ***!
-  \**********************************************************/
-/*! exports provided: NetworkStatus, isNetworkRequestInFlight */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NetworkStatus", function() { return NetworkStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNetworkRequestInFlight", function() { return isNetworkRequestInFlight; });
-var NetworkStatus;
-(function (NetworkStatus) {
-    NetworkStatus[NetworkStatus["loading"] = 1] = "loading";
-    NetworkStatus[NetworkStatus["setVariables"] = 2] = "setVariables";
-    NetworkStatus[NetworkStatus["fetchMore"] = 3] = "fetchMore";
-    NetworkStatus[NetworkStatus["refetch"] = 4] = "refetch";
-    NetworkStatus[NetworkStatus["poll"] = 6] = "poll";
-    NetworkStatus[NetworkStatus["ready"] = 7] = "ready";
-    NetworkStatus[NetworkStatus["error"] = 8] = "error";
-})(NetworkStatus || (NetworkStatus = {}));
-function isNetworkRequestInFlight(networkStatus) {
-    return networkStatus < 7;
-}
-//# sourceMappingURL=networkStatus.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-client/core/types.js":
-/*!**************************************************!*\
-  !*** ./node_modules/apollo-client/core/types.js ***!
-  \**************************************************/
-/*! exports provided: FetchType */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FetchType", function() { return FetchType; });
-var FetchType;
-(function (FetchType) {
-    FetchType[FetchType["normal"] = 1] = "normal";
-    FetchType[FetchType["refetch"] = 2] = "refetch";
-    FetchType[FetchType["poll"] = 3] = "poll";
-})(FetchType || (FetchType = {}));
-//# sourceMappingURL=types.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-client/data/mutations.js":
-/*!******************************************************!*\
-  !*** ./node_modules/apollo-client/data/mutations.js ***!
-  \******************************************************/
-/*! exports provided: MutationStore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MutationStore", function() { return MutationStore; });
-var MutationStore = (function () {
-    function MutationStore() {
-        this.store = {};
-    }
-    MutationStore.prototype.getStore = function () {
-        return this.store;
-    };
-    MutationStore.prototype.get = function (mutationId) {
-        return this.store[mutationId];
-    };
-    MutationStore.prototype.initMutation = function (mutationId, mutation, variables) {
-        this.store[mutationId] = {
-            mutation: mutation,
-            variables: variables || {},
-            loading: true,
-            error: null,
-        };
-    };
-    MutationStore.prototype.markMutationError = function (mutationId, error) {
-        var mutation = this.store[mutationId];
-        if (!mutation) {
-            return;
-        }
-        mutation.loading = false;
-        mutation.error = error;
-    };
-    MutationStore.prototype.markMutationResult = function (mutationId) {
-        var mutation = this.store[mutationId];
-        if (!mutation) {
-            return;
-        }
-        mutation.loading = false;
-        mutation.error = null;
-    };
-    MutationStore.prototype.reset = function () {
-        this.store = {};
-    };
-    return MutationStore;
-}());
-
-//# sourceMappingURL=mutations.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-client/data/queries.js":
-/*!****************************************************!*\
-  !*** ./node_modules/apollo-client/data/queries.js ***!
-  \****************************************************/
-/*! exports provided: QueryStore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QueryStore", function() { return QueryStore; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var apollo_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-utilities */ "./node_modules/apollo-utilities/lib/index.js");
-/* harmony import */ var _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/networkStatus */ "./node_modules/apollo-client/core/networkStatus.js");
-
-
-
-var QueryStore = (function () {
-    function QueryStore() {
-        this.store = {};
-    }
-    QueryStore.prototype.getStore = function () {
-        return this.store;
-    };
-    QueryStore.prototype.get = function (queryId) {
-        return this.store[queryId];
-    };
-    QueryStore.prototype.initQuery = function (query) {
-        var previousQuery = this.store[query.queryId];
-        if (previousQuery &&
-            previousQuery.document !== query.document &&
-            !Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["isEqual"])(previousQuery.document, query.document)) {
-            throw new Error('Internal Error: may not update existing query string in store');
-        }
-        var isSetVariables = false;
-        var previousVariables = null;
-        if (query.storePreviousVariables &&
-            previousQuery &&
-            previousQuery.networkStatus !== _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].loading) {
-            if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["isEqual"])(previousQuery.variables, query.variables)) {
-                isSetVariables = true;
-                previousVariables = previousQuery.variables;
-            }
-        }
-        var networkStatus;
-        if (isSetVariables) {
-            networkStatus = _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].setVariables;
-        }
-        else if (query.isPoll) {
-            networkStatus = _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].poll;
-        }
-        else if (query.isRefetch) {
-            networkStatus = _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].refetch;
-        }
-        else {
-            networkStatus = _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].loading;
-        }
-        var graphQLErrors = [];
-        if (previousQuery && previousQuery.graphQLErrors) {
-            graphQLErrors = previousQuery.graphQLErrors;
-        }
-        this.store[query.queryId] = {
-            document: query.document,
-            variables: query.variables,
-            previousVariables: previousVariables,
-            networkError: null,
-            graphQLErrors: graphQLErrors,
-            networkStatus: networkStatus,
-            metadata: query.metadata,
-        };
-        if (typeof query.fetchMoreForQueryId === 'string' &&
-            this.store[query.fetchMoreForQueryId]) {
-            this.store[query.fetchMoreForQueryId].networkStatus =
-                _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].fetchMore;
-        }
-    };
-    QueryStore.prototype.markQueryResult = function (queryId, result, fetchMoreForQueryId) {
-        if (!this.store || !this.store[queryId])
-            return;
-        this.store[queryId].networkError = null;
-        this.store[queryId].graphQLErrors =
-            result.errors && result.errors.length ? result.errors : [];
-        this.store[queryId].previousVariables = null;
-        this.store[queryId].networkStatus = _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].ready;
-        if (typeof fetchMoreForQueryId === 'string' &&
-            this.store[fetchMoreForQueryId]) {
-            this.store[fetchMoreForQueryId].networkStatus = _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].ready;
-        }
-    };
-    QueryStore.prototype.markQueryError = function (queryId, error, fetchMoreForQueryId) {
-        if (!this.store || !this.store[queryId])
-            return;
-        this.store[queryId].networkError = error;
-        this.store[queryId].networkStatus = _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].error;
-        if (typeof fetchMoreForQueryId === 'string') {
-            this.markQueryResultClient(fetchMoreForQueryId, true);
-        }
-    };
-    QueryStore.prototype.markQueryResultClient = function (queryId, complete) {
-        if (!this.store || !this.store[queryId])
-            return;
-        this.store[queryId].networkError = null;
-        this.store[queryId].previousVariables = null;
-        this.store[queryId].networkStatus = complete
-            ? _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].ready
-            : _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].loading;
-    };
-    QueryStore.prototype.stopQuery = function (queryId) {
-        delete this.store[queryId];
-    };
-    QueryStore.prototype.reset = function (observableQueryIds) {
-        var _this = this;
-        this.store = Object.keys(this.store)
-            .filter(function (queryId) {
-            return observableQueryIds.indexOf(queryId) > -1;
-        })
-            .reduce(function (res, key) {
-            res[key] = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, _this.store[key], { networkStatus: _core_networkStatus__WEBPACK_IMPORTED_MODULE_2__["NetworkStatus"].loading });
-            return res;
-        }, {});
-    };
-    return QueryStore;
-}());
-
-//# sourceMappingURL=queries.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-client/data/store.js":
-/*!**************************************************!*\
-  !*** ./node_modules/apollo-client/data/store.js ***!
-  \**************************************************/
-/*! exports provided: DataStore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataStore", function() { return DataStore; });
-/* harmony import */ var apollo_utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! apollo-utilities */ "./node_modules/apollo-utilities/lib/index.js");
 
 var DataStore = (function () {
     function DataStore(initialCache) {
@@ -2784,8 +3063,8 @@ var DataStore = (function () {
     };
     DataStore.prototype.markQueryResult = function (result, document, variables, fetchMoreForQueryId, ignoreErrors) {
         if (ignoreErrors === void 0) { ignoreErrors = false; }
-        var writeWithErrors = !Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_0__["graphQLResultHasError"])(result);
-        if (ignoreErrors && Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_0__["graphQLResultHasError"])(result) && result.data) {
+        var writeWithErrors = !Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["graphQLResultHasError"])(result);
+        if (ignoreErrors && Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["graphQLResultHasError"])(result) && result.data) {
             writeWithErrors = true;
         }
         if (!fetchMoreForQueryId && writeWithErrors) {
@@ -2798,7 +3077,7 @@ var DataStore = (function () {
         }
     };
     DataStore.prototype.markSubscriptionResult = function (result, document, variables) {
-        if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_0__["graphQLResultHasError"])(result)) {
+        if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["graphQLResultHasError"])(result)) {
             this.cache.write({
                 result: result.data,
                 dataId: 'ROOT_SUBSCRIPTION',
@@ -2841,7 +3120,7 @@ var DataStore = (function () {
     };
     DataStore.prototype.markMutationResult = function (mutation) {
         var _this = this;
-        if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_0__["graphQLResultHasError"])(mutation.result)) {
+        if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["graphQLResultHasError"])(mutation.result)) {
             var cacheWrites_1 = [];
             cacheWrites_1.push({
                 result: mutation.result.data,
@@ -2863,10 +3142,10 @@ var DataStore = (function () {
                     if (!complete) {
                         return;
                     }
-                    var nextQueryResult = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_0__["tryFunctionOrLogError"])(function () {
+                    var nextQueryResult = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["tryFunctionOrLogError"])(function () {
                         return updater(currentQueryResult, {
                             mutationResult: mutation.result,
-                            queryName: Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_0__["getOperationName"])(query.document) || undefined,
+                            queryName: Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getOperationName"])(query.document) || undefined,
                             queryVariables: query.variables,
                         });
                     });
@@ -2886,7 +3165,7 @@ var DataStore = (function () {
             var update_1 = mutation.update;
             if (update_1) {
                 this.cache.performTransaction(function (c) {
-                    Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_0__["tryFunctionOrLogError"])(function () { return update_1(c, mutation.result); });
+                    Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["tryFunctionOrLogError"])(function () { return update_1(c, mutation.result); });
                 });
             }
         }
@@ -2911,272 +3190,258 @@ var DataStore = (function () {
     return DataStore;
 }());
 
-//# sourceMappingURL=store.js.map
+var version = "2.5.1";
 
-/***/ }),
-
-/***/ "./node_modules/apollo-client/errors/ApolloError.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/apollo-client/errors/ApolloError.js ***!
-  \**********************************************************/
-/*! exports provided: isApolloError, ApolloError */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isApolloError", function() { return isApolloError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApolloError", function() { return ApolloError; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-
-function isApolloError(err) {
-    return err.hasOwnProperty('graphQLErrors');
-}
-var generateErrorMessage = function (err) {
-    var message = '';
-    if (Array.isArray(err.graphQLErrors) && err.graphQLErrors.length !== 0) {
-        err.graphQLErrors.forEach(function (graphQLError) {
-            var errorMessage = graphQLError
-                ? graphQLError.message
-                : 'Error message not found.';
-            message += "GraphQL error: " + errorMessage + "\n";
-        });
-    }
-    if (err.networkError) {
-        message += 'Network error: ' + err.networkError.message + '\n';
-    }
-    message = message.replace(/\n$/, '');
-    return message;
-};
-var ApolloError = (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ApolloError, _super);
-    function ApolloError(_a) {
-        var graphQLErrors = _a.graphQLErrors, networkError = _a.networkError, errorMessage = _a.errorMessage, extraInfo = _a.extraInfo;
-        var _this = _super.call(this, errorMessage) || this;
-        _this.graphQLErrors = graphQLErrors || [];
-        _this.networkError = networkError || null;
-        if (!errorMessage) {
-            _this.message = generateErrorMessage(_this);
-        }
-        else {
-            _this.message = errorMessage;
-        }
-        _this.extraInfo = extraInfo;
-        _this.__proto__ = ApolloError.prototype;
-        return _this;
-    }
-    return ApolloError;
-}(Error));
-
-//# sourceMappingURL=ApolloError.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-client/index.js":
-/*!*********************************************!*\
-  !*** ./node_modules/apollo-client/index.js ***!
-  \*********************************************/
-/*! exports provided: ObservableQuery, NetworkStatus, isApolloError, ApolloError, ApolloClient, default, FetchType */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_ObservableQuery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/ObservableQuery */ "./node_modules/apollo-client/core/ObservableQuery.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ObservableQuery", function() { return _core_ObservableQuery__WEBPACK_IMPORTED_MODULE_0__["ObservableQuery"]; });
-
-/* harmony import */ var _core_networkStatus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core/networkStatus */ "./node_modules/apollo-client/core/networkStatus.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NetworkStatus", function() { return _core_networkStatus__WEBPACK_IMPORTED_MODULE_1__["NetworkStatus"]; });
-
-/* harmony import */ var _core_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./core/types */ "./node_modules/apollo-client/core/types.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FetchType", function() { return _core_types__WEBPACK_IMPORTED_MODULE_2__["FetchType"]; });
-
-/* harmony import */ var _errors_ApolloError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./errors/ApolloError */ "./node_modules/apollo-client/errors/ApolloError.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isApolloError", function() { return _errors_ApolloError__WEBPACK_IMPORTED_MODULE_3__["isApolloError"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ApolloError", function() { return _errors_ApolloError__WEBPACK_IMPORTED_MODULE_3__["ApolloError"]; });
-
-/* harmony import */ var _ApolloClient__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ApolloClient */ "./node_modules/apollo-client/ApolloClient.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ApolloClient", function() { return _ApolloClient__WEBPACK_IMPORTED_MODULE_4__["default"]; });
-
-
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (_ApolloClient__WEBPACK_IMPORTED_MODULE_4__["default"]);
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-client/scheduler/scheduler.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/apollo-client/scheduler/scheduler.js ***!
-  \***********************************************************/
-/*! exports provided: QueryScheduler */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QueryScheduler", function() { return QueryScheduler; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _core_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/types */ "./node_modules/apollo-client/core/types.js");
-/* harmony import */ var _core_ObservableQuery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/ObservableQuery */ "./node_modules/apollo-client/core/ObservableQuery.js");
-/* harmony import */ var _core_networkStatus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/networkStatus */ "./node_modules/apollo-client/core/networkStatus.js");
-
-
-
-
-var QueryScheduler = (function () {
-    function QueryScheduler(_a) {
-        var queryManager = _a.queryManager, ssrMode = _a.ssrMode;
-        this.inFlightQueries = {};
-        this.registeredQueries = {};
-        this.intervalQueries = {};
-        this.pollingTimers = {};
-        this.ssrMode = false;
-        this.queryManager = queryManager;
-        this.ssrMode = ssrMode || false;
-    }
-    QueryScheduler.prototype.stop = function () {
+var hasSuggestedDevtools = false;
+var ApolloClient = (function () {
+    function ApolloClient(options) {
         var _this = this;
-        Object.keys(this.registeredQueries).forEach(function (queryId) {
-            _this.stopPollingQuery(queryId);
+        this.defaultOptions = {};
+        this.resetStoreCallbacks = [];
+        this.clearStoreCallbacks = [];
+        this.clientAwareness = {};
+        var cache = options.cache, _a = options.ssrMode, ssrMode = _a === void 0 ? false : _a, _b = options.ssrForceFetchDelay, ssrForceFetchDelay = _b === void 0 ? 0 : _b, connectToDevTools = options.connectToDevTools, _c = options.queryDeduplication, queryDeduplication = _c === void 0 ? true : _c, defaultOptions = options.defaultOptions, resolvers = options.resolvers, typeDefs = options.typeDefs, fragmentMatcher = options.fragmentMatcher, clientAwarenessName = options.name, clientAwarenessVersion = options.version;
+        var link = options.link;
+        if (!link && resolvers) {
+            link = apollo_link__WEBPACK_IMPORTED_MODULE_2__["ApolloLink"].empty();
+        }
+        if (!link || !cache) {
+            throw  false ? undefined : new ts_invariant__WEBPACK_IMPORTED_MODULE_4__["InvariantError"]("\n        In order to initialize Apollo Client, you must specify link & cache properties on the config object.\n        This is part of the required upgrade when migrating from Apollo Client 1.0 to Apollo Client 2.0.\n        For more information, please visit:\n          https://www.apollographql.com/docs/react/basics/setup.html\n        to help you get started.\n      ");
+        }
+        var supportedCache = new Map();
+        var supportedDirectives = new apollo_link__WEBPACK_IMPORTED_MODULE_2__["ApolloLink"](function (operation, forward) {
+            var result = supportedCache.get(operation.query);
+            if (!result) {
+                result = Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["removeConnectionDirectiveFromDocument"])(operation.query);
+                supportedCache.set(operation.query, result);
+                supportedCache.set(result, result);
+            }
+            operation.query = result;
+            return forward(operation);
         });
-        Object.keys(this.intervalQueries).forEach(function (interval) {
-            _this.fetchQueriesOnInterval(+interval);
+        this.link = supportedDirectives.concat(link);
+        this.cache = cache;
+        this.store = new DataStore(cache);
+        this.disableNetworkFetches = ssrMode || ssrForceFetchDelay > 0;
+        this.queryDeduplication = queryDeduplication;
+        this.ssrMode = ssrMode;
+        this.defaultOptions = defaultOptions || {};
+        this.typeDefs = typeDefs;
+        if (ssrForceFetchDelay) {
+            setTimeout(function () { return (_this.disableNetworkFetches = false); }, ssrForceFetchDelay);
+        }
+        this.watchQuery = this.watchQuery.bind(this);
+        this.query = this.query.bind(this);
+        this.mutate = this.mutate.bind(this);
+        this.resetStore = this.resetStore.bind(this);
+        this.reFetchObservableQueries = this.reFetchObservableQueries.bind(this);
+        var defaultConnectToDevTools = "development" !== 'production' &&
+            typeof window !== 'undefined' &&
+            !window.__APOLLO_CLIENT__;
+        if (typeof connectToDevTools === 'undefined'
+            ? defaultConnectToDevTools
+            : connectToDevTools && typeof window !== 'undefined') {
+            window.__APOLLO_CLIENT__ = this;
+        }
+        if (!hasSuggestedDevtools && "development" !== 'production') {
+            hasSuggestedDevtools = true;
+            if (typeof window !== 'undefined' &&
+                window.document &&
+                window.top === window.self) {
+                if (typeof window.__APOLLO_DEVTOOLS_GLOBAL_HOOK__ === 'undefined') {
+                    if (window.navigator &&
+                        window.navigator.userAgent &&
+                        window.navigator.userAgent.indexOf('Chrome') > -1) {
+                        console.debug('Download the Apollo DevTools ' +
+                            'for a better development experience: ' +
+                            'https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm');
+                    }
+                }
+            }
+        }
+        this.version = version;
+        if (clientAwarenessName) {
+            this.clientAwareness.name = clientAwarenessName;
+        }
+        if (clientAwarenessVersion) {
+            this.clientAwareness.version = clientAwarenessVersion;
+        }
+        this.localState = new LocalState({
+            cache: cache,
+            client: this,
+            resolvers: resolvers,
+            fragmentMatcher: fragmentMatcher,
         });
+    }
+    ApolloClient.prototype.stop = function () {
+        if (this.queryManager) {
+            this.queryManager.stop();
+        }
     };
-    QueryScheduler.prototype.checkInFlight = function (queryId) {
-        var query = this.queryManager.queryStore.get(queryId);
-        return (query &&
-            query.networkStatus !== _core_networkStatus__WEBPACK_IMPORTED_MODULE_3__["NetworkStatus"].ready &&
-            query.networkStatus !== _core_networkStatus__WEBPACK_IMPORTED_MODULE_3__["NetworkStatus"].error);
+    ApolloClient.prototype.watchQuery = function (options) {
+        if (this.defaultOptions.watchQuery) {
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.defaultOptions.watchQuery, options);
+        }
+        if (this.disableNetworkFetches &&
+            (options.fetchPolicy === 'network-only' ||
+                options.fetchPolicy === 'cache-and-network')) {
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options, { fetchPolicy: 'cache-first' });
+        }
+        return this.initQueryManager().watchQuery(options);
     };
-    QueryScheduler.prototype.fetchQuery = function (queryId, options, fetchType) {
+    ApolloClient.prototype.query = function (options) {
+        if (this.defaultOptions.query) {
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.defaultOptions.query, options);
+        }
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(options.fetchPolicy !== 'cache-and-network', 'cache-and-network fetchPolicy can only be used with watchQuery');
+        if (this.disableNetworkFetches && options.fetchPolicy === 'network-only') {
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options, { fetchPolicy: 'cache-first' });
+        }
+        return this.initQueryManager().query(options);
+    };
+    ApolloClient.prototype.mutate = function (options) {
+        if (this.defaultOptions.mutate) {
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.defaultOptions.mutate, options);
+        }
+        return this.initQueryManager().mutate(options);
+    };
+    ApolloClient.prototype.subscribe = function (options) {
+        return this.initQueryManager().startGraphQLSubscription(options);
+    };
+    ApolloClient.prototype.readQuery = function (options, optimistic) {
+        if (optimistic === void 0) { optimistic = false; }
+        return this.initProxy().readQuery(options, optimistic);
+    };
+    ApolloClient.prototype.readFragment = function (options, optimistic) {
+        if (optimistic === void 0) { optimistic = false; }
+        return this.initProxy().readFragment(options, optimistic);
+    };
+    ApolloClient.prototype.writeQuery = function (options) {
+        var result = this.initProxy().writeQuery(options);
+        this.initQueryManager().broadcastQueries();
+        return result;
+    };
+    ApolloClient.prototype.writeFragment = function (options) {
+        var result = this.initProxy().writeFragment(options);
+        this.initQueryManager().broadcastQueries();
+        return result;
+    };
+    ApolloClient.prototype.writeData = function (options) {
+        var result = this.initProxy().writeData(options);
+        this.initQueryManager().broadcastQueries();
+        return result;
+    };
+    ApolloClient.prototype.__actionHookForDevTools = function (cb) {
+        this.devToolsHookCb = cb;
+    };
+    ApolloClient.prototype.__requestRaw = function (payload) {
+        return Object(apollo_link__WEBPACK_IMPORTED_MODULE_2__["execute"])(this.link, payload);
+    };
+    ApolloClient.prototype.initQueryManager = function () {
         var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.queryManager
-                .fetchQuery(queryId, options, fetchType)
-                .then(function (result) {
-                resolve(result);
-            })
-                .catch(function (error) {
-                reject(error);
+        if (!this.queryManager) {
+            this.queryManager = new QueryManager({
+                link: this.link,
+                store: this.store,
+                queryDeduplication: this.queryDeduplication,
+                ssrMode: this.ssrMode,
+                clientAwareness: this.clientAwareness,
+                localState: this.localState,
+                onBroadcast: function () {
+                    if (_this.devToolsHookCb) {
+                        _this.devToolsHookCb({
+                            action: {},
+                            state: {
+                                queries: _this.queryManager
+                                    ? _this.queryManager.queryStore.getStore()
+                                    : {},
+                                mutations: _this.queryManager
+                                    ? _this.queryManager.mutationStore.getStore()
+                                    : {},
+                            },
+                            dataWithOptimisticResults: _this.cache.extract(true),
+                        });
+                    }
+                },
             });
-        });
-    };
-    QueryScheduler.prototype.startPollingQuery = function (options, queryId, listener) {
-        if (!options.pollInterval) {
-            throw new Error('Attempted to start a polling query without a polling interval.');
         }
-        if (this.ssrMode)
-            return queryId;
-        this.registeredQueries[queryId] = options;
-        if (listener) {
-            this.queryManager.addQueryListener(queryId, listener);
-        }
-        this.addQueryOnInterval(queryId, options);
-        return queryId;
+        return this.queryManager;
     };
-    QueryScheduler.prototype.stopPollingQuery = function (queryId) {
-        delete this.registeredQueries[queryId];
-    };
-    QueryScheduler.prototype.fetchQueriesOnInterval = function (interval) {
+    ApolloClient.prototype.resetStore = function () {
         var _this = this;
-        this.intervalQueries[interval] = this.intervalQueries[interval].filter(function (queryId) {
-            if (!(_this.registeredQueries.hasOwnProperty(queryId) &&
-                _this.registeredQueries[queryId].pollInterval === interval)) {
-                return false;
-            }
-            if (_this.checkInFlight(queryId)) {
-                return true;
-            }
-            var queryOptions = _this.registeredQueries[queryId];
-            var pollingOptions = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, queryOptions);
-            pollingOptions.fetchPolicy = 'network-only';
-            _this.fetchQuery(queryId, pollingOptions, _core_types__WEBPACK_IMPORTED_MODULE_1__["FetchType"].poll).catch(function () { });
-            return true;
+        return Promise.resolve()
+            .then(function () {
+            return _this.queryManager
+                ? _this.queryManager.clearStore()
+                : Promise.resolve(null);
+        })
+            .then(function () { return Promise.all(_this.resetStoreCallbacks.map(function (fn) { return fn(); })); })
+            .then(function () {
+            return _this.queryManager && _this.queryManager.reFetchObservableQueries
+                ? _this.queryManager.reFetchObservableQueries()
+                : Promise.resolve(null);
         });
-        if (this.intervalQueries[interval].length === 0) {
-            clearInterval(this.pollingTimers[interval]);
-            delete this.intervalQueries[interval];
-        }
     };
-    QueryScheduler.prototype.addQueryOnInterval = function (queryId, queryOptions) {
+    ApolloClient.prototype.clearStore = function () {
         var _this = this;
-        var interval = queryOptions.pollInterval;
-        if (!interval) {
-            throw new Error("A poll interval is required to start polling query with id '" + queryId + "'.");
-        }
-        if (this.intervalQueries.hasOwnProperty(interval.toString()) &&
-            this.intervalQueries[interval].length > 0) {
-            this.intervalQueries[interval].push(queryId);
-        }
-        else {
-            this.intervalQueries[interval] = [queryId];
-            this.pollingTimers[interval] = setInterval(function () {
-                _this.fetchQueriesOnInterval(interval);
-            }, interval);
-        }
-    };
-    QueryScheduler.prototype.registerPollingQuery = function (queryOptions) {
-        if (!queryOptions.pollInterval) {
-            throw new Error('Attempted to register a non-polling query with the scheduler.');
-        }
-        return new _core_ObservableQuery__WEBPACK_IMPORTED_MODULE_2__["ObservableQuery"]({
-            scheduler: this,
-            options: queryOptions,
+        var queryManager = this.queryManager;
+        return Promise.resolve()
+            .then(function () { return Promise.all(_this.clearStoreCallbacks.map(function (fn) { return fn(); })); })
+            .then(function () {
+            return queryManager ? queryManager.clearStore() : Promise.resolve(null);
         });
     };
-    return QueryScheduler;
+    ApolloClient.prototype.onResetStore = function (cb) {
+        var _this = this;
+        this.resetStoreCallbacks.push(cb);
+        return function () {
+            _this.resetStoreCallbacks = _this.resetStoreCallbacks.filter(function (c) { return c !== cb; });
+        };
+    };
+    ApolloClient.prototype.onClearStore = function (cb) {
+        var _this = this;
+        this.clearStoreCallbacks.push(cb);
+        return function () {
+            _this.clearStoreCallbacks = _this.clearStoreCallbacks.filter(function (c) { return c !== cb; });
+        };
+    };
+    ApolloClient.prototype.reFetchObservableQueries = function (includeStandby) {
+        return this.queryManager
+            ? this.queryManager.reFetchObservableQueries(includeStandby)
+            : Promise.resolve(null);
+    };
+    ApolloClient.prototype.extract = function (optimistic) {
+        return this.initProxy().extract(optimistic);
+    };
+    ApolloClient.prototype.restore = function (serializedState) {
+        return this.initProxy().restore(serializedState);
+    };
+    ApolloClient.prototype.addResolvers = function (resolvers) {
+        this.localState.addResolvers(resolvers);
+    };
+    ApolloClient.prototype.setResolvers = function (resolvers) {
+        this.localState.setResolvers(resolvers);
+    };
+    ApolloClient.prototype.getResolvers = function () {
+        return this.localState.getResolvers();
+    };
+    ApolloClient.prototype.setLocalStateFragmentMatcher = function (fragmentMatcher) {
+        this.localState.setFragmentMatcher(fragmentMatcher);
+    };
+    ApolloClient.prototype.initProxy = function () {
+        if (!this.proxy) {
+            this.initQueryManager();
+            this.proxy = this.cache;
+        }
+        return this.proxy;
+    };
+    return ApolloClient;
 }());
 
-//# sourceMappingURL=scheduler.js.map
+/* harmony default export */ __webpack_exports__["default"] = (ApolloClient);
 
-/***/ }),
+//# sourceMappingURL=bundle.esm.js.map
 
-/***/ "./node_modules/apollo-client/util/Observable.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/apollo-client/util/Observable.js ***!
-  \*******************************************************/
-/*! exports provided: Observable */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Observable", function() { return Observable; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var apollo_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-link */ "./node_modules/apollo-link/lib/bundle.esm.js");
-/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! symbol-observable */ "./node_modules/symbol-observable/es/index.js");
-
-
-
-var Observable = (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](Observable, _super);
-    function Observable() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Observable.prototype[symbol_observable__WEBPACK_IMPORTED_MODULE_2__["default"]] = function () {
-        return this;
-    };
-    Observable.prototype['@@observable'] = function () {
-        return this;
-    };
-    return Observable;
-}(apollo_link__WEBPACK_IMPORTED_MODULE_1__["Observable"]));
-
-//# sourceMappingURL=Observable.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-client/version.js":
-/*!***********************************************!*\
-  !*** ./node_modules/apollo-client/version.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-exports.version = "2.4.12"
 
 /***/ }),
 
@@ -3553,156 +3818,21 @@ function execute(link, operation) {
 
 /***/ }),
 
-/***/ "./node_modules/apollo-utilities/lib/directives.js":
+/***/ "./node_modules/apollo-utilities/lib/bundle.esm.js":
 /*!*********************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/directives.js ***!
+  !*** ./node_modules/apollo-utilities/lib/bundle.esm.js ***!
   \*********************************************************/
-/*! exports provided: getDirectiveInfoFromField, shouldInclude, getDirectiveNames, hasDirectives */
+/*! exports provided: getDirectiveInfoFromField, shouldInclude, getDirectiveNames, hasDirectives, hasClientExports, getFragmentQueryDocument, getMutationDefinition, checkDocument, getOperationDefinition, getOperationDefinitionOrDie, getOperationName, getFragmentDefinitions, getQueryDefinition, getFragmentDefinition, getMainDefinition, createFragmentMap, getDefaultValues, variablesInOperation, removeDirectivesFromDocument, addTypenameToDocument, removeConnectionDirectiveFromDocument, getDirectivesFromDocument, removeArgumentsFromDocument, removeFragmentSpreadFromDocument, buildQueryFromSelectionSet, removeClientSetsFromDocument, isScalarValue, isNumberValue, valueToObjectRepresentation, storeKeyNameFromField, getStoreKeyName, argumentsObjectFromField, resultKeyNameFromField, isField, isInlineFragment, isIdValue, toIdValue, isJsonValue, valueFromNode, assign, cloneDeep, getEnv, isEnv, isProduction, isDevelopment, isTest, tryFunctionOrLogError, graphQLResultHasError, isEqual, maybeDeepFreeze, mergeDeep, mergeDeepArray, warnOnceInDevelopment, stripSymbols */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDirectiveInfoFromField", function() { return getDirectiveInfoFromField; });
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDirectiveInfoFromField", function() { return getDirectiveInfoFromField; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shouldInclude", function() { return shouldInclude; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDirectiveNames", function() { return getDirectiveNames; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasDirectives", function() { return hasDirectives; });
-/* harmony import */ var graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql/language/visitor */ "./node_modules/graphql/language/visitor.mjs");
-/* harmony import */ var _storeUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./storeUtils */ "./node_modules/apollo-utilities/lib/storeUtils.js");
-
-
-function getDirectiveInfoFromField(field, variables) {
-    if (field.directives && field.directives.length) {
-        var directiveObj_1 = {};
-        field.directives.forEach(function (directive) {
-            directiveObj_1[directive.name.value] = Object(_storeUtils__WEBPACK_IMPORTED_MODULE_1__["argumentsObjectFromField"])(directive, variables);
-        });
-        return directiveObj_1;
-    }
-    return null;
-}
-function shouldInclude(selection, variables) {
-    if (variables === void 0) { variables = {}; }
-    if (!selection.directives) {
-        return true;
-    }
-    var res = true;
-    selection.directives.forEach(function (directive) {
-        if (directive.name.value !== 'skip' && directive.name.value !== 'include') {
-            return;
-        }
-        var directiveArguments = directive.arguments || [];
-        var directiveName = directive.name.value;
-        if (directiveArguments.length !== 1) {
-            throw new Error("Incorrect number of arguments for the @" + directiveName + " directive.");
-        }
-        var ifArgument = directiveArguments[0];
-        if (!ifArgument.name || ifArgument.name.value !== 'if') {
-            throw new Error("Invalid argument for the @" + directiveName + " directive.");
-        }
-        var ifValue = directiveArguments[0].value;
-        var evaledValue = false;
-        if (!ifValue || ifValue.kind !== 'BooleanValue') {
-            if (ifValue.kind !== 'Variable') {
-                throw new Error("Argument for the @" + directiveName + " directive must be a variable or a boolean value.");
-            }
-            else {
-                evaledValue = variables[ifValue.name.value];
-                if (evaledValue === undefined) {
-                    throw new Error("Invalid variable referenced in @" + directiveName + " directive.");
-                }
-            }
-        }
-        else {
-            evaledValue = ifValue.value;
-        }
-        if (directiveName === 'skip') {
-            evaledValue = !evaledValue;
-        }
-        if (!evaledValue) {
-            res = false;
-        }
-    });
-    return res;
-}
-function getDirectiveNames(doc) {
-    var names = [];
-    Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(doc, {
-        Directive: function (node) {
-            names.push(node.name.value);
-        },
-    });
-    return names;
-}
-function hasDirectives(names, doc) {
-    return getDirectiveNames(doc).some(function (name) { return names.indexOf(name) > -1; });
-}
-//# sourceMappingURL=directives.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/fragments.js":
-/*!********************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/fragments.js ***!
-  \********************************************************/
-/*! exports provided: getFragmentQueryDocument */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasClientExports", function() { return hasClientExports; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFragmentQueryDocument", function() { return getFragmentQueryDocument; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-
-function getFragmentQueryDocument(document, fragmentName) {
-    var actualFragmentName = fragmentName;
-    var fragments = [];
-    document.definitions.forEach(function (definition) {
-        if (definition.kind === 'OperationDefinition') {
-            throw new Error("Found a " + definition.operation + " operation" + (definition.name ? " named '" + definition.name.value + "'" : '') + ". " +
-                'No operations are allowed when using a fragment as a query. Only fragments are allowed.');
-        }
-        if (definition.kind === 'FragmentDefinition') {
-            fragments.push(definition);
-        }
-    });
-    if (typeof actualFragmentName === 'undefined') {
-        if (fragments.length !== 1) {
-            throw new Error("Found " + fragments.length + " fragments. `fragmentName` must be provided when there is not exactly 1 fragment.");
-        }
-        actualFragmentName = fragments[0].name.value;
-    }
-    var query = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, document, { definitions: [
-            {
-                kind: 'OperationDefinition',
-                operation: 'query',
-                selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                        {
-                            kind: 'FragmentSpread',
-                            name: {
-                                kind: 'Name',
-                                value: actualFragmentName,
-                            },
-                        },
-                    ],
-                },
-            }
-        ].concat(document.definitions) });
-    return query;
-}
-//# sourceMappingURL=fragments.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/getFromAST.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/getFromAST.js ***!
-  \*********************************************************/
-/*! exports provided: getMutationDefinition, checkDocument, getOperationDefinition, getOperationDefinitionOrDie, getOperationName, getFragmentDefinitions, getQueryDefinition, getFragmentDefinition, getMainDefinition, createFragmentMap, getDefaultValues, variablesInOperation */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMutationDefinition", function() { return getMutationDefinition; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkDocument", function() { return checkDocument; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getOperationDefinition", function() { return getOperationDefinition; });
@@ -3715,288 +3845,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createFragmentMap", function() { return createFragmentMap; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDefaultValues", function() { return getDefaultValues; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "variablesInOperation", function() { return variablesInOperation; });
-/* harmony import */ var _util_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/assign */ "./node_modules/apollo-utilities/lib/util/assign.js");
-/* harmony import */ var _storeUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./storeUtils */ "./node_modules/apollo-utilities/lib/storeUtils.js");
-
-
-function getMutationDefinition(doc) {
-    checkDocument(doc);
-    var mutationDef = doc.definitions.filter(function (definition) {
-        return definition.kind === 'OperationDefinition' &&
-            definition.operation === 'mutation';
-    })[0];
-    if (!mutationDef) {
-        throw new Error('Must contain a mutation definition.');
-    }
-    return mutationDef;
-}
-function checkDocument(doc) {
-    if (doc.kind !== 'Document') {
-        throw new Error("Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a \"gql\" tag? http://docs.apollostack.com/apollo-client/core.html#gql");
-    }
-    var operations = doc.definitions
-        .filter(function (d) { return d.kind !== 'FragmentDefinition'; })
-        .map(function (definition) {
-        if (definition.kind !== 'OperationDefinition') {
-            throw new Error("Schema type definitions not allowed in queries. Found: \"" + definition.kind + "\"");
-        }
-        return definition;
-    });
-    if (operations.length > 1) {
-        throw new Error("Ambiguous GraphQL document: contains " + operations.length + " operations");
-    }
-    return doc;
-}
-function getOperationDefinition(doc) {
-    checkDocument(doc);
-    return doc.definitions.filter(function (definition) { return definition.kind === 'OperationDefinition'; })[0];
-}
-function getOperationDefinitionOrDie(document) {
-    var def = getOperationDefinition(document);
-    if (!def) {
-        throw new Error("GraphQL document is missing an operation");
-    }
-    return def;
-}
-function getOperationName(doc) {
-    return (doc.definitions
-        .filter(function (definition) {
-        return definition.kind === 'OperationDefinition' && definition.name;
-    })
-        .map(function (x) { return x.name.value; })[0] || null);
-}
-function getFragmentDefinitions(doc) {
-    return doc.definitions.filter(function (definition) { return definition.kind === 'FragmentDefinition'; });
-}
-function getQueryDefinition(doc) {
-    var queryDef = getOperationDefinition(doc);
-    if (!queryDef || queryDef.operation !== 'query') {
-        throw new Error('Must contain a query definition.');
-    }
-    return queryDef;
-}
-function getFragmentDefinition(doc) {
-    if (doc.kind !== 'Document') {
-        throw new Error("Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a \"gql\" tag? http://docs.apollostack.com/apollo-client/core.html#gql");
-    }
-    if (doc.definitions.length > 1) {
-        throw new Error('Fragment must have exactly one definition.');
-    }
-    var fragmentDef = doc.definitions[0];
-    if (fragmentDef.kind !== 'FragmentDefinition') {
-        throw new Error('Must be a fragment definition.');
-    }
-    return fragmentDef;
-}
-function getMainDefinition(queryDoc) {
-    checkDocument(queryDoc);
-    var fragmentDefinition;
-    for (var _i = 0, _a = queryDoc.definitions; _i < _a.length; _i++) {
-        var definition = _a[_i];
-        if (definition.kind === 'OperationDefinition') {
-            var operation = definition.operation;
-            if (operation === 'query' ||
-                operation === 'mutation' ||
-                operation === 'subscription') {
-                return definition;
-            }
-        }
-        if (definition.kind === 'FragmentDefinition' && !fragmentDefinition) {
-            fragmentDefinition = definition;
-        }
-    }
-    if (fragmentDefinition) {
-        return fragmentDefinition;
-    }
-    throw new Error('Expected a parsed GraphQL query with a query, mutation, subscription, or a fragment.');
-}
-function createFragmentMap(fragments) {
-    if (fragments === void 0) { fragments = []; }
-    var symTable = {};
-    fragments.forEach(function (fragment) {
-        symTable[fragment.name.value] = fragment;
-    });
-    return symTable;
-}
-function getDefaultValues(definition) {
-    if (definition &&
-        definition.variableDefinitions &&
-        definition.variableDefinitions.length) {
-        var defaultValues = definition.variableDefinitions
-            .filter(function (_a) {
-            var defaultValue = _a.defaultValue;
-            return defaultValue;
-        })
-            .map(function (_a) {
-            var variable = _a.variable, defaultValue = _a.defaultValue;
-            var defaultValueObj = {};
-            Object(_storeUtils__WEBPACK_IMPORTED_MODULE_1__["valueToObjectRepresentation"])(defaultValueObj, variable.name, defaultValue);
-            return defaultValueObj;
-        });
-        return _util_assign__WEBPACK_IMPORTED_MODULE_0__["assign"].apply(void 0, [{}].concat(defaultValues));
-    }
-    return {};
-}
-function variablesInOperation(operation) {
-    var names = new Set();
-    if (operation.variableDefinitions) {
-        for (var _i = 0, _a = operation.variableDefinitions; _i < _a.length; _i++) {
-            var definition = _a[_i];
-            names.add(definition.variable.name.value);
-        }
-    }
-    return names;
-}
-//# sourceMappingURL=getFromAST.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/index.js ***!
-  \****************************************************/
-/*! exports provided: getDirectiveInfoFromField, shouldInclude, getDirectiveNames, hasDirectives, getFragmentQueryDocument, getMutationDefinition, checkDocument, getOperationDefinition, getOperationDefinitionOrDie, getOperationName, getFragmentDefinitions, getQueryDefinition, getFragmentDefinition, getMainDefinition, createFragmentMap, getDefaultValues, variablesInOperation, removeDirectivesFromDocument, addTypenameToDocument, removeConnectionDirectiveFromDocument, getDirectivesFromDocument, removeArgumentsFromDocument, removeFragmentSpreadFromDocument, isScalarValue, isNumberValue, valueToObjectRepresentation, storeKeyNameFromField, getStoreKeyName, argumentsObjectFromField, resultKeyNameFromField, isField, isInlineFragment, isIdValue, toIdValue, isJsonValue, valueFromNode, assign, cloneDeep, getEnv, isEnv, isProduction, isDevelopment, isTest, tryFunctionOrLogError, graphQLResultHasError, isEqual, maybeDeepFreeze, warnOnceInDevelopment, stripSymbols */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _directives__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./directives */ "./node_modules/apollo-utilities/lib/directives.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDirectiveInfoFromField", function() { return _directives__WEBPACK_IMPORTED_MODULE_0__["getDirectiveInfoFromField"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "shouldInclude", function() { return _directives__WEBPACK_IMPORTED_MODULE_0__["shouldInclude"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDirectiveNames", function() { return _directives__WEBPACK_IMPORTED_MODULE_0__["getDirectiveNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hasDirectives", function() { return _directives__WEBPACK_IMPORTED_MODULE_0__["hasDirectives"]; });
-
-/* harmony import */ var _fragments__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fragments */ "./node_modules/apollo-utilities/lib/fragments.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getFragmentQueryDocument", function() { return _fragments__WEBPACK_IMPORTED_MODULE_1__["getFragmentQueryDocument"]; });
-
-/* harmony import */ var _getFromAST__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getFromAST */ "./node_modules/apollo-utilities/lib/getFromAST.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getMutationDefinition", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["getMutationDefinition"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "checkDocument", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["checkDocument"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getOperationDefinition", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["getOperationDefinition"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getOperationDefinitionOrDie", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["getOperationDefinitionOrDie"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getOperationName", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["getOperationName"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getFragmentDefinitions", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["getFragmentDefinitions"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getQueryDefinition", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["getQueryDefinition"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getFragmentDefinition", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["getFragmentDefinition"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getMainDefinition", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["getMainDefinition"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createFragmentMap", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["createFragmentMap"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDefaultValues", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["getDefaultValues"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "variablesInOperation", function() { return _getFromAST__WEBPACK_IMPORTED_MODULE_2__["variablesInOperation"]; });
-
-/* harmony import */ var _transform__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./transform */ "./node_modules/apollo-utilities/lib/transform.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "removeDirectivesFromDocument", function() { return _transform__WEBPACK_IMPORTED_MODULE_3__["removeDirectivesFromDocument"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "addTypenameToDocument", function() { return _transform__WEBPACK_IMPORTED_MODULE_3__["addTypenameToDocument"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "removeConnectionDirectiveFromDocument", function() { return _transform__WEBPACK_IMPORTED_MODULE_3__["removeConnectionDirectiveFromDocument"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDirectivesFromDocument", function() { return _transform__WEBPACK_IMPORTED_MODULE_3__["getDirectivesFromDocument"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "removeArgumentsFromDocument", function() { return _transform__WEBPACK_IMPORTED_MODULE_3__["removeArgumentsFromDocument"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "removeFragmentSpreadFromDocument", function() { return _transform__WEBPACK_IMPORTED_MODULE_3__["removeFragmentSpreadFromDocument"]; });
-
-/* harmony import */ var _storeUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./storeUtils */ "./node_modules/apollo-utilities/lib/storeUtils.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isScalarValue", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["isScalarValue"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isNumberValue", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["isNumberValue"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "valueToObjectRepresentation", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["valueToObjectRepresentation"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "storeKeyNameFromField", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["storeKeyNameFromField"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getStoreKeyName", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["getStoreKeyName"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "argumentsObjectFromField", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["argumentsObjectFromField"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "resultKeyNameFromField", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["resultKeyNameFromField"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isField", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["isField"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isInlineFragment", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["isInlineFragment"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isIdValue", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["isIdValue"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "toIdValue", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["toIdValue"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isJsonValue", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["isJsonValue"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "valueFromNode", function() { return _storeUtils__WEBPACK_IMPORTED_MODULE_4__["valueFromNode"]; });
-
-/* harmony import */ var _util_assign__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./util/assign */ "./node_modules/apollo-utilities/lib/util/assign.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "assign", function() { return _util_assign__WEBPACK_IMPORTED_MODULE_5__["assign"]; });
-
-/* harmony import */ var _util_cloneDeep__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./util/cloneDeep */ "./node_modules/apollo-utilities/lib/util/cloneDeep.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cloneDeep", function() { return _util_cloneDeep__WEBPACK_IMPORTED_MODULE_6__["cloneDeep"]; });
-
-/* harmony import */ var _util_environment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./util/environment */ "./node_modules/apollo-utilities/lib/util/environment.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getEnv", function() { return _util_environment__WEBPACK_IMPORTED_MODULE_7__["getEnv"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isEnv", function() { return _util_environment__WEBPACK_IMPORTED_MODULE_7__["isEnv"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isProduction", function() { return _util_environment__WEBPACK_IMPORTED_MODULE_7__["isProduction"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isDevelopment", function() { return _util_environment__WEBPACK_IMPORTED_MODULE_7__["isDevelopment"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isTest", function() { return _util_environment__WEBPACK_IMPORTED_MODULE_7__["isTest"]; });
-
-/* harmony import */ var _util_errorHandling__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./util/errorHandling */ "./node_modules/apollo-utilities/lib/util/errorHandling.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tryFunctionOrLogError", function() { return _util_errorHandling__WEBPACK_IMPORTED_MODULE_8__["tryFunctionOrLogError"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "graphQLResultHasError", function() { return _util_errorHandling__WEBPACK_IMPORTED_MODULE_8__["graphQLResultHasError"]; });
-
-/* harmony import */ var _util_isEqual__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./util/isEqual */ "./node_modules/apollo-utilities/lib/util/isEqual.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isEqual", function() { return _util_isEqual__WEBPACK_IMPORTED_MODULE_9__["isEqual"]; });
-
-/* harmony import */ var _util_maybeDeepFreeze__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./util/maybeDeepFreeze */ "./node_modules/apollo-utilities/lib/util/maybeDeepFreeze.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "maybeDeepFreeze", function() { return _util_maybeDeepFreeze__WEBPACK_IMPORTED_MODULE_10__["maybeDeepFreeze"]; });
-
-/* harmony import */ var _util_warnOnce__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./util/warnOnce */ "./node_modules/apollo-utilities/lib/util/warnOnce.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "warnOnceInDevelopment", function() { return _util_warnOnce__WEBPACK_IMPORTED_MODULE_11__["warnOnceInDevelopment"]; });
-
-/* harmony import */ var _util_stripSymbols__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./util/stripSymbols */ "./node_modules/apollo-utilities/lib/util/stripSymbols.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "stripSymbols", function() { return _util_stripSymbols__WEBPACK_IMPORTED_MODULE_12__["stripSymbols"]; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/storeUtils.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/storeUtils.js ***!
-  \*********************************************************/
-/*! exports provided: isScalarValue, isNumberValue, valueToObjectRepresentation, storeKeyNameFromField, getStoreKeyName, argumentsObjectFromField, resultKeyNameFromField, isField, isInlineFragment, isIdValue, toIdValue, isJsonValue, valueFromNode */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeDirectivesFromDocument", function() { return removeDirectivesFromDocument; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addTypenameToDocument", function() { return addTypenameToDocument; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeConnectionDirectiveFromDocument", function() { return removeConnectionDirectiveFromDocument; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDirectivesFromDocument", function() { return getDirectivesFromDocument; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeArgumentsFromDocument", function() { return removeArgumentsFromDocument; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeFragmentSpreadFromDocument", function() { return removeFragmentSpreadFromDocument; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildQueryFromSelectionSet", function() { return buildQueryFromSelectionSet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeClientSetsFromDocument", function() { return removeClientSetsFromDocument; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isScalarValue", function() { return isScalarValue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNumberValue", function() { return isNumberValue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "valueToObjectRepresentation", function() { return valueToObjectRepresentation; });
@@ -4010,9 +3866,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toIdValue", function() { return toIdValue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isJsonValue", function() { return isJsonValue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "valueFromNode", function() { return valueFromNode; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var fast_json_stable_stringify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! fast-json-stable-stringify */ "./node_modules/fast-json-stable-stringify/index.js");
-/* harmony import */ var fast_json_stable_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(fast_json_stable_stringify__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "assign", function() { return assign; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cloneDeep", function() { return cloneDeep; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getEnv", function() { return getEnv; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEnv", function() { return isEnv; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isProduction", function() { return isProduction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDevelopment", function() { return isDevelopment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isTest", function() { return isTest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tryFunctionOrLogError", function() { return tryFunctionOrLogError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "graphQLResultHasError", function() { return graphQLResultHasError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEqual", function() { return isEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "maybeDeepFreeze", function() { return maybeDeepFreeze; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mergeDeep", function() { return mergeDeep; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mergeDeepArray", function() { return mergeDeepArray; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "warnOnceInDevelopment", function() { return warnOnceInDevelopment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stripSymbols", function() { return stripSymbols; });
+/* harmony import */ var graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql/language/visitor */ "./node_modules/graphql/language/visitor.mjs");
+/* harmony import */ var ts_invariant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ts-invariant */ "./node_modules/ts-invariant/lib/invariant.esm.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var fast_json_stable_stringify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! fast-json-stable-stringify */ "./node_modules/fast-json-stable-stringify/index.js");
+/* harmony import */ var fast_json_stable_stringify__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(fast_json_stable_stringify__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
 
 
 function isScalarValue(value) {
@@ -4080,7 +3956,7 @@ function valueToObjectRepresentation(argObj, name, value, variables) {
         argObj[name.value] = null;
     }
     else {
-        throw new Error("The inline argument \"" + name.value + "\" of kind \"" + value.kind + "\"" +
+        throw  false ? undefined : new ts_invariant__WEBPACK_IMPORTED_MODULE_1__["InvariantError"]("The inline argument \"" + name.value + "\" of kind \"" + value.kind + "\"" +
             'is not supported. Use variables instead of inline arguments to ' +
             'overcome this limitation.');
     }
@@ -4140,7 +4016,7 @@ function getStoreKeyName(fieldName, args, directives) {
     }
     var completeFieldName = fieldName;
     if (args) {
-        var stringifiedArgs = fast_json_stable_stringify__WEBPACK_IMPORTED_MODULE_1___default()(args);
+        var stringifiedArgs = fast_json_stable_stringify__WEBPACK_IMPORTED_MODULE_3___default()(args);
         completeFieldName += "(" + stringifiedArgs + ")";
     }
     if (directives) {
@@ -4184,7 +4060,7 @@ function isIdValue(idObject) {
 }
 function toIdValue(idConfig, generated) {
     if (generated === void 0) { generated = false; }
-    return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({ type: 'id', generated: generated }, (typeof idConfig === 'string'
+    return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ type: 'id', generated: generated }, (typeof idConfig === 'string'
         ? { id: idConfig, typename: undefined }
         : idConfig));
 }
@@ -4194,7 +4070,7 @@ function isJsonValue(jsonObject) {
         jsonObject.type === 'json');
 }
 function defaultValueFromVariable(node) {
-    throw new Error("Variable nodes are not supported by valueFromNode");
+    throw  false ? undefined : new ts_invariant__WEBPACK_IMPORTED_MODULE_1__["InvariantError"]("Variable nodes are not supported by valueFromNode");
 }
 function valueFromNode(node, onVariable) {
     if (onVariable === void 0) { onVariable = defaultValueFromVariable; }
@@ -4221,32 +4097,245 @@ function valueFromNode(node, onVariable) {
             return node.value;
     }
 }
-//# sourceMappingURL=storeUtils.js.map
 
-/***/ }),
+function getDirectiveInfoFromField(field, variables) {
+    if (field.directives && field.directives.length) {
+        var directiveObj_1 = {};
+        field.directives.forEach(function (directive) {
+            directiveObj_1[directive.name.value] = argumentsObjectFromField(directive, variables);
+        });
+        return directiveObj_1;
+    }
+    return null;
+}
+function shouldInclude(selection, variables) {
+    if (variables === void 0) { variables = {}; }
+    if (!selection.directives) {
+        return true;
+    }
+    var res = true;
+    selection.directives.forEach(function (directive) {
+        if (directive.name.value !== 'skip' && directive.name.value !== 'include') {
+            return;
+        }
+        var directiveArguments = directive.arguments || [];
+        var directiveName = directive.name.value;
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(directiveArguments.length === 1, "Incorrect number of arguments for the @" + directiveName + " directive.");
+        var ifArgument = directiveArguments[0];
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(ifArgument.name && ifArgument.name.value === 'if', "Invalid argument for the @" + directiveName + " directive.");
+        var ifValue = directiveArguments[0].value;
+        var evaledValue = false;
+        if (!ifValue || ifValue.kind !== 'BooleanValue') {
+             false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(ifValue.kind === 'Variable', "Argument for the @" + directiveName + " directive must be a variable or a boolean value.");
+            evaledValue = variables[ifValue.name.value];
+             false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(evaledValue !== void 0, "Invalid variable referenced in @" + directiveName + " directive.");
+        }
+        else {
+            evaledValue = ifValue.value;
+        }
+        if (directiveName === 'skip') {
+            evaledValue = !evaledValue;
+        }
+        if (!evaledValue) {
+            res = false;
+        }
+    });
+    return res;
+}
+function getDirectiveNames(doc) {
+    var names = [];
+    Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(doc, {
+        Directive: function (node) {
+            names.push(node.name.value);
+        },
+    });
+    return names;
+}
+function hasDirectives(names, doc) {
+    return getDirectiveNames(doc).some(function (name) { return names.indexOf(name) > -1; });
+}
+function hasClientExports(document) {
+    return (document &&
+        hasDirectives(['client'], document) &&
+        hasDirectives(['export'], document));
+}
 
-/***/ "./node_modules/apollo-utilities/lib/transform.js":
-/*!********************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/transform.js ***!
-  \********************************************************/
-/*! exports provided: removeDirectivesFromDocument, addTypenameToDocument, removeConnectionDirectiveFromDocument, getDirectivesFromDocument, removeArgumentsFromDocument, removeFragmentSpreadFromDocument */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+function getFragmentQueryDocument(document, fragmentName) {
+    var actualFragmentName = fragmentName;
+    var fragments = [];
+    document.definitions.forEach(function (definition) {
+        if (definition.kind === 'OperationDefinition') {
+            throw  false ? undefined : new ts_invariant__WEBPACK_IMPORTED_MODULE_1__["InvariantError"]("Found a " + definition.operation + " operation" + (definition.name ? " named '" + definition.name.value + "'" : '') + ". " +
+                'No operations are allowed when using a fragment as a query. Only fragments are allowed.');
+        }
+        if (definition.kind === 'FragmentDefinition') {
+            fragments.push(definition);
+        }
+    });
+    if (typeof actualFragmentName === 'undefined') {
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(fragments.length === 1, "Found " + fragments.length + " fragments. `fragmentName` must be provided when there is not exactly 1 fragment.");
+        actualFragmentName = fragments[0].name.value;
+    }
+    var query = Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, document, { definitions: [
+            {
+                kind: 'OperationDefinition',
+                operation: 'query',
+                selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                        {
+                            kind: 'FragmentSpread',
+                            name: {
+                                kind: 'Name',
+                                value: actualFragmentName,
+                            },
+                        },
+                    ],
+                },
+            }
+        ].concat(document.definitions) });
+    return query;
+}
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeDirectivesFromDocument", function() { return removeDirectivesFromDocument; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addTypenameToDocument", function() { return addTypenameToDocument; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeConnectionDirectiveFromDocument", function() { return removeConnectionDirectiveFromDocument; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDirectivesFromDocument", function() { return getDirectivesFromDocument; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeArgumentsFromDocument", function() { return removeArgumentsFromDocument; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeFragmentSpreadFromDocument", function() { return removeFragmentSpreadFromDocument; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var graphql_language_visitor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! graphql/language/visitor */ "./node_modules/graphql/language/visitor.mjs");
-/* harmony import */ var _getFromAST__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getFromAST */ "./node_modules/apollo-utilities/lib/getFromAST.js");
-/* harmony import */ var _util_filterInPlace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util/filterInPlace */ "./node_modules/apollo-utilities/lib/util/filterInPlace.js");
+function assign(target) {
+    var sources = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        sources[_i - 1] = arguments[_i];
+    }
+    sources.forEach(function (source) {
+        if (typeof source === 'undefined' || source === null) {
+            return;
+        }
+        Object.keys(source).forEach(function (key) {
+            target[key] = source[key];
+        });
+    });
+    return target;
+}
 
+function getMutationDefinition(doc) {
+    checkDocument(doc);
+    var mutationDef = doc.definitions.filter(function (definition) {
+        return definition.kind === 'OperationDefinition' &&
+            definition.operation === 'mutation';
+    })[0];
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(mutationDef, 'Must contain a mutation definition.');
+    return mutationDef;
+}
+function checkDocument(doc) {
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(doc && doc.kind === 'Document', "Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a \"gql\" tag? http://docs.apollostack.com/apollo-client/core.html#gql");
+    var operations = doc.definitions
+        .filter(function (d) { return d.kind !== 'FragmentDefinition'; })
+        .map(function (definition) {
+        if (definition.kind !== 'OperationDefinition') {
+            throw  false ? undefined : new ts_invariant__WEBPACK_IMPORTED_MODULE_1__["InvariantError"]("Schema type definitions not allowed in queries. Found: \"" + definition.kind + "\"");
+        }
+        return definition;
+    });
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(operations.length <= 1, "Ambiguous GraphQL document: contains " + operations.length + " operations");
+    return doc;
+}
+function getOperationDefinition(doc) {
+    checkDocument(doc);
+    return doc.definitions.filter(function (definition) { return definition.kind === 'OperationDefinition'; })[0];
+}
+function getOperationDefinitionOrDie(document) {
+    var def = getOperationDefinition(document);
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(def, "GraphQL document is missing an operation");
+    return def;
+}
+function getOperationName(doc) {
+    return (doc.definitions
+        .filter(function (definition) {
+        return definition.kind === 'OperationDefinition' && definition.name;
+    })
+        .map(function (x) { return x.name.value; })[0] || null);
+}
+function getFragmentDefinitions(doc) {
+    return doc.definitions.filter(function (definition) { return definition.kind === 'FragmentDefinition'; });
+}
+function getQueryDefinition(doc) {
+    var queryDef = getOperationDefinition(doc);
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(queryDef && queryDef.operation === 'query', 'Must contain a query definition.');
+    return queryDef;
+}
+function getFragmentDefinition(doc) {
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(doc.kind === 'Document', "Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a \"gql\" tag? http://docs.apollostack.com/apollo-client/core.html#gql");
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(doc.definitions.length <= 1, 'Fragment must have exactly one definition.');
+    var fragmentDef = doc.definitions[0];
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(fragmentDef.kind === 'FragmentDefinition', 'Must be a fragment definition.');
+    return fragmentDef;
+}
+function getMainDefinition(queryDoc) {
+    checkDocument(queryDoc);
+    var fragmentDefinition;
+    for (var _i = 0, _a = queryDoc.definitions; _i < _a.length; _i++) {
+        var definition = _a[_i];
+        if (definition.kind === 'OperationDefinition') {
+            var operation = definition.operation;
+            if (operation === 'query' ||
+                operation === 'mutation' ||
+                operation === 'subscription') {
+                return definition;
+            }
+        }
+        if (definition.kind === 'FragmentDefinition' && !fragmentDefinition) {
+            fragmentDefinition = definition;
+        }
+    }
+    if (fragmentDefinition) {
+        return fragmentDefinition;
+    }
+    throw  false ? undefined : new ts_invariant__WEBPACK_IMPORTED_MODULE_1__["InvariantError"]('Expected a parsed GraphQL query with a query, mutation, subscription, or a fragment.');
+}
+function createFragmentMap(fragments) {
+    if (fragments === void 0) { fragments = []; }
+    var symTable = {};
+    fragments.forEach(function (fragment) {
+        symTable[fragment.name.value] = fragment;
+    });
+    return symTable;
+}
+function getDefaultValues(definition) {
+    if (definition &&
+        definition.variableDefinitions &&
+        definition.variableDefinitions.length) {
+        var defaultValues = definition.variableDefinitions
+            .filter(function (_a) {
+            var defaultValue = _a.defaultValue;
+            return defaultValue;
+        })
+            .map(function (_a) {
+            var variable = _a.variable, defaultValue = _a.defaultValue;
+            var defaultValueObj = {};
+            valueToObjectRepresentation(defaultValueObj, variable.name, defaultValue);
+            return defaultValueObj;
+        });
+        return assign.apply(void 0, [{}].concat(defaultValues));
+    }
+    return {};
+}
+function variablesInOperation(operation) {
+    var names = new Set();
+    if (operation.variableDefinitions) {
+        for (var _i = 0, _a = operation.variableDefinitions; _i < _a.length; _i++) {
+            var definition = _a[_i];
+            names.add(definition.variable.name.value);
+        }
+    }
+    return names;
+}
 
-
+function filterInPlace(array, test, context) {
+    var target = 0;
+    array.forEach(function (elem, i) {
+        if (test.call(this, elem, i, array)) {
+            array[target++] = elem;
+        }
+    }, context);
+    array.length = target;
+    return array;
+}
 
 var TYPENAME_FIELD = {
     kind: 'Field',
@@ -4262,7 +4351,9 @@ function isEmpty(op, fragments) {
     });
 }
 function nullIfDocIsEmpty(doc) {
-    return isEmpty(Object(_getFromAST__WEBPACK_IMPORTED_MODULE_2__["getOperationDefinitionOrDie"])(doc), Object(_getFromAST__WEBPACK_IMPORTED_MODULE_2__["createFragmentMap"])(Object(_getFromAST__WEBPACK_IMPORTED_MODULE_2__["getFragmentDefinitions"])(doc))) ? null : doc;
+    return isEmpty(getOperationDefinition(doc) || getFragmentDefinition(doc), createFragmentMap(getFragmentDefinitions(doc)))
+        ? null
+        : doc;
 }
 function getDirectiveMatcher(directives) {
     return function directiveMatcher(directive) {
@@ -4277,7 +4368,7 @@ function removeDirectivesFromDocument(directives, doc) {
     var variablesToRemove = [];
     var fragmentSpreadsInUse = Object.create(null);
     var fragmentSpreadsToRemove = [];
-    var modifiedDoc = nullIfDocIsEmpty(Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_1__["visit"])(doc, {
+    var modifiedDoc = nullIfDocIsEmpty(Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(doc, {
         Variable: {
             enter: function (node, _key, parent) {
                 if (parent.kind !== 'VariableDefinition') {
@@ -4287,27 +4378,29 @@ function removeDirectivesFromDocument(directives, doc) {
         },
         Field: {
             enter: function (node) {
-                var shouldRemoveField = directives.some(function (directive) { return directive.remove; });
-                if (shouldRemoveField &&
-                    node.directives &&
-                    node.directives.some(getDirectiveMatcher(directives))) {
-                    if (node.arguments) {
-                        node.arguments.forEach(function (arg) {
-                            if (arg.value.kind === 'Variable') {
-                                variablesToRemove.push({
-                                    name: arg.value.name.value,
-                                });
-                            }
-                        });
-                    }
-                    if (node.selectionSet) {
-                        getAllFragmentSpreadsFromSelectionSet(node.selectionSet).forEach(function (frag) {
-                            fragmentSpreadsToRemove.push({
-                                name: frag.name.value,
+                if (directives && node.directives) {
+                    var shouldRemoveField = directives.some(function (directive) { return directive.remove; });
+                    if (shouldRemoveField &&
+                        node.directives &&
+                        node.directives.some(getDirectiveMatcher(directives))) {
+                        if (node.arguments) {
+                            node.arguments.forEach(function (arg) {
+                                if (arg.value.kind === 'Variable') {
+                                    variablesToRemove.push({
+                                        name: arg.value.name.value,
+                                    });
+                                }
                             });
-                        });
+                        }
+                        if (node.selectionSet) {
+                            getAllFragmentSpreadsFromSelectionSet(node.selectionSet).forEach(function (frag) {
+                                fragmentSpreadsToRemove.push({
+                                    name: frag.name.value,
+                                });
+                            });
+                        }
+                        return null;
                     }
-                    return null;
                 }
             },
         },
@@ -4325,17 +4418,18 @@ function removeDirectivesFromDocument(directives, doc) {
         },
     }));
     if (modifiedDoc &&
-        Object(_util_filterInPlace__WEBPACK_IMPORTED_MODULE_3__["filterInPlace"])(variablesToRemove, function (v) { return !variablesInUse[v.name]; }).length) {
+        filterInPlace(variablesToRemove, function (v) { return !variablesInUse[v.name]; }).length) {
         modifiedDoc = removeArgumentsFromDocument(variablesToRemove, modifiedDoc);
     }
     if (modifiedDoc &&
-        Object(_util_filterInPlace__WEBPACK_IMPORTED_MODULE_3__["filterInPlace"])(fragmentSpreadsToRemove, function (fs) { return !fragmentSpreadsInUse[fs.name]; }).length) {
+        filterInPlace(fragmentSpreadsToRemove, function (fs) { return !fragmentSpreadsInUse[fs.name]; })
+            .length) {
         modifiedDoc = removeFragmentSpreadFromDocument(fragmentSpreadsToRemove, modifiedDoc);
     }
     return modifiedDoc;
 }
 function addTypenameToDocument(doc) {
-    return Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_1__["visit"])(Object(_getFromAST__WEBPACK_IMPORTED_MODULE_2__["checkDocument"])(doc), {
+    return Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(checkDocument(doc), {
         SelectionSet: {
             enter: function (node, _key, parent) {
                 if (parent &&
@@ -4354,7 +4448,7 @@ function addTypenameToDocument(doc) {
                 if (skip) {
                     return;
                 }
-                return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, node, { selections: selections.concat([TYPENAME_FIELD]) });
+                return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node, { selections: selections.concat([TYPENAME_FIELD]) });
             },
         },
     });
@@ -4373,7 +4467,7 @@ var connectionRemoveConfig = {
     },
 };
 function removeConnectionDirectiveFromDocument(doc) {
-    return removeDirectivesFromDocument([connectionRemoveConfig], Object(_getFromAST__WEBPACK_IMPORTED_MODULE_2__["checkDocument"])(doc));
+    return removeDirectivesFromDocument([connectionRemoveConfig], checkDocument(doc));
 }
 function hasDirectivesInSelectionSet(directives, selectionSet, nestedCheck) {
     if (nestedCheck === void 0) { nestedCheck = true; }
@@ -4396,9 +4490,9 @@ function hasDirectivesInSelection(directives, selection, nestedCheck) {
             hasDirectivesInSelectionSet(directives, selection.selectionSet, nestedCheck)));
 }
 function getDirectivesFromDocument(directives, doc) {
-    Object(_getFromAST__WEBPACK_IMPORTED_MODULE_2__["checkDocument"])(doc);
+    checkDocument(doc);
     var parentPath;
-    return nullIfDocIsEmpty(Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_1__["visit"])(doc, {
+    return nullIfDocIsEmpty(Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(doc, {
         SelectionSet: {
             enter: function (node, _key, _parent, path) {
                 var currentPath = path.join('-');
@@ -4406,13 +4500,11 @@ function getDirectivesFromDocument(directives, doc) {
                     currentPath === parentPath ||
                     !currentPath.startsWith(parentPath)) {
                     if (node.selections) {
-                        var selectionsWithDirectives = node.selections.filter(function (selection) {
-                            return hasDirectivesInSelection(directives, selection);
-                        });
+                        var selectionsWithDirectives = node.selections.filter(function (selection) { return hasDirectivesInSelection(directives, selection); });
                         if (hasDirectivesInSelectionSet(directives, node, false)) {
                             parentPath = currentPath;
                         }
-                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, node, { selections: selectionsWithDirectives });
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node, { selections: selectionsWithDirectives });
                     }
                     else {
                         return null;
@@ -4435,10 +4527,12 @@ function getArgumentMatcher(config) {
 }
 function removeArgumentsFromDocument(config, doc) {
     var argMatcher = getArgumentMatcher(config);
-    return nullIfDocIsEmpty(Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_1__["visit"])(doc, {
+    return nullIfDocIsEmpty(Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(doc, {
         OperationDefinition: {
             enter: function (node) {
-                return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, node, { variableDefinitions: node.variableDefinitions.filter(function (varDef) { return !config.some(function (arg) { return arg.name === varDef.variable.name.value; }); }) });
+                return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node, { variableDefinitions: node.variableDefinitions.filter(function (varDef) {
+                        return !config.some(function (arg) { return arg.name === varDef.variable.name.value; });
+                    }) });
             },
         },
         Field: {
@@ -4472,7 +4566,7 @@ function removeFragmentSpreadFromDocument(config, doc) {
             return null;
         }
     }
-    return nullIfDocIsEmpty(Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_1__["visit"])(doc, {
+    return nullIfDocIsEmpty(Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(doc, {
         FragmentSpread: { enter: enter },
         FragmentDefinition: { enter: enter },
     }));
@@ -4480,8 +4574,7 @@ function removeFragmentSpreadFromDocument(config, doc) {
 function getAllFragmentSpreadsFromSelectionSet(selectionSet) {
     var allFragments = [];
     selectionSet.selections.forEach(function (selection) {
-        if ((selection.kind === 'Field' ||
-            selection.kind === 'InlineFragment') &&
+        if ((selection.kind === 'Field' || selection.kind === 'InlineFragment') &&
             selection.selectionSet) {
             getAllFragmentSpreadsFromSelectionSet(selection.selectionSet).forEach(function (frag) { return allFragments.push(frag); });
         }
@@ -4491,49 +4584,49 @@ function getAllFragmentSpreadsFromSelectionSet(selectionSet) {
     });
     return allFragments;
 }
-//# sourceMappingURL=transform.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/util/assign.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/util/assign.js ***!
-  \**********************************************************/
-/*! exports provided: assign */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "assign", function() { return assign; });
-function assign(target) {
-    var sources = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        sources[_i - 1] = arguments[_i];
+function buildQueryFromSelectionSet(document) {
+    var definition = getMainDefinition(document);
+    var definitionOperation = definition.operation;
+    if (definitionOperation === 'query') {
+        return document;
     }
-    sources.forEach(function (source) {
-        if (typeof source === 'undefined' || source === null) {
-            return;
-        }
-        Object.keys(source).forEach(function (key) {
-            target[key] = source[key];
-        });
+    var modifiedDoc = Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(document, {
+        OperationDefinition: {
+            enter: function (node) {
+                return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node, { operation: 'query' });
+            },
+        },
     });
-    return target;
+    return modifiedDoc;
 }
-//# sourceMappingURL=assign.js.map
+function removeClientSetsFromDocument(document) {
+    checkDocument(document);
+    var modifiedDoc = removeDirectivesFromDocument([
+        {
+            test: function (directive) { return directive.name.value === 'client'; },
+            remove: true,
+        },
+    ], document);
+    if (modifiedDoc) {
+        modifiedDoc = Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(modifiedDoc, {
+            FragmentDefinition: {
+                enter: function (node) {
+                    if (node.selectionSet) {
+                        var isTypenameOnly = node.selectionSet.selections.every(function (selection) {
+                            return (selection.kind === 'Field' &&
+                                selection.name.value === '__typename');
+                        });
+                        if (isTypenameOnly) {
+                            return null;
+                        }
+                    }
+                },
+            },
+        });
+    }
+    return modifiedDoc;
+}
 
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/util/cloneDeep.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/util/cloneDeep.js ***!
-  \*************************************************************/
-/*! exports provided: cloneDeep */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cloneDeep", function() { return cloneDeep; });
 var toString = Object.prototype.toString;
 function cloneDeep(value) {
     return cloneDeepHelper(value, new Map());
@@ -4564,24 +4657,7 @@ function cloneDeepHelper(val, seen) {
             return val;
     }
 }
-//# sourceMappingURL=cloneDeep.js.map
 
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/util/environment.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/util/environment.js ***!
-  \***************************************************************/
-/*! exports provided: getEnv, isEnv, isProduction, isDevelopment, isTest */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getEnv", function() { return getEnv; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEnv", function() { return isEnv; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isProduction", function() { return isProduction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDevelopment", function() { return isDevelopment; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isTest", function() { return isTest; });
 function getEnv() {
     if (typeof process !== 'undefined' && "development") {
         return "development";
@@ -4600,22 +4676,7 @@ function isDevelopment() {
 function isTest() {
     return isEnv('test') === true;
 }
-//# sourceMappingURL=environment.js.map
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../process/browser.js */ "./node_modules/process/browser.js")))
 
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/util/errorHandling.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/util/errorHandling.js ***!
-  \*****************************************************************/
-/*! exports provided: tryFunctionOrLogError, graphQLResultHasError */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tryFunctionOrLogError", function() { return tryFunctionOrLogError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "graphQLResultHasError", function() { return graphQLResultHasError; });
 function tryFunctionOrLogError(f) {
     try {
         return f();
@@ -4629,44 +4690,7 @@ function tryFunctionOrLogError(f) {
 function graphQLResultHasError(result) {
     return result.errors && result.errors.length;
 }
-//# sourceMappingURL=errorHandling.js.map
 
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/util/filterInPlace.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/util/filterInPlace.js ***!
-  \*****************************************************************/
-/*! exports provided: filterInPlace */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterInPlace", function() { return filterInPlace; });
-function filterInPlace(array, test, context) {
-    var target = 0;
-    array.forEach(function (elem, i) {
-        if (test.call(this, elem, i, array)) {
-            array[target++] = elem;
-        }
-    }, context);
-    array.length = target;
-    return array;
-}
-//# sourceMappingURL=filterInPlace.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/util/isEqual.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/util/isEqual.js ***!
-  \***********************************************************/
-/*! exports provided: isEqual */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEqual", function() { return isEqual; });
 function isEqual(a, b) {
     if (a === b) {
         return true;
@@ -4698,21 +4722,6 @@ function isEqual(a, b) {
     }
     return false;
 }
-//# sourceMappingURL=isEqual.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/util/maybeDeepFreeze.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/util/maybeDeepFreeze.js ***!
-  \*******************************************************************/
-/*! exports provided: maybeDeepFreeze */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "maybeDeepFreeze", function() { return maybeDeepFreeze; });
-/* harmony import */ var _environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./environment */ "./node_modules/apollo-utilities/lib/util/environment.js");
 
 function deepFreeze(o) {
     Object.freeze(o);
@@ -4726,7 +4735,7 @@ function deepFreeze(o) {
     return o;
 }
 function maybeDeepFreeze(obj) {
-    if (Object(_environment__WEBPACK_IMPORTED_MODULE_0__["isDevelopment"])() || Object(_environment__WEBPACK_IMPORTED_MODULE_0__["isTest"])()) {
+    if (isDevelopment() || isTest()) {
         var symbolIsPolyfilled = typeof Symbol === 'function' && typeof Symbol('') === 'string';
         if (!symbolIsPolyfilled) {
             return deepFreeze(obj);
@@ -4734,47 +4743,74 @@ function maybeDeepFreeze(obj) {
     }
     return obj;
 }
-//# sourceMappingURL=maybeDeepFreeze.js.map
 
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/util/stripSymbols.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/util/stripSymbols.js ***!
-  \****************************************************************/
-/*! exports provided: stripSymbols */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stripSymbols", function() { return stripSymbols; });
-function stripSymbols(data) {
-    return JSON.parse(JSON.stringify(data));
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+function mergeDeep() {
+    var sources = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        sources[_i] = arguments[_i];
+    }
+    return mergeDeepArray(sources);
 }
-//# sourceMappingURL=stripSymbols.js.map
-
-/***/ }),
-
-/***/ "./node_modules/apollo-utilities/lib/util/warnOnce.js":
-/*!************************************************************!*\
-  !*** ./node_modules/apollo-utilities/lib/util/warnOnce.js ***!
-  \************************************************************/
-/*! exports provided: warnOnceInDevelopment */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "warnOnceInDevelopment", function() { return warnOnceInDevelopment; });
-/* harmony import */ var _environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./environment */ "./node_modules/apollo-utilities/lib/util/environment.js");
+function mergeDeepArray(sources) {
+    var target = sources[0] || {};
+    var count = sources.length;
+    if (count > 1) {
+        var pastCopies = [];
+        target = shallowCopyForMerge(target, pastCopies);
+        for (var i = 1; i < count; ++i) {
+            target = mergeHelper(target, sources[i], pastCopies);
+        }
+    }
+    return target;
+}
+function isObject(obj) {
+    return obj !== null && typeof obj === 'object';
+}
+function mergeHelper(target, source, pastCopies) {
+    if (isObject(source) && isObject(target)) {
+        if (Object.isExtensible && !Object.isExtensible(target)) {
+            target = shallowCopyForMerge(target, pastCopies);
+        }
+        Object.keys(source).forEach(function (sourceKey) {
+            var sourceValue = source[sourceKey];
+            if (hasOwnProperty.call(target, sourceKey)) {
+                var targetValue = target[sourceKey];
+                if (sourceValue !== targetValue) {
+                    target[sourceKey] = mergeHelper(shallowCopyForMerge(targetValue, pastCopies), sourceValue, pastCopies);
+                }
+            }
+            else {
+                target[sourceKey] = sourceValue;
+            }
+        });
+        return target;
+    }
+    return source;
+}
+function shallowCopyForMerge(value, pastCopies) {
+    if (value !== null &&
+        typeof value === 'object' &&
+        pastCopies.indexOf(value) < 0) {
+        if (Array.isArray(value)) {
+            value = value.slice(0);
+        }
+        else {
+            value = Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ __proto__: Object.getPrototypeOf(value) }, value);
+        }
+        pastCopies.push(value);
+    }
+    return value;
+}
 
 var haveWarned = Object.create({});
 function warnOnceInDevelopment(msg, type) {
     if (type === void 0) { type = 'warn'; }
-    if (Object(_environment__WEBPACK_IMPORTED_MODULE_0__["isProduction"])()) {
+    if (isProduction()) {
         return;
     }
     if (!haveWarned[msg]) {
-        if (!Object(_environment__WEBPACK_IMPORTED_MODULE_0__["isTest"])()) {
+        if (!isTest()) {
             haveWarned[msg] = true;
         }
         switch (type) {
@@ -4786,7 +4822,15 @@ function warnOnceInDevelopment(msg, type) {
         }
     }
 }
-//# sourceMappingURL=warnOnce.js.map
+
+function stripSymbols(data) {
+    return JSON.parse(JSON.stringify(data));
+}
+
+
+//# sourceMappingURL=bundle.esm.js.map
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -5812,7 +5856,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.4' };
+var core = module.exports = { version: '2.6.5' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -8837,82 +8881,6 @@ module.exports = function (data, opts) {
     })(data);
 };
 
-
-/***/ }),
-
-/***/ "./node_modules/fbjs/lib/shallowEqual.js":
-/*!***********************************************!*\
-  !*** ./node_modules/fbjs/lib/shallowEqual.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @typechecks
- * 
- */
-
-/*eslint-disable no-self-compare */
-
-
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-/**
- * inlined Object.is polyfill to avoid requiring consumers ship their own
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
- */
-
-function is(x, y) {
-  // SameValue algorithm
-  if (x === y) {
-    // Steps 1-5, 7-10
-    // Steps 6.b-6.e: +0 != -0
-    // Added the nonzero y check to make Flow happy, but it is redundant
-    return x !== 0 || y !== 0 || 1 / x === 1 / y;
-  } else {
-    // Step 6.a: NaN == NaN
-    return x !== x && y !== y;
-  }
-}
-/**
- * Performs equality by iterating through keys on an object and returning false
- * when any key has values which are not strictly equal between the arguments.
- * Returns true when the values of all keys are strictly equal.
- */
-
-
-function shallowEqual(objA, objB) {
-  if (is(objA, objB)) {
-    return true;
-  }
-
-  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
-    return false;
-  }
-
-  var keysA = Object.keys(objA);
-  var keysB = Object.keys(objB);
-
-  if (keysA.length !== keysB.length) {
-    return false;
-  } // Test for A's keys different from B.
-
-
-  for (var i = 0; i < keysA.length; i++) {
-    if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-module.exports = shallowEqual;
 
 /***/ }),
 
@@ -13273,521 +13241,6 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/invariant/browser.js":
-/*!*******************************************!*\
-  !*** ./node_modules/invariant/browser.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
-var invariant = function(condition, format, a, b, c, d, e, f) {
-  if (true) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  }
-
-  if (!condition) {
-    var error;
-    if (format === undefined) {
-      error = new Error(
-        'Minified exception occurred; use the non-minified dev environment ' +
-        'for the full error message and additional helpful warnings.'
-      );
-    } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
-      error = new Error(
-        format.replace(/%s/g, function() { return args[argIndex++]; })
-      );
-      error.name = 'Invariant Violation';
-    }
-
-    error.framesToPop = 1; // we don't care about invariant's own frame
-    throw error;
-  }
-};
-
-module.exports = invariant;
-
-
-/***/ }),
-
-/***/ "./node_modules/lodash.flowright/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/lodash.flowright/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {/**
- * lodash (Custom Build) <https://lodash.com/>
- * Build: `lodash modularize exports="npm" -o ./`
- * Copyright jQuery Foundation and other contributors <https://jquery.org/>
- * Released under MIT license <https://lodash.com/license>
- * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
- * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
- */
-
-/** Used as the `TypeError` message for "Functions" methods. */
-var FUNC_ERROR_TEXT = 'Expected a function';
-
-/** Used as references for various `Number` constants. */
-var MAX_SAFE_INTEGER = 9007199254740991;
-
-/** `Object#toString` result references. */
-var argsTag = '[object Arguments]',
-    funcTag = '[object Function]',
-    genTag = '[object GeneratorFunction]';
-
-/** Detect free variable `global` from Node.js. */
-var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
-
-/** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-/** Used as a reference to the global object. */
-var root = freeGlobal || freeSelf || Function('return this')();
-
-/**
- * A faster alternative to `Function#apply`, this function invokes `func`
- * with the `this` binding of `thisArg` and the arguments of `args`.
- *
- * @private
- * @param {Function} func The function to invoke.
- * @param {*} thisArg The `this` binding of `func`.
- * @param {Array} args The arguments to invoke `func` with.
- * @returns {*} Returns the result of `func`.
- */
-function apply(func, thisArg, args) {
-  switch (args.length) {
-    case 0: return func.call(thisArg);
-    case 1: return func.call(thisArg, args[0]);
-    case 2: return func.call(thisArg, args[0], args[1]);
-    case 3: return func.call(thisArg, args[0], args[1], args[2]);
-  }
-  return func.apply(thisArg, args);
-}
-
-/**
- * Appends the elements of `values` to `array`.
- *
- * @private
- * @param {Array} array The array to modify.
- * @param {Array} values The values to append.
- * @returns {Array} Returns `array`.
- */
-function arrayPush(array, values) {
-  var index = -1,
-      length = values.length,
-      offset = array.length;
-
-  while (++index < length) {
-    array[offset + index] = values[index];
-  }
-  return array;
-}
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-var objectToString = objectProto.toString;
-
-/** Built-in value references. */
-var Symbol = root.Symbol,
-    propertyIsEnumerable = objectProto.propertyIsEnumerable,
-    spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;
-
-/* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
-
-/**
- * The base implementation of `_.flatten` with support for restricting flattening.
- *
- * @private
- * @param {Array} array The array to flatten.
- * @param {number} depth The maximum recursion depth.
- * @param {boolean} [predicate=isFlattenable] The function invoked per iteration.
- * @param {boolean} [isStrict] Restrict to values that pass `predicate` checks.
- * @param {Array} [result=[]] The initial result value.
- * @returns {Array} Returns the new flattened array.
- */
-function baseFlatten(array, depth, predicate, isStrict, result) {
-  var index = -1,
-      length = array.length;
-
-  predicate || (predicate = isFlattenable);
-  result || (result = []);
-
-  while (++index < length) {
-    var value = array[index];
-    if (depth > 0 && predicate(value)) {
-      if (depth > 1) {
-        // Recursively flatten arrays (susceptible to call stack limits).
-        baseFlatten(value, depth - 1, predicate, isStrict, result);
-      } else {
-        arrayPush(result, value);
-      }
-    } else if (!isStrict) {
-      result[result.length] = value;
-    }
-  }
-  return result;
-}
-
-/**
- * The base implementation of `_.rest` which doesn't validate or coerce arguments.
- *
- * @private
- * @param {Function} func The function to apply a rest parameter to.
- * @param {number} [start=func.length-1] The start position of the rest parameter.
- * @returns {Function} Returns the new function.
- */
-function baseRest(func, start) {
-  start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
-  return function() {
-    var args = arguments,
-        index = -1,
-        length = nativeMax(args.length - start, 0),
-        array = Array(length);
-
-    while (++index < length) {
-      array[index] = args[start + index];
-    }
-    index = -1;
-    var otherArgs = Array(start + 1);
-    while (++index < start) {
-      otherArgs[index] = args[index];
-    }
-    otherArgs[start] = array;
-    return apply(func, this, otherArgs);
-  };
-}
-
-/**
- * Creates a `_.flow` or `_.flowRight` function.
- *
- * @private
- * @param {boolean} [fromRight] Specify iterating from right to left.
- * @returns {Function} Returns the new flow function.
- */
-function createFlow(fromRight) {
-  return baseRest(function(funcs) {
-    funcs = baseFlatten(funcs, 1);
-
-    var length = funcs.length,
-        index = length;
-
-    if (fromRight) {
-      funcs.reverse();
-    }
-    while (index--) {
-      if (typeof funcs[index] != 'function') {
-        throw new TypeError(FUNC_ERROR_TEXT);
-      }
-    }
-    return function() {
-      var index = 0,
-          result = length ? funcs[index].apply(this, arguments) : arguments[0];
-
-      while (++index < length) {
-        result = funcs[index].call(this, result);
-      }
-      return result;
-    };
-  });
-}
-
-/**
- * Checks if `value` is a flattenable `arguments` object or array.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
- */
-function isFlattenable(value) {
-  return isArray(value) || isArguments(value) ||
-    !!(spreadableSymbol && value && value[spreadableSymbol]);
-}
-
-/**
- * Checks if `value` is likely an `arguments` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an `arguments` object,
- *  else `false`.
- * @example
- *
- * _.isArguments(function() { return arguments; }());
- * // => true
- *
- * _.isArguments([1, 2, 3]);
- * // => false
- */
-function isArguments(value) {
-  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
-  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
-    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
-}
-
-/**
- * Checks if `value` is classified as an `Array` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an array, else `false`.
- * @example
- *
- * _.isArray([1, 2, 3]);
- * // => true
- *
- * _.isArray(document.body.children);
- * // => false
- *
- * _.isArray('abc');
- * // => false
- *
- * _.isArray(_.noop);
- * // => false
- */
-var isArray = Array.isArray;
-
-/**
- * Checks if `value` is array-like. A value is considered array-like if it's
- * not a function and has a `value.length` that's an integer greater than or
- * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
- * @example
- *
- * _.isArrayLike([1, 2, 3]);
- * // => true
- *
- * _.isArrayLike(document.body.children);
- * // => true
- *
- * _.isArrayLike('abc');
- * // => true
- *
- * _.isArrayLike(_.noop);
- * // => false
- */
-function isArrayLike(value) {
-  return value != null && isLength(value.length) && !isFunction(value);
-}
-
-/**
- * This method is like `_.isArrayLike` except that it also checks if `value`
- * is an object.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an array-like object,
- *  else `false`.
- * @example
- *
- * _.isArrayLikeObject([1, 2, 3]);
- * // => true
- *
- * _.isArrayLikeObject(document.body.children);
- * // => true
- *
- * _.isArrayLikeObject('abc');
- * // => false
- *
- * _.isArrayLikeObject(_.noop);
- * // => false
- */
-function isArrayLikeObject(value) {
-  return isObjectLike(value) && isArrayLike(value);
-}
-
-/**
- * Checks if `value` is classified as a `Function` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a function, else `false`.
- * @example
- *
- * _.isFunction(_);
- * // => true
- *
- * _.isFunction(/abc/);
- * // => false
- */
-function isFunction(value) {
-  // The use of `Object#toString` avoids issues with the `typeof` operator
-  // in Safari 8-9 which returns 'object' for typed array and other constructors.
-  var tag = isObject(value) ? objectToString.call(value) : '';
-  return tag == funcTag || tag == genTag;
-}
-
-/**
- * Checks if `value` is a valid array-like length.
- *
- * **Note:** This method is loosely based on
- * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
- * @example
- *
- * _.isLength(3);
- * // => true
- *
- * _.isLength(Number.MIN_VALUE);
- * // => false
- *
- * _.isLength(Infinity);
- * // => false
- *
- * _.isLength('3');
- * // => false
- */
-function isLength(value) {
-  return typeof value == 'number' &&
-    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
-}
-
-/**
- * Checks if `value` is the
- * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
- * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an object, else `false`.
- * @example
- *
- * _.isObject({});
- * // => true
- *
- * _.isObject([1, 2, 3]);
- * // => true
- *
- * _.isObject(_.noop);
- * // => true
- *
- * _.isObject(null);
- * // => false
- */
-function isObject(value) {
-  var type = typeof value;
-  return !!value && (type == 'object' || type == 'function');
-}
-
-/**
- * Checks if `value` is object-like. A value is object-like if it's not `null`
- * and has a `typeof` result of "object".
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
- * @example
- *
- * _.isObjectLike({});
- * // => true
- *
- * _.isObjectLike([1, 2, 3]);
- * // => true
- *
- * _.isObjectLike(_.noop);
- * // => false
- *
- * _.isObjectLike(null);
- * // => false
- */
-function isObjectLike(value) {
-  return !!value && typeof value == 'object';
-}
-
-/**
- * This method is like `_.flow` except that it creates a function that
- * invokes the given functions from right to left.
- *
- * @static
- * @since 3.0.0
- * @memberOf _
- * @category Util
- * @param {...(Function|Function[])} [funcs] The functions to invoke.
- * @returns {Function} Returns the new composite function.
- * @see _.flow
- * @example
- *
- * function square(n) {
- *   return n * n;
- * }
- *
- * var addSquare = _.flowRight([square, _.add]);
- * addSquare(1, 2);
- * // => 9
- */
-var flowRight = createFlow(true);
-
-module.exports = flowRight;
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
 /***/ "./node_modules/memoize-one/dist/memoize-one.esm.js":
 /*!**********************************************************!*\
   !*** ./node_modules/memoize-one/dist/memoize-one.esm.js ***!
@@ -13836,4701 +13289,6 @@ function index (resultFn, isEqual) {
 
 /* harmony default export */ __webpack_exports__["default"] = (index);
 
-
-/***/ }),
-
-/***/ "./node_modules/mobx-react-lite/dist/index.module.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/mobx-react-lite/dist/index.module.js ***!
-  \***********************************************************/
-/*! exports provided: useObservable, useComputed, useDisposable, isUsingStaticRendering, useStaticRendering, observer, useObserver, Observer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useObservable", function() { return useObservable; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useComputed", function() { return useComputed; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useDisposable", function() { return useDisposable; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isUsingStaticRendering", function() { return isUsingStaticRendering; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useStaticRendering", function() { return useStaticRendering; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "observer", function() { return observer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useObserver", function() { return useObserver; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Observer", function() { return ObserverComponent; });
-/* harmony import */ var mobx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.module.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-if (!react__WEBPACK_IMPORTED_MODULE_1__["useState"]) {
-    throw new Error("mobx-react-lite requires React with Hooks support");
-}
-if (!mobx__WEBPACK_IMPORTED_MODULE_0__["spy"]) {
-    throw new Error("mobx-react-lite requires mobx at least version 4 to be available");
-}
-
-function useObservable(initialValue) {
-    var observableRef = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null);
-    if (!observableRef.current) {
-        observableRef.current = Object(mobx__WEBPACK_IMPORTED_MODULE_0__["observable"])(initialValue);
-    }
-    return observableRef.current;
-}
-
-function useComputed(func, inputs) {
-    if (inputs === void 0) { inputs = []; }
-    var computed$$1 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useMemo"])(function () { return Object(mobx__WEBPACK_IMPORTED_MODULE_0__["computed"])(func); }, inputs);
-    return computed$$1.get();
-}
-
-var doNothingDisposer = function () {
-    // empty
-};
-/**
- * Adds an observable effect (reaction, autorun, or anything else that returns a disposer) that will be registered upon component creation and disposed upon unmounting.
- * Returns the generated disposer for early disposal.
- *
- * @export
- * @template D
- * @param {() => D} disposerGenerator A function that returns the disposer of the wanted effect.
- * @param {ReadonlyArray<any>} [inputs=[]] If you want the effect to be automatically re-created when some variable(s) are changed then pass them in this array.
- * @returns {D}
- */
-function useDisposable(disposerGenerator, inputs) {
-    if (inputs === void 0) { inputs = []; }
-    var disposerRef = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null);
-    var earlyDisposedRef = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(false);
-    Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-        return lazyCreateDisposer(false);
-    }, inputs);
-    function lazyCreateDisposer(earlyDisposal) {
-        // ensure that we won't create a new disposer if it was early disposed
-        if (earlyDisposedRef.current) {
-            return doNothingDisposer;
-        }
-        if (!disposerRef.current) {
-            var newDisposer = disposerGenerator();
-            if (typeof newDisposer !== "function") {
-                var error = new Error("generated disposer must be a function");
-                {
-                    // tslint:disable-next-line:no-console
-                    console.error(error);
-                    return doNothingDisposer;
-                }
-            }
-            disposerRef.current = newDisposer;
-        }
-        return function () {
-            if (disposerRef.current) {
-                disposerRef.current();
-                disposerRef.current = null;
-            }
-            if (earlyDisposal) {
-                earlyDisposedRef.current = true;
-            }
-        };
-    }
-    return lazyCreateDisposer(true);
-}
-
-var globalIsUsingStaticRendering = false;
-function useStaticRendering(enable) {
-    globalIsUsingStaticRendering = enable;
-}
-function isUsingStaticRendering() {
-    return globalIsUsingStaticRendering;
-}
-
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-
-function __read(o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-}
-
-var EMPTY_ARRAY = [];
-function useUnmount(fn) {
-    Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () { return fn; }, EMPTY_ARRAY);
-}
-function useForceUpdate() {
-    var _a = __read(Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0), 2), setTick = _a[1];
-    var update = Object(react__WEBPACK_IMPORTED_MODULE_1__["useCallback"])(function () {
-        setTick(function (tick) { return tick + 1; });
-    }, []);
-    return update;
-}
-
-function useObserver(fn, baseComponentName) {
-    if (baseComponentName === void 0) { baseComponentName = "observed"; }
-    if (isUsingStaticRendering()) {
-        return fn();
-    }
-    var forceUpdate = useForceUpdate();
-    var reaction = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null);
-    if (!reaction.current) {
-        reaction.current = new mobx__WEBPACK_IMPORTED_MODULE_0__["Reaction"]("observer(" + baseComponentName + ")", function () {
-            forceUpdate();
-        });
-    }
-    useUnmount(function () {
-        reaction.current.dispose();
-    });
-    // render the original component, but have the
-    // reaction track the observables, so that rendering
-    // can be invalidated (see above) once a dependency changes
-    var rendering;
-    reaction.current.track(function () {
-        rendering = fn();
-    });
-    return rendering;
-}
-
-// n.b. base case is not used for actual typings or exported in the typing files
-function observer(baseComponent, options) {
-    // The working of observer is explaind step by step in this talk: https://www.youtube.com/watch?v=cPF4iBedoF0&feature=youtu.be&t=1307
-    if (isUsingStaticRendering()) {
-        return baseComponent;
-    }
-    var realOptions = __assign({ forwardRef: false }, options);
-    var baseComponentName = baseComponent.displayName || baseComponent.name;
-    var wrappedComponent = function (props, ref) {
-        return useObserver(function () { return baseComponent(props, ref); }, baseComponentName);
-    };
-    // memo; we are not intested in deep updates
-    // in props; we assume that if deep objects are changed,
-    // this is in observables, which would have been tracked anyway
-    var memoComponent;
-    if (realOptions.forwardRef) {
-        // we have to use forwardRef here because:
-        // 1. it cannot go before memo, only after it
-        // 2. forwardRef converts the function into an actual component, so we can't let the baseComponent do it
-        //    since it wouldn't be a callable function anymore
-        memoComponent = Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(Object(react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(wrappedComponent));
-    }
-    else {
-        memoComponent = Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(wrappedComponent);
-    }
-    memoComponent.displayName = baseComponentName;
-    return memoComponent;
-}
-
-function ObserverComponent(_a) {
-    var children = _a.children, render = _a.render;
-    var component = children || render;
-    if (typeof component !== "function") {
-        return null;
-    }
-    return useObserver(component);
-}
-ObserverComponent.propTypes = {
-    children: ObserverPropsCheck,
-    render: ObserverPropsCheck
-};
-ObserverComponent.displayName = "Observer";
-function ObserverPropsCheck(props, key, componentName, location, propFullName) {
-    var extraKey = key === "children" ? "render" : "children";
-    var hasProp = typeof props[key] === "function";
-    var hasExtraProp = typeof props[extraKey] === "function";
-    if (hasProp && hasExtraProp) {
-        return new Error("MobX Observer: Do not use children and render in the same time in`" + componentName);
-    }
-    if (hasProp || hasExtraProp) {
-        return null;
-    }
-    return new Error("Invalid prop `" +
-        propFullName +
-        "` of type `" +
-        typeof props[key] +
-        "` supplied to" +
-        " `" +
-        componentName +
-        "`, expected `function`.");
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/mobx/lib/mobx.module.js":
-/*!**********************************************!*\
-  !*** ./node_modules/mobx/lib/mobx.module.js ***!
-  \**********************************************/
-/*! exports provided: Reaction, untracked, IDerivationState, createAtom, spy, comparer, isObservableObject, isBoxedObservable, isObservableArray, ObservableMap, isObservableMap, ObservableSet, isObservableSet, transaction, observable, computed, isObservable, isObservableProp, isComputed, isComputedProp, extendObservable, observe, intercept, autorun, reaction, when, action, isAction, runInAction, keys, values, entries, set, remove, has, get, decorate, configure, onBecomeObserved, onBecomeUnobserved, flow, toJS, trace, getDependencyTree, getObserverTree, _resetGlobalState, _getGlobalState, getDebugName, getAtom, _getAdministration, _allowStateChanges, _allowStateChangesInsideComputed, isArrayLike, $mobx, _isComputingDerivation, onReactionError, _interceptReads */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process, global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Reaction", function() { return Reaction$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "untracked", function() { return untracked$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IDerivationState", function() { return IDerivationState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createAtom", function() { return createAtom$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "spy", function() { return spy$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "comparer", function() { return comparer$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObservableObject", function() { return isObservableObject$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isBoxedObservable", function() { return isObservableValue$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObservableArray", function() { return isObservableArray$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ObservableMap", function() { return ObservableMap$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObservableMap", function() { return isObservableMap$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ObservableSet", function() { return ObservableSet$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObservableSet", function() { return isObservableSet$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transaction", function() { return transaction$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "observable", function() { return observable$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computed", function() { return computed$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObservable", function() { return isObservable$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObservableProp", function() { return isObservableProp$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isComputed", function() { return isComputed$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isComputedProp", function() { return isComputedProp$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "extendObservable", function() { return extendObservable$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "observe", function() { return observe$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "intercept", function() { return intercept$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "autorun", function() { return autorun$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reaction", function() { return reaction$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "when", function() { return when$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "action", function() { return action$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAction", function() { return isAction$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "runInAction", function() { return runInAction$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keys", function() { return keys$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "values", function() { return values$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "entries", function() { return entries$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "set", function() { return set$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "remove", function() { return remove$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "has", function() { return has$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get", function() { return get$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "decorate", function() { return decorate$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "configure", function() { return configure$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onBecomeObserved", function() { return onBecomeObserved$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onBecomeUnobserved", function() { return onBecomeUnobserved$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "flow", function() { return flow$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toJS", function() { return toJS$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trace", function() { return trace$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDependencyTree", function() { return getDependencyTree$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getObserverTree", function() { return getObserverTree$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_resetGlobalState", function() { return resetGlobalState$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getGlobalState", function() { return getGlobalState$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDebugName", function() { return getDebugName$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAtom", function() { return getAtom$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getAdministration", function() { return getAdministration$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_allowStateChanges", function() { return allowStateChanges$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_allowStateChangesInsideComputed", function() { return allowStateChangesInsideComputed$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isArrayLike", function() { return isArrayLike$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "$mobx", function() { return $mobx$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_isComputingDerivation", function() { return isComputingDerivation$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onReactionError", function() { return onReactionError$$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_interceptReads", function() { return interceptReads$$1; });
-/** MobX - (c) Michel Weststrate 2015 - 2018 - MIT Licensed */
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-/* global Reflect, Promise */
-
-var extendStatics = Object.setPrototypeOf ||
-    ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-    function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-
-function __extends(d, b) {
-    extendStatics(d, b);
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-
-var __assign = Object.assign || function __assign(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function __values(o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
-    if (m) return m.call(o);
-    return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-}
-
-function __read(o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-}
-
-function __spread() {
-    for (var ar = [], i = 0; i < arguments.length; i++)
-        ar = ar.concat(__read(arguments[i]));
-    return ar;
-}
-
-var OBFUSCATED_ERROR$$1 = "An invariant failed, however the error is obfuscated because this is an production build.";
-var EMPTY_ARRAY$$1 = [];
-Object.freeze(EMPTY_ARRAY$$1);
-var EMPTY_OBJECT$$1 = {};
-Object.freeze(EMPTY_OBJECT$$1);
-function getNextId$$1() {
-    return ++globalState$$1.mobxGuid;
-}
-function fail$$1(message) {
-    invariant$$1(false, message);
-    throw "X"; // unreachable
-}
-function invariant$$1(check, message) {
-    if (!check)
-        throw new Error("[mobx] " + (message || OBFUSCATED_ERROR$$1));
-}
-/**
- * Prints a deprecation message, but only one time.
- * Returns false if the deprecated message was already printed before
- */
-var deprecatedMessages = [];
-function deprecated$$1(msg, thing) {
-    if (false)
-        {}
-    if (thing) {
-        return deprecated$$1("'" + msg + "', use '" + thing + "' instead.");
-    }
-    if (deprecatedMessages.indexOf(msg) !== -1)
-        return false;
-    deprecatedMessages.push(msg);
-    console.error("[mobx] Deprecated: " + msg);
-    return true;
-}
-/**
- * Makes sure that the provided function is invoked at most once.
- */
-function once$$1(func) {
-    var invoked = false;
-    return function () {
-        if (invoked)
-            return;
-        invoked = true;
-        return func.apply(this, arguments);
-    };
-}
-var noop$$1 = function () { };
-function unique$$1(list) {
-    var res = [];
-    list.forEach(function (item) {
-        if (res.indexOf(item) === -1)
-            res.push(item);
-    });
-    return res;
-}
-function isObject$$1(value) {
-    return value !== null && typeof value === "object";
-}
-function isPlainObject$$1(value) {
-    if (value === null || typeof value !== "object")
-        return false;
-    var proto = Object.getPrototypeOf(value);
-    return proto === Object.prototype || proto === null;
-}
-
-function addHiddenProp$$1(object, propName, value) {
-    Object.defineProperty(object, propName, {
-        enumerable: false,
-        writable: true,
-        configurable: true,
-        value: value
-    });
-}
-function addHiddenFinalProp$$1(object, propName, value) {
-    Object.defineProperty(object, propName, {
-        enumerable: false,
-        writable: false,
-        configurable: true,
-        value: value
-    });
-}
-function isPropertyConfigurable$$1(object, prop) {
-    var descriptor = Object.getOwnPropertyDescriptor(object, prop);
-    return !descriptor || (descriptor.configurable !== false && descriptor.writable !== false);
-}
-function assertPropertyConfigurable$$1(object, prop) {
-    if ("development" !== "production" && !isPropertyConfigurable$$1(object, prop))
-        fail$$1("Cannot make property '" + prop.toString() + "' observable, it is not configurable and writable in the target object");
-}
-function createInstanceofPredicate$$1(name, clazz) {
-    var propName = "isMobX" + name;
-    clazz.prototype[propName] = true;
-    return function (x) {
-        return isObject$$1(x) && x[propName] === true;
-    };
-}
-/**
- * Returns whether the argument is an array, disregarding observability.
- */
-function isArrayLike$$1(x) {
-    return Array.isArray(x) || isObservableArray$$1(x);
-}
-function isES6Map$$1(thing) {
-    return thing instanceof Map;
-}
-function isES6Set$$1(thing) {
-    return thing instanceof Set;
-}
-function getMapLikeKeys$$1(map) {
-    if (isPlainObject$$1(map))
-        return Object.keys(map);
-    if (Array.isArray(map))
-        return map.map(function (_a) {
-            var _b = __read(_a, 1), key = _b[0];
-            return key;
-        });
-    if (isES6Map$$1(map) || isObservableMap$$1(map))
-        return Array.from(map.keys());
-    return fail$$1("Cannot get keys from '" + map + "'");
-}
-function toPrimitive$$1(value) {
-    return value === null ? null : typeof value === "object" ? "" + value : value;
-}
-
-var $mobx$$1 = Symbol("mobx administration");
-var Atom$$1 = /** @class */ (function () {
-    /**
-     * Create a new atom. For debugging purposes it is recommended to give it a name.
-     * The onBecomeObserved and onBecomeUnobserved callbacks can be used for resource management.
-     */
-    function Atom$$1(name) {
-        if (name === void 0) { name = "Atom@" + getNextId$$1(); }
-        this.name = name;
-        this.isPendingUnobservation = false; // for effective unobserving. BaseAtom has true, for extra optimization, so its onBecomeUnobserved never gets called, because it's not needed
-        this.isBeingObserved = false;
-        this.observers = new Set();
-        this.diffValue = 0;
-        this.lastAccessedBy = 0;
-        this.lowestObserverState = IDerivationState.NOT_TRACKING;
-    }
-    Atom$$1.prototype.onBecomeObserved = function () {
-        if (this.onBecomeObservedListeners) {
-            this.onBecomeObservedListeners.forEach(function (listener) { return listener(); });
-        }
-    };
-    Atom$$1.prototype.onBecomeUnobserved = function () {
-        if (this.onBecomeUnobservedListeners) {
-            this.onBecomeUnobservedListeners.forEach(function (listener) { return listener(); });
-        }
-    };
-    /**
-     * Invoke this method to notify mobx that your atom has been used somehow.
-     * Returns true if there is currently a reactive context.
-     */
-    Atom$$1.prototype.reportObserved = function () {
-        return reportObserved$$1(this);
-    };
-    /**
-     * Invoke this method _after_ this method has changed to signal mobx that all its observers should invalidate.
-     */
-    Atom$$1.prototype.reportChanged = function () {
-        startBatch$$1();
-        propagateChanged$$1(this);
-        endBatch$$1();
-    };
-    Atom$$1.prototype.toString = function () {
-        return this.name;
-    };
-    return Atom$$1;
-}());
-var isAtom$$1 = createInstanceofPredicate$$1("Atom", Atom$$1);
-function createAtom$$1(name, onBecomeObservedHandler, onBecomeUnobservedHandler) {
-    if (onBecomeObservedHandler === void 0) { onBecomeObservedHandler = noop$$1; }
-    if (onBecomeUnobservedHandler === void 0) { onBecomeUnobservedHandler = noop$$1; }
-    var atom = new Atom$$1(name);
-    // default `noop` listener will not initialize the hook Set
-    if (onBecomeObservedHandler !== noop$$1) {
-        onBecomeObserved$$1(atom, onBecomeObservedHandler);
-    }
-    if (onBecomeUnobservedHandler !== noop$$1) {
-        onBecomeUnobserved$$1(atom, onBecomeUnobservedHandler);
-    }
-    return atom;
-}
-
-function identityComparer(a, b) {
-    return a === b;
-}
-function structuralComparer(a, b) {
-    return deepEqual$$1(a, b);
-}
-function defaultComparer(a, b) {
-    return Object.is(a, b);
-}
-var comparer$$1 = {
-    identity: identityComparer,
-    structural: structuralComparer,
-    default: defaultComparer
-};
-
-var mobxDidRunLazyInitializersSymbol$$1 = Symbol("mobx did run lazy initializers");
-var mobxPendingDecorators$$1 = Symbol("mobx pending decorators");
-var enumerableDescriptorCache = {};
-var nonEnumerableDescriptorCache = {};
-function createPropertyInitializerDescriptor(prop, enumerable) {
-    var cache = enumerable ? enumerableDescriptorCache : nonEnumerableDescriptorCache;
-    return (cache[prop] ||
-        (cache[prop] = {
-            configurable: true,
-            enumerable: enumerable,
-            get: function () {
-                initializeInstance$$1(this);
-                return this[prop];
-            },
-            set: function (value) {
-                initializeInstance$$1(this);
-                this[prop] = value;
-            }
-        }));
-}
-function initializeInstance$$1(target) {
-    if (target[mobxDidRunLazyInitializersSymbol$$1] === true)
-        return;
-    var decorators = target[mobxPendingDecorators$$1];
-    if (decorators) {
-        addHiddenProp$$1(target, mobxDidRunLazyInitializersSymbol$$1, true);
-        for (var key in decorators) {
-            var d = decorators[key];
-            d.propertyCreator(target, d.prop, d.descriptor, d.decoratorTarget, d.decoratorArguments);
-        }
-    }
-}
-function createPropDecorator$$1(propertyInitiallyEnumerable, propertyCreator) {
-    return function decoratorFactory() {
-        var decoratorArguments;
-        var decorator = function decorate$$1(target, prop, descriptor, applyImmediately
-        // This is a special parameter to signal the direct application of a decorator, allow extendObservable to skip the entire type decoration part,
-        // as the instance to apply the decorator to equals the target
-        ) {
-            if (applyImmediately === true) {
-                propertyCreator(target, prop, descriptor, target, decoratorArguments);
-                return null;
-            }
-            if ("development" !== "production" && !quacksLikeADecorator$$1(arguments))
-                fail$$1("This function is a decorator, but it wasn't invoked like a decorator");
-            if (!Object.prototype.hasOwnProperty.call(target, mobxPendingDecorators$$1)) {
-                var inheritedDecorators = target[mobxPendingDecorators$$1];
-                addHiddenProp$$1(target, mobxPendingDecorators$$1, __assign({}, inheritedDecorators));
-            }
-            target[mobxPendingDecorators$$1][prop] = {
-                prop: prop,
-                propertyCreator: propertyCreator,
-                descriptor: descriptor,
-                decoratorTarget: target,
-                decoratorArguments: decoratorArguments
-            };
-            return createPropertyInitializerDescriptor(prop, propertyInitiallyEnumerable);
-        };
-        if (quacksLikeADecorator$$1(arguments)) {
-            // @decorator
-            decoratorArguments = EMPTY_ARRAY$$1;
-            return decorator.apply(null, arguments);
-        }
-        else {
-            // @decorator(args)
-            decoratorArguments = Array.prototype.slice.call(arguments);
-            return decorator;
-        }
-    };
-}
-function quacksLikeADecorator$$1(args) {
-    return (((args.length === 2 || args.length === 3) && typeof args[1] === "string") ||
-        (args.length === 4 && args[3] === true));
-}
-
-function deepEnhancer$$1(v, _, name) {
-    // it is an observable already, done
-    if (isObservable$$1(v))
-        return v;
-    // something that can be converted and mutated?
-    if (Array.isArray(v))
-        return observable$$1.array(v, { name: name });
-    if (isPlainObject$$1(v))
-        return observable$$1.object(v, undefined, { name: name });
-    if (isES6Map$$1(v))
-        return observable$$1.map(v, { name: name });
-    if (isES6Set$$1(v))
-        return observable$$1.set(v, { name: name });
-    return v;
-}
-function shallowEnhancer$$1(v, _, name) {
-    if (v === undefined || v === null)
-        return v;
-    if (isObservableObject$$1(v) || isObservableArray$$1(v) || isObservableMap$$1(v) || isObservableSet$$1(v))
-        return v;
-    if (Array.isArray(v))
-        return observable$$1.array(v, { name: name, deep: false });
-    if (isPlainObject$$1(v))
-        return observable$$1.object(v, undefined, { name: name, deep: false });
-    if (isES6Map$$1(v))
-        return observable$$1.map(v, { name: name, deep: false });
-    if (isES6Set$$1(v))
-        return observable$$1.set(v, { name: name, deep: false });
-    return fail$$1("development" !== "production" &&
-        "The shallow modifier / decorator can only used in combination with arrays, objects, maps and sets");
-}
-function referenceEnhancer$$1(newValue) {
-    // never turn into an observable
-    return newValue;
-}
-function refStructEnhancer$$1(v, oldValue, name) {
-    if ("development" !== "production" && isObservable$$1(v))
-        throw "observable.struct should not be used with observable values";
-    if (deepEqual$$1(v, oldValue))
-        return oldValue;
-    return v;
-}
-
-function createDecoratorForEnhancer$$1(enhancer) {
-    invariant$$1(enhancer);
-    var decorator = createPropDecorator$$1(true, function (target, propertyName, descriptor, _decoratorTarget, decoratorArgs) {
-        if (true) {
-            invariant$$1(!descriptor || !descriptor.get, "@observable cannot be used on getter (property \"" + propertyName + "\"), use @computed instead.");
-        }
-        var initialValue = descriptor
-            ? descriptor.initializer
-                ? descriptor.initializer.call(target)
-                : descriptor.value
-            : undefined;
-        asObservableObject$$1(target).addObservableProp(propertyName, initialValue, enhancer);
-    });
-    var res = 
-    // Extra process checks, as this happens during module initialization
-    typeof process !== "undefined" && process.env && "development" !== "production"
-        ? function observableDecorator() {
-            // This wrapper function is just to detect illegal decorator invocations, deprecate in a next version
-            // and simply return the created prop decorator
-            if (arguments.length < 2)
-                return fail$$1("Incorrect decorator invocation. @observable decorator doesn't expect any arguments");
-            return decorator.apply(null, arguments);
-        }
-        : decorator;
-    res.enhancer = enhancer;
-    return res;
-}
-
-// Predefined bags of create observable options, to avoid allocating temporarily option objects
-// in the majority of cases
-var defaultCreateObservableOptions$$1 = {
-    deep: true,
-    name: undefined,
-    defaultDecorator: undefined,
-    proxy: true
-};
-Object.freeze(defaultCreateObservableOptions$$1);
-function assertValidOption(key) {
-    if (!/^(deep|name|equals|defaultDecorator|proxy)$/.test(key))
-        fail$$1("invalid option for (extend)observable: " + key);
-}
-function asCreateObservableOptions$$1(thing) {
-    if (thing === null || thing === undefined)
-        return defaultCreateObservableOptions$$1;
-    if (typeof thing === "string")
-        return { name: thing, deep: true, proxy: true };
-    if (true) {
-        if (typeof thing !== "object")
-            return fail$$1("expected options object");
-        Object.keys(thing).forEach(assertValidOption);
-    }
-    return thing;
-}
-var deepDecorator$$1 = createDecoratorForEnhancer$$1(deepEnhancer$$1);
-var shallowDecorator = createDecoratorForEnhancer$$1(shallowEnhancer$$1);
-var refDecorator$$1 = createDecoratorForEnhancer$$1(referenceEnhancer$$1);
-var refStructDecorator = createDecoratorForEnhancer$$1(refStructEnhancer$$1);
-function getEnhancerFromOptions(options) {
-    return options.defaultDecorator
-        ? options.defaultDecorator.enhancer
-        : options.deep === false
-            ? referenceEnhancer$$1
-            : deepEnhancer$$1;
-}
-/**
- * Turns an object, array or function into a reactive structure.
- * @param v the value which should become observable.
- */
-function createObservable(v, arg2, arg3) {
-    // @observable someProp;
-    if (typeof arguments[1] === "string") {
-        return deepDecorator$$1.apply(null, arguments);
-    }
-    // it is an observable already, done
-    if (isObservable$$1(v))
-        return v;
-    // something that can be converted and mutated?
-    var res = isPlainObject$$1(v)
-        ? observable$$1.object(v, arg2, arg3)
-        : Array.isArray(v)
-            ? observable$$1.array(v, arg2)
-            : isES6Map$$1(v)
-                ? observable$$1.map(v, arg2)
-                : isES6Set$$1(v)
-                    ? observable$$1.set(v, arg2)
-                    : v;
-    // this value could be converted to a new observable data structure, return it
-    if (res !== v)
-        return res;
-    // otherwise, just box it
-    fail$$1("development" !== "production" &&
-        "The provided value could not be converted into an observable. If you want just create an observable reference to the object use 'observable.box(value)'");
-}
-var observableFactories = {
-    box: function (value, options) {
-        if (arguments.length > 2)
-            incorrectlyUsedAsDecorator("box");
-        var o = asCreateObservableOptions$$1(options);
-        return new ObservableValue$$1(value, getEnhancerFromOptions(o), o.name, true, o.equals);
-    },
-    array: function (initialValues, options) {
-        if (arguments.length > 2)
-            incorrectlyUsedAsDecorator("array");
-        var o = asCreateObservableOptions$$1(options);
-        return createObservableArray$$1(initialValues, getEnhancerFromOptions(o), o.name);
-    },
-    map: function (initialValues, options) {
-        if (arguments.length > 2)
-            incorrectlyUsedAsDecorator("map");
-        var o = asCreateObservableOptions$$1(options);
-        return new ObservableMap$$1(initialValues, getEnhancerFromOptions(o), o.name);
-    },
-    set: function (initialValues, options) {
-        if (arguments.length > 2)
-            incorrectlyUsedAsDecorator("set");
-        var o = asCreateObservableOptions$$1(options);
-        return new ObservableSet$$1(initialValues, getEnhancerFromOptions(o), o.name);
-    },
-    object: function (props, decorators, options) {
-        if (typeof arguments[1] === "string")
-            incorrectlyUsedAsDecorator("object");
-        var o = asCreateObservableOptions$$1(options);
-        if (o.proxy === false) {
-            return extendObservable$$1({}, props, decorators, o);
-        }
-        else {
-            var defaultDecorator = getDefaultDecoratorFromObjectOptions$$1(o);
-            var base = extendObservable$$1({}, undefined, undefined, o);
-            var proxy = createDynamicObservableObject$$1(base);
-            extendObservableObjectWithProperties$$1(proxy, props, decorators, defaultDecorator);
-            return proxy;
-        }
-    },
-    ref: refDecorator$$1,
-    shallow: shallowDecorator,
-    deep: deepDecorator$$1,
-    struct: refStructDecorator
-};
-var observable$$1 = createObservable;
-// weird trick to keep our typings nicely with our funcs, and still extend the observable function
-Object.keys(observableFactories).forEach(function (name) { return (observable$$1[name] = observableFactories[name]); });
-function incorrectlyUsedAsDecorator(methodName) {
-    fail$$1(
-    // process.env.NODE_ENV !== "production" &&
-    "Expected one or two arguments to observable." + methodName + ". Did you accidentally try to use observable." + methodName + " as decorator?");
-}
-
-var computedDecorator$$1 = createPropDecorator$$1(false, function (instance, propertyName, descriptor, decoratorTarget, decoratorArgs) {
-    var get$$1 = descriptor.get, set$$1 = descriptor.set; // initialValue is the descriptor for get / set props
-    // Optimization: faster on decorator target or instance? Assuming target
-    // Optimization: find out if declaring on instance isn't just faster. (also makes the property descriptor simpler). But, more memory usage..
-    // Forcing instance now, fixes hot reloadig issues on React Native:
-    var options = decoratorArgs[0] || {};
-    asObservableObject$$1(instance).addComputedProp(instance, propertyName, __assign({ get: get$$1,
-        set: set$$1, context: instance }, options));
-});
-var computedStructDecorator = computedDecorator$$1({ equals: comparer$$1.structural });
-/**
- * Decorator for class properties: @computed get value() { return expr; }.
- * For legacy purposes also invokable as ES5 observable created: `computed(() => expr)`;
- */
-var computed$$1 = function computed$$1(arg1, arg2, arg3) {
-    if (typeof arg2 === "string") {
-        // @computed
-        return computedDecorator$$1.apply(null, arguments);
-    }
-    if (arg1 !== null && typeof arg1 === "object" && arguments.length === 1) {
-        // @computed({ options })
-        return computedDecorator$$1.apply(null, arguments);
-    }
-    // computed(expr, options?)
-    if (true) {
-        invariant$$1(typeof arg1 === "function", "First argument to `computed` should be an expression.");
-        invariant$$1(arguments.length < 3, "Computed takes one or two arguments if used as function");
-    }
-    var opts = typeof arg2 === "object" ? arg2 : {};
-    opts.get = arg1;
-    opts.set = typeof arg2 === "function" ? arg2 : opts.set;
-    opts.name = opts.name || arg1.name || ""; /* for generated name */
-    return new ComputedValue$$1(opts);
-};
-computed$$1.struct = computedStructDecorator;
-
-function createAction$$1(actionName, fn) {
-    if (true) {
-        invariant$$1(typeof fn === "function", "`action` can only be invoked on functions");
-        if (typeof actionName !== "string" || !actionName)
-            fail$$1("actions should have valid names, got: '" + actionName + "'");
-    }
-    var res = function () {
-        return executeAction$$1(actionName, fn, this, arguments);
-    };
-    res.isMobxAction = true;
-    return res;
-}
-function executeAction$$1(actionName, fn, scope, args) {
-    var runInfo = startAction(actionName, fn, scope, args);
-    var shouldSupressReactionError = true;
-    try {
-        var res = fn.apply(scope, args);
-        shouldSupressReactionError = false;
-        return res;
-    }
-    finally {
-        if (shouldSupressReactionError) {
-            globalState$$1.suppressReactionErrors = shouldSupressReactionError;
-            endAction(runInfo);
-            globalState$$1.suppressReactionErrors = false;
-        }
-        else {
-            endAction(runInfo);
-        }
-    }
-}
-function startAction(actionName, fn, scope, args) {
-    var notifySpy = isSpyEnabled$$1() && !!actionName;
-    var startTime = 0;
-    if (notifySpy && "development" !== "production") {
-        startTime = Date.now();
-        var l = (args && args.length) || 0;
-        var flattendArgs = new Array(l);
-        if (l > 0)
-            for (var i = 0; i < l; i++)
-                flattendArgs[i] = args[i];
-        spyReportStart$$1({
-            type: "action",
-            name: actionName,
-            object: scope,
-            arguments: flattendArgs
-        });
-    }
-    var prevDerivation = untrackedStart$$1();
-    startBatch$$1();
-    var prevAllowStateChanges = allowStateChangesStart$$1(true);
-    return {
-        prevDerivation: prevDerivation,
-        prevAllowStateChanges: prevAllowStateChanges,
-        notifySpy: notifySpy,
-        startTime: startTime
-    };
-}
-function endAction(runInfo) {
-    allowStateChangesEnd$$1(runInfo.prevAllowStateChanges);
-    endBatch$$1();
-    untrackedEnd$$1(runInfo.prevDerivation);
-    if (runInfo.notifySpy && "development" !== "production")
-        spyReportEnd$$1({ time: Date.now() - runInfo.startTime });
-}
-function allowStateChanges$$1(allowStateChanges$$1, func) {
-    var prev = allowStateChangesStart$$1(allowStateChanges$$1);
-    var res;
-    try {
-        res = func();
-    }
-    finally {
-        allowStateChangesEnd$$1(prev);
-    }
-    return res;
-}
-function allowStateChangesStart$$1(allowStateChanges$$1) {
-    var prev = globalState$$1.allowStateChanges;
-    globalState$$1.allowStateChanges = allowStateChanges$$1;
-    return prev;
-}
-function allowStateChangesEnd$$1(prev) {
-    globalState$$1.allowStateChanges = prev;
-}
-function allowStateChangesInsideComputed$$1(func) {
-    var prev = globalState$$1.computationDepth;
-    globalState$$1.computationDepth = 0;
-    var res;
-    try {
-        res = func();
-    }
-    finally {
-        globalState$$1.computationDepth = prev;
-    }
-    return res;
-}
-
-var ObservableValue$$1 = /** @class */ (function (_super) {
-    __extends(ObservableValue$$1, _super);
-    function ObservableValue$$1(value, enhancer, name, notifySpy, equals) {
-        if (name === void 0) { name = "ObservableValue@" + getNextId$$1(); }
-        if (notifySpy === void 0) { notifySpy = true; }
-        if (equals === void 0) { equals = comparer$$1.default; }
-        var _this = _super.call(this, name) || this;
-        _this.enhancer = enhancer;
-        _this.name = name;
-        _this.equals = equals;
-        _this.hasUnreportedChange = false;
-        _this.value = enhancer(value, undefined, name);
-        if (notifySpy && isSpyEnabled$$1() && "development" !== "production") {
-            // only notify spy if this is a stand-alone observable
-            spyReport$$1({ type: "create", name: _this.name, newValue: "" + _this.value });
-        }
-        return _this;
-    }
-    ObservableValue$$1.prototype.dehanceValue = function (value) {
-        if (this.dehancer !== undefined)
-            return this.dehancer(value);
-        return value;
-    };
-    ObservableValue$$1.prototype.set = function (newValue) {
-        var oldValue = this.value;
-        newValue = this.prepareNewValue(newValue);
-        if (newValue !== globalState$$1.UNCHANGED) {
-            var notifySpy = isSpyEnabled$$1();
-            if (notifySpy && "development" !== "production") {
-                spyReportStart$$1({
-                    type: "update",
-                    name: this.name,
-                    newValue: newValue,
-                    oldValue: oldValue
-                });
-            }
-            this.setNewValue(newValue);
-            if (notifySpy && "development" !== "production")
-                spyReportEnd$$1();
-        }
-    };
-    ObservableValue$$1.prototype.prepareNewValue = function (newValue) {
-        checkIfStateModificationsAreAllowed$$1(this);
-        if (hasInterceptors$$1(this)) {
-            var change = interceptChange$$1(this, {
-                object: this,
-                type: "update",
-                newValue: newValue
-            });
-            if (!change)
-                return globalState$$1.UNCHANGED;
-            newValue = change.newValue;
-        }
-        // apply modifier
-        newValue = this.enhancer(newValue, this.value, this.name);
-        return this.equals(this.value, newValue) ? globalState$$1.UNCHANGED : newValue;
-    };
-    ObservableValue$$1.prototype.setNewValue = function (newValue) {
-        var oldValue = this.value;
-        this.value = newValue;
-        this.reportChanged();
-        if (hasListeners$$1(this)) {
-            notifyListeners$$1(this, {
-                type: "update",
-                object: this,
-                newValue: newValue,
-                oldValue: oldValue
-            });
-        }
-    };
-    ObservableValue$$1.prototype.get = function () {
-        this.reportObserved();
-        return this.dehanceValue(this.value);
-    };
-    ObservableValue$$1.prototype.intercept = function (handler) {
-        return registerInterceptor$$1(this, handler);
-    };
-    ObservableValue$$1.prototype.observe = function (listener, fireImmediately) {
-        if (fireImmediately)
-            listener({
-                object: this,
-                type: "update",
-                newValue: this.value,
-                oldValue: undefined
-            });
-        return registerListener$$1(this, listener);
-    };
-    ObservableValue$$1.prototype.toJSON = function () {
-        return this.get();
-    };
-    ObservableValue$$1.prototype.toString = function () {
-        return this.name + "[" + this.value + "]";
-    };
-    ObservableValue$$1.prototype.valueOf = function () {
-        return toPrimitive$$1(this.get());
-    };
-    ObservableValue$$1.prototype[Symbol.toPrimitive] = function () {
-        return this.valueOf();
-    };
-    return ObservableValue$$1;
-}(Atom$$1));
-var isObservableValue$$1 = createInstanceofPredicate$$1("ObservableValue", ObservableValue$$1);
-
-/**
- * A node in the state dependency root that observes other nodes, and can be observed itself.
- *
- * ComputedValue will remember the result of the computation for the duration of the batch, or
- * while being observed.
- *
- * During this time it will recompute only when one of its direct dependencies changed,
- * but only when it is being accessed with `ComputedValue.get()`.
- *
- * Implementation description:
- * 1. First time it's being accessed it will compute and remember result
- *    give back remembered result until 2. happens
- * 2. First time any deep dependency change, propagate POSSIBLY_STALE to all observers, wait for 3.
- * 3. When it's being accessed, recompute if any shallow dependency changed.
- *    if result changed: propagate STALE to all observers, that were POSSIBLY_STALE from the last step.
- *    go to step 2. either way
- *
- * If at any point it's outside batch and it isn't observed: reset everything and go to 1.
- */
-var ComputedValue$$1 = /** @class */ (function () {
-    /**
-     * Create a new computed value based on a function expression.
-     *
-     * The `name` property is for debug purposes only.
-     *
-     * The `equals` property specifies the comparer function to use to determine if a newly produced
-     * value differs from the previous value. Two comparers are provided in the library; `defaultComparer`
-     * compares based on identity comparison (===), and `structualComparer` deeply compares the structure.
-     * Structural comparison can be convenient if you always produce a new aggregated object and
-     * don't want to notify observers if it is structurally the same.
-     * This is useful for working with vectors, mouse coordinates etc.
-     */
-    function ComputedValue$$1(options) {
-        this.dependenciesState = IDerivationState.NOT_TRACKING;
-        this.observing = []; // nodes we are looking at. Our value depends on these nodes
-        this.newObserving = null; // during tracking it's an array with new observed observers
-        this.isBeingObserved = false;
-        this.isPendingUnobservation = false;
-        this.observers = new Set();
-        this.diffValue = 0;
-        this.runId = 0;
-        this.lastAccessedBy = 0;
-        this.lowestObserverState = IDerivationState.UP_TO_DATE;
-        this.unboundDepsCount = 0;
-        this.__mapid = "#" + getNextId$$1();
-        this.value = new CaughtException$$1(null);
-        this.isComputing = false; // to check for cycles
-        this.isRunningSetter = false;
-        this.isTracing = TraceMode$$1.NONE;
-        if ("development" !== "production" && !options.get)
-            throw "[mobx] missing option for computed: get";
-        this.derivation = options.get;
-        this.name = options.name || "ComputedValue@" + getNextId$$1();
-        if (options.set)
-            this.setter = createAction$$1(this.name + "-setter", options.set);
-        this.equals =
-            options.equals ||
-                (options.compareStructural || options.struct
-                    ? comparer$$1.structural
-                    : comparer$$1.default);
-        this.scope = options.context;
-        this.requiresReaction = !!options.requiresReaction;
-        this.keepAlive = !!options.keepAlive;
-    }
-    ComputedValue$$1.prototype.onBecomeStale = function () {
-        propagateMaybeChanged$$1(this);
-    };
-    ComputedValue$$1.prototype.onBecomeObserved = function () {
-        if (this.onBecomeObservedListeners) {
-            this.onBecomeObservedListeners.forEach(function (listener) { return listener(); });
-        }
-    };
-    ComputedValue$$1.prototype.onBecomeUnobserved = function () {
-        if (this.onBecomeUnobservedListeners) {
-            this.onBecomeUnobservedListeners.forEach(function (listener) { return listener(); });
-        }
-    };
-    /**
-     * Returns the current value of this computed value.
-     * Will evaluate its computation first if needed.
-     */
-    ComputedValue$$1.prototype.get = function () {
-        if (this.isComputing)
-            fail$$1("Cycle detected in computation " + this.name + ": " + this.derivation);
-        if (globalState$$1.inBatch === 0 && this.observers.size === 0 && !this.keepAlive) {
-            if (shouldCompute$$1(this)) {
-                this.warnAboutUntrackedRead();
-                startBatch$$1(); // See perf test 'computed memoization'
-                this.value = this.computeValue(false);
-                endBatch$$1();
-            }
-        }
-        else {
-            reportObserved$$1(this);
-            if (shouldCompute$$1(this))
-                if (this.trackAndCompute())
-                    propagateChangeConfirmed$$1(this);
-        }
-        var result = this.value;
-        if (isCaughtException$$1(result))
-            throw result.cause;
-        return result;
-    };
-    ComputedValue$$1.prototype.peek = function () {
-        var res = this.computeValue(false);
-        if (isCaughtException$$1(res))
-            throw res.cause;
-        return res;
-    };
-    ComputedValue$$1.prototype.set = function (value) {
-        if (this.setter) {
-            invariant$$1(!this.isRunningSetter, "The setter of computed value '" + this.name + "' is trying to update itself. Did you intend to update an _observable_ value, instead of the computed property?");
-            this.isRunningSetter = true;
-            try {
-                this.setter.call(this.scope, value);
-            }
-            finally {
-                this.isRunningSetter = false;
-            }
-        }
-        else
-            invariant$$1(false, "development" !== "production" &&
-                "[ComputedValue '" + this.name + "'] It is not possible to assign a new value to a computed value.");
-    };
-    ComputedValue$$1.prototype.trackAndCompute = function () {
-        if (isSpyEnabled$$1() && "development" !== "production") {
-            spyReport$$1({
-                object: this.scope,
-                type: "compute",
-                name: this.name
-            });
-        }
-        var oldValue = this.value;
-        var wasSuspended = 
-        /* see #1208 */ this.dependenciesState === IDerivationState.NOT_TRACKING;
-        var newValue = this.computeValue(true);
-        var changed = wasSuspended ||
-            isCaughtException$$1(oldValue) ||
-            isCaughtException$$1(newValue) ||
-            !this.equals(oldValue, newValue);
-        if (changed) {
-            this.value = newValue;
-        }
-        return changed;
-    };
-    ComputedValue$$1.prototype.computeValue = function (track) {
-        this.isComputing = true;
-        globalState$$1.computationDepth++;
-        var res;
-        if (track) {
-            res = trackDerivedFunction$$1(this, this.derivation, this.scope);
-        }
-        else {
-            if (globalState$$1.disableErrorBoundaries === true) {
-                res = this.derivation.call(this.scope);
-            }
-            else {
-                try {
-                    res = this.derivation.call(this.scope);
-                }
-                catch (e) {
-                    res = new CaughtException$$1(e);
-                }
-            }
-        }
-        globalState$$1.computationDepth--;
-        this.isComputing = false;
-        return res;
-    };
-    ComputedValue$$1.prototype.suspend = function () {
-        if (!this.keepAlive) {
-            clearObserving$$1(this);
-            this.value = undefined; // don't hold on to computed value!
-        }
-    };
-    ComputedValue$$1.prototype.observe = function (listener, fireImmediately) {
-        var _this = this;
-        var firstTime = true;
-        var prevValue = undefined;
-        return autorun$$1(function () {
-            var newValue = _this.get();
-            if (!firstTime || fireImmediately) {
-                var prevU = untrackedStart$$1();
-                listener({
-                    type: "update",
-                    object: _this,
-                    newValue: newValue,
-                    oldValue: prevValue
-                });
-                untrackedEnd$$1(prevU);
-            }
-            firstTime = false;
-            prevValue = newValue;
-        });
-    };
-    ComputedValue$$1.prototype.warnAboutUntrackedRead = function () {
-        if (false)
-            {}
-        if (this.requiresReaction === true) {
-            fail$$1("[mobx] Computed value " + this.name + " is read outside a reactive context");
-        }
-        if (this.isTracing !== TraceMode$$1.NONE) {
-            console.log("[mobx.trace] '" + this.name + "' is being read outside a reactive context. Doing a full recompute");
-        }
-        if (globalState$$1.computedRequiresReaction) {
-            console.warn("[mobx] Computed value " + this.name + " is being read outside a reactive context. Doing a full recompute");
-        }
-    };
-    ComputedValue$$1.prototype.toJSON = function () {
-        return this.get();
-    };
-    ComputedValue$$1.prototype.toString = function () {
-        return this.name + "[" + this.derivation.toString() + "]";
-    };
-    ComputedValue$$1.prototype.valueOf = function () {
-        return toPrimitive$$1(this.get());
-    };
-    ComputedValue$$1.prototype[Symbol.toPrimitive] = function () {
-        return this.valueOf();
-    };
-    return ComputedValue$$1;
-}());
-var isComputedValue$$1 = createInstanceofPredicate$$1("ComputedValue", ComputedValue$$1);
-
-var IDerivationState;
-(function (IDerivationState$$1) {
-    // before being run or (outside batch and not being observed)
-    // at this point derivation is not holding any data about dependency tree
-    IDerivationState$$1[IDerivationState$$1["NOT_TRACKING"] = -1] = "NOT_TRACKING";
-    // no shallow dependency changed since last computation
-    // won't recalculate derivation
-    // this is what makes mobx fast
-    IDerivationState$$1[IDerivationState$$1["UP_TO_DATE"] = 0] = "UP_TO_DATE";
-    // some deep dependency changed, but don't know if shallow dependency changed
-    // will require to check first if UP_TO_DATE or POSSIBLY_STALE
-    // currently only ComputedValue will propagate POSSIBLY_STALE
-    //
-    // having this state is second big optimization:
-    // don't have to recompute on every dependency change, but only when it's needed
-    IDerivationState$$1[IDerivationState$$1["POSSIBLY_STALE"] = 1] = "POSSIBLY_STALE";
-    // A shallow dependency has changed since last computation and the derivation
-    // will need to recompute when it's needed next.
-    IDerivationState$$1[IDerivationState$$1["STALE"] = 2] = "STALE";
-})(IDerivationState || (IDerivationState = {}));
-var TraceMode$$1;
-(function (TraceMode$$1) {
-    TraceMode$$1[TraceMode$$1["NONE"] = 0] = "NONE";
-    TraceMode$$1[TraceMode$$1["LOG"] = 1] = "LOG";
-    TraceMode$$1[TraceMode$$1["BREAK"] = 2] = "BREAK";
-})(TraceMode$$1 || (TraceMode$$1 = {}));
-var CaughtException$$1 = /** @class */ (function () {
-    function CaughtException$$1(cause) {
-        this.cause = cause;
-        // Empty
-    }
-    return CaughtException$$1;
-}());
-function isCaughtException$$1(e) {
-    return e instanceof CaughtException$$1;
-}
-/**
- * Finds out whether any dependency of the derivation has actually changed.
- * If dependenciesState is 1 then it will recalculate dependencies,
- * if any dependency changed it will propagate it by changing dependenciesState to 2.
- *
- * By iterating over the dependencies in the same order that they were reported and
- * stopping on the first change, all the recalculations are only called for ComputedValues
- * that will be tracked by derivation. That is because we assume that if the first x
- * dependencies of the derivation doesn't change then the derivation should run the same way
- * up until accessing x-th dependency.
- */
-function shouldCompute$$1(derivation) {
-    switch (derivation.dependenciesState) {
-        case IDerivationState.UP_TO_DATE:
-            return false;
-        case IDerivationState.NOT_TRACKING:
-        case IDerivationState.STALE:
-            return true;
-        case IDerivationState.POSSIBLY_STALE: {
-            var prevUntracked = untrackedStart$$1(); // no need for those computeds to be reported, they will be picked up in trackDerivedFunction.
-            var obs = derivation.observing, l = obs.length;
-            for (var i = 0; i < l; i++) {
-                var obj = obs[i];
-                if (isComputedValue$$1(obj)) {
-                    if (globalState$$1.disableErrorBoundaries) {
-                        obj.get();
-                    }
-                    else {
-                        try {
-                            obj.get();
-                        }
-                        catch (e) {
-                            // we are not interested in the value *or* exception at this moment, but if there is one, notify all
-                            untrackedEnd$$1(prevUntracked);
-                            return true;
-                        }
-                    }
-                    // if ComputedValue `obj` actually changed it will be computed and propagated to its observers.
-                    // and `derivation` is an observer of `obj`
-                    // invariantShouldCompute(derivation)
-                    if (derivation.dependenciesState === IDerivationState.STALE) {
-                        untrackedEnd$$1(prevUntracked);
-                        return true;
-                    }
-                }
-            }
-            changeDependenciesStateTo0$$1(derivation);
-            untrackedEnd$$1(prevUntracked);
-            return false;
-        }
-    }
-}
-// function invariantShouldCompute(derivation: IDerivation) {
-//     const newDepState = (derivation as any).dependenciesState
-//     if (
-//         process.env.NODE_ENV === "production" &&
-//         (newDepState === IDerivationState.POSSIBLY_STALE ||
-//             newDepState === IDerivationState.NOT_TRACKING)
-//     )
-//         fail("Illegal dependency state")
-// }
-function isComputingDerivation$$1() {
-    return globalState$$1.trackingDerivation !== null; // filter out actions inside computations
-}
-function checkIfStateModificationsAreAllowed$$1(atom) {
-    var hasObservers$$1 = atom.observers.size > 0;
-    // Should never be possible to change an observed observable from inside computed, see #798
-    if (globalState$$1.computationDepth > 0 && hasObservers$$1)
-        fail$$1("development" !== "production" &&
-            "Computed values are not allowed to cause side effects by changing observables that are already being observed. Tried to modify: " + atom.name);
-    // Should not be possible to change observed state outside strict mode, except during initialization, see #563
-    if (!globalState$$1.allowStateChanges && (hasObservers$$1 || globalState$$1.enforceActions === "strict"))
-        fail$$1("development" !== "production" &&
-            (globalState$$1.enforceActions
-                ? "Since strict-mode is enabled, changing observed observable values outside actions is not allowed. Please wrap the code in an `action` if this change is intended. Tried to modify: "
-                : "Side effects like changing state are not allowed at this point. Are you trying to modify state from, for example, the render function of a React component? Tried to modify: ") +
-                atom.name);
-}
-/**
- * Executes the provided function `f` and tracks which observables are being accessed.
- * The tracking information is stored on the `derivation` object and the derivation is registered
- * as observer of any of the accessed observables.
- */
-function trackDerivedFunction$$1(derivation, f, context) {
-    // pre allocate array allocation + room for variation in deps
-    // array will be trimmed by bindDependencies
-    changeDependenciesStateTo0$$1(derivation);
-    derivation.newObserving = new Array(derivation.observing.length + 100);
-    derivation.unboundDepsCount = 0;
-    derivation.runId = ++globalState$$1.runId;
-    var prevTracking = globalState$$1.trackingDerivation;
-    globalState$$1.trackingDerivation = derivation;
-    var result;
-    if (globalState$$1.disableErrorBoundaries === true) {
-        result = f.call(context);
-    }
-    else {
-        try {
-            result = f.call(context);
-        }
-        catch (e) {
-            result = new CaughtException$$1(e);
-        }
-    }
-    globalState$$1.trackingDerivation = prevTracking;
-    bindDependencies(derivation);
-    return result;
-}
-/**
- * diffs newObserving with observing.
- * update observing to be newObserving with unique observables
- * notify observers that become observed/unobserved
- */
-function bindDependencies(derivation) {
-    // invariant(derivation.dependenciesState !== IDerivationState.NOT_TRACKING, "INTERNAL ERROR bindDependencies expects derivation.dependenciesState !== -1");
-    var prevObserving = derivation.observing;
-    var observing = (derivation.observing = derivation.newObserving);
-    var lowestNewObservingDerivationState = IDerivationState.UP_TO_DATE;
-    // Go through all new observables and check diffValue: (this list can contain duplicates):
-    //   0: first occurrence, change to 1 and keep it
-    //   1: extra occurrence, drop it
-    var i0 = 0, l = derivation.unboundDepsCount;
-    for (var i = 0; i < l; i++) {
-        var dep = observing[i];
-        if (dep.diffValue === 0) {
-            dep.diffValue = 1;
-            if (i0 !== i)
-                observing[i0] = dep;
-            i0++;
-        }
-        // Upcast is 'safe' here, because if dep is IObservable, `dependenciesState` will be undefined,
-        // not hitting the condition
-        if (dep.dependenciesState > lowestNewObservingDerivationState) {
-            lowestNewObservingDerivationState = dep.dependenciesState;
-        }
-    }
-    observing.length = i0;
-    derivation.newObserving = null; // newObserving shouldn't be needed outside tracking (statement moved down to work around FF bug, see #614)
-    // Go through all old observables and check diffValue: (it is unique after last bindDependencies)
-    //   0: it's not in new observables, unobserve it
-    //   1: it keeps being observed, don't want to notify it. change to 0
-    l = prevObserving.length;
-    while (l--) {
-        var dep = prevObserving[l];
-        if (dep.diffValue === 0) {
-            removeObserver$$1(dep, derivation);
-        }
-        dep.diffValue = 0;
-    }
-    // Go through all new observables and check diffValue: (now it should be unique)
-    //   0: it was set to 0 in last loop. don't need to do anything.
-    //   1: it wasn't observed, let's observe it. set back to 0
-    while (i0--) {
-        var dep = observing[i0];
-        if (dep.diffValue === 1) {
-            dep.diffValue = 0;
-            addObserver$$1(dep, derivation);
-        }
-    }
-    // Some new observed derivations may become stale during this derivation computation
-    // so they have had no chance to propagate staleness (#916)
-    if (lowestNewObservingDerivationState !== IDerivationState.UP_TO_DATE) {
-        derivation.dependenciesState = lowestNewObservingDerivationState;
-        derivation.onBecomeStale();
-    }
-}
-function clearObserving$$1(derivation) {
-    // invariant(globalState.inBatch > 0, "INTERNAL ERROR clearObserving should be called only inside batch");
-    var obs = derivation.observing;
-    derivation.observing = [];
-    var i = obs.length;
-    while (i--)
-        removeObserver$$1(obs[i], derivation);
-    derivation.dependenciesState = IDerivationState.NOT_TRACKING;
-}
-function untracked$$1(action$$1) {
-    var prev = untrackedStart$$1();
-    try {
-        return action$$1();
-    }
-    finally {
-        untrackedEnd$$1(prev);
-    }
-}
-function untrackedStart$$1() {
-    var prev = globalState$$1.trackingDerivation;
-    globalState$$1.trackingDerivation = null;
-    return prev;
-}
-function untrackedEnd$$1(prev) {
-    globalState$$1.trackingDerivation = prev;
-}
-/**
- * needed to keep `lowestObserverState` correct. when changing from (2 or 1) to 0
- *
- */
-function changeDependenciesStateTo0$$1(derivation) {
-    if (derivation.dependenciesState === IDerivationState.UP_TO_DATE)
-        return;
-    derivation.dependenciesState = IDerivationState.UP_TO_DATE;
-    var obs = derivation.observing;
-    var i = obs.length;
-    while (i--)
-        obs[i].lowestObserverState = IDerivationState.UP_TO_DATE;
-}
-
-/**
- * These values will persist if global state is reset
- */
-var persistentKeys = [
-    "mobxGuid",
-    "spyListeners",
-    "enforceActions",
-    "computedRequiresReaction",
-    "disableErrorBoundaries",
-    "runId",
-    "UNCHANGED"
-];
-var MobXGlobals$$1 = /** @class */ (function () {
-    function MobXGlobals$$1() {
-        /**
-         * MobXGlobals version.
-         * MobX compatiblity with other versions loaded in memory as long as this version matches.
-         * It indicates that the global state still stores similar information
-         *
-         * N.B: this version is unrelated to the package version of MobX, and is only the version of the
-         * internal state storage of MobX, and can be the same across many different package versions
-         */
-        this.version = 5;
-        /**
-         * globally unique token to signal unchanged
-         */
-        this.UNCHANGED = {};
-        /**
-         * Currently running derivation
-         */
-        this.trackingDerivation = null;
-        /**
-         * Are we running a computation currently? (not a reaction)
-         */
-        this.computationDepth = 0;
-        /**
-         * Each time a derivation is tracked, it is assigned a unique run-id
-         */
-        this.runId = 0;
-        /**
-         * 'guid' for general purpose. Will be persisted amongst resets.
-         */
-        this.mobxGuid = 0;
-        /**
-         * Are we in a batch block? (and how many of them)
-         */
-        this.inBatch = 0;
-        /**
-         * Observables that don't have observers anymore, and are about to be
-         * suspended, unless somebody else accesses it in the same batch
-         *
-         * @type {IObservable[]}
-         */
-        this.pendingUnobservations = [];
-        /**
-         * List of scheduled, not yet executed, reactions.
-         */
-        this.pendingReactions = [];
-        /**
-         * Are we currently processing reactions?
-         */
-        this.isRunningReactions = false;
-        /**
-         * Is it allowed to change observables at this point?
-         * In general, MobX doesn't allow that when running computations and React.render.
-         * To ensure that those functions stay pure.
-         */
-        this.allowStateChanges = true;
-        /**
-         * If strict mode is enabled, state changes are by default not allowed
-         */
-        this.enforceActions = false;
-        /**
-         * Spy callbacks
-         */
-        this.spyListeners = [];
-        /**
-         * Globally attached error handlers that react specifically to errors in reactions
-         */
-        this.globalReactionErrorHandlers = [];
-        /**
-         * Warn if computed values are accessed outside a reactive context
-         */
-        this.computedRequiresReaction = false;
-        /*
-         * Don't catch and rethrow exceptions. This is useful for inspecting the state of
-         * the stack when an exception occurs while debugging.
-         */
-        this.disableErrorBoundaries = false;
-        /*
-         * If true, we are already handling an exception in an action. Any errors in reactions should be supressed, as
-         * they are not the cause, see: https://github.com/mobxjs/mobx/issues/1836
-         */
-        this.suppressReactionErrors = false;
-    }
-    return MobXGlobals$$1;
-}());
-var canMergeGlobalState = true;
-var isolateCalled = false;
-var globalState$$1 = (function () {
-    var global = getGlobal$$1();
-    if (global.__mobxInstanceCount > 0 && !global.__mobxGlobals)
-        canMergeGlobalState = false;
-    if (global.__mobxGlobals && global.__mobxGlobals.version !== new MobXGlobals$$1().version)
-        canMergeGlobalState = false;
-    if (!canMergeGlobalState) {
-        setTimeout(function () {
-            if (!isolateCalled) {
-                fail$$1("There are multiple, different versions of MobX active. Make sure MobX is loaded only once or use `configure({ isolateGlobalState: true })`");
-            }
-        }, 1);
-        return new MobXGlobals$$1();
-    }
-    else if (global.__mobxGlobals) {
-        global.__mobxInstanceCount += 1;
-        if (!global.__mobxGlobals.UNCHANGED)
-            global.__mobxGlobals.UNCHANGED = {}; // make merge backward compatible
-        return global.__mobxGlobals;
-    }
-    else {
-        global.__mobxInstanceCount = 1;
-        return (global.__mobxGlobals = new MobXGlobals$$1());
-    }
-})();
-function isolateGlobalState$$1() {
-    if (globalState$$1.pendingReactions.length ||
-        globalState$$1.inBatch ||
-        globalState$$1.isRunningReactions)
-        fail$$1("isolateGlobalState should be called before MobX is running any reactions");
-    isolateCalled = true;
-    if (canMergeGlobalState) {
-        if (--getGlobal$$1().__mobxInstanceCount === 0)
-            getGlobal$$1().__mobxGlobals = undefined;
-        globalState$$1 = new MobXGlobals$$1();
-    }
-}
-function getGlobalState$$1() {
-    return globalState$$1;
-}
-/**
- * For testing purposes only; this will break the internal state of existing observables,
- * but can be used to get back at a stable state after throwing errors
- */
-function resetGlobalState$$1() {
-    var defaultGlobals = new MobXGlobals$$1();
-    for (var key in defaultGlobals)
-        if (persistentKeys.indexOf(key) === -1)
-            globalState$$1[key] = defaultGlobals[key];
-    globalState$$1.allowStateChanges = !globalState$$1.enforceActions;
-}
-function getGlobal$$1() {
-    return typeof window !== "undefined" ? window : global;
-}
-
-function hasObservers$$1(observable$$1) {
-    return observable$$1.observers && observable$$1.observers.size > 0;
-}
-function getObservers$$1(observable$$1) {
-    return observable$$1.observers;
-}
-// function invariantObservers(observable: IObservable) {
-//     const list = observable.observers
-//     const map = observable.observersIndexes
-//     const l = list.length
-//     for (let i = 0; i < l; i++) {
-//         const id = list[i].__mapid
-//         if (i) {
-//             invariant(map[id] === i, "INTERNAL ERROR maps derivation.__mapid to index in list") // for performance
-//         } else {
-//             invariant(!(id in map), "INTERNAL ERROR observer on index 0 shouldn't be held in map.") // for performance
-//         }
-//     }
-//     invariant(
-//         list.length === 0 || Object.keys(map).length === list.length - 1,
-//         "INTERNAL ERROR there is no junk in map"
-//     )
-// }
-function addObserver$$1(observable$$1, node) {
-    // invariant(node.dependenciesState !== -1, "INTERNAL ERROR, can add only dependenciesState !== -1");
-    // invariant(observable._observers.indexOf(node) === -1, "INTERNAL ERROR add already added node");
-    // invariantObservers(observable);
-    observable$$1.observers.add(node);
-    if (observable$$1.lowestObserverState > node.dependenciesState)
-        observable$$1.lowestObserverState = node.dependenciesState;
-    // invariantObservers(observable);
-    // invariant(observable._observers.indexOf(node) !== -1, "INTERNAL ERROR didn't add node");
-}
-function removeObserver$$1(observable$$1, node) {
-    // invariant(globalState.inBatch > 0, "INTERNAL ERROR, remove should be called only inside batch");
-    // invariant(observable._observers.indexOf(node) !== -1, "INTERNAL ERROR remove already removed node");
-    // invariantObservers(observable);
-    observable$$1.observers.delete(node);
-    if (observable$$1.observers.size === 0) {
-        // deleting last observer
-        queueForUnobservation$$1(observable$$1);
-    }
-    // invariantObservers(observable);
-    // invariant(observable._observers.indexOf(node) === -1, "INTERNAL ERROR remove already removed node2");
-}
-function queueForUnobservation$$1(observable$$1) {
-    if (observable$$1.isPendingUnobservation === false) {
-        // invariant(observable._observers.length === 0, "INTERNAL ERROR, should only queue for unobservation unobserved observables");
-        observable$$1.isPendingUnobservation = true;
-        globalState$$1.pendingUnobservations.push(observable$$1);
-    }
-}
-/**
- * Batch starts a transaction, at least for purposes of memoizing ComputedValues when nothing else does.
- * During a batch `onBecomeUnobserved` will be called at most once per observable.
- * Avoids unnecessary recalculations.
- */
-function startBatch$$1() {
-    globalState$$1.inBatch++;
-}
-function endBatch$$1() {
-    if (--globalState$$1.inBatch === 0) {
-        runReactions$$1();
-        // the batch is actually about to finish, all unobserving should happen here.
-        var list = globalState$$1.pendingUnobservations;
-        for (var i = 0; i < list.length; i++) {
-            var observable$$1 = list[i];
-            observable$$1.isPendingUnobservation = false;
-            if (observable$$1.observers.size === 0) {
-                if (observable$$1.isBeingObserved) {
-                    // if this observable had reactive observers, trigger the hooks
-                    observable$$1.isBeingObserved = false;
-                    observable$$1.onBecomeUnobserved();
-                }
-                if (observable$$1 instanceof ComputedValue$$1) {
-                    // computed values are automatically teared down when the last observer leaves
-                    // this process happens recursively, this computed might be the last observabe of another, etc..
-                    observable$$1.suspend();
-                }
-            }
-        }
-        globalState$$1.pendingUnobservations = [];
-    }
-}
-function reportObserved$$1(observable$$1) {
-    var derivation = globalState$$1.trackingDerivation;
-    if (derivation !== null) {
-        /**
-         * Simple optimization, give each derivation run an unique id (runId)
-         * Check if last time this observable was accessed the same runId is used
-         * if this is the case, the relation is already known
-         */
-        if (derivation.runId !== observable$$1.lastAccessedBy) {
-            observable$$1.lastAccessedBy = derivation.runId;
-            // Tried storing newObserving, or observing, or both as Set, but performance didn't come close...
-            derivation.newObserving[derivation.unboundDepsCount++] = observable$$1;
-            if (!observable$$1.isBeingObserved) {
-                observable$$1.isBeingObserved = true;
-                observable$$1.onBecomeObserved();
-            }
-        }
-        return true;
-    }
-    else if (observable$$1.observers.size === 0 && globalState$$1.inBatch > 0) {
-        queueForUnobservation$$1(observable$$1);
-    }
-    return false;
-}
-// function invariantLOS(observable: IObservable, msg: string) {
-//     // it's expensive so better not run it in produciton. but temporarily helpful for testing
-//     const min = getObservers(observable).reduce((a, b) => Math.min(a, b.dependenciesState), 2)
-//     if (min >= observable.lowestObserverState) return // <- the only assumption about `lowestObserverState`
-//     throw new Error(
-//         "lowestObserverState is wrong for " +
-//             msg +
-//             " because " +
-//             min +
-//             " < " +
-//             observable.lowestObserverState
-//     )
-// }
-/**
- * NOTE: current propagation mechanism will in case of self reruning autoruns behave unexpectedly
- * It will propagate changes to observers from previous run
- * It's hard or maybe impossible (with reasonable perf) to get it right with current approach
- * Hopefully self reruning autoruns aren't a feature people should depend on
- * Also most basic use cases should be ok
- */
-// Called by Atom when its value changes
-function propagateChanged$$1(observable$$1) {
-    // invariantLOS(observable, "changed start");
-    if (observable$$1.lowestObserverState === IDerivationState.STALE)
-        return;
-    observable$$1.lowestObserverState = IDerivationState.STALE;
-    // Ideally we use for..of here, but the downcompiled version is really slow...
-    observable$$1.observers.forEach(function (d) {
-        if (d.dependenciesState === IDerivationState.UP_TO_DATE) {
-            if (d.isTracing !== TraceMode$$1.NONE) {
-                logTraceInfo(d, observable$$1);
-            }
-            d.onBecomeStale();
-        }
-        d.dependenciesState = IDerivationState.STALE;
-    });
-    // invariantLOS(observable, "changed end");
-}
-// Called by ComputedValue when it recalculate and its value changed
-function propagateChangeConfirmed$$1(observable$$1) {
-    // invariantLOS(observable, "confirmed start");
-    if (observable$$1.lowestObserverState === IDerivationState.STALE)
-        return;
-    observable$$1.lowestObserverState = IDerivationState.STALE;
-    observable$$1.observers.forEach(function (d) {
-        if (d.dependenciesState === IDerivationState.POSSIBLY_STALE)
-            d.dependenciesState = IDerivationState.STALE;
-        else if (d.dependenciesState === IDerivationState.UP_TO_DATE // this happens during computing of `d`, just keep lowestObserverState up to date.
-        )
-            observable$$1.lowestObserverState = IDerivationState.UP_TO_DATE;
-    });
-    // invariantLOS(observable, "confirmed end");
-}
-// Used by computed when its dependency changed, but we don't wan't to immediately recompute.
-function propagateMaybeChanged$$1(observable$$1) {
-    // invariantLOS(observable, "maybe start");
-    if (observable$$1.lowestObserverState !== IDerivationState.UP_TO_DATE)
-        return;
-    observable$$1.lowestObserverState = IDerivationState.POSSIBLY_STALE;
-    observable$$1.observers.forEach(function (d) {
-        if (d.dependenciesState === IDerivationState.UP_TO_DATE) {
-            d.dependenciesState = IDerivationState.POSSIBLY_STALE;
-            if (d.isTracing !== TraceMode$$1.NONE) {
-                logTraceInfo(d, observable$$1);
-            }
-            d.onBecomeStale();
-        }
-    });
-    // invariantLOS(observable, "maybe end");
-}
-function logTraceInfo(derivation, observable$$1) {
-    console.log("[mobx.trace] '" + derivation.name + "' is invalidated due to a change in: '" + observable$$1.name + "'");
-    if (derivation.isTracing === TraceMode$$1.BREAK) {
-        var lines = [];
-        printDepTree(getDependencyTree$$1(derivation), lines, 1);
-        // prettier-ignore
-        new Function("debugger;\n/*\nTracing '" + derivation.name + "'\n\nYou are entering this break point because derivation '" + derivation.name + "' is being traced and '" + observable$$1.name + "' is now forcing it to update.\nJust follow the stacktrace you should now see in the devtools to see precisely what piece of your code is causing this update\nThe stackframe you are looking for is at least ~6-8 stack-frames up.\n\n" + (derivation instanceof ComputedValue$$1 ? derivation.derivation.toString().replace(/[*]\//g, "/") : "") + "\n\nThe dependencies for this derivation are:\n\n" + lines.join("\n") + "\n*/\n    ")();
-    }
-}
-function printDepTree(tree, lines, depth) {
-    if (lines.length >= 1000) {
-        lines.push("(and many more)");
-        return;
-    }
-    lines.push("" + new Array(depth).join("\t") + tree.name); // MWE: not the fastest, but the easiest way :)
-    if (tree.dependencies)
-        tree.dependencies.forEach(function (child) { return printDepTree(child, lines, depth + 1); });
-}
-
-var Reaction$$1 = /** @class */ (function () {
-    function Reaction$$1(name, onInvalidate, errorHandler) {
-        if (name === void 0) { name = "Reaction@" + getNextId$$1(); }
-        this.name = name;
-        this.onInvalidate = onInvalidate;
-        this.errorHandler = errorHandler;
-        this.observing = []; // nodes we are looking at. Our value depends on these nodes
-        this.newObserving = [];
-        this.dependenciesState = IDerivationState.NOT_TRACKING;
-        this.diffValue = 0;
-        this.runId = 0;
-        this.unboundDepsCount = 0;
-        this.__mapid = "#" + getNextId$$1();
-        this.isDisposed = false;
-        this._isScheduled = false;
-        this._isTrackPending = false;
-        this._isRunning = false;
-        this.isTracing = TraceMode$$1.NONE;
-    }
-    Reaction$$1.prototype.onBecomeStale = function () {
-        this.schedule();
-    };
-    Reaction$$1.prototype.schedule = function () {
-        if (!this._isScheduled) {
-            this._isScheduled = true;
-            globalState$$1.pendingReactions.push(this);
-            runReactions$$1();
-        }
-    };
-    Reaction$$1.prototype.isScheduled = function () {
-        return this._isScheduled;
-    };
-    /**
-     * internal, use schedule() if you intend to kick off a reaction
-     */
-    Reaction$$1.prototype.runReaction = function () {
-        if (!this.isDisposed) {
-            startBatch$$1();
-            this._isScheduled = false;
-            if (shouldCompute$$1(this)) {
-                this._isTrackPending = true;
-                try {
-                    this.onInvalidate();
-                    if (this._isTrackPending &&
-                        isSpyEnabled$$1() &&
-                        "development" !== "production") {
-                        // onInvalidate didn't trigger track right away..
-                        spyReport$$1({
-                            name: this.name,
-                            type: "scheduled-reaction"
-                        });
-                    }
-                }
-                catch (e) {
-                    this.reportExceptionInDerivation(e);
-                }
-            }
-            endBatch$$1();
-        }
-    };
-    Reaction$$1.prototype.track = function (fn) {
-        startBatch$$1();
-        var notify = isSpyEnabled$$1();
-        var startTime;
-        if (notify && "development" !== "production") {
-            startTime = Date.now();
-            spyReportStart$$1({
-                name: this.name,
-                type: "reaction"
-            });
-        }
-        this._isRunning = true;
-        var result = trackDerivedFunction$$1(this, fn, undefined);
-        this._isRunning = false;
-        this._isTrackPending = false;
-        if (this.isDisposed) {
-            // disposed during last run. Clean up everything that was bound after the dispose call.
-            clearObserving$$1(this);
-        }
-        if (isCaughtException$$1(result))
-            this.reportExceptionInDerivation(result.cause);
-        if (notify && "development" !== "production") {
-            spyReportEnd$$1({
-                time: Date.now() - startTime
-            });
-        }
-        endBatch$$1();
-    };
-    Reaction$$1.prototype.reportExceptionInDerivation = function (error) {
-        var _this = this;
-        if (this.errorHandler) {
-            this.errorHandler(error, this);
-            return;
-        }
-        if (globalState$$1.disableErrorBoundaries)
-            throw error;
-        var message = "[mobx] Encountered an uncaught exception that was thrown by a reaction or observer component, in: '" + this + "'";
-        if (globalState$$1.suppressReactionErrors) {
-            console.warn("[mobx] (error in reaction '" + this.name + "' suppressed, fix error of causing action below)"); // prettier-ignore
-        }
-        else {
-            console.error(message, error);
-            /** If debugging brought you here, please, read the above message :-). Tnx! */
-        }
-        if (isSpyEnabled$$1()) {
-            spyReport$$1({
-                type: "error",
-                name: this.name,
-                message: message,
-                error: "" + error
-            });
-        }
-        globalState$$1.globalReactionErrorHandlers.forEach(function (f) { return f(error, _this); });
-    };
-    Reaction$$1.prototype.dispose = function () {
-        if (!this.isDisposed) {
-            this.isDisposed = true;
-            if (!this._isRunning) {
-                // if disposed while running, clean up later. Maybe not optimal, but rare case
-                startBatch$$1();
-                clearObserving$$1(this);
-                endBatch$$1();
-            }
-        }
-    };
-    Reaction$$1.prototype.getDisposer = function () {
-        var r = this.dispose.bind(this);
-        r[$mobx$$1] = this;
-        return r;
-    };
-    Reaction$$1.prototype.toString = function () {
-        return "Reaction[" + this.name + "]";
-    };
-    Reaction$$1.prototype.trace = function (enterBreakPoint) {
-        if (enterBreakPoint === void 0) { enterBreakPoint = false; }
-        trace$$1(this, enterBreakPoint);
-    };
-    return Reaction$$1;
-}());
-function onReactionError$$1(handler) {
-    globalState$$1.globalReactionErrorHandlers.push(handler);
-    return function () {
-        var idx = globalState$$1.globalReactionErrorHandlers.indexOf(handler);
-        if (idx >= 0)
-            globalState$$1.globalReactionErrorHandlers.splice(idx, 1);
-    };
-}
-/**
- * Magic number alert!
- * Defines within how many times a reaction is allowed to re-trigger itself
- * until it is assumed that this is gonna be a never ending loop...
- */
-var MAX_REACTION_ITERATIONS = 100;
-var reactionScheduler = function (f) { return f(); };
-function runReactions$$1() {
-    // Trampolining, if runReactions are already running, new reactions will be picked up
-    if (globalState$$1.inBatch > 0 || globalState$$1.isRunningReactions)
-        return;
-    reactionScheduler(runReactionsHelper);
-}
-function runReactionsHelper() {
-    globalState$$1.isRunningReactions = true;
-    var allReactions = globalState$$1.pendingReactions;
-    var iterations = 0;
-    // While running reactions, new reactions might be triggered.
-    // Hence we work with two variables and check whether
-    // we converge to no remaining reactions after a while.
-    while (allReactions.length > 0) {
-        if (++iterations === MAX_REACTION_ITERATIONS) {
-            console.error("Reaction doesn't converge to a stable state after " + MAX_REACTION_ITERATIONS + " iterations." +
-                (" Probably there is a cycle in the reactive function: " + allReactions[0]));
-            allReactions.splice(0); // clear reactions
-        }
-        var remainingReactions = allReactions.splice(0);
-        for (var i = 0, l = remainingReactions.length; i < l; i++)
-            remainingReactions[i].runReaction();
-    }
-    globalState$$1.isRunningReactions = false;
-}
-var isReaction$$1 = createInstanceofPredicate$$1("Reaction", Reaction$$1);
-function setReactionScheduler$$1(fn) {
-    var baseScheduler = reactionScheduler;
-    reactionScheduler = function (f) { return fn(function () { return baseScheduler(f); }); };
-}
-
-function isSpyEnabled$$1() {
-    return "development" !== "production" && !!globalState$$1.spyListeners.length;
-}
-function spyReport$$1(event) {
-    if (false)
-        {} // dead code elimination can do the rest
-    if (!globalState$$1.spyListeners.length)
-        return;
-    var listeners = globalState$$1.spyListeners;
-    for (var i = 0, l = listeners.length; i < l; i++)
-        listeners[i](event);
-}
-function spyReportStart$$1(event) {
-    if (false)
-        {}
-    var change = __assign({}, event, { spyReportStart: true });
-    spyReport$$1(change);
-}
-var END_EVENT = { spyReportEnd: true };
-function spyReportEnd$$1(change) {
-    if (false)
-        {}
-    if (change)
-        spyReport$$1(__assign({}, change, { spyReportEnd: true }));
-    else
-        spyReport$$1(END_EVENT);
-}
-function spy$$1(listener) {
-    if (false) {}
-    else {
-        globalState$$1.spyListeners.push(listener);
-        return once$$1(function () {
-            globalState$$1.spyListeners = globalState$$1.spyListeners.filter(function (l) { return l !== listener; });
-        });
-    }
-}
-
-function dontReassignFields() {
-    fail$$1("development" !== "production" && "@action fields are not reassignable");
-}
-function namedActionDecorator$$1(name) {
-    return function (target, prop, descriptor) {
-        if (descriptor) {
-            if ("development" !== "production" && descriptor.get !== undefined) {
-                return fail$$1("@action cannot be used with getters");
-            }
-            // babel / typescript
-            // @action method() { }
-            if (descriptor.value) {
-                // typescript
-                return {
-                    value: createAction$$1(name, descriptor.value),
-                    enumerable: false,
-                    configurable: true,
-                    writable: true // for typescript, this must be writable, otherwise it cannot inherit :/ (see inheritable actions test)
-                };
-            }
-            // babel only: @action method = () => {}
-            var initializer_1 = descriptor.initializer;
-            return {
-                enumerable: false,
-                configurable: true,
-                writable: true,
-                initializer: function () {
-                    // N.B: we can't immediately invoke initializer; this would be wrong
-                    return createAction$$1(name, initializer_1.call(this));
-                }
-            };
-        }
-        // bound instance methods
-        return actionFieldDecorator$$1(name).apply(this, arguments);
-    };
-}
-function actionFieldDecorator$$1(name) {
-    // Simple property that writes on first invocation to the current instance
-    return function (target, prop, descriptor) {
-        Object.defineProperty(target, prop, {
-            configurable: true,
-            enumerable: false,
-            get: function () {
-                return undefined;
-            },
-            set: function (value) {
-                addHiddenProp$$1(this, prop, action$$1(name, value));
-            }
-        });
-    };
-}
-function boundActionDecorator$$1(target, propertyName, descriptor, applyToInstance) {
-    if (applyToInstance === true) {
-        defineBoundAction$$1(target, propertyName, descriptor.value);
-        return null;
-    }
-    if (descriptor) {
-        // if (descriptor.value)
-        // Typescript / Babel: @action.bound method() { }
-        // also: babel @action.bound method = () => {}
-        return {
-            configurable: true,
-            enumerable: false,
-            get: function () {
-                defineBoundAction$$1(this, propertyName, descriptor.value || descriptor.initializer.call(this));
-                return this[propertyName];
-            },
-            set: dontReassignFields
-        };
-    }
-    // field decorator Typescript @action.bound method = () => {}
-    return {
-        enumerable: false,
-        configurable: true,
-        set: function (v) {
-            defineBoundAction$$1(this, propertyName, v);
-        },
-        get: function () {
-            return undefined;
-        }
-    };
-}
-
-var action$$1 = function action$$1(arg1, arg2, arg3, arg4) {
-    // action(fn() {})
-    if (arguments.length === 1 && typeof arg1 === "function")
-        return createAction$$1(arg1.name || "<unnamed action>", arg1);
-    // action("name", fn() {})
-    if (arguments.length === 2 && typeof arg2 === "function")
-        return createAction$$1(arg1, arg2);
-    // @action("name") fn() {}
-    if (arguments.length === 1 && typeof arg1 === "string")
-        return namedActionDecorator$$1(arg1);
-    // @action fn() {}
-    if (arg4 === true) {
-        // apply to instance immediately
-        addHiddenProp$$1(arg1, arg2, createAction$$1(arg1.name || arg2, arg3.value));
-    }
-    else {
-        return namedActionDecorator$$1(arg2).apply(null, arguments);
-    }
-};
-action$$1.bound = boundActionDecorator$$1;
-function runInAction$$1(arg1, arg2) {
-    var actionName = typeof arg1 === "string" ? arg1 : arg1.name || "<unnamed action>";
-    var fn = typeof arg1 === "function" ? arg1 : arg2;
-    if (true) {
-        invariant$$1(typeof fn === "function" && fn.length === 0, "`runInAction` expects a function without arguments");
-        if (typeof actionName !== "string" || !actionName)
-            fail$$1("actions should have valid names, got: '" + actionName + "'");
-    }
-    return executeAction$$1(actionName, fn, this, undefined);
-}
-function isAction$$1(thing) {
-    return typeof thing === "function" && thing.isMobxAction === true;
-}
-function defineBoundAction$$1(target, propertyName, fn) {
-    addHiddenProp$$1(target, propertyName, createAction$$1(propertyName, fn.bind(target)));
-}
-
-/**
- * Creates a named reactive view and keeps it alive, so that the view is always
- * updated if one of the dependencies changes, even when the view is not further used by something else.
- * @param view The reactive view
- * @returns disposer function, which can be used to stop the view from being updated in the future.
- */
-function autorun$$1(view, opts) {
-    if (opts === void 0) { opts = EMPTY_OBJECT$$1; }
-    if (true) {
-        invariant$$1(typeof view === "function", "Autorun expects a function as first argument");
-        invariant$$1(isAction$$1(view) === false, "Autorun does not accept actions since actions are untrackable");
-    }
-    var name = (opts && opts.name) || view.name || "Autorun@" + getNextId$$1();
-    var runSync = !opts.scheduler && !opts.delay;
-    var reaction$$1;
-    if (runSync) {
-        // normal autorun
-        reaction$$1 = new Reaction$$1(name, function () {
-            this.track(reactionRunner);
-        }, opts.onError);
-    }
-    else {
-        var scheduler_1 = createSchedulerFromOptions(opts);
-        // debounced autorun
-        var isScheduled_1 = false;
-        reaction$$1 = new Reaction$$1(name, function () {
-            if (!isScheduled_1) {
-                isScheduled_1 = true;
-                scheduler_1(function () {
-                    isScheduled_1 = false;
-                    if (!reaction$$1.isDisposed)
-                        reaction$$1.track(reactionRunner);
-                });
-            }
-        }, opts.onError);
-    }
-    function reactionRunner() {
-        view(reaction$$1);
-    }
-    reaction$$1.schedule();
-    return reaction$$1.getDisposer();
-}
-var run = function (f) { return f(); };
-function createSchedulerFromOptions(opts) {
-    return opts.scheduler
-        ? opts.scheduler
-        : opts.delay
-            ? function (f) { return setTimeout(f, opts.delay); }
-            : run;
-}
-function reaction$$1(expression, effect, opts) {
-    if (opts === void 0) { opts = EMPTY_OBJECT$$1; }
-    if (true) {
-        invariant$$1(typeof expression === "function", "First argument to reaction should be a function");
-        invariant$$1(typeof opts === "object", "Third argument of reactions should be an object");
-    }
-    var name = opts.name || "Reaction@" + getNextId$$1();
-    var effectAction = action$$1(name, opts.onError ? wrapErrorHandler(opts.onError, effect) : effect);
-    var runSync = !opts.scheduler && !opts.delay;
-    var scheduler = createSchedulerFromOptions(opts);
-    var firstTime = true;
-    var isScheduled = false;
-    var value;
-    var equals = opts.compareStructural
-        ? comparer$$1.structural
-        : opts.equals || comparer$$1.default;
-    var r = new Reaction$$1(name, function () {
-        if (firstTime || runSync) {
-            reactionRunner();
-        }
-        else if (!isScheduled) {
-            isScheduled = true;
-            scheduler(reactionRunner);
-        }
-    }, opts.onError);
-    function reactionRunner() {
-        isScheduled = false; // Q: move into reaction runner?
-        if (r.isDisposed)
-            return;
-        var changed = false;
-        r.track(function () {
-            var nextValue = expression(r);
-            changed = firstTime || !equals(value, nextValue);
-            value = nextValue;
-        });
-        if (firstTime && opts.fireImmediately)
-            effectAction(value, r);
-        if (!firstTime && changed === true)
-            effectAction(value, r);
-        if (firstTime)
-            firstTime = false;
-    }
-    r.schedule();
-    return r.getDisposer();
-}
-function wrapErrorHandler(errorHandler, baseFn) {
-    return function () {
-        try {
-            return baseFn.apply(this, arguments);
-        }
-        catch (e) {
-            errorHandler.call(this, e);
-        }
-    };
-}
-
-function onBecomeObserved$$1(thing, arg2, arg3) {
-    return interceptHook("onBecomeObserved", thing, arg2, arg3);
-}
-function onBecomeUnobserved$$1(thing, arg2, arg3) {
-    return interceptHook("onBecomeUnobserved", thing, arg2, arg3);
-}
-function interceptHook(hook, thing, arg2, arg3) {
-    var atom = typeof arg2 === "string" ? getAtom$$1(thing, arg2) : getAtom$$1(thing);
-    var cb = typeof arg2 === "string" ? arg3 : arg2;
-    var listenersKey = hook + "Listeners";
-    if (atom[listenersKey]) {
-        atom[listenersKey].add(cb);
-    }
-    else {
-        atom[listenersKey] = new Set([cb]);
-    }
-    var orig = atom[hook];
-    if (typeof orig !== "function")
-        return fail$$1("development" !== "production" && "Not an atom that can be (un)observed");
-    return function () {
-        var hookListeners = atom[listenersKey];
-        if (hookListeners) {
-            hookListeners.delete(cb);
-            if (hookListeners.size === 0) {
-                delete atom[listenersKey];
-            }
-        }
-    };
-}
-
-function configure$$1(options) {
-    var enforceActions = options.enforceActions, computedRequiresReaction = options.computedRequiresReaction, disableErrorBoundaries = options.disableErrorBoundaries, reactionScheduler = options.reactionScheduler;
-    if (options.isolateGlobalState === true) {
-        isolateGlobalState$$1();
-    }
-    if (enforceActions !== undefined) {
-        if (typeof enforceActions === "boolean" || enforceActions === "strict")
-            deprecated$$1("Deprecated value for 'enforceActions', use 'false' => '\"never\"', 'true' => '\"observed\"', '\"strict\"' => \"'always'\" instead");
-        var ea = void 0;
-        switch (enforceActions) {
-            case true:
-            case "observed":
-                ea = true;
-                break;
-            case false:
-            case "never":
-                ea = false;
-                break;
-            case "strict":
-            case "always":
-                ea = "strict";
-                break;
-            default:
-                fail$$1("Invalid value for 'enforceActions': '" + enforceActions + "', expected 'never', 'always' or 'observed'");
-        }
-        globalState$$1.enforceActions = ea;
-        globalState$$1.allowStateChanges = ea === true || ea === "strict" ? false : true;
-    }
-    if (computedRequiresReaction !== undefined) {
-        globalState$$1.computedRequiresReaction = !!computedRequiresReaction;
-    }
-    if (disableErrorBoundaries !== undefined) {
-        if (disableErrorBoundaries === true)
-            console.warn("WARNING: Debug feature only. MobX will NOT recover from errors when `disableErrorBoundaries` is enabled.");
-        globalState$$1.disableErrorBoundaries = !!disableErrorBoundaries;
-    }
-    if (reactionScheduler) {
-        setReactionScheduler$$1(reactionScheduler);
-    }
-}
-
-function decorate$$1(thing, decorators) {
-    "development" !== "production" &&
-        invariant$$1(isPlainObject$$1(decorators), "Decorators should be a key value map");
-    var target = typeof thing === "function" ? thing.prototype : thing;
-    var _loop_1 = function (prop) {
-        var propertyDecorators = decorators[prop];
-        if (!Array.isArray(propertyDecorators)) {
-            propertyDecorators = [propertyDecorators];
-        }
-        "development" !== "production" &&
-            invariant$$1(propertyDecorators.every(function (decorator) { return typeof decorator === "function"; }), "Decorate: expected a decorator function or array of decorator functions for '" + prop + "'");
-        var descriptor = Object.getOwnPropertyDescriptor(target, prop);
-        var newDescriptor = propertyDecorators.reduce(function (accDescriptor, decorator) { return decorator(target, prop, accDescriptor); }, descriptor);
-        if (newDescriptor)
-            Object.defineProperty(target, prop, newDescriptor);
-    };
-    for (var prop in decorators) {
-        _loop_1(prop);
-    }
-    return thing;
-}
-
-function extendObservable$$1(target, properties, decorators, options) {
-    if (true) {
-        invariant$$1(arguments.length >= 2 && arguments.length <= 4, "'extendObservable' expected 2-4 arguments");
-        invariant$$1(typeof target === "object", "'extendObservable' expects an object as first argument");
-        invariant$$1(!isObservableMap$$1(target), "'extendObservable' should not be used on maps, use map.merge instead");
-    }
-    options = asCreateObservableOptions$$1(options);
-    var defaultDecorator = getDefaultDecoratorFromObjectOptions$$1(options);
-    initializeInstance$$1(target); // Fixes #1740
-    asObservableObject$$1(target, options.name, defaultDecorator.enhancer); // make sure object is observable, even without initial props
-    if (properties)
-        extendObservableObjectWithProperties$$1(target, properties, decorators, defaultDecorator);
-    return target;
-}
-function getDefaultDecoratorFromObjectOptions$$1(options) {
-    return options.defaultDecorator || (options.deep === false ? refDecorator$$1 : deepDecorator$$1);
-}
-function extendObservableObjectWithProperties$$1(target, properties, decorators, defaultDecorator) {
-    if (true) {
-        invariant$$1(!isObservable$$1(properties), "Extending an object with another observable (object) is not supported. Please construct an explicit propertymap, using `toJS` if need. See issue #540");
-        if (decorators)
-            for (var key in decorators)
-                if (!(key in properties))
-                    fail$$1("Trying to declare a decorator for unspecified property '" + key + "'");
-    }
-    startBatch$$1();
-    try {
-        for (var key in properties) {
-            var descriptor = Object.getOwnPropertyDescriptor(properties, key);
-            if (true) {
-                if (Object.getOwnPropertyDescriptor(target, key))
-                    fail$$1("'extendObservable' can only be used to introduce new properties. Use 'set' or 'decorate' instead. The property '" + key + "' already exists on '" + target + "'");
-                if (isComputed$$1(descriptor.value))
-                    fail$$1("Passing a 'computed' as initial property value is no longer supported by extendObservable. Use a getter or decorator instead");
-            }
-            var decorator = decorators && key in decorators
-                ? decorators[key]
-                : descriptor.get
-                    ? computedDecorator$$1
-                    : defaultDecorator;
-            if ("development" !== "production" && typeof decorator !== "function")
-                fail$$1("Not a valid decorator for '" + key + "', got: " + decorator);
-            var resultDescriptor = decorator(target, key, descriptor, true);
-            if (resultDescriptor // otherwise, assume already applied, due to `applyToInstance`
-            )
-                Object.defineProperty(target, key, resultDescriptor);
-        }
-    }
-    finally {
-        endBatch$$1();
-    }
-}
-
-function getDependencyTree$$1(thing, property) {
-    return nodeToDependencyTree(getAtom$$1(thing, property));
-}
-function nodeToDependencyTree(node) {
-    var result = {
-        name: node.name
-    };
-    if (node.observing && node.observing.length > 0)
-        result.dependencies = unique$$1(node.observing).map(nodeToDependencyTree);
-    return result;
-}
-function getObserverTree$$1(thing, property) {
-    return nodeToObserverTree(getAtom$$1(thing, property));
-}
-function nodeToObserverTree(node) {
-    var result = {
-        name: node.name
-    };
-    if (hasObservers$$1(node))
-        result.observers = Array.from(getObservers$$1(node)).map(nodeToObserverTree);
-    return result;
-}
-
-var generatorId = 0;
-function flow$$1(generator) {
-    if (arguments.length !== 1)
-        fail$$1("development" && "Flow expects one 1 argument and cannot be used as decorator");
-    var name = generator.name || "<unnamed flow>";
-    // Implementation based on https://github.com/tj/co/blob/master/index.js
-    return function () {
-        var ctx = this;
-        var args = arguments;
-        var runId = ++generatorId;
-        var gen = action$$1(name + " - runid: " + runId + " - init", generator).apply(ctx, args);
-        var rejector;
-        var pendingPromise = undefined;
-        var promise = new Promise(function (resolve, reject) {
-            var stepId = 0;
-            rejector = reject;
-            function onFulfilled(res) {
-                pendingPromise = undefined;
-                var ret;
-                try {
-                    ret = action$$1(name + " - runid: " + runId + " - yield " + stepId++, gen.next).call(gen, res);
-                }
-                catch (e) {
-                    return reject(e);
-                }
-                next(ret);
-            }
-            function onRejected(err) {
-                pendingPromise = undefined;
-                var ret;
-                try {
-                    ret = action$$1(name + " - runid: " + runId + " - yield " + stepId++, gen.throw).call(gen, err);
-                }
-                catch (e) {
-                    return reject(e);
-                }
-                next(ret);
-            }
-            function next(ret) {
-                if (ret && typeof ret.then === "function") {
-                    // an async iterator
-                    ret.then(next, reject);
-                    return;
-                }
-                if (ret.done)
-                    return resolve(ret.value);
-                pendingPromise = Promise.resolve(ret.value);
-                return pendingPromise.then(onFulfilled, onRejected);
-            }
-            onFulfilled(undefined); // kick off the process
-        });
-        promise.cancel = action$$1(name + " - runid: " + runId + " - cancel", function () {
-            try {
-                if (pendingPromise)
-                    cancelPromise(pendingPromise);
-                // Finally block can return (or yield) stuff..
-                var res = gen.return();
-                // eat anything that promise would do, it's cancelled!
-                var yieldedPromise = Promise.resolve(res.value);
-                yieldedPromise.then(noop$$1, noop$$1);
-                cancelPromise(yieldedPromise); // maybe it can be cancelled :)
-                // reject our original promise
-                rejector(new Error("FLOW_CANCELLED"));
-            }
-            catch (e) {
-                rejector(e); // there could be a throwing finally block
-            }
-        });
-        return promise;
-    };
-}
-function cancelPromise(promise) {
-    if (typeof promise.cancel === "function")
-        promise.cancel();
-}
-
-function interceptReads$$1(thing, propOrHandler, handler) {
-    var target;
-    if (isObservableMap$$1(thing) || isObservableArray$$1(thing) || isObservableValue$$1(thing)) {
-        target = getAdministration$$1(thing);
-    }
-    else if (isObservableObject$$1(thing)) {
-        if (typeof propOrHandler !== "string")
-            return fail$$1("development" !== "production" &&
-                "InterceptReads can only be used with a specific property, not with an object in general");
-        target = getAdministration$$1(thing, propOrHandler);
-    }
-    else {
-        return fail$$1("development" !== "production" &&
-            "Expected observable map, object or array as first array");
-    }
-    if (target.dehancer !== undefined)
-        return fail$$1("development" !== "production" && "An intercept reader was already established");
-    target.dehancer = typeof propOrHandler === "function" ? propOrHandler : handler;
-    return function () {
-        target.dehancer = undefined;
-    };
-}
-
-function intercept$$1(thing, propOrHandler, handler) {
-    if (typeof handler === "function")
-        return interceptProperty(thing, propOrHandler, handler);
-    else
-        return interceptInterceptable(thing, propOrHandler);
-}
-function interceptInterceptable(thing, handler) {
-    return getAdministration$$1(thing).intercept(handler);
-}
-function interceptProperty(thing, property, handler) {
-    return getAdministration$$1(thing, property).intercept(handler);
-}
-
-function _isComputed$$1(value, property) {
-    if (value === null || value === undefined)
-        return false;
-    if (property !== undefined) {
-        if (isObservableObject$$1(value) === false)
-            return false;
-        if (!value[$mobx$$1].values.has(property))
-            return false;
-        var atom = getAtom$$1(value, property);
-        return isComputedValue$$1(atom);
-    }
-    return isComputedValue$$1(value);
-}
-function isComputed$$1(value) {
-    if (arguments.length > 1)
-        return fail$$1("development" !== "production" &&
-            "isComputed expects only 1 argument. Use isObservableProp to inspect the observability of a property");
-    return _isComputed$$1(value);
-}
-function isComputedProp$$1(value, propName) {
-    if (typeof propName !== "string")
-        return fail$$1("development" !== "production" &&
-            "isComputed expected a property name as second argument");
-    return _isComputed$$1(value, propName);
-}
-
-function _isObservable(value, property) {
-    if (value === null || value === undefined)
-        return false;
-    if (property !== undefined) {
-        if ("development" !== "production" &&
-            (isObservableMap$$1(value) || isObservableArray$$1(value)))
-            return fail$$1("isObservable(object, propertyName) is not supported for arrays and maps. Use map.has or array.length instead.");
-        if (isObservableObject$$1(value)) {
-            return value[$mobx$$1].values.has(property);
-        }
-        return false;
-    }
-    // For first check, see #701
-    return (isObservableObject$$1(value) ||
-        !!value[$mobx$$1] ||
-        isAtom$$1(value) ||
-        isReaction$$1(value) ||
-        isComputedValue$$1(value));
-}
-function isObservable$$1(value) {
-    if (arguments.length !== 1)
-        fail$$1("development" !== "production" &&
-            "isObservable expects only 1 argument. Use isObservableProp to inspect the observability of a property");
-    return _isObservable(value);
-}
-function isObservableProp$$1(value, propName) {
-    if (typeof propName !== "string")
-        return fail$$1("development" !== "production" && "expected a property name as second argument");
-    return _isObservable(value, propName);
-}
-
-function keys$$1(obj) {
-    if (isObservableObject$$1(obj)) {
-        return obj[$mobx$$1].getKeys();
-    }
-    if (isObservableMap$$1(obj)) {
-        return Array.from(obj.keys());
-    }
-    if (isObservableSet$$1(obj)) {
-        return Array.from(obj.keys());
-    }
-    if (isObservableArray$$1(obj)) {
-        return obj.map(function (_, index) { return index; });
-    }
-    return fail$$1("development" !== "production" &&
-        "'keys()' can only be used on observable objects, arrays, sets and maps");
-}
-function values$$1(obj) {
-    if (isObservableObject$$1(obj)) {
-        return keys$$1(obj).map(function (key) { return obj[key]; });
-    }
-    if (isObservableMap$$1(obj)) {
-        return keys$$1(obj).map(function (key) { return obj.get(key); });
-    }
-    if (isObservableSet$$1(obj)) {
-        return Array.from(obj.values());
-    }
-    if (isObservableArray$$1(obj)) {
-        return obj.slice();
-    }
-    return fail$$1("development" !== "production" &&
-        "'values()' can only be used on observable objects, arrays, sets and maps");
-}
-function entries$$1(obj) {
-    if (isObservableObject$$1(obj)) {
-        return keys$$1(obj).map(function (key) { return [key, obj[key]]; });
-    }
-    if (isObservableMap$$1(obj)) {
-        return keys$$1(obj).map(function (key) { return [key, obj.get(key)]; });
-    }
-    if (isObservableSet$$1(obj)) {
-        return Array.from(obj.entries());
-    }
-    if (isObservableArray$$1(obj)) {
-        return obj.map(function (key, index) { return [index, key]; });
-    }
-    return fail$$1("development" !== "production" &&
-        "'entries()' can only be used on observable objects, arrays and maps");
-}
-function set$$1(obj, key, value) {
-    if (arguments.length === 2) {
-        startBatch$$1();
-        var values_1 = key;
-        try {
-            for (var key_1 in values_1)
-                set$$1(obj, key_1, values_1[key_1]);
-        }
-        finally {
-            endBatch$$1();
-        }
-        return;
-    }
-    if (isObservableObject$$1(obj)) {
-        var adm = obj[$mobx$$1];
-        var existingObservable = adm.values.get(key);
-        if (existingObservable) {
-            adm.write(key, value);
-        }
-        else {
-            adm.addObservableProp(key, value, adm.defaultEnhancer);
-        }
-    }
-    else if (isObservableMap$$1(obj)) {
-        obj.set(key, value);
-    }
-    else if (isObservableArray$$1(obj)) {
-        if (typeof key !== "number")
-            key = parseInt(key, 10);
-        invariant$$1(key >= 0, "Not a valid index: '" + key + "'");
-        startBatch$$1();
-        if (key >= obj.length)
-            obj.length = key + 1;
-        obj[key] = value;
-        endBatch$$1();
-    }
-    else {
-        return fail$$1("development" !== "production" &&
-            "'set()' can only be used on observable objects, arrays and maps");
-    }
-}
-function remove$$1(obj, key) {
-    if (isObservableObject$$1(obj)) {
-        
-        obj[$mobx$$1].remove(key);
-    }
-    else if (isObservableMap$$1(obj)) {
-        obj.delete(key);
-    }
-    else if (isObservableSet$$1(obj)) {
-        obj.delete(key);
-    }
-    else if (isObservableArray$$1(obj)) {
-        if (typeof key !== "number")
-            key = parseInt(key, 10);
-        invariant$$1(key >= 0, "Not a valid index: '" + key + "'");
-        obj.splice(key, 1);
-    }
-    else {
-        return fail$$1("development" !== "production" &&
-            "'remove()' can only be used on observable objects, arrays and maps");
-    }
-}
-function has$$1(obj, key) {
-    if (isObservableObject$$1(obj)) {
-        // return keys(obj).indexOf(key) >= 0
-        var adm = getAdministration$$1(obj);
-        return adm.has(key);
-    }
-    else if (isObservableMap$$1(obj)) {
-        return obj.has(key);
-    }
-    else if (isObservableSet$$1(obj)) {
-        return obj.has(key);
-    }
-    else if (isObservableArray$$1(obj)) {
-        return key >= 0 && key < obj.length;
-    }
-    else {
-        return fail$$1("development" !== "production" &&
-            "'has()' can only be used on observable objects, arrays and maps");
-    }
-}
-function get$$1(obj, key) {
-    if (!has$$1(obj, key))
-        return undefined;
-    if (isObservableObject$$1(obj)) {
-        return obj[key];
-    }
-    else if (isObservableMap$$1(obj)) {
-        return obj.get(key);
-    }
-    else if (isObservableArray$$1(obj)) {
-        return obj[key];
-    }
-    else {
-        return fail$$1("development" !== "production" &&
-            "'get()' can only be used on observable objects, arrays and maps");
-    }
-}
-
-function observe$$1(thing, propOrCb, cbOrFire, fireImmediately) {
-    if (typeof cbOrFire === "function")
-        return observeObservableProperty(thing, propOrCb, cbOrFire, fireImmediately);
-    else
-        return observeObservable(thing, propOrCb, cbOrFire);
-}
-function observeObservable(thing, listener, fireImmediately) {
-    return getAdministration$$1(thing).observe(listener, fireImmediately);
-}
-function observeObservableProperty(thing, property, listener, fireImmediately) {
-    return getAdministration$$1(thing, property).observe(listener, fireImmediately);
-}
-
-var defaultOptions = {
-    detectCycles: true,
-    exportMapsAsObjects: true,
-    recurseEverything: false
-};
-function cache(map, key, value, options) {
-    if (options.detectCycles)
-        map.set(key, value);
-    return value;
-}
-function toJSHelper(source, options, __alreadySeen) {
-    if (!options.recurseEverything && !isObservable$$1(source))
-        return source;
-    if (typeof source !== "object")
-        return source;
-    // Directly return null if source is null
-    if (source === null)
-        return null;
-    // Directly return the Date object itself if contained in the observable
-    if (source instanceof Date)
-        return source;
-    if (isObservableValue$$1(source))
-        return toJSHelper(source.get(), options, __alreadySeen);
-    // make sure we track the keys of the object
-    if (isObservable$$1(source))
-        keys$$1(source);
-    var detectCycles = options.detectCycles === true;
-    if (detectCycles && source !== null && __alreadySeen.has(source)) {
-        return __alreadySeen.get(source);
-    }
-    if (isObservableArray$$1(source) || Array.isArray(source)) {
-        var res_1 = cache(__alreadySeen, source, [], options);
-        var toAdd = source.map(function (value) { return toJSHelper(value, options, __alreadySeen); });
-        res_1.length = toAdd.length;
-        for (var i = 0, l = toAdd.length; i < l; i++)
-            res_1[i] = toAdd[i];
-        return res_1;
-    }
-    if (isObservableSet$$1(source) || Object.getPrototypeOf(source) === Set.prototype) {
-        if (options.exportMapsAsObjects === false) {
-            var res_2 = cache(__alreadySeen, source, new Set(), options);
-            source.forEach(function (value) {
-                res_2.add(toJSHelper(value, options, __alreadySeen));
-            });
-            return res_2;
-        }
-        else {
-            var res_3 = cache(__alreadySeen, source, [], options);
-            source.forEach(function (value) {
-                res_3.push(toJSHelper(value, options, __alreadySeen));
-            });
-            return res_3;
-        }
-    }
-    if (isObservableMap$$1(source) || Object.getPrototypeOf(source) === Map.prototype) {
-        if (options.exportMapsAsObjects === false) {
-            var res_4 = cache(__alreadySeen, source, new Map(), options);
-            source.forEach(function (value, key) {
-                res_4.set(key, toJSHelper(value, options, __alreadySeen));
-            });
-            return res_4;
-        }
-        else {
-            var res_5 = cache(__alreadySeen, source, {}, options);
-            source.forEach(function (value, key) {
-                res_5[key] = toJSHelper(value, options, __alreadySeen);
-            });
-            return res_5;
-        }
-    }
-    // Fallback to the situation that source is an ObservableObject or a plain object
-    var res = cache(__alreadySeen, source, {}, options);
-    for (var key in source) {
-        res[key] = toJSHelper(source[key], options, __alreadySeen);
-    }
-    return res;
-}
-function toJS$$1(source, options) {
-    // backward compatibility
-    if (typeof options === "boolean")
-        options = { detectCycles: options };
-    if (!options)
-        options = defaultOptions;
-    options.detectCycles =
-        options.detectCycles === undefined
-            ? options.recurseEverything === true
-            : options.detectCycles === true;
-    var __alreadySeen;
-    if (options.detectCycles)
-        __alreadySeen = new Map();
-    return toJSHelper(source, options, __alreadySeen);
-}
-
-function trace$$1() {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
-    var enterBreakPoint = false;
-    if (typeof args[args.length - 1] === "boolean")
-        enterBreakPoint = args.pop();
-    var derivation = getAtomFromArgs(args);
-    if (!derivation) {
-        return fail$$1("development" !== "production" &&
-            "'trace(break?)' can only be used inside a tracked computed value or a Reaction. Consider passing in the computed value or reaction explicitly");
-    }
-    if (derivation.isTracing === TraceMode$$1.NONE) {
-        console.log("[mobx.trace] '" + derivation.name + "' tracing enabled");
-    }
-    derivation.isTracing = enterBreakPoint ? TraceMode$$1.BREAK : TraceMode$$1.LOG;
-}
-function getAtomFromArgs(args) {
-    switch (args.length) {
-        case 0:
-            return globalState$$1.trackingDerivation;
-        case 1:
-            return getAtom$$1(args[0]);
-        case 2:
-            return getAtom$$1(args[0], args[1]);
-    }
-}
-
-/**
- * During a transaction no views are updated until the end of the transaction.
- * The transaction will be run synchronously nonetheless.
- *
- * @param action a function that updates some reactive state
- * @returns any value that was returned by the 'action' parameter.
- */
-function transaction$$1(action$$1, thisArg) {
-    if (thisArg === void 0) { thisArg = undefined; }
-    startBatch$$1();
-    try {
-        return action$$1.apply(thisArg);
-    }
-    finally {
-        endBatch$$1();
-    }
-}
-
-function when$$1(predicate, arg1, arg2) {
-    if (arguments.length === 1 || (arg1 && typeof arg1 === "object"))
-        return whenPromise(predicate, arg1);
-    return _when(predicate, arg1, arg2 || {});
-}
-function _when(predicate, effect, opts) {
-    var timeoutHandle;
-    if (typeof opts.timeout === "number") {
-        timeoutHandle = setTimeout(function () {
-            if (!disposer[$mobx$$1].isDisposed) {
-                disposer();
-                var error = new Error("WHEN_TIMEOUT");
-                if (opts.onError)
-                    opts.onError(error);
-                else
-                    throw error;
-            }
-        }, opts.timeout);
-    }
-    opts.name = opts.name || "When@" + getNextId$$1();
-    var effectAction = createAction$$1(opts.name + "-effect", effect);
-    var disposer = autorun$$1(function (r) {
-        if (predicate()) {
-            r.dispose();
-            if (timeoutHandle)
-                clearTimeout(timeoutHandle);
-            effectAction();
-        }
-    }, opts);
-    return disposer;
-}
-function whenPromise(predicate, opts) {
-    if ("development" !== "production" && opts && opts.onError)
-        return fail$$1("the options 'onError' and 'promise' cannot be combined");
-    var cancel;
-    var res = new Promise(function (resolve, reject) {
-        var disposer = _when(predicate, resolve, __assign({}, opts, { onError: reject }));
-        cancel = function () {
-            disposer();
-            reject("WHEN_CANCELLED");
-        };
-    });
-    res.cancel = cancel;
-    return res;
-}
-
-function getAdm(target) {
-    return target[$mobx$$1];
-}
-// Optimization: we don't need the intermediate objects and could have a completely custom administration for DynamicObjects,
-// and skip either the internal values map, or the base object with its property descriptors!
-var objectProxyTraps = {
-    has: function (target, name) {
-        if (name === $mobx$$1 || name === "constructor" || name === mobxDidRunLazyInitializersSymbol$$1)
-            return true;
-        var adm = getAdm(target);
-        // MWE: should `in` operator be reactive? If not, below code path will be faster / more memory efficient
-        // TODO: check performance stats!
-        // if (adm.values.get(name as string)) return true
-        if (typeof name === "string")
-            return adm.has(name);
-        return name in target;
-    },
-    get: function (target, name) {
-        if (name === $mobx$$1 || name === "constructor" || name === mobxDidRunLazyInitializersSymbol$$1)
-            return target[name];
-        var adm = getAdm(target);
-        var observable$$1 = adm.values.get(name);
-        if (observable$$1 instanceof Atom$$1) {
-            var result = observable$$1.get();
-            if (result === undefined) {
-                // This fixes #1796, because deleting a prop that has an
-                // undefined value won't retrigger a observer (no visible effect),
-                // the autorun wouldn't subscribe to future key changes (see also next comment)
-                adm.has(name);
-            }
-            return result;
-        }
-        // make sure we start listening to future keys
-        // note that we only do this here for optimization
-        if (typeof name === "string")
-            adm.has(name);
-        return target[name];
-    },
-    set: function (target, name, value) {
-        if (typeof name !== "string")
-            return false;
-        set$$1(target, name, value);
-        return true;
-    },
-    deleteProperty: function (target, name) {
-        if (typeof name !== "string")
-            return false;
-        var adm = getAdm(target);
-        adm.remove(name);
-        return true;
-    },
-    ownKeys: function (target) {
-        var adm = getAdm(target);
-        adm.keysAtom.reportObserved();
-        return Reflect.ownKeys(target);
-    },
-    preventExtensions: function (target) {
-        fail$$1("Dynamic observable objects cannot be frozen");
-        return false;
-    }
-};
-function createDynamicObservableObject$$1(base) {
-    var proxy = new Proxy(base, objectProxyTraps);
-    base[$mobx$$1].proxy = proxy;
-    return proxy;
-}
-
-function hasInterceptors$$1(interceptable) {
-    return interceptable.interceptors !== undefined && interceptable.interceptors.length > 0;
-}
-function registerInterceptor$$1(interceptable, handler) {
-    var interceptors = interceptable.interceptors || (interceptable.interceptors = []);
-    interceptors.push(handler);
-    return once$$1(function () {
-        var idx = interceptors.indexOf(handler);
-        if (idx !== -1)
-            interceptors.splice(idx, 1);
-    });
-}
-function interceptChange$$1(interceptable, change) {
-    var prevU = untrackedStart$$1();
-    try {
-        var interceptors = interceptable.interceptors;
-        if (interceptors)
-            for (var i = 0, l = interceptors.length; i < l; i++) {
-                change = interceptors[i](change);
-                invariant$$1(!change || change.type, "Intercept handlers should return nothing or a change object");
-                if (!change)
-                    break;
-            }
-        return change;
-    }
-    finally {
-        untrackedEnd$$1(prevU);
-    }
-}
-
-function hasListeners$$1(listenable) {
-    return listenable.changeListeners !== undefined && listenable.changeListeners.length > 0;
-}
-function registerListener$$1(listenable, handler) {
-    var listeners = listenable.changeListeners || (listenable.changeListeners = []);
-    listeners.push(handler);
-    return once$$1(function () {
-        var idx = listeners.indexOf(handler);
-        if (idx !== -1)
-            listeners.splice(idx, 1);
-    });
-}
-function notifyListeners$$1(listenable, change) {
-    var prevU = untrackedStart$$1();
-    var listeners = listenable.changeListeners;
-    if (!listeners)
-        return;
-    listeners = listeners.slice();
-    for (var i = 0, l = listeners.length; i < l; i++) {
-        listeners[i](change);
-    }
-    untrackedEnd$$1(prevU);
-}
-
-var MAX_SPLICE_SIZE = 10000; // See e.g. https://github.com/mobxjs/mobx/issues/859
-var arrayTraps = {
-    get: function (target, name) {
-        if (name === $mobx$$1)
-            return target[$mobx$$1];
-        if (name === "length")
-            return target[$mobx$$1].getArrayLength();
-        if (typeof name === "number") {
-            return arrayExtensions.get.call(target, name);
-        }
-        if (typeof name === "string" && !isNaN(name)) {
-            return arrayExtensions.get.call(target, parseInt(name));
-        }
-        if (arrayExtensions.hasOwnProperty(name)) {
-            return arrayExtensions[name];
-        }
-        return target[name];
-    },
-    set: function (target, name, value) {
-        if (name === "length") {
-            target[$mobx$$1].setArrayLength(value);
-            return true;
-        }
-        if (typeof name === "number") {
-            arrayExtensions.set.call(target, name, value);
-            return true;
-        }
-        if (!isNaN(name)) {
-            arrayExtensions.set.call(target, parseInt(name), value);
-            return true;
-        }
-        return false;
-    },
-    preventExtensions: function (target) {
-        fail$$1("Observable arrays cannot be frozen");
-        return false;
-    }
-};
-function createObservableArray$$1(initialValues, enhancer, name, owned) {
-    if (name === void 0) { name = "ObservableArray@" + getNextId$$1(); }
-    if (owned === void 0) { owned = false; }
-    var adm = new ObservableArrayAdministration(name, enhancer, owned);
-    addHiddenFinalProp$$1(adm.values, $mobx$$1, adm);
-    var proxy = new Proxy(adm.values, arrayTraps);
-    adm.proxy = proxy;
-    if (initialValues && initialValues.length) {
-        var prev = allowStateChangesStart$$1(true);
-        adm.spliceWithArray(0, 0, initialValues);
-        allowStateChangesEnd$$1(prev);
-    }
-    return proxy;
-}
-var ObservableArrayAdministration = /** @class */ (function () {
-    function ObservableArrayAdministration(name, enhancer, owned) {
-        this.owned = owned;
-        this.values = [];
-        this.proxy = undefined;
-        this.lastKnownLength = 0;
-        this.atom = new Atom$$1(name || "ObservableArray@" + getNextId$$1());
-        this.enhancer = function (newV, oldV) { return enhancer(newV, oldV, name + "[..]"); };
-    }
-    ObservableArrayAdministration.prototype.dehanceValue = function (value) {
-        if (this.dehancer !== undefined)
-            return this.dehancer(value);
-        return value;
-    };
-    ObservableArrayAdministration.prototype.dehanceValues = function (values$$1) {
-        if (this.dehancer !== undefined && values$$1.length > 0)
-            return values$$1.map(this.dehancer);
-        return values$$1;
-    };
-    ObservableArrayAdministration.prototype.intercept = function (handler) {
-        return registerInterceptor$$1(this, handler);
-    };
-    ObservableArrayAdministration.prototype.observe = function (listener, fireImmediately) {
-        if (fireImmediately === void 0) { fireImmediately = false; }
-        if (fireImmediately) {
-            listener({
-                object: this.proxy,
-                type: "splice",
-                index: 0,
-                added: this.values.slice(),
-                addedCount: this.values.length,
-                removed: [],
-                removedCount: 0
-            });
-        }
-        return registerListener$$1(this, listener);
-    };
-    ObservableArrayAdministration.prototype.getArrayLength = function () {
-        this.atom.reportObserved();
-        return this.values.length;
-    };
-    ObservableArrayAdministration.prototype.setArrayLength = function (newLength) {
-        if (typeof newLength !== "number" || newLength < 0)
-            throw new Error("[mobx.array] Out of range: " + newLength);
-        var currentLength = this.values.length;
-        if (newLength === currentLength)
-            return;
-        else if (newLength > currentLength) {
-            var newItems = new Array(newLength - currentLength);
-            for (var i = 0; i < newLength - currentLength; i++)
-                newItems[i] = undefined; // No Array.fill everywhere...
-            this.spliceWithArray(currentLength, 0, newItems);
-        }
-        else
-            this.spliceWithArray(newLength, currentLength - newLength);
-    };
-    ObservableArrayAdministration.prototype.updateArrayLength = function (oldLength, delta) {
-        if (oldLength !== this.lastKnownLength)
-            throw new Error("[mobx] Modification exception: the internal structure of an observable array was changed.");
-        this.lastKnownLength += delta;
-    };
-    ObservableArrayAdministration.prototype.spliceWithArray = function (index, deleteCount, newItems) {
-        var _this = this;
-        checkIfStateModificationsAreAllowed$$1(this.atom);
-        var length = this.values.length;
-        if (index === undefined)
-            index = 0;
-        else if (index > length)
-            index = length;
-        else if (index < 0)
-            index = Math.max(0, length + index);
-        if (arguments.length === 1)
-            deleteCount = length - index;
-        else if (deleteCount === undefined || deleteCount === null)
-            deleteCount = 0;
-        else
-            deleteCount = Math.max(0, Math.min(deleteCount, length - index));
-        if (newItems === undefined)
-            newItems = EMPTY_ARRAY$$1;
-        if (hasInterceptors$$1(this)) {
-            var change = interceptChange$$1(this, {
-                object: this.proxy,
-                type: "splice",
-                index: index,
-                removedCount: deleteCount,
-                added: newItems
-            });
-            if (!change)
-                return EMPTY_ARRAY$$1;
-            deleteCount = change.removedCount;
-            newItems = change.added;
-        }
-        newItems = newItems.length === 0 ? newItems : newItems.map(function (v) { return _this.enhancer(v, undefined); });
-        if (true) {
-            var lengthDelta = newItems.length - deleteCount;
-            this.updateArrayLength(length, lengthDelta); // checks if internal array wasn't modified
-        }
-        var res = this.spliceItemsIntoValues(index, deleteCount, newItems);
-        if (deleteCount !== 0 || newItems.length !== 0)
-            this.notifyArraySplice(index, newItems, res);
-        return this.dehanceValues(res);
-    };
-    ObservableArrayAdministration.prototype.spliceItemsIntoValues = function (index, deleteCount, newItems) {
-        var _a;
-        if (newItems.length < MAX_SPLICE_SIZE) {
-            return (_a = this.values).splice.apply(_a, __spread([index, deleteCount], newItems));
-        }
-        else {
-            var res = this.values.slice(index, index + deleteCount);
-            this.values = this.values
-                .slice(0, index)
-                .concat(newItems, this.values.slice(index + deleteCount));
-            return res;
-        }
-    };
-    ObservableArrayAdministration.prototype.notifyArrayChildUpdate = function (index, newValue, oldValue) {
-        var notifySpy = !this.owned && isSpyEnabled$$1();
-        var notify = hasListeners$$1(this);
-        var change = notify || notifySpy
-            ? {
-                object: this.proxy,
-                type: "update",
-                index: index,
-                newValue: newValue,
-                oldValue: oldValue
-            }
-            : null;
-        // The reason why this is on right hand side here (and not above), is this way the uglifier will drop it, but it won't
-        // cause any runtime overhead in development mode without NODE_ENV set, unless spying is enabled
-        if (notifySpy && "development" !== "production")
-            spyReportStart$$1(__assign({}, change, { name: this.atom.name }));
-        this.atom.reportChanged();
-        if (notify)
-            notifyListeners$$1(this, change);
-        if (notifySpy && "development" !== "production")
-            spyReportEnd$$1();
-    };
-    ObservableArrayAdministration.prototype.notifyArraySplice = function (index, added, removed) {
-        var notifySpy = !this.owned && isSpyEnabled$$1();
-        var notify = hasListeners$$1(this);
-        var change = notify || notifySpy
-            ? {
-                object: this.proxy,
-                type: "splice",
-                index: index,
-                removed: removed,
-                added: added,
-                removedCount: removed.length,
-                addedCount: added.length
-            }
-            : null;
-        if (notifySpy && "development" !== "production")
-            spyReportStart$$1(__assign({}, change, { name: this.atom.name }));
-        this.atom.reportChanged();
-        // conform: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/observe
-        if (notify)
-            notifyListeners$$1(this, change);
-        if (notifySpy && "development" !== "production")
-            spyReportEnd$$1();
-    };
-    return ObservableArrayAdministration;
-}());
-var arrayExtensions = {
-    intercept: function (handler) {
-        return this[$mobx$$1].intercept(handler);
-    },
-    observe: function (listener, fireImmediately) {
-        if (fireImmediately === void 0) { fireImmediately = false; }
-        var adm = this[$mobx$$1];
-        return adm.observe(listener, fireImmediately);
-    },
-    clear: function () {
-        return this.splice(0);
-    },
-    replace: function (newItems) {
-        var adm = this[$mobx$$1];
-        return adm.spliceWithArray(0, adm.values.length, newItems);
-    },
-    /**
-     * Converts this array back to a (shallow) javascript structure.
-     * For a deep clone use mobx.toJS
-     */
-    toJS: function () {
-        return this.slice();
-    },
-    toJSON: function () {
-        // Used by JSON.stringify
-        return this.toJS();
-    },
-    /*
-     * functions that do alter the internal structure of the array, (based on lib.es6.d.ts)
-     * since these functions alter the inner structure of the array, the have side effects.
-     * Because the have side effects, they should not be used in computed function,
-     * and for that reason the do not call dependencyState.notifyObserved
-     */
-    splice: function (index, deleteCount) {
-        var newItems = [];
-        for (var _i = 2; _i < arguments.length; _i++) {
-            newItems[_i - 2] = arguments[_i];
-        }
-        var adm = this[$mobx$$1];
-        switch (arguments.length) {
-            case 0:
-                return [];
-            case 1:
-                return adm.spliceWithArray(index);
-            case 2:
-                return adm.spliceWithArray(index, deleteCount);
-        }
-        return adm.spliceWithArray(index, deleteCount, newItems);
-    },
-    spliceWithArray: function (index, deleteCount, newItems) {
-        var adm = this[$mobx$$1];
-        return adm.spliceWithArray(index, deleteCount, newItems);
-    },
-    push: function () {
-        var items = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            items[_i] = arguments[_i];
-        }
-        var adm = this[$mobx$$1];
-        adm.spliceWithArray(adm.values.length, 0, items);
-        return adm.values.length;
-    },
-    pop: function () {
-        return this.splice(Math.max(this[$mobx$$1].values.length - 1, 0), 1)[0];
-    },
-    shift: function () {
-        return this.splice(0, 1)[0];
-    },
-    unshift: function () {
-        var items = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            items[_i] = arguments[_i];
-        }
-        var adm = this[$mobx$$1];
-        adm.spliceWithArray(0, 0, items);
-        return adm.values.length;
-    },
-    reverse: function () {
-        // reverse by default mutates in place before returning the result
-        // which makes it both a 'derivation' and a 'mutation'.
-        // so we deviate from the default and just make it an dervitation
-        if (true) {
-            console.warn("[mobx] `observableArray.reverse()` will not update the array in place. Use `observableArray.slice().reverse()` to supress this warning and perform the operation on a copy, or `observableArray.replace(observableArray.slice().reverse())` to reverse & update in place");
-        }
-        var clone = this.slice();
-        return clone.reverse.apply(clone, arguments);
-    },
-    sort: function (compareFn) {
-        // sort by default mutates in place before returning the result
-        // which goes against all good practices. Let's not change the array in place!
-        if (true) {
-            console.warn("[mobx] `observableArray.sort()` will not update the array in place. Use `observableArray.slice().sort()` to supress this warning and perform the operation on a copy, or `observableArray.replace(observableArray.slice().sort())` to sort & update in place");
-        }
-        var clone = this.slice();
-        return clone.sort.apply(clone, arguments);
-    },
-    remove: function (value) {
-        var adm = this[$mobx$$1];
-        var idx = adm.dehanceValues(adm.values).indexOf(value);
-        if (idx > -1) {
-            this.splice(idx, 1);
-            return true;
-        }
-        return false;
-    },
-    get: function (index) {
-        var adm = this[$mobx$$1];
-        if (adm) {
-            if (index < adm.values.length) {
-                adm.atom.reportObserved();
-                return adm.dehanceValue(adm.values[index]);
-            }
-            console.warn("[mobx.array] Attempt to read an array index (" + index + ") that is out of bounds (" + adm.values.length + "). Please check length first. Out of bound indices will not be tracked by MobX");
-        }
-        return undefined;
-    },
-    set: function (index, newValue) {
-        var adm = this[$mobx$$1];
-        var values$$1 = adm.values;
-        if (index < values$$1.length) {
-            // update at index in range
-            checkIfStateModificationsAreAllowed$$1(adm.atom);
-            var oldValue = values$$1[index];
-            if (hasInterceptors$$1(adm)) {
-                var change = interceptChange$$1(adm, {
-                    type: "update",
-                    object: this,
-                    index: index,
-                    newValue: newValue
-                });
-                if (!change)
-                    return;
-                newValue = change.newValue;
-            }
-            newValue = adm.enhancer(newValue, oldValue);
-            var changed = newValue !== oldValue;
-            if (changed) {
-                values$$1[index] = newValue;
-                adm.notifyArrayChildUpdate(index, newValue, oldValue);
-            }
-        }
-        else if (index === values$$1.length) {
-            // add a new item
-            adm.spliceWithArray(index, 0, [newValue]);
-        }
-        else {
-            // out of bounds
-            throw new Error("[mobx.array] Index out of bounds, " + index + " is larger than " + values$$1.length);
-        }
-    }
-};
-[
-    "concat",
-    "every",
-    "filter",
-    "forEach",
-    "indexOf",
-    "join",
-    "lastIndexOf",
-    "map",
-    "reduce",
-    "reduceRight",
-    "slice",
-    "some",
-    "toString",
-    "toLocaleString"
-].forEach(function (funcName) {
-    arrayExtensions[funcName] = function () {
-        var adm = this[$mobx$$1];
-        adm.atom.reportObserved();
-        var res = adm.dehanceValues(adm.values);
-        return res[funcName].apply(res, arguments);
-    };
-});
-var isObservableArrayAdministration = createInstanceofPredicate$$1("ObservableArrayAdministration", ObservableArrayAdministration);
-function isObservableArray$$1(thing) {
-    return isObject$$1(thing) && isObservableArrayAdministration(thing[$mobx$$1]);
-}
-
-var _a;
-var ObservableMapMarker = {};
-// just extend Map? See also https://gist.github.com/nestharus/13b4d74f2ef4a2f4357dbd3fc23c1e54
-// But: https://github.com/mobxjs/mobx/issues/1556
-var ObservableMap$$1 = /** @class */ (function () {
-    function ObservableMap$$1(initialData, enhancer, name) {
-        if (enhancer === void 0) { enhancer = deepEnhancer$$1; }
-        if (name === void 0) { name = "ObservableMap@" + getNextId$$1(); }
-        this.enhancer = enhancer;
-        this.name = name;
-        this[_a] = ObservableMapMarker;
-        this._keysAtom = createAtom$$1(this.name + ".keys()");
-        this[Symbol.toStringTag] = "Map";
-        if (typeof Map !== "function") {
-            throw new Error("mobx.map requires Map polyfill for the current browser. Check babel-polyfill or core-js/es6/map.js");
-        }
-        this._data = new Map();
-        this._hasMap = new Map();
-        this.merge(initialData);
-    }
-    ObservableMap$$1.prototype._has = function (key) {
-        return this._data.has(key);
-    };
-    ObservableMap$$1.prototype.has = function (key) {
-        if (this._hasMap.has(key))
-            return this._hasMap.get(key).get();
-        return this._updateHasMapEntry(key, false).get();
-    };
-    ObservableMap$$1.prototype.set = function (key, value) {
-        var hasKey = this._has(key);
-        if (hasInterceptors$$1(this)) {
-            var change = interceptChange$$1(this, {
-                type: hasKey ? "update" : "add",
-                object: this,
-                newValue: value,
-                name: key
-            });
-            if (!change)
-                return this;
-            value = change.newValue;
-        }
-        if (hasKey) {
-            this._updateValue(key, value);
-        }
-        else {
-            this._addValue(key, value);
-        }
-        return this;
-    };
-    ObservableMap$$1.prototype.delete = function (key) {
-        var _this = this;
-        if (hasInterceptors$$1(this)) {
-            var change = interceptChange$$1(this, {
-                type: "delete",
-                object: this,
-                name: key
-            });
-            if (!change)
-                return false;
-        }
-        if (this._has(key)) {
-            var notifySpy = isSpyEnabled$$1();
-            var notify = hasListeners$$1(this);
-            var change = notify || notifySpy
-                ? {
-                    type: "delete",
-                    object: this,
-                    oldValue: this._data.get(key).value,
-                    name: key
-                }
-                : null;
-            if (notifySpy && "development" !== "production")
-                spyReportStart$$1(__assign({}, change, { name: this.name, key: key }));
-            transaction$$1(function () {
-                _this._keysAtom.reportChanged();
-                _this._updateHasMapEntry(key, false);
-                var observable$$1 = _this._data.get(key);
-                observable$$1.setNewValue(undefined);
-                _this._data.delete(key);
-            });
-            if (notify)
-                notifyListeners$$1(this, change);
-            if (notifySpy && "development" !== "production")
-                spyReportEnd$$1();
-            return true;
-        }
-        return false;
-    };
-    ObservableMap$$1.prototype._updateHasMapEntry = function (key, value) {
-        // optimization; don't fill the hasMap if we are not observing, or remove entry if there are no observers anymore
-        var entry = this._hasMap.get(key);
-        if (entry) {
-            entry.setNewValue(value);
-        }
-        else {
-            entry = new ObservableValue$$1(value, referenceEnhancer$$1, this.name + "." + key + "?", false);
-            this._hasMap.set(key, entry);
-        }
-        return entry;
-    };
-    ObservableMap$$1.prototype._updateValue = function (key, newValue) {
-        var observable$$1 = this._data.get(key);
-        newValue = observable$$1.prepareNewValue(newValue);
-        if (newValue !== globalState$$1.UNCHANGED) {
-            var notifySpy = isSpyEnabled$$1();
-            var notify = hasListeners$$1(this);
-            var change = notify || notifySpy
-                ? {
-                    type: "update",
-                    object: this,
-                    oldValue: observable$$1.value,
-                    name: key,
-                    newValue: newValue
-                }
-                : null;
-            if (notifySpy && "development" !== "production")
-                spyReportStart$$1(__assign({}, change, { name: this.name, key: key }));
-            observable$$1.setNewValue(newValue);
-            if (notify)
-                notifyListeners$$1(this, change);
-            if (notifySpy && "development" !== "production")
-                spyReportEnd$$1();
-        }
-    };
-    ObservableMap$$1.prototype._addValue = function (key, newValue) {
-        var _this = this;
-        checkIfStateModificationsAreAllowed$$1(this._keysAtom);
-        transaction$$1(function () {
-            var observable$$1 = new ObservableValue$$1(newValue, _this.enhancer, _this.name + "." + key, false);
-            _this._data.set(key, observable$$1);
-            newValue = observable$$1.value; // value might have been changed
-            _this._updateHasMapEntry(key, true);
-            _this._keysAtom.reportChanged();
-        });
-        var notifySpy = isSpyEnabled$$1();
-        var notify = hasListeners$$1(this);
-        var change = notify || notifySpy
-            ? {
-                type: "add",
-                object: this,
-                name: key,
-                newValue: newValue
-            }
-            : null;
-        if (notifySpy && "development" !== "production")
-            spyReportStart$$1(__assign({}, change, { name: this.name, key: key }));
-        if (notify)
-            notifyListeners$$1(this, change);
-        if (notifySpy && "development" !== "production")
-            spyReportEnd$$1();
-    };
-    ObservableMap$$1.prototype.get = function (key) {
-        if (this.has(key))
-            return this.dehanceValue(this._data.get(key).get());
-        return this.dehanceValue(undefined);
-    };
-    ObservableMap$$1.prototype.dehanceValue = function (value) {
-        if (this.dehancer !== undefined) {
-            return this.dehancer(value);
-        }
-        return value;
-    };
-    ObservableMap$$1.prototype.keys = function () {
-        this._keysAtom.reportObserved();
-        return this._data.keys();
-    };
-    ObservableMap$$1.prototype.values = function () {
-        var self = this;
-        var nextIndex = 0;
-        var keys$$1 = Array.from(this.keys());
-        return makeIterable({
-            next: function () {
-                return nextIndex < keys$$1.length
-                    ? { value: self.get(keys$$1[nextIndex++]), done: false }
-                    : { done: true };
-            }
-        });
-    };
-    ObservableMap$$1.prototype.entries = function () {
-        var self = this;
-        var nextIndex = 0;
-        var keys$$1 = Array.from(this.keys());
-        return makeIterable({
-            next: function () {
-                if (nextIndex < keys$$1.length) {
-                    var key = keys$$1[nextIndex++];
-                    return {
-                        value: [key, self.get(key)],
-                        done: false
-                    };
-                }
-                return { done: true };
-            }
-        });
-    };
-    ObservableMap$$1.prototype[(_a = $mobx$$1, Symbol.iterator)] = function () {
-        return this.entries();
-    };
-    ObservableMap$$1.prototype.forEach = function (callback, thisArg) {
-        var e_1, _a;
-        try {
-            for (var _b = __values(this), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var _d = __read(_c.value, 2), key = _d[0], value = _d[1];
-                callback.call(thisArg, value, key, this);
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-    };
-    /** Merge another object into this object, returns this. */
-    ObservableMap$$1.prototype.merge = function (other) {
-        var _this = this;
-        if (isObservableMap$$1(other)) {
-            other = other.toJS();
-        }
-        transaction$$1(function () {
-            if (isPlainObject$$1(other))
-                Object.keys(other).forEach(function (key) { return _this.set(key, other[key]); });
-            else if (Array.isArray(other))
-                other.forEach(function (_a) {
-                    var _b = __read(_a, 2), key = _b[0], value = _b[1];
-                    return _this.set(key, value);
-                });
-            else if (isES6Map$$1(other)) {
-                if (other.constructor !== Map)
-                    return fail$$1("Cannot initialize from classes that inherit from Map: " + other.constructor.name); // prettier-ignore
-                other.forEach(function (value, key) { return _this.set(key, value); });
-            }
-            else if (other !== null && other !== undefined)
-                fail$$1("Cannot initialize map from " + other);
-        });
-        return this;
-    };
-    ObservableMap$$1.prototype.clear = function () {
-        var _this = this;
-        transaction$$1(function () {
-            untracked$$1(function () {
-                var e_2, _a;
-                try {
-                    for (var _b = __values(_this.keys()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                        var key = _c.value;
-                        _this.delete(key);
-                    }
-                }
-                catch (e_2_1) { e_2 = { error: e_2_1 }; }
-                finally {
-                    try {
-                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                    }
-                    finally { if (e_2) throw e_2.error; }
-                }
-            });
-        });
-    };
-    ObservableMap$$1.prototype.replace = function (values$$1) {
-        var _this = this;
-        transaction$$1(function () {
-            // grab all the keys that are present in the new map but not present in the current map
-            // and delete them from the map, then merge the new map
-            // this will cause reactions only on changed values
-            var newKeys = getMapLikeKeys$$1(values$$1);
-            var oldKeys = Array.from(_this.keys());
-            var missingKeys = oldKeys.filter(function (k) { return newKeys.indexOf(k) === -1; });
-            missingKeys.forEach(function (k) { return _this.delete(k); });
-            _this.merge(values$$1);
-        });
-        return this;
-    };
-    Object.defineProperty(ObservableMap$$1.prototype, "size", {
-        get: function () {
-            this._keysAtom.reportObserved();
-            return this._data.size;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a plain object that represents this map.
-     * Note that all the keys being stringified.
-     * If there are duplicating keys after converting them to strings, behaviour is undetermined.
-     */
-    ObservableMap$$1.prototype.toPOJO = function () {
-        var e_3, _a;
-        var res = {};
-        try {
-            for (var _b = __values(this), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var _d = __read(_c.value, 2), key = _d[0], value = _d[1];
-                res["" + key] = value;
-            }
-        }
-        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_3) throw e_3.error; }
-        }
-        return res;
-    };
-    /**
-     * Returns a shallow non observable object clone of this map.
-     * Note that the values migth still be observable. For a deep clone use mobx.toJS.
-     */
-    ObservableMap$$1.prototype.toJS = function () {
-        return new Map(this);
-    };
-    ObservableMap$$1.prototype.toJSON = function () {
-        // Used by JSON.stringify
-        return this.toPOJO();
-    };
-    ObservableMap$$1.prototype.toString = function () {
-        var _this = this;
-        return (this.name +
-            "[{ " +
-            Array.from(this.keys())
-                .map(function (key) { return key + ": " + ("" + _this.get(key)); })
-                .join(", ") +
-            " }]");
-    };
-    /**
-     * Observes this object. Triggers for the events 'add', 'update' and 'delete'.
-     * See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe
-     * for callback details
-     */
-    ObservableMap$$1.prototype.observe = function (listener, fireImmediately) {
-        "development" !== "production" &&
-            invariant$$1(fireImmediately !== true, "`observe` doesn't support fireImmediately=true in combination with maps.");
-        return registerListener$$1(this, listener);
-    };
-    ObservableMap$$1.prototype.intercept = function (handler) {
-        return registerInterceptor$$1(this, handler);
-    };
-    return ObservableMap$$1;
-}());
-/* 'var' fixes small-build issue */
-var isObservableMap$$1 = createInstanceofPredicate$$1("ObservableMap", ObservableMap$$1);
-
-var _a$1;
-var ObservableSetMarker = {};
-var ObservableSet$$1 = /** @class */ (function () {
-    function ObservableSet$$1(initialData, enhancer, name) {
-        if (enhancer === void 0) { enhancer = deepEnhancer$$1; }
-        if (name === void 0) { name = "ObservableSet@" + getNextId$$1(); }
-        this.name = name;
-        this[_a$1] = ObservableSetMarker;
-        this._data = new Set();
-        this._atom = createAtom$$1(this.name);
-        this[Symbol.toStringTag] = "Set";
-        if (typeof Set !== "function") {
-            throw new Error("mobx.set requires Set polyfill for the current browser. Check babel-polyfill or core-js/es6/set.js");
-        }
-        this.enhancer = function (newV, oldV) { return enhancer(newV, oldV, name); };
-        if (initialData) {
-            this.replace(initialData);
-        }
-    }
-    ObservableSet$$1.prototype.dehanceValue = function (value) {
-        if (this.dehancer !== undefined) {
-            return this.dehancer(value);
-        }
-        return value;
-    };
-    ObservableSet$$1.prototype.clear = function () {
-        var _this = this;
-        transaction$$1(function () {
-            untracked$$1(function () {
-                var e_1, _a;
-                try {
-                    for (var _b = __values(_this._data.values()), _c = _b.next(); !_c.done; _c = _b.next()) {
-                        var value = _c.value;
-                        _this.delete(value);
-                    }
-                }
-                catch (e_1_1) { e_1 = { error: e_1_1 }; }
-                finally {
-                    try {
-                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                    }
-                    finally { if (e_1) throw e_1.error; }
-                }
-            });
-        });
-    };
-    ObservableSet$$1.prototype.forEach = function (callbackFn, thisArg) {
-        var e_2, _a;
-        try {
-            for (var _b = __values(this), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var value = _c.value;
-                callbackFn.call(thisArg, value, value, this);
-            }
-        }
-        catch (e_2_1) { e_2 = { error: e_2_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_2) throw e_2.error; }
-        }
-    };
-    Object.defineProperty(ObservableSet$$1.prototype, "size", {
-        get: function () {
-            this._atom.reportObserved();
-            return this._data.size;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    ObservableSet$$1.prototype.add = function (value) {
-        var _this = this;
-        checkIfStateModificationsAreAllowed$$1(this._atom);
-        if (hasInterceptors$$1(this)) {
-            var change = interceptChange$$1(this, {
-                type: "add",
-                object: this,
-                newValue: value
-            });
-            if (!change)
-                return this;
-            // TODO: ideally, value = change.value would be done here, so that values can be
-            // changed by interceptor. Same applies for other Set and Map api's.
-        }
-        if (!this.has(value)) {
-            transaction$$1(function () {
-                _this._data.add(_this.enhancer(value, undefined));
-                _this._atom.reportChanged();
-            });
-            var notifySpy = isSpyEnabled$$1();
-            var notify = hasListeners$$1(this);
-            var change = notify || notifySpy
-                ? {
-                    type: "add",
-                    object: this,
-                    newValue: value
-                }
-                : null;
-            if (notifySpy && "development" !== "production")
-                spyReportStart$$1(change);
-            if (notify)
-                notifyListeners$$1(this, change);
-            if (notifySpy && "development" !== "production")
-                spyReportEnd$$1();
-        }
-        return this;
-    };
-    ObservableSet$$1.prototype.delete = function (value) {
-        var _this = this;
-        if (hasInterceptors$$1(this)) {
-            var change = interceptChange$$1(this, {
-                type: "delete",
-                object: this,
-                oldValue: value
-            });
-            if (!change)
-                return false;
-        }
-        if (this.has(value)) {
-            var notifySpy = isSpyEnabled$$1();
-            var notify = hasListeners$$1(this);
-            var change = notify || notifySpy
-                ? {
-                    type: "delete",
-                    object: this,
-                    oldValue: value
-                }
-                : null;
-            if (notifySpy && "development" !== "production")
-                spyReportStart$$1(__assign({}, change, { name: this.name }));
-            transaction$$1(function () {
-                _this._atom.reportChanged();
-                _this._data.delete(value);
-            });
-            if (notify)
-                notifyListeners$$1(this, change);
-            if (notifySpy && "development" !== "production")
-                spyReportEnd$$1();
-            return true;
-        }
-        return false;
-    };
-    ObservableSet$$1.prototype.has = function (value) {
-        this._atom.reportObserved();
-        return this._data.has(this.dehanceValue(value));
-    };
-    ObservableSet$$1.prototype.entries = function () {
-        var nextIndex = 0;
-        var keys$$1 = Array.from(this.keys());
-        var values$$1 = Array.from(this.values());
-        return makeIterable({
-            next: function () {
-                var index = nextIndex;
-                nextIndex += 1;
-                return index < values$$1.length
-                    ? { value: [keys$$1[index], values$$1[index]], done: false }
-                    : { done: true };
-            }
-        });
-    };
-    ObservableSet$$1.prototype.keys = function () {
-        return this.values();
-    };
-    ObservableSet$$1.prototype.values = function () {
-        this._atom.reportObserved();
-        var self = this;
-        var nextIndex = 0;
-        var observableValues = Array.from(this._data.values());
-        return makeIterable({
-            next: function () {
-                return nextIndex < observableValues.length
-                    ? { value: self.dehanceValue(observableValues[nextIndex++]), done: false }
-                    : { done: true };
-            }
-        });
-    };
-    ObservableSet$$1.prototype.replace = function (other) {
-        var _this = this;
-        if (isObservableSet$$1(other)) {
-            other = other.toJS();
-        }
-        transaction$$1(function () {
-            if (Array.isArray(other)) {
-                _this.clear();
-                other.forEach(function (value) { return _this.add(value); });
-            }
-            else if (isES6Set$$1(other)) {
-                _this.clear();
-                other.forEach(function (value) { return _this.add(value); });
-            }
-            else if (other !== null && other !== undefined) {
-                fail$$1("Cannot initialize set from " + other);
-            }
-        });
-        return this;
-    };
-    ObservableSet$$1.prototype.observe = function (listener, fireImmediately) {
-        // TODO 'fireImmediately' can be true?
-        "development" !== "production" &&
-            invariant$$1(fireImmediately !== true, "`observe` doesn't support fireImmediately=true in combination with sets.");
-        return registerListener$$1(this, listener);
-    };
-    ObservableSet$$1.prototype.intercept = function (handler) {
-        return registerInterceptor$$1(this, handler);
-    };
-    ObservableSet$$1.prototype.toJS = function () {
-        return new Set(this);
-    };
-    ObservableSet$$1.prototype.toString = function () {
-        return this.name + "[ " + Array.from(this).join(", ") + " ]";
-    };
-    ObservableSet$$1.prototype[(_a$1 = $mobx$$1, Symbol.iterator)] = function () {
-        return this.values();
-    };
-    return ObservableSet$$1;
-}());
-var isObservableSet$$1 = createInstanceofPredicate$$1("ObservableSet", ObservableSet$$1);
-
-var ObservableObjectAdministration$$1 = /** @class */ (function () {
-    function ObservableObjectAdministration$$1(target, values$$1, name, defaultEnhancer) {
-        if (values$$1 === void 0) { values$$1 = new Map(); }
-        this.target = target;
-        this.values = values$$1;
-        this.name = name;
-        this.defaultEnhancer = defaultEnhancer;
-        this.keysAtom = new Atom$$1(name + ".keys");
-    }
-    ObservableObjectAdministration$$1.prototype.read = function (key) {
-        return this.values.get(key).get();
-    };
-    ObservableObjectAdministration$$1.prototype.write = function (key, newValue) {
-        var instance = this.target;
-        var observable$$1 = this.values.get(key);
-        if (observable$$1 instanceof ComputedValue$$1) {
-            observable$$1.set(newValue);
-            return;
-        }
-        // intercept
-        if (hasInterceptors$$1(this)) {
-            var change = interceptChange$$1(this, {
-                type: "update",
-                object: this.proxy || instance,
-                name: key,
-                newValue: newValue
-            });
-            if (!change)
-                return;
-            newValue = change.newValue;
-        }
-        newValue = observable$$1.prepareNewValue(newValue);
-        // notify spy & observers
-        if (newValue !== globalState$$1.UNCHANGED) {
-            var notify = hasListeners$$1(this);
-            var notifySpy = isSpyEnabled$$1();
-            var change = notify || notifySpy
-                ? {
-                    type: "update",
-                    object: this.proxy || instance,
-                    oldValue: observable$$1.value,
-                    name: key,
-                    newValue: newValue
-                }
-                : null;
-            if (notifySpy && "development" !== "production")
-                spyReportStart$$1(__assign({}, change, { name: this.name, key: key }));
-            observable$$1.setNewValue(newValue);
-            if (notify)
-                notifyListeners$$1(this, change);
-            if (notifySpy && "development" !== "production")
-                spyReportEnd$$1();
-        }
-    };
-    ObservableObjectAdministration$$1.prototype.has = function (key) {
-        var map = this.pendingKeys || (this.pendingKeys = new Map());
-        var entry = map.get(key);
-        if (entry)
-            return entry.get();
-        else {
-            var exists = !!this.values.get(key);
-            // Possible optimization: Don't have a separate map for non existing keys,
-            // but store them in the values map instead, using a special symbol to denote "not existing"
-            entry = new ObservableValue$$1(exists, referenceEnhancer$$1, this.name + "." + key.toString() + "?", false);
-            map.set(key, entry);
-            return entry.get(); // read to subscribe
-        }
-    };
-    ObservableObjectAdministration$$1.prototype.addObservableProp = function (propName, newValue, enhancer) {
-        if (enhancer === void 0) { enhancer = this.defaultEnhancer; }
-        var target = this.target;
-        assertPropertyConfigurable$$1(target, propName);
-        if (hasInterceptors$$1(this)) {
-            var change = interceptChange$$1(this, {
-                object: this.proxy || target,
-                name: propName,
-                type: "add",
-                newValue: newValue
-            });
-            if (!change)
-                return;
-            newValue = change.newValue;
-        }
-        var observable$$1 = new ObservableValue$$1(newValue, enhancer, this.name + "." + propName, false);
-        this.values.set(propName, observable$$1);
-        newValue = observable$$1.value; // observableValue might have changed it
-        Object.defineProperty(target, propName, generateObservablePropConfig$$1(propName));
-        this.notifyPropertyAddition(propName, newValue);
-    };
-    ObservableObjectAdministration$$1.prototype.addComputedProp = function (propertyOwner, // where is the property declared?
-    propName, options) {
-        var target = this.target;
-        options.name = options.name || this.name + "." + propName;
-        this.values.set(propName, new ComputedValue$$1(options));
-        if (propertyOwner === target || isPropertyConfigurable$$1(propertyOwner, propName))
-            Object.defineProperty(propertyOwner, propName, generateComputedPropConfig$$1(propName));
-    };
-    ObservableObjectAdministration$$1.prototype.remove = function (key) {
-        if (!this.values.has(key))
-            return;
-        var target = this.target;
-        if (hasInterceptors$$1(this)) {
-            var change = interceptChange$$1(this, {
-                object: this.proxy || target,
-                name: key,
-                type: "remove"
-            });
-            if (!change)
-                return;
-        }
-        try {
-            startBatch$$1();
-            var notify = hasListeners$$1(this);
-            var notifySpy = isSpyEnabled$$1();
-            var oldObservable = this.values.get(key);
-            var oldValue = oldObservable && oldObservable.get();
-            oldObservable && oldObservable.set(undefined);
-            // notify key and keyset listeners
-            this.keysAtom.reportChanged();
-            this.values.delete(key);
-            if (this.pendingKeys) {
-                var entry = this.pendingKeys.get(key);
-                if (entry)
-                    entry.set(false);
-            }
-            // delete the prop
-            delete this.target[key];
-            var change = notify || notifySpy
-                ? {
-                    type: "remove",
-                    object: this.proxy || target,
-                    oldValue: oldValue,
-                    name: key
-                }
-                : null;
-            if (notifySpy && "development" !== "production")
-                spyReportStart$$1(__assign({}, change, { name: this.name, key: key }));
-            if (notify)
-                notifyListeners$$1(this, change);
-            if (notifySpy && "development" !== "production")
-                spyReportEnd$$1();
-        }
-        finally {
-            endBatch$$1();
-        }
-    };
-    ObservableObjectAdministration$$1.prototype.illegalAccess = function (owner, propName) {
-        /**
-         * This happens if a property is accessed through the prototype chain, but the property was
-         * declared directly as own property on the prototype.
-         *
-         * E.g.:
-         * class A {
-         * }
-         * extendObservable(A.prototype, { x: 1 })
-         *
-         * classB extens A {
-         * }
-         * console.log(new B().x)
-         *
-         * It is unclear whether the property should be considered 'static' or inherited.
-         * Either use `console.log(A.x)`
-         * or: decorate(A, { x: observable })
-         *
-         * When using decorate, the property will always be redeclared as own property on the actual instance
-         */
-        console.warn("Property '" + propName + "' of '" + owner + "' was accessed through the prototype chain. Use 'decorate' instead to declare the prop or access it statically through it's owner");
-    };
-    /**
-     * Observes this object. Triggers for the events 'add', 'update' and 'delete'.
-     * See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe
-     * for callback details
-     */
-    ObservableObjectAdministration$$1.prototype.observe = function (callback, fireImmediately) {
-        "development" !== "production" &&
-            invariant$$1(fireImmediately !== true, "`observe` doesn't support the fire immediately property for observable objects.");
-        return registerListener$$1(this, callback);
-    };
-    ObservableObjectAdministration$$1.prototype.intercept = function (handler) {
-        return registerInterceptor$$1(this, handler);
-    };
-    ObservableObjectAdministration$$1.prototype.notifyPropertyAddition = function (key, newValue) {
-        var notify = hasListeners$$1(this);
-        var notifySpy = isSpyEnabled$$1();
-        var change = notify || notifySpy
-            ? {
-                type: "add",
-                object: this.proxy || this.target,
-                name: key,
-                newValue: newValue
-            }
-            : null;
-        if (notifySpy && "development" !== "production")
-            spyReportStart$$1(__assign({}, change, { name: this.name, key: key }));
-        if (notify)
-            notifyListeners$$1(this, change);
-        if (notifySpy && "development" !== "production")
-            spyReportEnd$$1();
-        if (this.pendingKeys) {
-            var entry = this.pendingKeys.get(key);
-            if (entry)
-                entry.set(true);
-        }
-        this.keysAtom.reportChanged();
-    };
-    ObservableObjectAdministration$$1.prototype.getKeys = function () {
-        var e_1, _a;
-        this.keysAtom.reportObserved();
-        // return Reflect.ownKeys(this.values) as any
-        var res = [];
-        try {
-            for (var _b = __values(this.values), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var _d = __read(_c.value, 2), key = _d[0], value = _d[1];
-                if (value instanceof ObservableValue$$1)
-                    res.push(key);
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-        return res;
-    };
-    return ObservableObjectAdministration$$1;
-}());
-function asObservableObject$$1(target, name, defaultEnhancer) {
-    if (name === void 0) { name = ""; }
-    if (defaultEnhancer === void 0) { defaultEnhancer = deepEnhancer$$1; }
-    if (Object.prototype.hasOwnProperty.call(target, $mobx$$1))
-        return target[$mobx$$1];
-    "development" !== "production" &&
-        invariant$$1(Object.isExtensible(target), "Cannot make the designated object observable; it is not extensible");
-    if (!isPlainObject$$1(target))
-        name = (target.constructor.name || "ObservableObject") + "@" + getNextId$$1();
-    if (!name)
-        name = "ObservableObject@" + getNextId$$1();
-    var adm = new ObservableObjectAdministration$$1(target, new Map(), name, defaultEnhancer);
-    addHiddenProp$$1(target, $mobx$$1, adm);
-    return adm;
-}
-var observablePropertyConfigs = Object.create(null);
-var computedPropertyConfigs = Object.create(null);
-function generateObservablePropConfig$$1(propName) {
-    return (observablePropertyConfigs[propName] ||
-        (observablePropertyConfigs[propName] = {
-            configurable: true,
-            enumerable: true,
-            get: function () {
-                return this[$mobx$$1].read(propName);
-            },
-            set: function (v) {
-                this[$mobx$$1].write(propName, v);
-            }
-        }));
-}
-function getAdministrationForComputedPropOwner(owner) {
-    var adm = owner[$mobx$$1];
-    if (!adm) {
-        // because computed props are declared on proty,
-        // the current instance might not have been initialized yet
-        initializeInstance$$1(owner);
-        return owner[$mobx$$1];
-    }
-    return adm;
-}
-function generateComputedPropConfig$$1(propName) {
-    return (computedPropertyConfigs[propName] ||
-        (computedPropertyConfigs[propName] = {
-            configurable: false,
-            enumerable: false,
-            get: function () {
-                return getAdministrationForComputedPropOwner(this).read(propName);
-            },
-            set: function (v) {
-                getAdministrationForComputedPropOwner(this).write(propName, v);
-            }
-        }));
-}
-var isObservableObjectAdministration = createInstanceofPredicate$$1("ObservableObjectAdministration", ObservableObjectAdministration$$1);
-function isObservableObject$$1(thing) {
-    if (isObject$$1(thing)) {
-        // Initializers run lazily when transpiling to babel, so make sure they are run...
-        initializeInstance$$1(thing);
-        return isObservableObjectAdministration(thing[$mobx$$1]);
-    }
-    return false;
-}
-
-function getAtom$$1(thing, property) {
-    if (typeof thing === "object" && thing !== null) {
-        if (isObservableArray$$1(thing)) {
-            if (property !== undefined)
-                fail$$1("development" !== "production" &&
-                    "It is not possible to get index atoms from arrays");
-            return thing[$mobx$$1].atom;
-        }
-        if (isObservableSet$$1(thing)) {
-            return thing[$mobx$$1];
-        }
-        if (isObservableMap$$1(thing)) {
-            var anyThing = thing;
-            if (property === undefined)
-                return anyThing._keysAtom;
-            var observable$$1 = anyThing._data.get(property) || anyThing._hasMap.get(property);
-            if (!observable$$1)
-                fail$$1("development" !== "production" &&
-                    "the entry '" + property + "' does not exist in the observable map '" + getDebugName$$1(thing) + "'");
-            return observable$$1;
-        }
-        // Initializers run lazily when transpiling to babel, so make sure they are run...
-        initializeInstance$$1(thing);
-        if (property && !thing[$mobx$$1])
-            thing[property]; // See #1072
-        if (isObservableObject$$1(thing)) {
-            if (!property)
-                return fail$$1("development" !== "production" && "please specify a property");
-            var observable$$1 = thing[$mobx$$1].values.get(property);
-            if (!observable$$1)
-                fail$$1("development" !== "production" &&
-                    "no observable property '" + property + "' found on the observable object '" + getDebugName$$1(thing) + "'");
-            return observable$$1;
-        }
-        if (isAtom$$1(thing) || isComputedValue$$1(thing) || isReaction$$1(thing)) {
-            return thing;
-        }
-    }
-    else if (typeof thing === "function") {
-        if (isReaction$$1(thing[$mobx$$1])) {
-            // disposer function
-            return thing[$mobx$$1];
-        }
-    }
-    return fail$$1("development" !== "production" && "Cannot obtain atom from " + thing);
-}
-function getAdministration$$1(thing, property) {
-    if (!thing)
-        fail$$1("Expecting some object");
-    if (property !== undefined)
-        return getAdministration$$1(getAtom$$1(thing, property));
-    if (isAtom$$1(thing) || isComputedValue$$1(thing) || isReaction$$1(thing))
-        return thing;
-    if (isObservableMap$$1(thing) || isObservableSet$$1(thing))
-        return thing;
-    // Initializers run lazily when transpiling to babel, so make sure they are run...
-    initializeInstance$$1(thing);
-    if (thing[$mobx$$1])
-        return thing[$mobx$$1];
-    fail$$1("development" !== "production" && "Cannot obtain administration from " + thing);
-}
-function getDebugName$$1(thing, property) {
-    var named;
-    if (property !== undefined)
-        named = getAtom$$1(thing, property);
-    else if (isObservableObject$$1(thing) || isObservableMap$$1(thing) || isObservableSet$$1(thing))
-        named = getAdministration$$1(thing);
-    else
-        named = getAtom$$1(thing); // valid for arrays as well
-    return named.name;
-}
-
-var toString = Object.prototype.toString;
-function deepEqual$$1(a, b) {
-    return eq(a, b);
-}
-// Copied from https://github.com/jashkenas/underscore/blob/5c237a7c682fb68fd5378203f0bf22dce1624854/underscore.js#L1186-L1289
-// Internal recursive comparison function for `isEqual`.
-function eq(a, b, aStack, bStack) {
-    // Identical objects are equal. `0 === -0`, but they aren't identical.
-    // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
-    if (a === b)
-        return a !== 0 || 1 / a === 1 / b;
-    // `null` or `undefined` only equal to itself (strict comparison).
-    if (a == null || b == null)
-        return false;
-    // `NaN`s are equivalent, but non-reflexive.
-    if (a !== a)
-        return b !== b;
-    // Exhaust primitive checks
-    var type = typeof a;
-    if (type !== "function" && type !== "object" && typeof b != "object")
-        return false;
-    return deepEq(a, b, aStack, bStack);
-}
-// Internal recursive comparison function for `isEqual`.
-function deepEq(a, b, aStack, bStack) {
-    // Unwrap any wrapped objects.
-    a = unwrap(a);
-    b = unwrap(b);
-    // Compare `[[Class]]` names.
-    var className = toString.call(a);
-    if (className !== toString.call(b))
-        return false;
-    switch (className) {
-        // Strings, numbers, regular expressions, dates, and booleans are compared by value.
-        case "[object RegExp]":
-        // RegExps are coerced to strings for comparison (Note: '' + /a/i === '/a/i')
-        case "[object String]":
-            // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
-            // equivalent to `new String("5")`.
-            return "" + a === "" + b;
-        case "[object Number]":
-            // `NaN`s are equivalent, but non-reflexive.
-            // Object(NaN) is equivalent to NaN.
-            if (+a !== +a)
-                return +b !== +b;
-            // An `egal` comparison is performed for other numeric values.
-            return +a === 0 ? 1 / +a === 1 / b : +a === +b;
-        case "[object Date]":
-        case "[object Boolean]":
-            // Coerce dates and booleans to numeric primitive values. Dates are compared by their
-            // millisecond representations. Note that invalid dates with millisecond representations
-            // of `NaN` are not equivalent.
-            return +a === +b;
-        case "[object Symbol]":
-            return (typeof Symbol !== "undefined" && Symbol.valueOf.call(a) === Symbol.valueOf.call(b));
-    }
-    var areArrays = className === "[object Array]";
-    if (!areArrays) {
-        if (typeof a != "object" || typeof b != "object")
-            return false;
-        // Objects with different constructors are not equivalent, but `Object`s or `Array`s
-        // from different frames are.
-        var aCtor = a.constructor, bCtor = b.constructor;
-        if (aCtor !== bCtor &&
-            !(typeof aCtor === "function" &&
-                aCtor instanceof aCtor &&
-                typeof bCtor === "function" &&
-                bCtor instanceof bCtor) &&
-            ("constructor" in a && "constructor" in b)) {
-            return false;
-        }
-    }
-    // Assume equality for cyclic structures. The algorithm for detecting cyclic
-    // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
-    // Initializing stack of traversed objects.
-    // It's done here since we only need them for objects and arrays comparison.
-    aStack = aStack || [];
-    bStack = bStack || [];
-    var length = aStack.length;
-    while (length--) {
-        // Linear search. Performance is inversely proportional to the number of
-        // unique nested structures.
-        if (aStack[length] === a)
-            return bStack[length] === b;
-    }
-    // Add the first object to the stack of traversed objects.
-    aStack.push(a);
-    bStack.push(b);
-    // Recursively compare objects and arrays.
-    if (areArrays) {
-        // Compare array lengths to determine if a deep comparison is necessary.
-        length = a.length;
-        if (length !== b.length)
-            return false;
-        // Deep compare the contents, ignoring non-numeric properties.
-        while (length--) {
-            if (!eq(a[length], b[length], aStack, bStack))
-                return false;
-        }
-    }
-    else {
-        // Deep compare objects.
-        var keys$$1 = Object.keys(a), key;
-        length = keys$$1.length;
-        // Ensure that both objects contain the same number of properties before comparing deep equality.
-        if (Object.keys(b).length !== length)
-            return false;
-        while (length--) {
-            // Deep compare each member
-            key = keys$$1[length];
-            if (!(has$1(b, key) && eq(a[key], b[key], aStack, bStack)))
-                return false;
-        }
-    }
-    // Remove the first object from the stack of traversed objects.
-    aStack.pop();
-    bStack.pop();
-    return true;
-}
-function unwrap(a) {
-    if (isObservableArray$$1(a))
-        return a.slice();
-    if (isES6Map$$1(a) || isObservableMap$$1(a))
-        return Array.from(a.entries());
-    if (isES6Set$$1(a) || isObservableSet$$1(a))
-        return Array.from(a.entries());
-    return a;
-}
-function has$1(a, key) {
-    return Object.prototype.hasOwnProperty.call(a, key);
-}
-
-function makeIterable(iterator) {
-    iterator[Symbol.iterator] = self;
-    return iterator;
-}
-function self() {
-    return this;
-}
-
-/*
-The only reason for this file to exist is pure horror:
-Without it rollup can make the bundling fail at any point in time; when it rolls up the files in the wrong order
-it will cause undefined errors (for example because super classes or local variables not being hosted).
-With this file that will still happen,
-but at least in this file we can magically reorder the imports with trial and error until the build succeeds again.
-*/
-
-/**
- * (c) Michel Weststrate 2015 - 2018
- * MIT Licensed
- *
- * Welcome to the mobx sources! To get an global overview of how MobX internally works,
- * this is a good place to start:
- * https://medium.com/@mweststrate/becoming-fully-reactive-an-in-depth-explanation-of-mobservable-55995262a254#.xvbh6qd74
- *
- * Source folders:
- * ===============
- *
- * - api/     Most of the public static methods exposed by the module can be found here.
- * - core/    Implementation of the MobX algorithm; atoms, derivations, reactions, dependency trees, optimizations. Cool stuff can be found here.
- * - types/   All the magic that is need to have observable objects, arrays and values is in this folder. Including the modifiers like `asFlat`.
- * - utils/   Utility stuff.
- *
- */
-if (typeof Proxy === "undefined" || typeof Symbol === "undefined") {
-    throw new Error("[mobx] MobX 5+ requires Proxy and Symbol objects. If your environment doesn't support Proxy objects, please downgrade to MobX 4. For React Native Android, consider upgrading JSCore.");
-}
-try {
-    // define process.env if needed
-    // if this is not a production build in the first place
-    // (in which case the expression below would be substituted with 'production')
-    "development";
-}
-catch (e) {
-    var g = typeof window !== "undefined" ? window : global;
-    if (typeof process === "undefined")
-        g.process = {};
-    g.process.env = {};
-}
-
-(function () {
-    function testCodeMinification() { }
-    if (testCodeMinification.name !== "testCodeMinification" &&
-        "development" !== "production" &&
-        process.env.IGNORE_MOBX_MINIFY_WARNING !== "true") {
-        console.warn(
-        // Template literal(backtick) is used for fix issue with rollup-plugin-commonjs https://github.com/rollup/rollup-plugin-commonjs/issues/344
-        "[mobx] you are running a minified build, but 'process.env.NODE_ENV' was not set to 'production' in your bundler. This results in an unnecessarily large and slow bundle");
-    }
-})();
-// Devtools support
-if (typeof __MOBX_DEVTOOLS_GLOBAL_HOOK__ === "object") {
-    // See: https://github.com/andykog/mobx-devtools/
-    __MOBX_DEVTOOLS_GLOBAL_HOOK__.injectMobx({
-        spy: spy$$1,
-        extras: {
-            getDebugName: getDebugName$$1
-        },
-        $mobx: $mobx$$1
-    });
-}
-
-
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js"), __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -20646,12 +15404,12 @@ module.exports = __webpack_require__(/*! ./dist/lib/link */ "./node_modules/next
 
 /***/ "./node_modules/next/node_modules/prop-types/checkPropTypes.js":
 /*!***************************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/node_modules/prop-types/checkPropTypes.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/next/node_modules/prop-types/checkPropTypes.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/next/node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/next/node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -21259,12 +16017,24 @@ if (true) {
 
 /***/ "./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*************************************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \*************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+
+/***/ }),
+
+/***/ "./node_modules/next/router.js":
+/*!*************************************!*\
+  !*** ./node_modules/next/router.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/lib/router */ "./node_modules/next/dist/lib/router/index.js")
+
 
 /***/ }),
 
@@ -21801,12 +16571,144 @@ module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/object-assign/index.js");
+
+/***/ }),
+
+/***/ "./node_modules/object-keys/implementation.js":
+/*!****************************************************!*\
+  !*** ./node_modules/object-keys/implementation.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var keysShim;
+if (!Object.keys) {
+	// modified from https://github.com/es-shims/es5-shim
+	var has = Object.prototype.hasOwnProperty;
+	var toStr = Object.prototype.toString;
+	var isArgs = __webpack_require__(/*! ./isArguments */ "./node_modules/object-keys/isArguments.js"); // eslint-disable-line global-require
+	var isEnumerable = Object.prototype.propertyIsEnumerable;
+	var hasDontEnumBug = !isEnumerable.call({ toString: null }, 'toString');
+	var hasProtoEnumBug = isEnumerable.call(function () {}, 'prototype');
+	var dontEnums = [
+		'toString',
+		'toLocaleString',
+		'valueOf',
+		'hasOwnProperty',
+		'isPrototypeOf',
+		'propertyIsEnumerable',
+		'constructor'
+	];
+	var equalsConstructorPrototype = function (o) {
+		var ctor = o.constructor;
+		return ctor && ctor.prototype === o;
+	};
+	var excludedKeys = {
+		$applicationCache: true,
+		$console: true,
+		$external: true,
+		$frame: true,
+		$frameElement: true,
+		$frames: true,
+		$innerHeight: true,
+		$innerWidth: true,
+		$outerHeight: true,
+		$outerWidth: true,
+		$pageXOffset: true,
+		$pageYOffset: true,
+		$parent: true,
+		$scrollLeft: true,
+		$scrollTop: true,
+		$scrollX: true,
+		$scrollY: true,
+		$self: true,
+		$webkitIndexedDB: true,
+		$webkitStorageInfo: true,
+		$window: true
+	};
+	var hasAutomationEqualityBug = (function () {
+		/* global window */
+		if (typeof window === 'undefined') { return false; }
+		for (var k in window) {
+			try {
+				if (!excludedKeys['$' + k] && has.call(window, k) && window[k] !== null && typeof window[k] === 'object') {
+					try {
+						equalsConstructorPrototype(window[k]);
+					} catch (e) {
+						return true;
+					}
+				}
+			} catch (e) {
+				return true;
+			}
+		}
+		return false;
+	}());
+	var equalsConstructorPrototypeIfNotBuggy = function (o) {
+		/* global window */
+		if (typeof window === 'undefined' || !hasAutomationEqualityBug) {
+			return equalsConstructorPrototype(o);
+		}
+		try {
+			return equalsConstructorPrototype(o);
+		} catch (e) {
+			return false;
+		}
+	};
+
+	keysShim = function keys(object) {
+		var isObject = object !== null && typeof object === 'object';
+		var isFunction = toStr.call(object) === '[object Function]';
+		var isArguments = isArgs(object);
+		var isString = isObject && toStr.call(object) === '[object String]';
+		var theKeys = [];
+
+		if (!isObject && !isFunction && !isArguments) {
+			throw new TypeError('Object.keys called on a non-object');
+		}
+
+		var skipProto = hasProtoEnumBug && isFunction;
+		if (isString && object.length > 0 && !has.call(object, 0)) {
+			for (var i = 0; i < object.length; ++i) {
+				theKeys.push(String(i));
+			}
+		}
+
+		if (isArguments && object.length > 0) {
+			for (var j = 0; j < object.length; ++j) {
+				theKeys.push(String(j));
+			}
+		} else {
+			for (var name in object) {
+				if (!(skipProto && name === 'prototype') && has.call(object, name)) {
+					theKeys.push(String(name));
+				}
+			}
+		}
+
+		if (hasDontEnumBug) {
+			var skipConstructor = equalsConstructorPrototypeIfNotBuggy(object);
+
+			for (var k = 0; k < dontEnums.length; ++k) {
+				if (!(skipConstructor && dontEnums[k] === 'constructor') && has.call(object, dontEnums[k])) {
+					theKeys.push(dontEnums[k]);
+				}
+			}
+		}
+		return theKeys;
+	};
+}
+module.exports = keysShim;
+
 
 /***/ }),
 
@@ -21820,136 +16722,27 @@ module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646
 "use strict";
 
 
-// modified from https://github.com/es-shims/es5-shim
-var has = Object.prototype.hasOwnProperty;
-var toStr = Object.prototype.toString;
 var slice = Array.prototype.slice;
 var isArgs = __webpack_require__(/*! ./isArguments */ "./node_modules/object-keys/isArguments.js");
-var isEnumerable = Object.prototype.propertyIsEnumerable;
-var hasDontEnumBug = !isEnumerable.call({ toString: null }, 'toString');
-var hasProtoEnumBug = isEnumerable.call(function () {}, 'prototype');
-var dontEnums = [
-	'toString',
-	'toLocaleString',
-	'valueOf',
-	'hasOwnProperty',
-	'isPrototypeOf',
-	'propertyIsEnumerable',
-	'constructor'
-];
-var equalsConstructorPrototype = function (o) {
-	var ctor = o.constructor;
-	return ctor && ctor.prototype === o;
-};
-var excludedKeys = {
-	$applicationCache: true,
-	$console: true,
-	$external: true,
-	$frame: true,
-	$frameElement: true,
-	$frames: true,
-	$innerHeight: true,
-	$innerWidth: true,
-	$outerHeight: true,
-	$outerWidth: true,
-	$pageXOffset: true,
-	$pageYOffset: true,
-	$parent: true,
-	$scrollLeft: true,
-	$scrollTop: true,
-	$scrollX: true,
-	$scrollY: true,
-	$self: true,
-	$webkitIndexedDB: true,
-	$webkitStorageInfo: true,
-	$window: true
-};
-var hasAutomationEqualityBug = (function () {
-	/* global window */
-	if (typeof window === 'undefined') { return false; }
-	for (var k in window) {
-		try {
-			if (!excludedKeys['$' + k] && has.call(window, k) && window[k] !== null && typeof window[k] === 'object') {
-				try {
-					equalsConstructorPrototype(window[k]);
-				} catch (e) {
-					return true;
-				}
-			}
-		} catch (e) {
-			return true;
-		}
-	}
-	return false;
-}());
-var equalsConstructorPrototypeIfNotBuggy = function (o) {
-	/* global window */
-	if (typeof window === 'undefined' || !hasAutomationEqualityBug) {
-		return equalsConstructorPrototype(o);
-	}
-	try {
-		return equalsConstructorPrototype(o);
-	} catch (e) {
-		return false;
-	}
-};
 
-var keysShim = function keys(object) {
-	var isObject = object !== null && typeof object === 'object';
-	var isFunction = toStr.call(object) === '[object Function]';
-	var isArguments = isArgs(object);
-	var isString = isObject && toStr.call(object) === '[object String]';
-	var theKeys = [];
+var origKeys = Object.keys;
+var keysShim = origKeys ? function keys(o) { return origKeys(o); } : __webpack_require__(/*! ./implementation */ "./node_modules/object-keys/implementation.js");
 
-	if (!isObject && !isFunction && !isArguments) {
-		throw new TypeError('Object.keys called on a non-object');
-	}
-
-	var skipProto = hasProtoEnumBug && isFunction;
-	if (isString && object.length > 0 && !has.call(object, 0)) {
-		for (var i = 0; i < object.length; ++i) {
-			theKeys.push(String(i));
-		}
-	}
-
-	if (isArguments && object.length > 0) {
-		for (var j = 0; j < object.length; ++j) {
-			theKeys.push(String(j));
-		}
-	} else {
-		for (var name in object) {
-			if (!(skipProto && name === 'prototype') && has.call(object, name)) {
-				theKeys.push(String(name));
-			}
-		}
-	}
-
-	if (hasDontEnumBug) {
-		var skipConstructor = equalsConstructorPrototypeIfNotBuggy(object);
-
-		for (var k = 0; k < dontEnums.length; ++k) {
-			if (!(skipConstructor && dontEnums[k] === 'constructor') && has.call(object, dontEnums[k])) {
-				theKeys.push(dontEnums[k]);
-			}
-		}
-	}
-	return theKeys;
-};
+var originalKeys = Object.keys;
 
 keysShim.shim = function shimObjectKeys() {
 	if (Object.keys) {
 		var keysWorksWithArguments = (function () {
 			// Safari 5.0 bug
-			return (Object.keys(arguments) || '').length === 2;
+			var args = Object.keys(arguments);
+			return args && args.length === arguments.length;
 		}(1, 2));
 		if (!keysWorksWithArguments) {
-			var originalKeys = Object.keys;
 			Object.keys = function keys(object) { // eslint-disable-line func-name-matching
 				if (isArgs(object)) {
 					return originalKeys(slice.call(object));
-				} else {
-					return originalKeys(object);
 				}
+				return originalKeys(object);
 			};
 		}
 	} else {
@@ -22771,1401 +17564,1147 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/react-apollo/react-apollo.browser.umd.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/react-apollo/react-apollo.browser.umd.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/react-apollo/react-apollo.esm.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-apollo/react-apollo.esm.js ***!
+  \*******************************************************/
+/*! exports provided: ApolloConsumer, ApolloProvider, Query, Mutation, Subscription, graphql, withQuery, withMutation, withSubscription, withApollo, getDataFromTree, renderToStringWithData, compose, RenderPromises, getMarkupFromTree */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-(function (global, factory) {
-     true ? factory(exports, __webpack_require__(/*! react */ "./node_modules/react/index.js"), __webpack_require__(/*! prop-types */ "./node_modules/next/node_modules/prop-types/index.js"), __webpack_require__(/*! apollo-client */ "./node_modules/apollo-client/index.js"), __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/react-apollo/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js")) :
-    undefined;
-}(this, function (exports, React, PropTypes, apolloClient, hoistNonReactStatics) { 'use strict';
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApolloConsumer", function() { return ApolloConsumer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApolloProvider", function() { return ApolloProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Query", function() { return Query; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Mutation", function() { return Mutation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Subscription", function() { return Subscription; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "graphql", function() { return graphql; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withQuery", function() { return withQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withMutation", function() { return withMutation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withSubscription", function() { return withSubscription; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withApollo", function() { return withApollo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDataFromTree", function() { return getDataFromTree; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderToStringWithData", function() { return renderToStringWithData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderPromises", function() { return RenderPromises; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMarkupFromTree", function() { return getMarkupFromTree; });
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/next/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var ts_invariant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ts-invariant */ "./node_modules/ts-invariant/lib/invariant.esm.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-client */ "./node_modules/apollo-client/bundle.esm.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/react-apollo/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_4__);
 
-    hoistNonReactStatics = hoistNonReactStatics && hoistNonReactStatics.hasOwnProperty('default') ? hoistNonReactStatics['default'] : hoistNonReactStatics;
 
-    var __extends = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
-        };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-    })();
-    var __assign = (undefined && undefined.__assign) || function () {
-        __assign = Object.assign || function(t) {
-            for (var s, i = 1, n = arguments.length; i < n; i++) {
-                s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                    t[p] = s[p];
-            }
-            return t;
-        };
-        return __assign.apply(this, arguments);
-    };
-    function makeDefaultQueryInfo() {
-        return {
-            seen: false,
-            observable: null,
-        };
-    }
-    var RenderPromises = (function () {
-        function RenderPromises() {
-            this.queryPromises = new Map();
-            this.queryInfoTrie = new Map();
+
+
+
+
+var ApolloConsumer = function (props, context) {
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(!!context.client, "Could not find \"client\" in the context of ApolloConsumer. Wrap the root component in an <ApolloProvider>");
+    return props.children(context.client);
+};
+ApolloConsumer.contextTypes = {
+    client: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"].isRequired,
+};
+ApolloConsumer.propTypes = {
+    children: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"].isRequired,
+};
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
         }
-        RenderPromises.prototype.registerSSRObservable = function (queryInstance, observable) {
-            this.lookupQueryInfo(queryInstance).observable = observable;
-        };
-        RenderPromises.prototype.getSSRObservable = function (queryInstance) {
-            return this.lookupQueryInfo(queryInstance).observable;
-        };
-        RenderPromises.prototype.addQueryPromise = function (queryInstance, finish) {
-            var info = this.lookupQueryInfo(queryInstance);
-            if (!info.seen) {
-                this.queryPromises.set(queryInstance, new Promise(function (resolve) {
-                    resolve(queryInstance.fetchData());
-                }));
-                return null;
-            }
-            return finish();
-        };
-        RenderPromises.prototype.hasPromises = function () {
-            return this.queryPromises.size > 0;
-        };
-        RenderPromises.prototype.consumeAndAwaitPromises = function () {
-            var _this = this;
-            var promises = [];
-            this.queryPromises.forEach(function (promise, queryInstance) {
-                _this.lookupQueryInfo(queryInstance).seen = true;
-                promises.push(promise);
-            });
-            this.queryPromises.clear();
-            return Promise.all(promises);
-        };
-        RenderPromises.prototype.lookupQueryInfo = function (queryInstance) {
-            var queryInfoTrie = this.queryInfoTrie;
-            var _a = queryInstance.props, query = _a.query, variables = _a.variables;
-            var varMap = queryInfoTrie.get(query) || new Map();
-            if (!queryInfoTrie.has(query))
-                queryInfoTrie.set(query, varMap);
-            var variablesString = JSON.stringify(variables);
-            var info = varMap.get(variablesString) || makeDefaultQueryInfo();
-            if (!varMap.has(variablesString))
-                varMap.set(variablesString, info);
-            return info;
-        };
-        return RenderPromises;
-    }());
-    function getDataFromTree(tree, context) {
-        if (context === void 0) { context = {}; }
-        return getMarkupFromTree({
-            tree: tree,
-            context: context,
-            renderFunction: __webpack_require__(/*! react-dom/server */ "./node_modules/react-dom/server.browser.js").renderToStaticMarkup,
-        });
-    }
-    function getMarkupFromTree(_a) {
-        var tree = _a.tree, _b = _a.context, context = _b === void 0 ? {} : _b, _c = _a.renderFunction, renderFunction = _c === void 0 ? __webpack_require__(/*! react-dom/server */ "./node_modules/react-dom/server.browser.js").renderToStaticMarkup : _c;
-        var renderPromises = new RenderPromises();
-        var RenderPromisesProvider = (function (_super) {
-            __extends(RenderPromisesProvider, _super);
-            function RenderPromisesProvider() {
-                return _super !== null && _super.apply(this, arguments) || this;
-            }
-            RenderPromisesProvider.prototype.getChildContext = function () {
-                return __assign({}, context, { renderPromises: renderPromises });
-            };
-            RenderPromisesProvider.prototype.render = function () {
-                return tree;
-            };
-            RenderPromisesProvider.childContextTypes = {
-                renderPromises: PropTypes.object,
-            };
-            return RenderPromisesProvider;
-        }(React.Component));
-        Object.keys(context).forEach(function (key) {
-            RenderPromisesProvider.childContextTypes[key] = PropTypes.any;
-        });
-        function process() {
-            var html = renderFunction(React.createElement(RenderPromisesProvider));
-            return renderPromises.hasPromises()
-                ? renderPromises.consumeAndAwaitPromises().then(process)
-                : html;
-        }
-        return Promise.resolve().then(process);
-    }
-
-    var invariant = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-    var ApolloConsumer = function (props, context) {
-        invariant(!!context.client, "Could not find \"client\" in the context of ApolloConsumer. Wrap the root component in an <ApolloProvider>");
-        return props.children(context.client);
-    };
-    ApolloConsumer.contextTypes = {
-        client: PropTypes.object.isRequired,
-    };
-    ApolloConsumer.propTypes = {
-        children: PropTypes.func.isRequired,
-    };
-
-    var __extends$1 = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
-        };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-    })();
-    var invariant$1 = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-    var ApolloProvider = (function (_super) {
-        __extends$1(ApolloProvider, _super);
-        function ApolloProvider(props, context) {
-            var _this = _super.call(this, props, context) || this;
-            _this.operations = new Map();
-            invariant$1(props.client, 'ApolloProvider was not passed a client instance. Make ' +
-                'sure you pass in your client via the "client" prop.');
-            if (!props.client.__operations_cache__) {
-                props.client.__operations_cache__ = _this.operations;
-            }
-            return _this;
-        }
-        ApolloProvider.prototype.getChildContext = function () {
-            return {
-                client: this.props.client,
-                operations: this.props.client.__operations_cache__,
-            };
-        };
-        ApolloProvider.prototype.render = function () {
-            return this.props.children;
-        };
-        ApolloProvider.propTypes = {
-            client: PropTypes.object.isRequired,
-            children: PropTypes.node.isRequired,
-        };
-        ApolloProvider.childContextTypes = {
-            client: PropTypes.object.isRequired,
-            operations: PropTypes.object,
-        };
-        return ApolloProvider;
-    }(React.Component));
-
-    var invariant$2 = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-    var DocumentType;
-    (function (DocumentType) {
-        DocumentType[DocumentType["Query"] = 0] = "Query";
-        DocumentType[DocumentType["Mutation"] = 1] = "Mutation";
-        DocumentType[DocumentType["Subscription"] = 2] = "Subscription";
-    })(DocumentType || (DocumentType = {}));
-    var cache = new Map();
-    function parser(document) {
-        var cached = cache.get(document);
-        if (cached)
-            return cached;
-        var variables, type, name;
-        invariant$2(!!document && !!document.kind, "Argument of " + document + " passed to parser was not a valid GraphQL " +
-            "DocumentNode. You may need to use 'graphql-tag' or another method " +
-            "to convert your operation into a document");
-        var fragments = document.definitions.filter(function (x) { return x.kind === 'FragmentDefinition'; });
-        var queries = document.definitions.filter(function (x) { return x.kind === 'OperationDefinition' && x.operation === 'query'; });
-        var mutations = document.definitions.filter(function (x) { return x.kind === 'OperationDefinition' && x.operation === 'mutation'; });
-        var subscriptions = document.definitions.filter(function (x) { return x.kind === 'OperationDefinition' && x.operation === 'subscription'; });
-        invariant$2(!fragments.length || (queries.length || mutations.length || subscriptions.length), "Passing only a fragment to 'graphql' is not yet supported. " +
-            "You must include a query, subscription or mutation as well");
-        invariant$2(queries.length + mutations.length + subscriptions.length <= 1, "react-apollo only supports a query, subscription, or a mutation per HOC. " +
-            (document + " had " + queries.length + " queries, " + subscriptions.length + " ") +
-            ("subscriptions and " + mutations.length + " mutations. ") +
-            "You can use 'compose' to join multiple operation types to a component");
-        type = queries.length ? DocumentType.Query : DocumentType.Mutation;
-        if (!queries.length && !mutations.length)
-            type = DocumentType.Subscription;
-        var definitions = queries.length ? queries : mutations.length ? mutations : subscriptions;
-        invariant$2(definitions.length === 1, "react-apollo only supports one defintion per HOC. " + document + " had " +
-            (definitions.length + " definitions. ") +
-            "You can use 'compose' to join multiple operation types to a component");
-        var definition = definitions[0];
-        variables = definition.variableDefinitions || [];
-        if (definition.name && definition.name.kind === 'Name') {
-            name = definition.name.value;
-        }
-        else {
-            name = 'data';
-        }
-        var payload = { name: name, type: type, variables: variables };
-        cache.set(document, payload);
-        return payload;
-    }
-
-    var invariant$3 = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-    function getClient(props, context) {
-        var client = props.client || context.client;
-        invariant$3(!!client, 'Could not find "client" in the context or passed in as a prop. ' +
-            'Wrap the root component in an <ApolloProvider>, or pass an ' +
-            'ApolloClient instance in via props.');
-        return client;
-    }
-
-    var __extends$2 = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
-        };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-    })();
-    var __assign$1 = (undefined && undefined.__assign) || function () {
-        __assign$1 = Object.assign || function(t) {
-            for (var s, i = 1, n = arguments.length; i < n; i++) {
-                s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                    t[p] = s[p];
-            }
-            return t;
-        };
-        return __assign$1.apply(this, arguments);
-    };
-    var __rest = (undefined && undefined.__rest) || function (s, e) {
-        var t = {};
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-            t[p] = s[p];
-        if (s != null && typeof Object.getOwnPropertySymbols === "function")
-            for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
-                t[p[i]] = s[p[i]];
         return t;
     };
-    var shallowEqual = __webpack_require__(/*! fbjs/lib/shallowEqual */ "./node_modules/fbjs/lib/shallowEqual.js");
-    var invariant$4 = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-    function compact(obj) {
-        return Object.keys(obj).reduce(function (acc, key) {
-            if (obj[key] !== undefined) {
-                acc[key] = obj[key];
-            }
-            return acc;
-        }, {});
-    }
-    function observableQueryFields(observable) {
-        var fields = {
-            variables: observable.variables,
-            refetch: observable.refetch.bind(observable),
-            fetchMore: observable.fetchMore.bind(observable),
-            updateQuery: observable.updateQuery.bind(observable),
-            startPolling: observable.startPolling.bind(observable),
-            stopPolling: observable.stopPolling.bind(observable),
-            subscribeToMore: observable.subscribeToMore.bind(observable),
-        };
-        return fields;
-    }
-    var Query = (function (_super) {
-        __extends$2(Query, _super);
-        function Query(props, context) {
-            var _this = _super.call(this, props, context) || this;
-            _this.previousData = {};
-            _this.hasMounted = false;
-            _this.startQuerySubscription = function () {
-                if (_this.querySubscription)
-                    return;
-                var initial = _this.getQueryResult();
-                _this.querySubscription = _this.queryObservable.subscribe({
-                    next: function (_a) {
-                        var data = _a.data;
-                        if (initial && initial.networkStatus === 7 && shallowEqual(initial.data, data)) {
-                            initial = undefined;
-                            return;
-                        }
-                        initial = undefined;
-                        _this.updateCurrentData();
-                    },
-                    error: function (error) {
-                        _this.resubscribeToQuery();
-                        if (!error.hasOwnProperty('graphQLErrors'))
-                            throw error;
-                        _this.updateCurrentData();
-                    },
-                });
-            };
-            _this.removeQuerySubscription = function () {
-                if (_this.querySubscription) {
-                    _this.querySubscription.unsubscribe();
-                    delete _this.querySubscription;
-                }
-            };
-            _this.updateCurrentData = function () {
-                if (_this.hasMounted)
-                    _this.forceUpdate();
-            };
-            _this.getQueryResult = function () {
-                var data = { data: Object.create(null) };
-                Object.assign(data, observableQueryFields(_this.queryObservable));
-                if (_this.props.skip) {
-                    data = __assign$1({}, data, { data: undefined, error: undefined, loading: false });
-                }
-                else {
-                    var currentResult = _this.queryObservable.currentResult();
-                    var loading = currentResult.loading, partial = currentResult.partial, networkStatus = currentResult.networkStatus, errors = currentResult.errors;
-                    var error = currentResult.error;
-                    if (errors && errors.length > 0) {
-                        error = new apolloClient.ApolloError({ graphQLErrors: errors });
-                    }
-                    Object.assign(data, { loading: loading, networkStatus: networkStatus, error: error });
-                    if (loading) {
-                        Object.assign(data.data, _this.previousData, currentResult.data);
-                    }
-                    else if (error) {
-                        Object.assign(data, {
-                            data: (_this.queryObservable.getLastResult() || {}).data,
-                        });
-                    }
-                    else {
-                        var fetchPolicy = _this.queryObservable.options.fetchPolicy;
-                        var partialRefetch = _this.props.partialRefetch;
-                        if (partialRefetch &&
-                            Object.keys(currentResult.data).length === 0 &&
-                            partial &&
-                            fetchPolicy !== 'cache-only') {
-                            Object.assign(data, { loading: true, networkStatus: apolloClient.NetworkStatus.loading });
-                            data.refetch();
-                            return data;
-                        }
-                        Object.assign(data.data, currentResult.data);
-                        _this.previousData = currentResult.data;
-                    }
-                }
-                if (!_this.querySubscription) {
-                    var oldRefetch_1 = data.refetch;
-                    data.refetch = function (args) {
-                        if (_this.querySubscription) {
-                            return oldRefetch_1(args);
-                        }
-                        else {
-                            return new Promise(function (r, f) {
-                                _this.refetcherQueue = { resolve: r, reject: f, args: args };
-                            });
-                        }
-                    };
-                }
-                data.client = _this.client;
-                return data;
-            };
-            _this.client = getClient(props, context);
-            _this.initializeQueryObservable(props);
-            return _this;
+    return __assign.apply(this, arguments);
+};
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+}
+
+var ApolloProvider = (function (_super) {
+    __extends(ApolloProvider, _super);
+    function ApolloProvider(props, context) {
+        var _this = _super.call(this, props, context) || this;
+        _this.operations = new Map();
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(props.client, 'ApolloProvider was not passed a client instance. Make ' +
+            'sure you pass in your client via the "client" prop.');
+        if (!props.client.__operations_cache__) {
+            props.client.__operations_cache__ = _this.operations;
         }
-        Query.prototype.fetchData = function () {
-            if (this.props.skip)
-                return false;
-            var _a = this.props, children = _a.children, ssr = _a.ssr, displayName = _a.displayName, skip = _a.skip, client = _a.client, onCompleted = _a.onCompleted, onError = _a.onError, partialRefetch = _a.partialRefetch, opts = __rest(_a, ["children", "ssr", "displayName", "skip", "client", "onCompleted", "onError", "partialRefetch"]);
-            var fetchPolicy = opts.fetchPolicy;
-            if (ssr === false)
-                return false;
-            if (fetchPolicy === 'network-only' || fetchPolicy === 'cache-and-network') {
-                fetchPolicy = 'cache-first';
-            }
-            var observable = this.client.watchQuery(__assign$1({}, opts, { fetchPolicy: fetchPolicy }));
-            if (this.context && this.context.renderPromises) {
-                this.context.renderPromises.registerSSRObservable(this, observable);
-            }
-            var result = this.queryObservable.currentResult();
-            return result.loading ? observable.result() : false;
+        return _this;
+    }
+    ApolloProvider.prototype.getChildContext = function () {
+        return {
+            client: this.props.client,
+            operations: this.props.client.__operations_cache__,
         };
-        Query.prototype.componentDidMount = function () {
-            this.hasMounted = true;
-            if (this.props.skip)
+    };
+    ApolloProvider.prototype.render = function () {
+        return this.props.children;
+    };
+    ApolloProvider.propTypes = {
+        client: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"].isRequired,
+        children: prop_types__WEBPACK_IMPORTED_MODULE_0__["node"].isRequired,
+    };
+    ApolloProvider.childContextTypes = {
+        client: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"].isRequired,
+        operations: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+    };
+    return ApolloProvider;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+
+var DocumentType;
+(function (DocumentType) {
+    DocumentType[DocumentType["Query"] = 0] = "Query";
+    DocumentType[DocumentType["Mutation"] = 1] = "Mutation";
+    DocumentType[DocumentType["Subscription"] = 2] = "Subscription";
+})(DocumentType || (DocumentType = {}));
+var cache = new Map();
+function parser(document) {
+    var cached = cache.get(document);
+    if (cached)
+        return cached;
+    var variables, type, name;
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(!!document && !!document.kind, "Argument of " + document + " passed to parser was not a valid GraphQL " +
+        "DocumentNode. You may need to use 'graphql-tag' or another method " +
+        "to convert your operation into a document");
+    var fragments = document.definitions.filter(function (x) { return x.kind === 'FragmentDefinition'; });
+    var queries = document.definitions.filter(function (x) { return x.kind === 'OperationDefinition' && x.operation === 'query'; });
+    var mutations = document.definitions.filter(function (x) { return x.kind === 'OperationDefinition' && x.operation === 'mutation'; });
+    var subscriptions = document.definitions.filter(function (x) { return x.kind === 'OperationDefinition' && x.operation === 'subscription'; });
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(!fragments.length || (queries.length || mutations.length || subscriptions.length), "Passing only a fragment to 'graphql' is not yet supported. " +
+        "You must include a query, subscription or mutation as well");
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(queries.length + mutations.length + subscriptions.length <= 1, "react-apollo only supports a query, subscription, or a mutation per HOC. " +
+        (document + " had " + queries.length + " queries, " + subscriptions.length + " ") +
+        ("subscriptions and " + mutations.length + " mutations. ") +
+        "You can use 'compose' to join multiple operation types to a component");
+    type = queries.length ? DocumentType.Query : DocumentType.Mutation;
+    if (!queries.length && !mutations.length)
+        type = DocumentType.Subscription;
+    var definitions = queries.length ? queries : mutations.length ? mutations : subscriptions;
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(definitions.length === 1, "react-apollo only supports one defintion per HOC. " + document + " had " +
+        (definitions.length + " definitions. ") +
+        "You can use 'compose' to join multiple operation types to a component");
+    var definition = definitions[0];
+    variables = definition.variableDefinitions || [];
+    if (definition.name && definition.name.kind === 'Name') {
+        name = definition.name.value;
+    }
+    else {
+        name = 'data';
+    }
+    var payload = { name: name, type: type, variables: variables };
+    cache.set(document, payload);
+    return payload;
+}
+
+function getClient(props, context) {
+    var client = props.client || context.client;
+     false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(!!client, 'Could not find "client" in the context or passed in as a prop. ' +
+        'Wrap the root component in an <ApolloProvider>, or pass an ' +
+        'ApolloClient instance in via props.');
+    return client;
+}
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+function is(x, y) {
+    if (x === y) {
+        return x !== 0 || y !== 0 || 1 / x === 1 / y;
+    }
+    return x !== x && y !== y;
+}
+function isObject(obj) {
+    return obj !== null && typeof obj === "object";
+}
+function shallowEqual(objA, objB) {
+    if (is(objA, objB)) {
+        return true;
+    }
+    if (!isObject(objA) || !isObject(objB)) {
+        return false;
+    }
+    var keys = Object.keys(objA);
+    if (keys.length !== Object.keys(objB).length) {
+        return false;
+    }
+    return keys.every(function (key) { return hasOwnProperty.call(objB, key) && is(objA[key], objB[key]); });
+}
+
+function compact(obj) {
+    return Object.keys(obj).reduce(function (acc, key) {
+        if (obj[key] !== undefined) {
+            acc[key] = obj[key];
+        }
+        return acc;
+    }, {});
+}
+function observableQueryFields(observable) {
+    var fields = {
+        variables: observable.variables,
+        refetch: observable.refetch.bind(observable),
+        fetchMore: observable.fetchMore.bind(observable),
+        updateQuery: observable.updateQuery.bind(observable),
+        startPolling: observable.startPolling.bind(observable),
+        stopPolling: observable.stopPolling.bind(observable),
+        subscribeToMore: observable.subscribeToMore.bind(observable),
+    };
+    return fields;
+}
+var Query = (function (_super) {
+    __extends(Query, _super);
+    function Query(props, context) {
+        var _this = _super.call(this, props, context) || this;
+        _this.previousData = {};
+        _this.hasMounted = false;
+        _this.lastResult = null;
+        _this.startQuerySubscription = function (justMounted) {
+            if (justMounted === void 0) { justMounted = false; }
+            if (!justMounted) {
+                _this.lastResult = _this.queryObservable.getLastResult();
+            }
+            if (_this.querySubscription)
                 return;
-            this.startQuerySubscription();
-            if (this.refetcherQueue) {
-                var _a = this.refetcherQueue, args = _a.args, resolve = _a.resolve, reject = _a.reject;
-                this.queryObservable.refetch(args)
-                    .then(resolve)
-                    .catch(reject);
-            }
-        };
-        Query.prototype.componentWillReceiveProps = function (nextProps, nextContext) {
-            if (nextProps.skip && !this.props.skip) {
-                this.removeQuerySubscription();
-                return;
-            }
-            var nextClient = getClient(nextProps, nextContext);
-            if (shallowEqual(this.props, nextProps) && this.client === nextClient) {
-                return;
-            }
-            if (this.client !== nextClient) {
-                this.client = nextClient;
-                this.removeQuerySubscription();
-                this.queryObservable = null;
-                this.previousData = {};
-                this.updateQuery(nextProps);
-            }
-            if (this.props.query !== nextProps.query) {
-                this.removeQuerySubscription();
-            }
-            this.updateQuery(nextProps);
-            if (nextProps.skip)
-                return;
-            this.startQuerySubscription();
-        };
-        Query.prototype.componentWillUnmount = function () {
-            this.removeQuerySubscription();
-            this.hasMounted = false;
-        };
-        Query.prototype.componentDidUpdate = function () {
-            var _a = this.props, onCompleted = _a.onCompleted, onError = _a.onError;
-            if (onCompleted || onError) {
-                var currentResult = this.queryObservable.currentResult();
-                var loading = currentResult.loading, error = currentResult.error, data = currentResult.data;
-                if (onCompleted && !loading && !error) {
-                    onCompleted(data);
-                }
-                else if (onError && !loading && error) {
-                    onError(error);
-                }
-            }
-        };
-        Query.prototype.render = function () {
-            var _this = this;
-            var context = this.context;
-            var finish = function () { return _this.props.children(_this.getQueryResult()); };
-            if (context && context.renderPromises) {
-                return context.renderPromises.addQueryPromise(this, finish);
-            }
-            return finish();
-        };
-        Query.prototype.extractOptsFromProps = function (props) {
-            var variables = props.variables, pollInterval = props.pollInterval, fetchPolicy = props.fetchPolicy, errorPolicy = props.errorPolicy, notifyOnNetworkStatusChange = props.notifyOnNetworkStatusChange, query = props.query, _a = props.displayName, displayName = _a === void 0 ? 'Query' : _a, _b = props.context, context = _b === void 0 ? {} : _b;
-            this.operation = parser(query);
-            invariant$4(this.operation.type === DocumentType.Query, "The <Query /> component requires a graphql query, but got a " + (this.operation.type === DocumentType.Mutation ? 'mutation' : 'subscription') + ".");
-            return compact({
-                variables: variables,
-                pollInterval: pollInterval,
-                query: query,
-                fetchPolicy: fetchPolicy,
-                errorPolicy: errorPolicy,
-                notifyOnNetworkStatusChange: notifyOnNetworkStatusChange,
-                metadata: { reactComponent: { displayName: displayName } },
-                context: context,
+            var initial = _this.getQueryResult();
+            _this.querySubscription = _this.queryObservable.subscribe({
+                next: function (_a) {
+                    var loading = _a.loading, networkStatus = _a.networkStatus, data = _a.data;
+                    if (initial && initial.networkStatus === 7 && shallowEqual(initial.data, data)) {
+                        initial = undefined;
+                        return;
+                    }
+                    if (_this.lastResult &&
+                        _this.lastResult.loading === loading &&
+                        _this.lastResult.networkStatus === networkStatus &&
+                        shallowEqual(_this.lastResult.data, data)) {
+                        return;
+                    }
+                    initial = undefined;
+                    _this.updateCurrentData();
+                },
+                error: function (error) {
+                    _this.resubscribeToQuery();
+                    if (!error.hasOwnProperty('graphQLErrors'))
+                        throw error;
+                    _this.updateCurrentData();
+                },
             });
         };
-        Query.prototype.initializeQueryObservable = function (props) {
-            var opts = this.extractOptsFromProps(props);
-            this.setOperations(opts);
-            if (this.context && this.context.renderPromises) {
-                this.queryObservable = this.context.renderPromises.getSSRObservable(this);
-            }
-            if (!this.queryObservable) {
-                this.queryObservable = this.client.watchQuery(opts);
+        _this.removeQuerySubscription = function () {
+            if (_this.querySubscription) {
+                _this.lastResult = _this.queryObservable.getLastResult();
+                _this.querySubscription.unsubscribe();
+                delete _this.querySubscription;
             }
         };
-        Query.prototype.setOperations = function (props) {
-            if (this.context.operations) {
-                this.context.operations.set(this.operation.name, {
-                    query: props.query,
-                    variables: props.variables,
-                });
-            }
+        _this.updateCurrentData = function () {
+            if (_this.hasMounted)
+                _this.forceUpdate();
         };
-        Query.prototype.updateQuery = function (props) {
-            if (!this.queryObservable) {
-                this.initializeQueryObservable(props);
+        _this.getQueryResult = function () {
+            var data = { data: Object.create(null) };
+            Object.assign(data, observableQueryFields(_this.queryObservable));
+            if (_this.props.skip) {
+                data = __assign({}, data, { data: undefined, error: undefined, loading: false });
             }
             else {
-                this.setOperations(props);
+                var currentResult = _this.queryObservable.currentResult();
+                var loading = currentResult.loading, partial = currentResult.partial, networkStatus = currentResult.networkStatus, errors = currentResult.errors;
+                var error = currentResult.error;
+                if (errors && errors.length > 0) {
+                    error = new apollo_client__WEBPACK_IMPORTED_MODULE_3__["ApolloError"]({ graphQLErrors: errors });
+                }
+                Object.assign(data, { loading: loading, networkStatus: networkStatus, error: error });
+                if (loading) {
+                    Object.assign(data.data, _this.previousData, currentResult.data);
+                }
+                else if (error) {
+                    Object.assign(data, {
+                        data: (_this.queryObservable.getLastResult() || {}).data,
+                    });
+                }
+                else {
+                    var fetchPolicy = _this.queryObservable.options.fetchPolicy;
+                    var partialRefetch = _this.props.partialRefetch;
+                    if (partialRefetch &&
+                        Object.keys(currentResult.data).length === 0 &&
+                        partial &&
+                        fetchPolicy !== 'cache-only') {
+                        Object.assign(data, { loading: true, networkStatus: apollo_client__WEBPACK_IMPORTED_MODULE_3__["NetworkStatus"].loading });
+                        data.refetch();
+                        return data;
+                    }
+                    Object.assign(data.data, currentResult.data);
+                    _this.previousData = currentResult.data;
+                }
             }
-            this.queryObservable.setOptions(this.extractOptsFromProps(props))
-                .catch(function () { return null; });
+            if (!_this.querySubscription) {
+                var oldRefetch_1 = data.refetch;
+                data.refetch = function (args) {
+                    if (_this.querySubscription) {
+                        return oldRefetch_1(args);
+                    }
+                    else {
+                        return new Promise(function (r, f) {
+                            _this.refetcherQueue = { resolve: r, reject: f, args: args };
+                        });
+                    }
+                };
+            }
+            data.client = _this.client;
+            return data;
         };
-        Query.prototype.resubscribeToQuery = function () {
+        _this.client = getClient(props, context);
+        _this.initializeQueryObservable(props);
+        return _this;
+    }
+    Query.prototype.fetchData = function () {
+        if (this.props.skip)
+            return false;
+        var _a = this.props, children = _a.children, ssr = _a.ssr, displayName = _a.displayName, skip = _a.skip, client = _a.client, onCompleted = _a.onCompleted, onError = _a.onError, partialRefetch = _a.partialRefetch, opts = __rest(_a, ["children", "ssr", "displayName", "skip", "client", "onCompleted", "onError", "partialRefetch"]);
+        var fetchPolicy = opts.fetchPolicy;
+        if (ssr === false)
+            return false;
+        if (fetchPolicy === 'network-only' || fetchPolicy === 'cache-and-network') {
+            fetchPolicy = 'cache-first';
+        }
+        var observable = this.client.watchQuery(__assign({}, opts, { fetchPolicy: fetchPolicy }));
+        if (this.context && this.context.renderPromises) {
+            this.context.renderPromises.registerSSRObservable(this, observable);
+        }
+        var result = this.queryObservable.currentResult();
+        return result.loading ? observable.result() : false;
+    };
+    Query.prototype.componentDidMount = function () {
+        this.hasMounted = true;
+        if (this.props.skip)
+            return;
+        this.startQuerySubscription(true);
+        if (this.refetcherQueue) {
+            var _a = this.refetcherQueue, args = _a.args, resolve = _a.resolve, reject = _a.reject;
+            this.queryObservable.refetch(args)
+                .then(resolve)
+                .catch(reject);
+        }
+    };
+    Query.prototype.componentWillReceiveProps = function (nextProps, nextContext) {
+        if (nextProps.skip && !this.props.skip) {
             this.removeQuerySubscription();
-            var lastError = this.queryObservable.getLastError();
-            var lastResult = this.queryObservable.getLastResult();
-            this.queryObservable.resetLastResults();
-            this.startQuerySubscription();
-            Object.assign(this.queryObservable, { lastError: lastError, lastResult: lastResult });
-        };
-        Query.contextTypes = {
-            client: PropTypes.object,
-            operations: PropTypes.object,
-            renderPromises: PropTypes.object,
-        };
-        Query.propTypes = {
-            client: PropTypes.object,
-            children: PropTypes.func.isRequired,
-            fetchPolicy: PropTypes.string,
-            notifyOnNetworkStatusChange: PropTypes.bool,
-            onCompleted: PropTypes.func,
-            onError: PropTypes.func,
-            pollInterval: PropTypes.number,
-            query: PropTypes.object.isRequired,
-            variables: PropTypes.object,
-            ssr: PropTypes.bool,
-            partialRefetch: PropTypes.bool,
-        };
-        return Query;
-    }(React.Component));
-
-    var __extends$3 = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
-        };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-    })();
-    var __assign$2 = (undefined && undefined.__assign) || function () {
-        __assign$2 = Object.assign || function(t) {
-            for (var s, i = 1, n = arguments.length; i < n; i++) {
-                s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                    t[p] = s[p];
-            }
-            return t;
-        };
-        return __assign$2.apply(this, arguments);
-    };
-    var invariant$5 = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-    var shallowEqual$1 = __webpack_require__(/*! fbjs/lib/shallowEqual */ "./node_modules/fbjs/lib/shallowEqual.js");
-    var initialState = {
-        loading: false,
-        called: false,
-        error: undefined,
-        data: undefined,
-    };
-    var Mutation = (function (_super) {
-        __extends$3(Mutation, _super);
-        function Mutation(props, context) {
-            var _this = _super.call(this, props, context) || this;
-            _this.hasMounted = false;
-            _this.runMutation = function (options) {
-                if (options === void 0) { options = {}; }
-                _this.onMutationStart();
-                var mutationId = _this.generateNewMutationId();
-                return _this.mutate(options)
-                    .then(function (response) {
-                    _this.onMutationCompleted(response, mutationId);
-                    return response;
-                })
-                    .catch(function (e) {
-                    _this.onMutationError(e, mutationId);
-                    if (!_this.props.onError)
-                        throw e;
-                });
-            };
-            _this.mutate = function (options) {
-                var _a = _this.props, mutation = _a.mutation, variables = _a.variables, optimisticResponse = _a.optimisticResponse, update = _a.update, _b = _a.context, context = _b === void 0 ? {} : _b, _c = _a.awaitRefetchQueries, awaitRefetchQueries = _c === void 0 ? false : _c, fetchPolicy = _a.fetchPolicy;
-                var mutateOptions = __assign$2({}, options);
-                var refetchQueries = mutateOptions.refetchQueries || _this.props.refetchQueries;
-                if (refetchQueries && refetchQueries.length && Array.isArray(refetchQueries)) {
-                    refetchQueries = refetchQueries.map(function (x) {
-                        if (typeof x === 'string' && _this.context.operations)
-                            return _this.context.operations.get(x) || x;
-                        return x;
-                    });
-                    delete mutateOptions.refetchQueries;
-                }
-                var mutateVariables = Object.assign({}, variables, mutateOptions.variables);
-                delete mutateOptions.variables;
-                return _this.client.mutate(__assign$2({ mutation: mutation,
-                    optimisticResponse: optimisticResponse,
-                    refetchQueries: refetchQueries,
-                    awaitRefetchQueries: awaitRefetchQueries,
-                    update: update,
-                    context: context,
-                    fetchPolicy: fetchPolicy, variables: mutateVariables }, mutateOptions));
-            };
-            _this.onMutationStart = function () {
-                if (!_this.state.loading && !_this.props.ignoreResults) {
-                    _this.setState({
-                        loading: true,
-                        error: undefined,
-                        data: undefined,
-                        called: true,
-                    });
-                }
-            };
-            _this.onMutationCompleted = function (response, mutationId) {
-                var _a = _this.props, onCompleted = _a.onCompleted, ignoreResults = _a.ignoreResults;
-                var data = response.data, errors = response.errors;
-                var error = errors && errors.length > 0 ? new apolloClient.ApolloError({ graphQLErrors: errors }) : undefined;
-                var callOncomplete = function () { return (onCompleted ? onCompleted(data) : null); };
-                if (_this.hasMounted && _this.isMostRecentMutation(mutationId) && !ignoreResults) {
-                    _this.setState({ loading: false, data: data, error: error }, callOncomplete);
-                }
-                else {
-                    callOncomplete();
-                }
-            };
-            _this.onMutationError = function (error, mutationId) {
-                var onError = _this.props.onError;
-                var callOnError = function () { return (onError ? onError(error) : null); };
-                if (_this.hasMounted && _this.isMostRecentMutation(mutationId)) {
-                    _this.setState({ loading: false, error: error }, callOnError);
-                }
-                else {
-                    callOnError();
-                }
-            };
-            _this.generateNewMutationId = function () {
-                _this.mostRecentMutationId = _this.mostRecentMutationId + 1;
-                return _this.mostRecentMutationId;
-            };
-            _this.isMostRecentMutation = function (mutationId) {
-                return _this.mostRecentMutationId === mutationId;
-            };
-            _this.verifyDocumentIsMutation = function (mutation) {
-                var operation = parser(mutation);
-                invariant$5(operation.type === DocumentType.Mutation, "The <Mutation /> component requires a graphql mutation, but got a " + (operation.type === DocumentType.Query ? 'query' : 'subscription') + ".");
-            };
-            _this.client = getClient(props, context);
-            _this.verifyDocumentIsMutation(props.mutation);
-            _this.mostRecentMutationId = 0;
-            _this.state = initialState;
-            return _this;
+            return;
         }
-        Mutation.prototype.componentDidMount = function () {
-            this.hasMounted = true;
-        };
-        Mutation.prototype.componentWillUnmount = function () {
-            this.hasMounted = false;
-        };
-        Mutation.prototype.componentWillReceiveProps = function (nextProps, nextContext) {
-            var nextClient = getClient(nextProps, nextContext);
-            if (shallowEqual$1(this.props, nextProps) && this.client === nextClient) {
-                return;
+        var nextClient = getClient(nextProps, nextContext);
+        if (shallowEqual(this.props, nextProps) && this.client === nextClient) {
+            return;
+        }
+        if (this.client !== nextClient) {
+            this.client = nextClient;
+            this.removeQuerySubscription();
+            this.queryObservable = null;
+            this.previousData = {};
+            this.updateQuery(nextProps);
+        }
+        if (this.props.query !== nextProps.query) {
+            this.removeQuerySubscription();
+        }
+        this.updateQuery(nextProps);
+        if (nextProps.skip)
+            return;
+        this.startQuerySubscription();
+    };
+    Query.prototype.componentWillUnmount = function () {
+        this.removeQuerySubscription();
+        this.hasMounted = false;
+    };
+    Query.prototype.componentDidUpdate = function () {
+        var _a = this.props, onCompleted = _a.onCompleted, onError = _a.onError;
+        if (onCompleted || onError) {
+            var currentResult = this.queryObservable.currentResult();
+            var loading = currentResult.loading, error = currentResult.error, data = currentResult.data;
+            if (onCompleted && !loading && !error) {
+                onCompleted(data);
             }
-            if (this.props.mutation !== nextProps.mutation) {
-                this.verifyDocumentIsMutation(nextProps.mutation);
+            else if (onError && !loading && error) {
+                onError(error);
             }
-            if (this.client !== nextClient) {
-                this.client = nextClient;
-                this.setState(initialState);
-            }
-        };
-        Mutation.prototype.render = function () {
-            var children = this.props.children;
-            var _a = this.state, loading = _a.loading, data = _a.data, error = _a.error, called = _a.called;
-            var result = {
-                called: called,
-                loading: loading,
-                data: data,
-                error: error,
-                client: this.client,
-            };
-            return children(this.runMutation, result);
-        };
-        Mutation.contextTypes = {
-            client: PropTypes.object,
-            operations: PropTypes.object,
-        };
-        Mutation.propTypes = {
-            mutation: PropTypes.object.isRequired,
-            variables: PropTypes.object,
-            optimisticResponse: PropTypes.object,
-            refetchQueries: PropTypes.oneOfType([
-                PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])),
-                PropTypes.func,
-            ]),
-            awaitRefetchQueries: PropTypes.bool,
-            update: PropTypes.func,
-            children: PropTypes.func.isRequired,
-            onCompleted: PropTypes.func,
-            onError: PropTypes.func,
-            fetchPolicy: PropTypes.string,
-        };
-        return Mutation;
-    }(React.Component));
+        }
+    };
+    Query.prototype.render = function () {
+        var _this = this;
+        var context = this.context;
+        var finish = function () { return _this.props.children(_this.getQueryResult()); };
+        if (context && context.renderPromises) {
+            return context.renderPromises.addQueryPromise(this, finish);
+        }
+        return finish();
+    };
+    Query.prototype.extractOptsFromProps = function (props) {
+        var variables = props.variables, pollInterval = props.pollInterval, fetchPolicy = props.fetchPolicy, errorPolicy = props.errorPolicy, notifyOnNetworkStatusChange = props.notifyOnNetworkStatusChange, query = props.query, _a = props.displayName, displayName = _a === void 0 ? 'Query' : _a, _b = props.context, context = _b === void 0 ? {} : _b;
+        this.operation = parser(query);
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(this.operation.type === DocumentType.Query, "The <Query /> component requires a graphql query, but got a " + (this.operation.type === DocumentType.Mutation ? 'mutation' : 'subscription') + ".");
+        return compact({
+            variables: variables,
+            pollInterval: pollInterval,
+            query: query,
+            fetchPolicy: fetchPolicy,
+            errorPolicy: errorPolicy,
+            notifyOnNetworkStatusChange: notifyOnNetworkStatusChange,
+            metadata: { reactComponent: { displayName: displayName } },
+            context: context,
+        });
+    };
+    Query.prototype.initializeQueryObservable = function (props) {
+        var opts = this.extractOptsFromProps(props);
+        this.setOperations(opts);
+        if (this.context && this.context.renderPromises) {
+            this.queryObservable = this.context.renderPromises.getSSRObservable(this);
+        }
+        if (!this.queryObservable) {
+            this.queryObservable = this.client.watchQuery(opts);
+        }
+    };
+    Query.prototype.setOperations = function (props) {
+        if (this.context.operations) {
+            this.context.operations.set(this.operation.name, {
+                query: props.query,
+                variables: props.variables,
+            });
+        }
+    };
+    Query.prototype.updateQuery = function (props) {
+        if (!this.queryObservable) {
+            this.initializeQueryObservable(props);
+        }
+        else {
+            this.setOperations(props);
+        }
+        this.queryObservable.setOptions(this.extractOptsFromProps(props))
+            .catch(function () { return null; });
+    };
+    Query.prototype.resubscribeToQuery = function () {
+        this.removeQuerySubscription();
+        var lastError = this.queryObservable.getLastError();
+        var lastResult = this.lastResult;
+        this.queryObservable.resetLastResults();
+        this.startQuerySubscription();
+        Object.assign(this.queryObservable, { lastError: lastError, lastResult: lastResult });
+    };
+    Query.contextTypes = {
+        client: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+        operations: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+        renderPromises: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+    };
+    Query.propTypes = {
+        client: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+        children: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"].isRequired,
+        fetchPolicy: prop_types__WEBPACK_IMPORTED_MODULE_0__["string"],
+        notifyOnNetworkStatusChange: prop_types__WEBPACK_IMPORTED_MODULE_0__["bool"],
+        onCompleted: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"],
+        onError: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"],
+        pollInterval: prop_types__WEBPACK_IMPORTED_MODULE_0__["number"],
+        query: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"].isRequired,
+        variables: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+        ssr: prop_types__WEBPACK_IMPORTED_MODULE_0__["bool"],
+        partialRefetch: prop_types__WEBPACK_IMPORTED_MODULE_0__["bool"],
+    };
+    return Query;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]));
 
-    var __extends$4 = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
+var initialState = {
+    loading: false,
+    called: false,
+    error: undefined,
+    data: undefined,
+};
+var Mutation = (function (_super) {
+    __extends(Mutation, _super);
+    function Mutation(props, context) {
+        var _this = _super.call(this, props, context) || this;
+        _this.hasMounted = false;
+        _this.runMutation = function (options) {
+            if (options === void 0) { options = {}; }
+            _this.onMutationStart();
+            var mutationId = _this.generateNewMutationId();
+            return _this.mutate(options)
+                .then(function (response) {
+                _this.onMutationCompleted(response, mutationId);
+                return response;
+            })
+                .catch(function (e) {
+                _this.onMutationError(e, mutationId);
+                if (!_this.props.onError)
+                    throw e;
+            });
         };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+        _this.mutate = function (options) {
+            var _a = _this.props, mutation = _a.mutation, variables = _a.variables, optimisticResponse = _a.optimisticResponse, update = _a.update, _b = _a.context, context = _b === void 0 ? {} : _b, _c = _a.awaitRefetchQueries, awaitRefetchQueries = _c === void 0 ? false : _c, fetchPolicy = _a.fetchPolicy;
+            var mutateOptions = __assign({}, options);
+            var refetchQueries = mutateOptions.refetchQueries || _this.props.refetchQueries;
+            if (refetchQueries && refetchQueries.length && Array.isArray(refetchQueries)) {
+                refetchQueries = refetchQueries.map(function (x) {
+                    if (typeof x === 'string' && _this.context.operations)
+                        return _this.context.operations.get(x) || x;
+                    return x;
+                });
+                delete mutateOptions.refetchQueries;
+            }
+            var mutateVariables = Object.assign({}, variables, mutateOptions.variables);
+            delete mutateOptions.variables;
+            return _this.client.mutate(__assign({ mutation: mutation,
+                optimisticResponse: optimisticResponse,
+                refetchQueries: refetchQueries,
+                awaitRefetchQueries: awaitRefetchQueries,
+                update: update,
+                context: context,
+                fetchPolicy: fetchPolicy, variables: mutateVariables }, mutateOptions));
         };
-    })();
-    var shallowEqual$2 = __webpack_require__(/*! fbjs/lib/shallowEqual */ "./node_modules/fbjs/lib/shallowEqual.js");
-    var invariant$6 = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-    var Subscription = (function (_super) {
-        __extends$4(Subscription, _super);
-        function Subscription(props, context) {
-            var _this = _super.call(this, props, context) || this;
-            _this.initialize = function (props) {
-                if (_this.queryObservable)
-                    return;
-                _this.queryObservable = _this.client.subscribe({
-                    query: props.subscription,
-                    variables: props.variables,
-                    fetchPolicy: props.fetchPolicy,
-                });
-            };
-            _this.startSubscription = function () {
-                if (_this.querySubscription)
-                    return;
-                _this.querySubscription = _this.queryObservable.subscribe({
-                    next: _this.updateCurrentData,
-                    error: _this.updateError,
-                    complete: _this.completeSubscription
-                });
-            };
-            _this.getInitialState = function () { return ({
-                loading: true,
-                error: undefined,
-                data: undefined,
-            }); };
-            _this.updateCurrentData = function (result) {
-                var _a = _this, client = _a.client, onSubscriptionData = _a.props.onSubscriptionData;
-                if (onSubscriptionData)
-                    onSubscriptionData({ client: client, subscriptionData: result });
+        _this.onMutationStart = function () {
+            if (!_this.state.loading && !_this.props.ignoreResults) {
                 _this.setState({
-                    data: result.data,
-                    loading: false,
+                    loading: true,
                     error: undefined,
+                    data: undefined,
+                    called: true,
                 });
-            };
-            _this.updateError = function (error) {
-                _this.setState({
-                    error: error,
-                    loading: false,
-                });
-            };
-            _this.completeSubscription = function () {
-                var onSubscriptionComplete = _this.props.onSubscriptionComplete;
-                if (onSubscriptionComplete)
-                    onSubscriptionComplete();
-                _this.endSubscription();
-            };
-            _this.endSubscription = function () {
-                if (_this.querySubscription) {
-                    _this.querySubscription.unsubscribe();
-                    delete _this.querySubscription;
-                }
-            };
-            _this.client = getClient(props, context);
-            _this.initialize(props);
-            _this.state = _this.getInitialState();
-            return _this;
-        }
-        Subscription.prototype.componentDidMount = function () {
-            this.startSubscription();
+            }
         };
-        Subscription.prototype.componentWillReceiveProps = function (nextProps, nextContext) {
-            var nextClient = getClient(nextProps, nextContext);
-            if (shallowEqual$2(this.props.variables, nextProps.variables) &&
-                this.client === nextClient &&
-                this.props.subscription === nextProps.subscription) {
+        _this.onMutationCompleted = function (response, mutationId) {
+            var _a = _this.props, onCompleted = _a.onCompleted, ignoreResults = _a.ignoreResults;
+            var data = response.data, errors = response.errors;
+            var error = errors && errors.length > 0 ? new apollo_client__WEBPACK_IMPORTED_MODULE_3__["ApolloError"]({ graphQLErrors: errors }) : undefined;
+            var callOncomplete = function () { return (onCompleted ? onCompleted(data) : null); };
+            if (_this.hasMounted && _this.isMostRecentMutation(mutationId) && !ignoreResults) {
+                _this.setState({ loading: false, data: data, error: error }, callOncomplete);
+            }
+            else {
+                callOncomplete();
+            }
+        };
+        _this.onMutationError = function (error, mutationId) {
+            var onError = _this.props.onError;
+            var callOnError = function () { return (onError ? onError(error) : null); };
+            if (_this.hasMounted && _this.isMostRecentMutation(mutationId)) {
+                _this.setState({ loading: false, error: error }, callOnError);
+            }
+            else {
+                callOnError();
+            }
+        };
+        _this.generateNewMutationId = function () {
+            _this.mostRecentMutationId = _this.mostRecentMutationId + 1;
+            return _this.mostRecentMutationId;
+        };
+        _this.isMostRecentMutation = function (mutationId) {
+            return _this.mostRecentMutationId === mutationId;
+        };
+        _this.verifyDocumentIsMutation = function (mutation) {
+            var operation = parser(mutation);
+             false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(operation.type === DocumentType.Mutation, "The <Mutation /> component requires a graphql mutation, but got a " + (operation.type === DocumentType.Query ? 'query' : 'subscription') + ".");
+        };
+        _this.client = getClient(props, context);
+        _this.verifyDocumentIsMutation(props.mutation);
+        _this.mostRecentMutationId = 0;
+        _this.state = initialState;
+        return _this;
+    }
+    Mutation.prototype.componentDidMount = function () {
+        this.hasMounted = true;
+    };
+    Mutation.prototype.componentWillUnmount = function () {
+        this.hasMounted = false;
+    };
+    Mutation.prototype.componentWillReceiveProps = function (nextProps, nextContext) {
+        var nextClient = getClient(nextProps, nextContext);
+        if (shallowEqual(this.props, nextProps) && this.client === nextClient) {
+            return;
+        }
+        if (this.props.mutation !== nextProps.mutation) {
+            this.verifyDocumentIsMutation(nextProps.mutation);
+        }
+        if (this.client !== nextClient) {
+            this.client = nextClient;
+            this.setState(initialState);
+        }
+    };
+    Mutation.prototype.render = function () {
+        var children = this.props.children;
+        var _a = this.state, loading = _a.loading, data = _a.data, error = _a.error, called = _a.called;
+        var result = {
+            called: called,
+            loading: loading,
+            data: data,
+            error: error,
+            client: this.client,
+        };
+        return children(this.runMutation, result);
+    };
+    Mutation.contextTypes = {
+        client: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+        operations: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+    };
+    Mutation.propTypes = {
+        mutation: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"].isRequired,
+        variables: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+        optimisticResponse: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+        refetchQueries: Object(prop_types__WEBPACK_IMPORTED_MODULE_0__["oneOfType"])([
+            Object(prop_types__WEBPACK_IMPORTED_MODULE_0__["arrayOf"])(Object(prop_types__WEBPACK_IMPORTED_MODULE_0__["oneOfType"])([prop_types__WEBPACK_IMPORTED_MODULE_0__["string"], prop_types__WEBPACK_IMPORTED_MODULE_0__["object"]])),
+            prop_types__WEBPACK_IMPORTED_MODULE_0__["func"],
+        ]),
+        awaitRefetchQueries: prop_types__WEBPACK_IMPORTED_MODULE_0__["bool"],
+        update: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"],
+        children: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"].isRequired,
+        onCompleted: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"],
+        onError: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"],
+        fetchPolicy: prop_types__WEBPACK_IMPORTED_MODULE_0__["string"],
+    };
+    return Mutation;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+
+var Subscription = (function (_super) {
+    __extends(Subscription, _super);
+    function Subscription(props, context) {
+        var _this = _super.call(this, props, context) || this;
+        _this.initialize = function (props) {
+            if (_this.queryObservable)
                 return;
-            }
-            var shouldResubscribe = nextProps.shouldResubscribe;
-            if (typeof shouldResubscribe === 'function') {
-                shouldResubscribe = !!shouldResubscribe(this.props, nextProps);
-            }
-            var shouldNotResubscribe = shouldResubscribe === false;
-            if (this.client !== nextClient) {
-                this.client = nextClient;
-            }
-            if (!shouldNotResubscribe) {
-                this.endSubscription();
-                delete this.queryObservable;
-                this.initialize(nextProps);
-                this.startSubscription();
-                this.setState(this.getInitialState());
+            _this.queryObservable = _this.client.subscribe({
+                query: props.subscription,
+                variables: props.variables,
+                fetchPolicy: props.fetchPolicy,
+            });
+        };
+        _this.startSubscription = function () {
+            if (_this.querySubscription)
                 return;
+            _this.querySubscription = _this.queryObservable.subscribe({
+                next: _this.updateCurrentData,
+                error: _this.updateError,
+                complete: _this.completeSubscription
+            });
+        };
+        _this.getInitialState = function () { return ({
+            loading: true,
+            error: undefined,
+            data: undefined,
+        }); };
+        _this.updateCurrentData = function (result) {
+            var _a = _this, client = _a.client, onSubscriptionData = _a.props.onSubscriptionData;
+            if (onSubscriptionData)
+                onSubscriptionData({ client: client, subscriptionData: result });
+            _this.setState({
+                data: result.data,
+                loading: false,
+                error: undefined,
+            });
+        };
+        _this.updateError = function (error) {
+            _this.setState({
+                error: error,
+                loading: false,
+            });
+        };
+        _this.completeSubscription = function () {
+            var onSubscriptionComplete = _this.props.onSubscriptionComplete;
+            if (onSubscriptionComplete)
+                onSubscriptionComplete();
+            _this.endSubscription();
+        };
+        _this.endSubscription = function () {
+            if (_this.querySubscription) {
+                _this.querySubscription.unsubscribe();
+                delete _this.querySubscription;
             }
+        };
+        _this.client = getClient(props, context);
+        _this.initialize(props);
+        _this.state = _this.getInitialState();
+        return _this;
+    }
+    Subscription.prototype.componentDidMount = function () {
+        this.startSubscription();
+    };
+    Subscription.prototype.componentWillReceiveProps = function (nextProps, nextContext) {
+        var nextClient = getClient(nextProps, nextContext);
+        if (shallowEqual(this.props.variables, nextProps.variables) &&
+            this.client === nextClient &&
+            this.props.subscription === nextProps.subscription) {
+            return;
+        }
+        var shouldResubscribe = nextProps.shouldResubscribe;
+        if (typeof shouldResubscribe === 'function') {
+            shouldResubscribe = !!shouldResubscribe(this.props, nextProps);
+        }
+        var shouldNotResubscribe = shouldResubscribe === false;
+        if (this.client !== nextClient) {
+            this.client = nextClient;
+        }
+        if (!shouldNotResubscribe) {
+            this.endSubscription();
+            delete this.queryObservable;
             this.initialize(nextProps);
             this.startSubscription();
-        };
-        Subscription.prototype.componentWillUnmount = function () {
-            this.endSubscription();
-        };
-        Subscription.prototype.render = function () {
-            var renderFn = this.props.children;
-            if (!renderFn)
-                return null;
-            var result = Object.assign({}, this.state, {
-                variables: this.props.variables,
-            });
-            return renderFn(result);
-        };
-        Subscription.contextTypes = {
-            client: PropTypes.object,
-        };
-        Subscription.propTypes = {
-            subscription: PropTypes.object.isRequired,
-            variables: PropTypes.object,
-            children: PropTypes.func,
-            onSubscriptionData: PropTypes.func,
-            onSubscriptionComplete: PropTypes.func,
-            shouldResubscribe: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
-        };
-        return Subscription;
-    }(React.Component));
-
-    var __extends$5 = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
-        };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-    })();
-    var invariant$7 = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-    var defaultMapPropsToOptions = function () { return ({}); };
-    var defaultMapPropsToSkip = function () { return false; };
-    function getDisplayName(WrappedComponent) {
-        return WrappedComponent.displayName || WrappedComponent.name || 'Component';
-    }
-    function calculateVariablesFromProps(operation, props, graphQLDisplayName, wrapperName) {
-        var variables = {};
-        for (var _i = 0, _a = operation.variables; _i < _a.length; _i++) {
-            var _b = _a[_i], variable = _b.variable, type = _b.type;
-            if (!variable.name || !variable.name.value)
-                continue;
-            var variableName = variable.name.value;
-            var variableProp = props[variableName];
-            if (typeof variableProp !== 'undefined') {
-                variables[variableName] = variableProp;
-                continue;
-            }
-            if (type.kind !== 'NonNullType') {
-                variables[variableName] = null;
-                continue;
-            }
-            if (operation.type === DocumentType.Mutation)
-                return;
-            invariant$7(typeof variableProp !== 'undefined', "The operation '" + operation.name + "' wrapping '" + wrapperName + "' " +
-                ("is expecting a variable: '" + variable.name.value + "' but it was not found in the props ") +
-                ("passed to '" + graphQLDisplayName + "'"));
+            this.setState(this.getInitialState());
+            return;
         }
-        return variables;
+        this.initialize(nextProps);
+        this.startSubscription();
+    };
+    Subscription.prototype.componentWillUnmount = function () {
+        this.endSubscription();
+    };
+    Subscription.prototype.render = function () {
+        var renderFn = this.props.children;
+        if (!renderFn)
+            return null;
+        var result = Object.assign({}, this.state, {
+            variables: this.props.variables,
+        });
+        return renderFn(result);
+    };
+    Subscription.contextTypes = {
+        client: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+    };
+    Subscription.propTypes = {
+        subscription: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"].isRequired,
+        variables: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+        children: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"],
+        onSubscriptionData: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"],
+        onSubscriptionComplete: prop_types__WEBPACK_IMPORTED_MODULE_0__["func"],
+        shouldResubscribe: Object(prop_types__WEBPACK_IMPORTED_MODULE_0__["oneOfType"])([prop_types__WEBPACK_IMPORTED_MODULE_0__["func"], prop_types__WEBPACK_IMPORTED_MODULE_0__["bool"]]),
+    };
+    return Subscription;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+
+var defaultMapPropsToOptions = function () { return ({}); };
+var defaultMapPropsToSkip = function () { return false; };
+function getDisplayName(WrappedComponent) {
+    return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+}
+function calculateVariablesFromProps(operation, props) {
+    var variables = {};
+    for (var _i = 0, _a = operation.variables; _i < _a.length; _i++) {
+        var _b = _a[_i], variable = _b.variable, type = _b.type;
+        if (!variable.name || !variable.name.value)
+            continue;
+        var variableName = variable.name.value;
+        var variableProp = props[variableName];
+        if (typeof variableProp !== 'undefined') {
+            variables[variableName] = variableProp;
+            continue;
+        }
+        if (type.kind !== 'NonNullType') {
+            variables[variableName] = null;
+        }
     }
-    var GraphQLBase = (function (_super) {
-        __extends$5(GraphQLBase, _super);
-        function GraphQLBase(props) {
+    return variables;
+}
+var GraphQLBase = (function (_super) {
+    __extends(GraphQLBase, _super);
+    function GraphQLBase(props) {
+        var _this = _super.call(this, props) || this;
+        _this.withRef = false;
+        _this.setWrappedInstance = _this.setWrappedInstance.bind(_this);
+        return _this;
+    }
+    GraphQLBase.prototype.getWrappedInstance = function () {
+         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(this.withRef, "To access the wrapped instance, you need to specify " + "{ withRef: true } in the options");
+        return this.wrappedInstance;
+    };
+    GraphQLBase.prototype.setWrappedInstance = function (ref) {
+        this.wrappedInstance = ref;
+    };
+    return GraphQLBase;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+
+function withQuery(document, operationOptions) {
+    if (operationOptions === void 0) { operationOptions = {}; }
+    var operation = parser(document);
+    var _a = operationOptions.options, options = _a === void 0 ? defaultMapPropsToOptions : _a, _b = operationOptions.skip, skip = _b === void 0 ? defaultMapPropsToSkip : _b, _c = operationOptions.alias, alias = _c === void 0 ? 'Apollo' : _c;
+    var mapPropsToOptions = options;
+    if (typeof mapPropsToOptions !== 'function') {
+        mapPropsToOptions = function () { return options; };
+    }
+    var mapPropsToSkip = skip;
+    if (typeof mapPropsToSkip !== 'function') {
+        mapPropsToSkip = function () { return skip; };
+    }
+    var lastResultProps;
+    return function (WrappedComponent) {
+        var graphQLDisplayName = alias + "(" + getDisplayName(WrappedComponent) + ")";
+        var GraphQL = (function (_super) {
+            __extends(GraphQL, _super);
+            function GraphQL() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            GraphQL.prototype.render = function () {
+                var _this = this;
+                var props = this.props;
+                var shouldSkip = mapPropsToSkip(props);
+                var opts = shouldSkip ? Object.create(null) : __assign({}, mapPropsToOptions(props));
+                if (!shouldSkip && !opts.variables && operation.variables.length > 0) {
+                    opts.variables = calculateVariablesFromProps(operation, props);
+                }
+                return (Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(Query, __assign({}, opts, { displayName: graphQLDisplayName, skip: shouldSkip, query: document, warnUnhandledError: true }), function (_a) {
+                    var _ = _a.client, data = _a.data, r = __rest(_a, ["client", "data"]);
+                    var _b, _c;
+                    if (operationOptions.withRef) {
+                        _this.withRef = true;
+                        props = Object.assign({}, props, {
+                            ref: _this.setWrappedInstance,
+                        });
+                    }
+                    if (shouldSkip)
+                        return Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(WrappedComponent, __assign({}, props));
+                    var result = Object.assign(r, data || {});
+                    var name = operationOptions.name || 'data';
+                    var childProps = (_b = {}, _b[name] = result, _b);
+                    if (operationOptions.props) {
+                        var newResult = (_c = {},
+                            _c[name] = result,
+                            _c.ownProps = props,
+                            _c);
+                        lastResultProps = operationOptions.props(newResult, lastResultProps);
+                        childProps = lastResultProps;
+                    }
+                    return Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(WrappedComponent, __assign({}, props, childProps));
+                }));
+            };
+            GraphQL.displayName = graphQLDisplayName;
+            GraphQL.WrappedComponent = WrappedComponent;
+            return GraphQL;
+        }(GraphQLBase));
+        return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_4___default()(GraphQL, WrappedComponent, {});
+    };
+}
+
+function withMutation(document, operationOptions) {
+    if (operationOptions === void 0) { operationOptions = {}; }
+    var operation = parser(document);
+    var _a = operationOptions.options, options = _a === void 0 ? defaultMapPropsToOptions : _a, _b = operationOptions.alias, alias = _b === void 0 ? 'Apollo' : _b;
+    var mapPropsToOptions = options;
+    if (typeof mapPropsToOptions !== 'function')
+        mapPropsToOptions = function () { return options; };
+    return function (WrappedComponent) {
+        var graphQLDisplayName = alias + "(" + getDisplayName(WrappedComponent) + ")";
+        var GraphQL = (function (_super) {
+            __extends(GraphQL, _super);
+            function GraphQL() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            GraphQL.prototype.render = function () {
+                var props = this.props;
+                var opts = mapPropsToOptions(props);
+                if (operationOptions.withRef) {
+                    this.withRef = true;
+                    props = Object.assign({}, props, {
+                        ref: this.setWrappedInstance,
+                    });
+                }
+                if (!opts.variables && operation.variables.length > 0) {
+                    opts.variables = calculateVariablesFromProps(operation, props);
+                }
+                return (Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(Mutation, __assign({}, opts, { mutation: document, ignoreResults: true }), function (mutate, _result) {
+                    var _a, _b;
+                    var name = operationOptions.name || 'mutate';
+                    var childProps = (_a = {}, _a[name] = mutate, _a);
+                    if (operationOptions.props) {
+                        var newResult = (_b = {},
+                            _b[name] = mutate,
+                            _b.ownProps = props,
+                            _b);
+                        childProps = operationOptions.props(newResult);
+                    }
+                    return Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(WrappedComponent, __assign({}, props, childProps));
+                }));
+            };
+            GraphQL.displayName = graphQLDisplayName;
+            GraphQL.WrappedComponent = WrappedComponent;
+            return GraphQL;
+        }(GraphQLBase));
+        return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_4___default()(GraphQL, WrappedComponent, {});
+    };
+}
+
+function withSubscription(document, operationOptions) {
+    if (operationOptions === void 0) { operationOptions = {}; }
+    var operation = parser(document);
+    var _a = operationOptions.options, options = _a === void 0 ? defaultMapPropsToOptions : _a, _b = operationOptions.skip, skip = _b === void 0 ? defaultMapPropsToSkip : _b, _c = operationOptions.alias, alias = _c === void 0 ? 'Apollo' : _c, shouldResubscribe = operationOptions.shouldResubscribe;
+    var mapPropsToOptions = options;
+    if (typeof mapPropsToOptions !== 'function')
+        mapPropsToOptions = function () { return options; };
+    var mapPropsToSkip = skip;
+    if (typeof mapPropsToSkip !== 'function')
+        mapPropsToSkip = function () { return skip; };
+    var lastResultProps;
+    return function (WrappedComponent) {
+        var graphQLDisplayName = alias + "(" + getDisplayName(WrappedComponent) + ")";
+        var GraphQL = (function (_super) {
+            __extends(GraphQL, _super);
+            function GraphQL(props) {
+                var _this = _super.call(this, props) || this;
+                _this.state = { resubscribe: false };
+                return _this;
+            }
+            GraphQL.prototype.componentWillReceiveProps = function (nextProps) {
+                if (!shouldResubscribe)
+                    return;
+                this.setState({
+                    resubscribe: shouldResubscribe(this.props, nextProps),
+                });
+            };
+            GraphQL.prototype.render = function () {
+                var _this = this;
+                var props = this.props;
+                var shouldSkip = mapPropsToSkip(props);
+                var opts = shouldSkip ? Object.create(null) : mapPropsToOptions(props);
+                if (!shouldSkip && !opts.variables && operation.variables.length > 0) {
+                    opts.variables = calculateVariablesFromProps(operation, props);
+                }
+                return (Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(Subscription, __assign({}, opts, { displayName: graphQLDisplayName, skip: shouldSkip, subscription: document, shouldResubscribe: this.state.resubscribe }), function (_a) {
+                    var data = _a.data, r = __rest(_a, ["data"]);
+                    var _b, _c;
+                    if (operationOptions.withRef) {
+                        _this.withRef = true;
+                        props = Object.assign({}, props, {
+                            ref: _this.setWrappedInstance,
+                        });
+                    }
+                    if (shouldSkip)
+                        return Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(WrappedComponent, __assign({}, props));
+                    var result = Object.assign(r, data || {});
+                    var name = operationOptions.name || 'data';
+                    var childProps = (_b = {}, _b[name] = result, _b);
+                    if (operationOptions.props) {
+                        var newResult = (_c = {},
+                            _c[name] = result,
+                            _c.ownProps = props,
+                            _c);
+                        lastResultProps = operationOptions.props(newResult, lastResultProps);
+                        childProps = lastResultProps;
+                    }
+                    return Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(WrappedComponent, __assign({}, props, childProps));
+                }));
+            };
+            GraphQL.displayName = graphQLDisplayName;
+            GraphQL.WrappedComponent = WrappedComponent;
+            return GraphQL;
+        }(GraphQLBase));
+        return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_4___default()(GraphQL, WrappedComponent, {});
+    };
+}
+
+function graphql(document, operationOptions) {
+    if (operationOptions === void 0) { operationOptions = {}; }
+    switch (parser(document).type) {
+        case DocumentType.Mutation:
+            return withMutation(document, operationOptions);
+        case DocumentType.Subscription:
+            return withSubscription(document, operationOptions);
+        case DocumentType.Query:
+        default:
+            return withQuery(document, operationOptions);
+    }
+}
+
+function getDisplayName$1(WrappedComponent) {
+    return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+}
+function withApollo(WrappedComponent, operationOptions) {
+    if (operationOptions === void 0) { operationOptions = {}; }
+    var withDisplayName = "withApollo(" + getDisplayName$1(WrappedComponent) + ")";
+    var WithApollo = (function (_super) {
+        __extends(WithApollo, _super);
+        function WithApollo(props) {
             var _this = _super.call(this, props) || this;
-            _this.withRef = false;
             _this.setWrappedInstance = _this.setWrappedInstance.bind(_this);
             return _this;
         }
-        GraphQLBase.prototype.getWrappedInstance = function () {
-            invariant$7(this.withRef, "To access the wrapped instance, you need to specify " + "{ withRef: true } in the options");
+        WithApollo.prototype.getWrappedInstance = function () {
+             false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(operationOptions.withRef, "To access the wrapped instance, you need to specify " + "{ withRef: true } in the options");
             return this.wrappedInstance;
         };
-        GraphQLBase.prototype.setWrappedInstance = function (ref) {
+        WithApollo.prototype.setWrappedInstance = function (ref) {
             this.wrappedInstance = ref;
         };
-        return GraphQLBase;
-    }(React.Component));
+        WithApollo.prototype.render = function () {
+            var _this = this;
+            return (Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ApolloConsumer, null, function (client) {
+                var props = Object.assign({}, _this.props, {
+                    client: client,
+                    ref: operationOptions.withRef ? _this.setWrappedInstance : undefined,
+                });
+                return Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(WrappedComponent, __assign({}, props));
+            }));
+        };
+        WithApollo.displayName = withDisplayName;
+        WithApollo.WrappedComponent = WrappedComponent;
+        return WithApollo;
+    }(react__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+    return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_4___default()(WithApollo, WrappedComponent, {});
+}
 
-    var __extends$6 = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
-        };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-    })();
-    var __assign$3 = (undefined && undefined.__assign) || function () {
-        __assign$3 = Object.assign || function(t) {
-            for (var s, i = 1, n = arguments.length; i < n; i++) {
-                s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                    t[p] = s[p];
-            }
-            return t;
-        };
-        return __assign$3.apply(this, arguments);
+function makeDefaultQueryInfo() {
+    return {
+        seen: false,
+        observable: null,
     };
-    var __rest$1 = (undefined && undefined.__rest) || function (s, e) {
-        var t = {};
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-            t[p] = s[p];
-        if (s != null && typeof Object.getOwnPropertySymbols === "function")
-            for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
-                t[p[i]] = s[p[i]];
-        return t;
+}
+var RenderPromises = (function () {
+    function RenderPromises() {
+        this.queryPromises = new Map();
+        this.queryInfoTrie = new Map();
+    }
+    RenderPromises.prototype.registerSSRObservable = function (queryInstance, observable) {
+        this.lookupQueryInfo(queryInstance).observable = observable;
     };
-    function withQuery(document, operationOptions) {
-        if (operationOptions === void 0) { operationOptions = {}; }
-        var operation = parser(document);
-        var _a = operationOptions.options, options = _a === void 0 ? defaultMapPropsToOptions : _a, _b = operationOptions.skip, skip = _b === void 0 ? defaultMapPropsToSkip : _b, _c = operationOptions.alias, alias = _c === void 0 ? 'Apollo' : _c;
-        var mapPropsToOptions = options;
-        if (typeof mapPropsToOptions !== 'function') {
-            mapPropsToOptions = function () { return options; };
-        }
-        var mapPropsToSkip = skip;
-        if (typeof mapPropsToSkip !== 'function') {
-            mapPropsToSkip = function () { return skip; };
-        }
-        var lastResultProps;
-        return function (WrappedComponent) {
-            var graphQLDisplayName = alias + "(" + getDisplayName(WrappedComponent) + ")";
-            var GraphQL = (function (_super) {
-                __extends$6(GraphQL, _super);
-                function GraphQL() {
-                    return _super !== null && _super.apply(this, arguments) || this;
-                }
-                GraphQL.prototype.render = function () {
-                    var _this = this;
-                    var props = this.props;
-                    var shouldSkip = mapPropsToSkip(props);
-                    var opts = shouldSkip ? Object.create(null) : __assign$3({}, mapPropsToOptions(props));
-                    if (!shouldSkip && !opts.variables && operation.variables.length > 0) {
-                        opts.variables = calculateVariablesFromProps(operation, props, graphQLDisplayName, getDisplayName(WrappedComponent));
-                    }
-                    return (React.createElement(Query, __assign$3({}, opts, { displayName: graphQLDisplayName, skip: shouldSkip, query: document, warnUnhandledError: true }), function (_a) {
-                        var _ = _a.client, data = _a.data, r = __rest$1(_a, ["client", "data"]);
-                        var _b, _c;
-                        if (operationOptions.withRef) {
-                            _this.withRef = true;
-                            props = Object.assign({}, props, {
-                                ref: _this.setWrappedInstance,
-                            });
-                        }
-                        if (shouldSkip)
-                            return React.createElement(WrappedComponent, __assign$3({}, props));
-                        var result = Object.assign(r, data || {});
-                        var name = operationOptions.name || 'data';
-                        var childProps = (_b = {}, _b[name] = result, _b);
-                        if (operationOptions.props) {
-                            var newResult = (_c = {},
-                                _c[name] = result,
-                                _c.ownProps = props,
-                                _c);
-                            lastResultProps = operationOptions.props(newResult, lastResultProps);
-                            childProps = lastResultProps;
-                        }
-                        return React.createElement(WrappedComponent, __assign$3({}, props, childProps));
-                    }));
-                };
-                GraphQL.displayName = graphQLDisplayName;
-                GraphQL.WrappedComponent = WrappedComponent;
-                return GraphQL;
-            }(GraphQLBase));
-            return hoistNonReactStatics(GraphQL, WrappedComponent, {});
-        };
-    }
-
-    var __extends$7 = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
-        };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-    })();
-    var __assign$4 = (undefined && undefined.__assign) || function () {
-        __assign$4 = Object.assign || function(t) {
-            for (var s, i = 1, n = arguments.length; i < n; i++) {
-                s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                    t[p] = s[p];
-            }
-            return t;
-        };
-        return __assign$4.apply(this, arguments);
+    RenderPromises.prototype.getSSRObservable = function (queryInstance) {
+        return this.lookupQueryInfo(queryInstance).observable;
     };
-    function withMutation(document, operationOptions) {
-        if (operationOptions === void 0) { operationOptions = {}; }
-        var operation = parser(document);
-        var _a = operationOptions.options, options = _a === void 0 ? defaultMapPropsToOptions : _a, _b = operationOptions.alias, alias = _b === void 0 ? 'Apollo' : _b;
-        var mapPropsToOptions = options;
-        if (typeof mapPropsToOptions !== 'function')
-            mapPropsToOptions = function () { return options; };
-        return function (WrappedComponent) {
-            var graphQLDisplayName = alias + "(" + getDisplayName(WrappedComponent) + ")";
-            var GraphQL = (function (_super) {
-                __extends$7(GraphQL, _super);
-                function GraphQL() {
-                    return _super !== null && _super.apply(this, arguments) || this;
-                }
-                GraphQL.prototype.render = function () {
-                    var props = this.props;
-                    var opts = mapPropsToOptions(props);
-                    if (operationOptions.withRef) {
-                        this.withRef = true;
-                        props = Object.assign({}, props, {
-                            ref: this.setWrappedInstance,
-                        });
-                    }
-                    if (!opts.variables && operation.variables.length > 0) {
-                        opts.variables = calculateVariablesFromProps(operation, props, graphQLDisplayName, getDisplayName(WrappedComponent));
-                    }
-                    return (React.createElement(Mutation, __assign$4({}, opts, { mutation: document, ignoreResults: true }), function (mutate, _result) {
-                        var _a, _b;
-                        var name = operationOptions.name || 'mutate';
-                        var childProps = (_a = {}, _a[name] = mutate, _a);
-                        if (operationOptions.props) {
-                            var newResult = (_b = {},
-                                _b[name] = mutate,
-                                _b.ownProps = props,
-                                _b);
-                            childProps = operationOptions.props(newResult);
-                        }
-                        return React.createElement(WrappedComponent, __assign$4({}, props, childProps));
-                    }));
-                };
-                GraphQL.displayName = graphQLDisplayName;
-                GraphQL.WrappedComponent = WrappedComponent;
-                return GraphQL;
-            }(GraphQLBase));
-            return hoistNonReactStatics(GraphQL, WrappedComponent, {});
-        };
-    }
-
-    var __extends$8 = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
-        };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-    })();
-    var __assign$5 = (undefined && undefined.__assign) || function () {
-        __assign$5 = Object.assign || function(t) {
-            for (var s, i = 1, n = arguments.length; i < n; i++) {
-                s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                    t[p] = s[p];
-            }
-            return t;
-        };
-        return __assign$5.apply(this, arguments);
+    RenderPromises.prototype.addQueryPromise = function (queryInstance, finish) {
+        var info = this.lookupQueryInfo(queryInstance);
+        if (!info.seen) {
+            this.queryPromises.set(queryInstance, new Promise(function (resolve) {
+                resolve(queryInstance.fetchData());
+            }));
+            return null;
+        }
+        return finish();
     };
-    var __rest$2 = (undefined && undefined.__rest) || function (s, e) {
-        var t = {};
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-            t[p] = s[p];
-        if (s != null && typeof Object.getOwnPropertySymbols === "function")
-            for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
-                t[p[i]] = s[p[i]];
-        return t;
+    RenderPromises.prototype.hasPromises = function () {
+        return this.queryPromises.size > 0;
     };
-    function withSubscription(document, operationOptions) {
-        if (operationOptions === void 0) { operationOptions = {}; }
-        var operation = parser(document);
-        var _a = operationOptions.options, options = _a === void 0 ? defaultMapPropsToOptions : _a, _b = operationOptions.skip, skip = _b === void 0 ? defaultMapPropsToSkip : _b, _c = operationOptions.alias, alias = _c === void 0 ? 'Apollo' : _c, shouldResubscribe = operationOptions.shouldResubscribe;
-        var mapPropsToOptions = options;
-        if (typeof mapPropsToOptions !== 'function')
-            mapPropsToOptions = function () { return options; };
-        var mapPropsToSkip = skip;
-        if (typeof mapPropsToSkip !== 'function')
-            mapPropsToSkip = function () { return skip; };
-        var lastResultProps;
-        return function (WrappedComponent) {
-            var graphQLDisplayName = alias + "(" + getDisplayName(WrappedComponent) + ")";
-            var GraphQL = (function (_super) {
-                __extends$8(GraphQL, _super);
-                function GraphQL(props) {
-                    var _this = _super.call(this, props) || this;
-                    _this.state = { resubscribe: false };
-                    return _this;
-                }
-                GraphQL.prototype.componentWillReceiveProps = function (nextProps) {
-                    if (!shouldResubscribe)
-                        return;
-                    this.setState({
-                        resubscribe: shouldResubscribe(this.props, nextProps),
-                    });
-                };
-                GraphQL.prototype.render = function () {
-                    var _this = this;
-                    var props = this.props;
-                    var shouldSkip = mapPropsToSkip(props);
-                    var opts = shouldSkip ? Object.create(null) : mapPropsToOptions(props);
-                    if (!shouldSkip && !opts.variables && operation.variables.length > 0) {
-                        opts.variables = calculateVariablesFromProps(operation, props, graphQLDisplayName, getDisplayName(WrappedComponent));
-                    }
-                    return (React.createElement(Subscription, __assign$5({}, opts, { displayName: graphQLDisplayName, skip: shouldSkip, subscription: document, shouldResubscribe: this.state.resubscribe }), function (_a) {
-                        var data = _a.data, r = __rest$2(_a, ["data"]);
-                        var _b, _c;
-                        if (operationOptions.withRef) {
-                            _this.withRef = true;
-                            props = Object.assign({}, props, {
-                                ref: _this.setWrappedInstance,
-                            });
-                        }
-                        if (shouldSkip)
-                            return React.createElement(WrappedComponent, __assign$5({}, props));
-                        var result = Object.assign(r, data || {});
-                        var name = operationOptions.name || 'data';
-                        var childProps = (_b = {}, _b[name] = result, _b);
-                        if (operationOptions.props) {
-                            var newResult = (_c = {},
-                                _c[name] = result,
-                                _c.ownProps = props,
-                                _c);
-                            lastResultProps = operationOptions.props(newResult, lastResultProps);
-                            childProps = lastResultProps;
-                        }
-                        return React.createElement(WrappedComponent, __assign$5({}, props, childProps));
-                    }));
-                };
-                GraphQL.displayName = graphQLDisplayName;
-                GraphQL.WrappedComponent = WrappedComponent;
-                return GraphQL;
-            }(GraphQLBase));
-            return hoistNonReactStatics(GraphQL, WrappedComponent, {});
-        };
-    }
-
-    function graphql(document, operationOptions) {
-        if (operationOptions === void 0) { operationOptions = {}; }
-        switch (parser(document).type) {
-            case DocumentType.Mutation:
-                return withMutation(document, operationOptions);
-            case DocumentType.Subscription:
-                return withSubscription(document, operationOptions);
-            case DocumentType.Query:
-            default:
-                return withQuery(document, operationOptions);
-        }
-    }
-
-    var __extends$9 = (undefined && undefined.__extends) || (function () {
-        var extendStatics = function (d, b) {
-            extendStatics = Object.setPrototypeOf ||
-                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-            return extendStatics(d, b);
-        };
-        return function (d, b) {
-            extendStatics(d, b);
-            function __() { this.constructor = d; }
-            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-    })();
-    var __assign$6 = (undefined && undefined.__assign) || function () {
-        __assign$6 = Object.assign || function(t) {
-            for (var s, i = 1, n = arguments.length; i < n; i++) {
-                s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                    t[p] = s[p];
-            }
-            return t;
-        };
-        return __assign$6.apply(this, arguments);
+    RenderPromises.prototype.consumeAndAwaitPromises = function () {
+        var _this = this;
+        var promises = [];
+        this.queryPromises.forEach(function (promise, queryInstance) {
+            _this.lookupQueryInfo(queryInstance).seen = true;
+            promises.push(promise);
+        });
+        this.queryPromises.clear();
+        return Promise.all(promises);
     };
-    var invariant$8 = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-    function getDisplayName$1(WrappedComponent) {
-        return WrappedComponent.displayName || WrappedComponent.name || 'Component';
-    }
-    function withApollo(WrappedComponent, operationOptions) {
-        if (operationOptions === void 0) { operationOptions = {}; }
-        var withDisplayName = "withApollo(" + getDisplayName$1(WrappedComponent) + ")";
-        var WithApollo = (function (_super) {
-            __extends$9(WithApollo, _super);
-            function WithApollo(props) {
-                var _this = _super.call(this, props) || this;
-                _this.setWrappedInstance = _this.setWrappedInstance.bind(_this);
-                return _this;
-            }
-            WithApollo.prototype.getWrappedInstance = function () {
-                invariant$8(operationOptions.withRef, "To access the wrapped instance, you need to specify " + "{ withRef: true } in the options");
-                return this.wrappedInstance;
-            };
-            WithApollo.prototype.setWrappedInstance = function (ref) {
-                this.wrappedInstance = ref;
-            };
-            WithApollo.prototype.render = function () {
-                var _this = this;
-                return (React.createElement(ApolloConsumer, null, function (client) {
-                    var props = Object.assign({}, _this.props, {
-                        client: client,
-                        ref: operationOptions.withRef ? _this.setWrappedInstance : undefined,
-                    });
-                    return React.createElement(WrappedComponent, __assign$6({}, props));
-                }));
-            };
-            WithApollo.displayName = withDisplayName;
-            WithApollo.WrappedComponent = WrappedComponent;
-            return WithApollo;
-        }(React.Component));
-        return hoistNonReactStatics(WithApollo, WrappedComponent, {});
-    }
-
-    function getProps(element) {
-        return element.props || element.attributes;
-    }
-    function isReactElement(element) {
-        return !!element.type;
-    }
-    function isComponentClass(Comp) {
-        return Comp.prototype && (Comp.prototype.render || Comp.prototype.isReactComponent);
-    }
-    function providesChildContext(instance) {
-        return !!instance.getChildContext;
-    }
-    function walkTree(element, context, visitor, newContext) {
-        if (newContext === void 0) { newContext = new Map(); }
-        if (!element) {
-            return;
+    RenderPromises.prototype.lookupQueryInfo = function (queryInstance) {
+        var queryInfoTrie = this.queryInfoTrie;
+        var _a = queryInstance.props, query = _a.query, variables = _a.variables;
+        var varMap = queryInfoTrie.get(query) || new Map();
+        if (!queryInfoTrie.has(query))
+            queryInfoTrie.set(query, varMap);
+        var variablesString = JSON.stringify(variables);
+        var info = varMap.get(variablesString) || makeDefaultQueryInfo();
+        if (!varMap.has(variablesString))
+            varMap.set(variablesString, info);
+        return info;
+    };
+    return RenderPromises;
+}());
+function getDataFromTree(tree, context) {
+    if (context === void 0) { context = {}; }
+    return getMarkupFromTree({
+        tree: tree,
+        context: context,
+        renderFunction: __webpack_require__(/*! react-dom/server */ "./node_modules/react-dom/server.browser.js").renderToStaticMarkup,
+    });
+}
+function getMarkupFromTree(_a) {
+    var tree = _a.tree, _b = _a.context, context = _b === void 0 ? {} : _b, _c = _a.renderFunction, renderFunction = _c === void 0 ? __webpack_require__(/*! react-dom/server */ "./node_modules/react-dom/server.browser.js").renderToStaticMarkup : _c;
+    var renderPromises = new RenderPromises();
+    var RenderPromisesProvider = (function (_super) {
+        __extends(RenderPromisesProvider, _super);
+        function RenderPromisesProvider() {
+            return _super !== null && _super.apply(this, arguments) || this;
         }
-        if (Array.isArray(element)) {
-            element.forEach(function (item) { return walkTree(item, context, visitor, newContext); });
-            return;
-        }
-        if (isReactElement(element)) {
-            if (typeof element.type === 'function') {
-                var Comp = element.type;
-                var props = Object.assign({}, Comp.defaultProps, getProps(element));
-                var childContext_1 = context;
-                var child = void 0;
-                if (isComponentClass(Comp)) {
-                    var instance_1 = new Comp(props, context);
-                    Object.defineProperty(instance_1, 'props', {
-                        value: instance_1.props || props,
-                    });
-                    instance_1.context = instance_1.context || context;
-                    instance_1.state = instance_1.state || null;
-                    instance_1.setState = function (newState) {
-                        if (typeof newState === 'function') {
-                            newState = newState(instance_1.state, instance_1.props, instance_1.context);
-                        }
-                        instance_1.state = Object.assign({}, instance_1.state, newState);
-                    };
-                    if (Comp.getDerivedStateFromProps) {
-                        var result = Comp.getDerivedStateFromProps(instance_1.props, instance_1.state);
-                        if (result !== null) {
-                            instance_1.state = Object.assign({}, instance_1.state, result);
-                        }
-                    }
-                    else if (instance_1.UNSAFE_componentWillMount) {
-                        instance_1.UNSAFE_componentWillMount();
-                    }
-                    else if (instance_1.componentWillMount) {
-                        instance_1.componentWillMount();
-                    }
-                    if (providesChildContext(instance_1)) {
-                        childContext_1 = Object.assign({}, context, instance_1.getChildContext());
-                    }
-                    if (visitor(element, instance_1, newContext, context, childContext_1) === false) {
-                        return;
-                    }
-                    child = instance_1.render();
-                }
-                else {
-                    if (visitor(element, null, newContext, context) === false) {
-                        return;
-                    }
-                    child = Comp(props, context);
-                }
-                if (child) {
-                    if (Array.isArray(child)) {
-                        child.forEach(function (item) { return walkTree(item, childContext_1, visitor, newContext); });
-                    }
-                    else {
-                        walkTree(child, childContext_1, visitor, newContext);
-                    }
-                }
-            }
-            else if (element.type._context || element.type.Consumer) {
-                if (visitor(element, null, newContext, context) === false) {
-                    return;
-                }
-                var child = void 0;
-                if (!!element.type._context) {
-                    newContext = new Map(newContext);
-                    newContext.set(element.type, element.props.value);
-                    child = element.props.children;
-                }
-                else {
-                    var value = element.type._currentValue;
-                    if (newContext.has(element.type.Provider)) {
-                        value = newContext.get(element.type.Provider);
-                    }
-                    child = element.props.children(value);
-                }
-                if (child) {
-                    if (Array.isArray(child)) {
-                        child.forEach(function (item) { return walkTree(item, context, visitor, newContext); });
-                    }
-                    else {
-                        walkTree(child, context, visitor, newContext);
-                    }
-                }
-            }
-            else {
-                if (visitor(element, null, newContext, context) === false) {
-                    return;
-                }
-                if (element.props && element.props.children) {
-                    React.Children.forEach(element.props.children, function (child) {
-                        if (child) {
-                            walkTree(child, context, visitor, newContext);
-                        }
-                    });
-                }
-            }
-        }
-        else if (typeof element === 'string' || typeof element === 'number') {
-            visitor(element, null, newContext, context);
-        }
+        RenderPromisesProvider.prototype.getChildContext = function () {
+            return __assign({}, context, { renderPromises: renderPromises });
+        };
+        RenderPromisesProvider.prototype.render = function () {
+            return tree;
+        };
+        RenderPromisesProvider.childContextTypes = {
+            renderPromises: prop_types__WEBPACK_IMPORTED_MODULE_0__["object"],
+        };
+        return RenderPromisesProvider;
+    }(react__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+    Object.keys(context).forEach(function (key) {
+        RenderPromisesProvider.childContextTypes[key] = prop_types__WEBPACK_IMPORTED_MODULE_0__["any"];
+    });
+    function process() {
+        var html = renderFunction(Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(RenderPromisesProvider));
+        return renderPromises.hasPromises()
+            ? renderPromises.consumeAndAwaitPromises().then(process)
+            : html;
     }
+    return Promise.resolve().then(process);
+}
 
-    var compose = __webpack_require__(/*! lodash.flowright */ "./node_modules/lodash.flowright/index.js");
+function renderToStringWithData(component) {
+    return getMarkupFromTree({
+        tree: component,
+        renderFunction: __webpack_require__(/*! react-dom/server */ "./node_modules/react-dom/server.browser.js").renderToString,
+    });
+}
 
-    exports.compose = compose;
-    exports.getDataFromTree = getDataFromTree;
-    exports.ApolloConsumer = ApolloConsumer;
-    exports.ApolloProvider = ApolloProvider;
-    exports.Query = Query;
-    exports.Mutation = Mutation;
-    exports.Subscription = Subscription;
-    exports.graphql = graphql;
-    exports.withQuery = withQuery;
-    exports.withMutation = withMutation;
-    exports.withSubscription = withSubscription;
-    exports.withApollo = withApollo;
-    exports.RenderPromises = RenderPromises;
-    exports.getMarkupFromTree = getMarkupFromTree;
-    exports.walkTree = walkTree;
+function compose() {
+    var funcs = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        funcs[_i] = arguments[_i];
+    }
+    var functions = funcs.reverse();
+    return function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        var firstFunction = functions[0], restFunctions = functions.slice(1);
+        var result = firstFunction.apply(null, args);
+        restFunctions.forEach(function (fnc) {
+            result = fnc.call(null, result);
+        });
+        return result;
+    };
+}
 
-    Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
-//# sourceMappingURL=react-apollo.browser.umd.js.map
+//# sourceMappingURL=react-apollo.esm.js.map
 
 
 /***/ }),
@@ -24178,7 +18717,7 @@ module.exports = hoistNonReactStatics;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.1
+/** @license React v16.8.3
  * react-dom-server.browser.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -24246,7 +18785,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 // TODO: this is special because it gets imported during build.
 
-var ReactVersion = '16.8.1';
+var ReactVersion = '16.8.3';
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -24921,12 +19460,15 @@ var capitalize = function (token) {
   attributeName, 'http://www.w3.org/XML/1998/namespace');
 });
 
-// Special case: this attribute exists both in HTML and SVG.
-// Its "tabindex" attribute name is case-sensitive in SVG so we can't just use
-// its React `tabIndex` name, like we do for attributes that exist only in HTML.
-properties.tabIndex = new PropertyInfoRecord('tabIndex', STRING, false, // mustUseProperty
-'tabindex', // attributeName
-null);
+// These attribute exists both in HTML and SVG.
+// The attribute name is case-sensitive in SVG so we can't just use
+// the React name like we do for attributes that exist only in HTML.
+['tabIndex', 'crossOrigin'].forEach(function (attributeName) {
+  properties[attributeName] = new PropertyInfoRecord(attributeName, STRING, false, // mustUseProperty
+  attributeName.toLowerCase(), // attributeName
+  null);
+} // attributeNamespace
+);
 
 // code copied and modified from escape-html
 /**
@@ -27187,6 +21729,7 @@ var ReactDOMServerRenderer = function () {
   ReactDOMServerRenderer.prototype.destroy = function destroy() {
     if (!this.exhausted) {
       this.exhausted = true;
+      this.clearProviders();
       freeThreadID(this.threadID);
     }
   };
@@ -27243,6 +21786,15 @@ var ReactDOMServerRenderer = function () {
     // We've already verified that this context has been expanded to accommodate
     // this thread id, so we don't need to do it again.
     context[this.threadID] = previousValue;
+  };
+
+  ReactDOMServerRenderer.prototype.clearProviders = function clearProviders() {
+    // Restore any remaining providers on the stack to previous values
+    for (var index = this.contextIndex; index >= 0; index--) {
+      var _context = this.contextStack[index];
+      var previousValue = this.contextValueStack[index];
+      _context[this.threadID] = previousValue;
+    }
   };
 
   ReactDOMServerRenderer.prototype.read = function read(bytes) {
@@ -27410,7 +21962,25 @@ var ReactDOMServerRenderer = function () {
         case REACT_SUSPENSE_TYPE:
           {
             if (enableSuspenseServerRenderer) {
-              var fallbackChildren = toArray(nextChild.props.fallback);
+              var fallback = nextChild.props.fallback;
+              if (fallback === undefined) {
+                // If there is no fallback, then this just behaves as a fragment.
+                var _nextChildren3 = toArray(nextChild.props.children);
+                var _frame3 = {
+                  type: null,
+                  domNamespace: parentNamespace,
+                  children: _nextChildren3,
+                  childIndex: 0,
+                  context: context,
+                  footer: ''
+                };
+                {
+                  _frame3.debugElementStack = [];
+                }
+                this.stack.push(_frame3);
+                return '';
+              }
+              var fallbackChildren = toArray(fallback);
               var _nextChildren2 = toArray(nextChild.props.children);
               var _fallbackFrame2 = {
                 type: null,
@@ -27428,7 +21998,7 @@ var ReactDOMServerRenderer = function () {
                 children: _nextChildren2,
                 childIndex: 0,
                 context: context,
-                footer: ''
+                footer: '<!--/$-->'
               };
               {
                 _frame2.debugElementStack = [];
@@ -27436,7 +22006,7 @@ var ReactDOMServerRenderer = function () {
               }
               this.stack.push(_frame2);
               this.suspenseDepth++;
-              return '';
+              return '<!--$-->';
             } else {
               invariant(false, 'ReactDOMServer does not yet support Suspense.');
             }
@@ -27450,30 +22020,12 @@ var ReactDOMServerRenderer = function () {
           case REACT_FORWARD_REF_TYPE:
             {
               var element = nextChild;
-              var _nextChildren3 = void 0;
+              var _nextChildren4 = void 0;
               var componentIdentity = {};
               prepareToUseHooks(componentIdentity);
-              _nextChildren3 = elementType.render(element.props, element.ref);
-              _nextChildren3 = finishHooks(elementType.render, element.props, _nextChildren3, element.ref);
-              _nextChildren3 = toArray(_nextChildren3);
-              var _frame3 = {
-                type: null,
-                domNamespace: parentNamespace,
-                children: _nextChildren3,
-                childIndex: 0,
-                context: context,
-                footer: ''
-              };
-              {
-                _frame3.debugElementStack = [];
-              }
-              this.stack.push(_frame3);
-              return '';
-            }
-          case REACT_MEMO_TYPE:
-            {
-              var _element = nextChild;
-              var _nextChildren4 = [React.createElement(elementType.type, _assign({ ref: _element.ref }, _element.props))];
+              _nextChildren4 = elementType.render(element.props, element.ref);
+              _nextChildren4 = finishHooks(elementType.render, element.props, _nextChildren4, element.ref);
+              _nextChildren4 = toArray(_nextChildren4);
               var _frame4 = {
                 type: null,
                 domNamespace: parentNamespace,
@@ -27488,13 +22040,12 @@ var ReactDOMServerRenderer = function () {
               this.stack.push(_frame4);
               return '';
             }
-          case REACT_PROVIDER_TYPE:
+          case REACT_MEMO_TYPE:
             {
-              var provider = nextChild;
-              var nextProps = provider.props;
-              var _nextChildren5 = toArray(nextProps.children);
+              var _element = nextChild;
+              var _nextChildren5 = [React.createElement(elementType.type, _assign({ ref: _element.ref }, _element.props))];
               var _frame5 = {
-                type: provider,
+                type: null,
                 domNamespace: parentNamespace,
                 children: _nextChildren5,
                 childIndex: 0,
@@ -27504,10 +22055,29 @@ var ReactDOMServerRenderer = function () {
               {
                 _frame5.debugElementStack = [];
               }
+              this.stack.push(_frame5);
+              return '';
+            }
+          case REACT_PROVIDER_TYPE:
+            {
+              var provider = nextChild;
+              var nextProps = provider.props;
+              var _nextChildren6 = toArray(nextProps.children);
+              var _frame6 = {
+                type: provider,
+                domNamespace: parentNamespace,
+                children: _nextChildren6,
+                childIndex: 0,
+                context: context,
+                footer: ''
+              };
+              {
+                _frame6.debugElementStack = [];
+              }
 
               this.pushProvider(provider);
 
-              this.stack.push(_frame5);
+              this.stack.push(_frame6);
               return '';
             }
           case REACT_CONTEXT_TYPE:
@@ -27540,19 +22110,19 @@ var ReactDOMServerRenderer = function () {
               validateContextBounds(reactContext, threadID);
               var nextValue = reactContext[threadID];
 
-              var _nextChildren6 = toArray(_nextProps.children(nextValue));
-              var _frame6 = {
+              var _nextChildren7 = toArray(_nextProps.children(nextValue));
+              var _frame7 = {
                 type: nextChild,
                 domNamespace: parentNamespace,
-                children: _nextChildren6,
+                children: _nextChildren7,
                 childIndex: 0,
                 context: context,
                 footer: ''
               };
               {
-                _frame6.debugElementStack = [];
+                _frame7.debugElementStack = [];
               }
-              this.stack.push(_frame6);
+              this.stack.push(_frame7);
               return '';
             }
           case REACT_LAZY_TYPE:
@@ -27832,12 +22402,12 @@ module.exports = server_browser;
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -27866,7 +22436,7 @@ if (false) {} else {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.1
+/** @license React v16.8.3
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -28116,12 +22686,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -31581,6 +26151,68 @@ function symbolObservablePonyfill(root) {
 
 /***/ }),
 
+/***/ "./node_modules/ts-invariant/lib/invariant.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/ts-invariant/lib/invariant.esm.js ***!
+  \********************************************************/
+/*! exports provided: default, InvariantError, invariant */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvariantError", function() { return InvariantError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "invariant", function() { return invariant; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+
+var genericMessage = "Invariant Violation";
+var _a = Object.setPrototypeOf, setPrototypeOf = _a === void 0 ? function (obj, proto) {
+    obj.__proto__ = proto;
+    return obj;
+} : _a;
+var InvariantError = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(InvariantError, _super);
+    function InvariantError(message) {
+        if (message === void 0) { message = genericMessage; }
+        var _this = _super.call(this, message) || this;
+        _this.framesToPop = 1;
+        _this.name = genericMessage;
+        setPrototypeOf(_this, InvariantError.prototype);
+        return _this;
+    }
+    return InvariantError;
+}(Error));
+function invariant(condition, message) {
+    if (!condition) {
+        throw new InvariantError(message);
+    }
+}
+(function (invariant) {
+    function warn() {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        return console.warn.apply(console, args);
+    }
+    invariant.warn = warn;
+    function error() {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        return console.error.apply(console, args);
+    }
+    invariant.error = error;
+})(invariant || (invariant = {}));
+var invariant$1 = invariant;
+
+/* harmony default export */ __webpack_exports__["default"] = (invariant$1);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/tslib/tslib.es6.js":
 /*!*****************************************!*\
   !*** ./node_modules/tslib/tslib.es6.js ***!
@@ -32573,12 +27205,12 @@ module.exports = {
 
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!******************************************************************************************************!*\
-  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/webpack/buildin/global.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/webpack/buildin/global.js");
 
 /***/ }),
 
@@ -33323,9 +27955,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_app_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/app/Layout */ "./components/app/Layout.tsx");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-apollo */ "./node_modules/react-apollo/react-apollo.browser.umd.js");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! mobx-react-lite */ "./node_modules/mobx-react-lite/dist/index.module.js");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-apollo */ "./node_modules/react-apollo/react-apollo.esm.js");
+/* harmony import */ var _lib_redirect__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/redirect */ "./lib/redirect.ts");
 var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\pages\\login.tsx";
 
 function _templateObject() {
@@ -33368,101 +27999,100 @@ var Login = function Login() {
       setPassword = _useState4[1];
 
   var USER_LOGIN = graphql_tag__WEBPACK_IMPORTED_MODULE_4___default()(_templateObject());
-  return Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__["useObserver"])(function () {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_app_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      title: "Resource | Login",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22
-      },
-      __self: this
-    }, console.log("yo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Mutation"], {
-      mutation: USER_LOGIN,
-      onCompleted: function onCompleted(data) {
-        // Store the token in cookie
-        document.cookie = cookie__WEBPACK_IMPORTED_MODULE_0___default.a.serialize("token", data.loginUser.token, {
-          maxAge: 30 * 24 * 60 * 60 // 30 days
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_app_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: "Resource | Login",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Mutation"], {
+    mutation: USER_LOGIN,
+    onCompleted: function onCompleted(data) {
+      // Store the token in cookie
+      document.cookie = cookie__WEBPACK_IMPORTED_MODULE_0___default.a.serialize("token", data.loginUser.token, {
+        maxAge: 30 * 24 * 60 * 60 // 30 days
 
-        }); // Force a reload of all the current queries now that the user is
-        // logged in
-        // client.cache.reset().then(() => {
-        //   redirect({}, "/");
-        // });
-      },
-      onError: function onError(error) {
-        // If you want to send error to external service?
-        console.log(error);
+      }); // Force a reload of all the current queries now that the user is
+      // logged in
+
+      if (data.loginUser.token) {
+        Object(_lib_redirect__WEBPACK_IMPORTED_MODULE_6__["default"])({}, "/");
+      }
+    },
+    onError: function onError(error) {
+      // If you want to send error to external service?
+      console.log(error);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, function (loginUser, _ref) {
+    var loading = _ref.loading,
+        error = _ref.error,
+        data = _ref.data;
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
+      onSubmit: function onSubmit(e) {
+        e.preventDefault();
+        loginUser({
+          variables: {
+            email: email,
+            password: password
+          }
+        });
+        setEmail("");
+        setPassword("");
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 44
       },
       __self: this
-    }, function (loginUser, _ref) {
-      var loading = _ref.loading,
-          error = _ref.error,
-          data = _ref.data;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
-        onSubmit: function onSubmit(e) {
-          e.preventDefault();
-          loginUser({
-            variables: {
-              email: email,
-              password: password
-            }
-          });
-          setEmail("");
-          setPassword("");
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
-      }, "Email"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
-        value: email,
-        onChange: function onChange(e) {
-          return setEmail(e.target.value);
-        },
-        type: "text",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }, "Password"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
-        value: password,
-        onChange: function onChange(e) {
-          return setPassword(e.target.value);
-        },
-        type: "password",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
-        type: "submit",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      }, "LOGIN"));
-    }));
-  });
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, "Email"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
+      value: email,
+      onChange: function onChange(e) {
+        return setEmail(e.target.value);
+      },
+      type: "text",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, "Password"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
+      value: password,
+      onChange: function onChange(e) {
+        return setPassword(e.target.value);
+      },
+      type: "password",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
+      type: "submit",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: this
+    }, "LOGIN"));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Login);
@@ -33518,14 +28148,14 @@ return { page: module.exports.default }});
 
 /***/ }),
 
-/***/ "dll-reference dll_31a52253456ff2ce2646":
+/***/ "dll-reference dll_aea5a84f9025b36d9dbf":
 /*!*******************************************!*\
-  !*** external "dll_31a52253456ff2ce2646" ***!
+  !*** external "dll_aea5a84f9025b36d9dbf" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_31a52253456ff2ce2646;
+module.exports = dll_aea5a84f9025b36d9dbf;
 
 /***/ })
 

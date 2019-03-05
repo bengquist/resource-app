@@ -102,79 +102,85 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\components\\app\\Header.tsx";
+
+
 
 
 function Header() {
   var cookie = false;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    style: {
-      width: "100%"
-    },
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }, "Home")), " ", "|", " ", cookie ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/login",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: this
   }, "Log Out")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/login",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, "Log In")), " ", "|", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, "Sign Up"))));
 }
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "Header__Container",
+  componentId: "sc-7lelrg-0"
+})(["background-color:#bcbcbc;width:100%;"]);
 
 /***/ }),
 
@@ -276,6 +282,34 @@ var Footer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withCo
 
 /***/ }),
 
+/***/ "./lib/redirect.ts":
+/*!*************************!*\
+  !*** ./lib/redirect.ts ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function (context, target) {
+  if (context.res) {
+    // server
+    // 303: "See other"
+    context.res.writeHead(303, {
+      Location: target
+    });
+    context.res.end();
+  } else {
+    // In the browser, we just pretend like this never even happened ;)
+    next_router__WEBPACK_IMPORTED_MODULE_0___default.a.replace(target);
+  }
+});
+
+/***/ }),
+
 /***/ "./pages/login.tsx":
 /*!*************************!*\
   !*** ./pages/login.tsx ***!
@@ -296,8 +330,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-apollo */ "react-apollo");
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! mobx-react-lite */ "mobx-react-lite");
-/* harmony import */ var mobx_react_lite__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _lib_redirect__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/redirect */ "./lib/redirect.ts");
 var _jsxFileName = "C:\\Users\\engqu\\Desktop\\projects\\Personal\\resource-app\\client\\pages\\login.tsx";
 
 function _templateObject() {
@@ -340,101 +373,100 @@ var Login = function Login() {
       setPassword = _useState4[1];
 
   var USER_LOGIN = graphql_tag__WEBPACK_IMPORTED_MODULE_4___default()(_templateObject());
-  return Object(mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__["useObserver"])(function () {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_app_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      title: "Resource | Login",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22
-      },
-      __self: this
-    }, console.log("yo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Mutation"], {
-      mutation: USER_LOGIN,
-      onCompleted: function onCompleted(data) {
-        // Store the token in cookie
-        document.cookie = cookie__WEBPACK_IMPORTED_MODULE_0___default.a.serialize("token", data.loginUser.token, {
-          maxAge: 30 * 24 * 60 * 60 // 30 days
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_app_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: "Resource | Login",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Mutation"], {
+    mutation: USER_LOGIN,
+    onCompleted: function onCompleted(data) {
+      // Store the token in cookie
+      document.cookie = cookie__WEBPACK_IMPORTED_MODULE_0___default.a.serialize("token", data.loginUser.token, {
+        maxAge: 30 * 24 * 60 * 60 // 30 days
 
-        }); // Force a reload of all the current queries now that the user is
-        // logged in
-        // client.cache.reset().then(() => {
-        //   redirect({}, "/");
-        // });
-      },
-      onError: function onError(error) {
-        // If you want to send error to external service?
-        console.log(error);
+      }); // Force a reload of all the current queries now that the user is
+      // logged in
+
+      if (data.loginUser.token) {
+        Object(_lib_redirect__WEBPACK_IMPORTED_MODULE_6__["default"])({}, "/");
+      }
+    },
+    onError: function onError(error) {
+      // If you want to send error to external service?
+      console.log(error);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, function (loginUser, _ref) {
+    var loading = _ref.loading,
+        error = _ref.error,
+        data = _ref.data;
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
+      onSubmit: function onSubmit(e) {
+        e.preventDefault();
+        loginUser({
+          variables: {
+            email: email,
+            password: password
+          }
+        });
+        setEmail("");
+        setPassword("");
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 44
       },
       __self: this
-    }, function (loginUser, _ref) {
-      var loading = _ref.loading,
-          error = _ref.error,
-          data = _ref.data;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
-        onSubmit: function onSubmit(e) {
-          e.preventDefault();
-          loginUser({
-            variables: {
-              email: email,
-              password: password
-            }
-          });
-          setEmail("");
-          setPassword("");
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
-      }, "Email"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
-        value: email,
-        onChange: function onChange(e) {
-          return setEmail(e.target.value);
-        },
-        type: "text",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }, "Password"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
-        value: password,
-        onChange: function onChange(e) {
-          return setPassword(e.target.value);
-        },
-        type: "password",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
-        type: "submit",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      }, "LOGIN"));
-    }));
-  });
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, "Email"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
+      value: email,
+      onChange: function onChange(e) {
+        return setEmail(e.target.value);
+      },
+      type: "text",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, "Password"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
+      value: password,
+      onChange: function onChange(e) {
+        return setPassword(e.target.value);
+      },
+      type: "password",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
+      type: "submit",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: this
+    }, "LOGIN"));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Login);
@@ -491,17 +523,6 @@ module.exports = require("graphql-tag");
 
 /***/ }),
 
-/***/ "mobx-react-lite":
-/*!**********************************!*\
-  !*** external "mobx-react-lite" ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("mobx-react-lite");
-
-/***/ }),
-
 /***/ "next/head":
 /*!****************************!*\
   !*** external "next/head" ***!
@@ -521,6 +542,17 @@ module.exports = require("next/head");
 /***/ (function(module, exports) {
 
 module.exports = require("next/link");
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ }),
 

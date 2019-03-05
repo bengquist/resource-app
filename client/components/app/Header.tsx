@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import styled from "styled-components";
 
-export default function Header() {
+function Header() {
   const cookie = false;
 
   return (
-    <nav style={{ width: "100%" }}>
+    <Container>
       <Link href="/">
         <a>Home</a>
       </Link>{" "}
@@ -25,6 +26,13 @@ export default function Header() {
           </Link>
         </>
       )}
-    </nav>
+    </Container>
   );
 }
+
+export default Header;
+
+const Container = styled.div`
+  background-color: #bcbcbc;
+  width: 100%;
+`;

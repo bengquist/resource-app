@@ -1246,7 +1246,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.4' };
+var core = module.exports = { version: '2.6.5' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -4710,12 +4710,12 @@ module.exports = __webpack_require__(/*! ./dist/lib/error */ "./node_modules/nex
 
 /***/ "./node_modules/next/node_modules/prop-types/checkPropTypes.js":
 /*!***************************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/node_modules/prop-types/checkPropTypes.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/next/node_modules/prop-types/checkPropTypes.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/next/node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/next/node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -5323,34 +5323,34 @@ if (true) {
 
 /***/ "./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*************************************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \*************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_31a52253456ff2ce2646 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_aea5a84f9025b36d9dbf ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_31a52253456ff2ce2646 */ "dll-reference dll_31a52253456ff2ce2646"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aea5a84f9025b36d9dbf */ "dll-reference dll_aea5a84f9025b36d9dbf"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -6148,14 +6148,14 @@ return { page: module.exports.default }});
 
 /***/ }),
 
-/***/ "dll-reference dll_31a52253456ff2ce2646":
+/***/ "dll-reference dll_aea5a84f9025b36d9dbf":
 /*!*******************************************!*\
-  !*** external "dll_31a52253456ff2ce2646" ***!
+  !*** external "dll_aea5a84f9025b36d9dbf" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_31a52253456ff2ce2646;
+module.exports = dll_aea5a84f9025b36d9dbf;
 
 /***/ })
 

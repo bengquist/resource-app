@@ -118,6 +118,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+ // import console = require("console");
 
 var apolloClient = null;
 var isBrowser = false;
@@ -134,18 +135,17 @@ function create(initialState, _ref) {
     var token = getToken();
     var newHeaders = {
       headers: _objectSpread({}, headers, {
-        cookie: token ? "token=".concat(token) : ""
+        cookie: token ? "token=".concat(token) : "",
+        authentication: token ? token : ""
       })
     };
-    console.log(newHeaders);
     return newHeaders;
   });
   var httpLink = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_1__["createHttpLink"])({
     uri: "http://localhost:4000/graphql",
     credentials: "same-origin",
-    headers: authLink
-  });
-  console.log("link: ", authLink); // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
+    headers: authLink.cookie ? authLink : {}
+  }); // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
 
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_0__["ApolloClient"]({
     connectToDevTools: isBrowser,

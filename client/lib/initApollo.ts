@@ -6,6 +6,7 @@ import {
 import { createHttpLink } from "apollo-link-http";
 import { setContext } from "apollo-link-context";
 import fetch from "isomorphic-unfetch";
+// import console = require("console");
 
 let apolloClient: ApolloClient<NormalizedCacheObject> | null = null;
 
@@ -27,11 +28,10 @@ function create(initialState: any, { getToken }: Options) {
     const newHeaders = {
       headers: {
         ...headers,
-        cookie: token ? `token=${token}` : ""
+        cookie: token ? `token=${token}` : "",
+        authentication: token ? token : ""
       }
     };
-
-    console.log(newHeaders);
 
     return newHeaders;
   });
@@ -39,10 +39,8 @@ function create(initialState: any, { getToken }: Options) {
   const httpLink = createHttpLink({
     uri: "http://localhost:4000/graphql",
     credentials: "same-origin",
-    headers: authLink
+    headers: authLink.cookie ? authLink : {}
   });
-
-  console.log("link: ", authLink);
 
   // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
   return new ApolloClient({

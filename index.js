@@ -50,11 +50,11 @@ app.use(
 );
 
 const verifyUser = async (req, res) => {
-  // const token = req.heaaders["authentication"];
-  console.log(req.headers);
+  const token = req.headers["authentication"];
+  console.log(token);
 
   try {
-    // const { user } = await jwt.verify(token, "secret");
+    const { user } = await jwt.verify(token, "secret");
     req.user = user;
   } catch (err) {
     console.log("Invalid token");

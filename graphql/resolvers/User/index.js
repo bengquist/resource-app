@@ -24,6 +24,7 @@ export default {
   Mutation: {
     loginUser: (root, { email, password }) => {
       return new Promise((resolve, reject) => {
+        console.log("yo");
         User.findOne({ email })
           .populate()
           .exec((err, user) => {
